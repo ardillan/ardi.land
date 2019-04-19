@@ -6,8 +6,10 @@ export default ({ data }) => (
   <Layout>
     <h1>Sobre {data.site.siteMetadata.title}</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Me llamo Adrián, aunque mucha gente me conoce como Ardillán. Tengo 30 años
+      y, actualmente, estoy inmerso en el mundo del desarrollo web. Me interesa
+      todo aquello que está relacionado con la tecnología, los videojuegos y la
+      música.
     </p>
   </Layout>
 )
