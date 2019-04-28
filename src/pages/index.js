@@ -5,17 +5,17 @@ import Layout from "../components/Layout"
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h4>{data.allMarkdownRemark.totalCount} entradas escritas</h4>
+      <h4>{data.allMarkdownRemark.totalCount} entradas escritas</h4>
+      <ul>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <li key={node.id}>
             <Link to={node.fields.slug}>
               {" "}
               <h3>{node.frontmatter.title}</h3>
             </Link>{" "}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Layout>
   )
 }
