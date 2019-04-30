@@ -2,12 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 
+import Hello from "../components/Hello"
+
 export default ({ data }) => {
   return (
     <Layout>
-      <h4>{data.allMarkdownRemark.totalCount} entradas escritas</h4>
-      <ul>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+      <Hello />
+      <h3>Artículos</h3>
+      <ul className="article-list">
+        {data.allMarkdownRemark.edges.slice(0, 5).map(({ node }) => (
           <li key={node.id}>
             <Link to={node.fields.slug}>
               {" "}
