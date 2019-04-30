@@ -2,6 +2,10 @@ a {
   color: orange;
 }
 
+::selection {
+  background: #f1ee36;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -25,6 +29,12 @@ section {
 
 footer {
   grid-area: footer;
+  grid-column-start: 0;
+  grid-column-end: 5;
+  text-align: center;
+  background: grey;
+  padding: 10px;
+  margin-top: 45px;
 }
 
 .container {
@@ -34,4 +44,15 @@ footer {
     "header header header header"
     ". main main ."
     "footer footer footer footer";
+}
+
+.article-list {
+  list-style-type: none;
+  margin: 0px;
+}
+
+.article-list a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: hsl(253.3, 24.3%, 7.3%);
 }
