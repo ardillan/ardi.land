@@ -1,9 +1,8 @@
 import Typography from "typography"
-import noriegaTheme from "typography-theme-noriega"
+import githubTheme from "typography-theme-github"
 
-const typography = new Typography({
-  noriegaTheme,
-  baseFontSize: "20px",
-})
+githubTheme.baseFontSize = "20px" // was 20px.
+
+const typography = new Typography(githubTheme)
 
 export default typography
