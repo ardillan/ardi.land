@@ -1,9 +1,11 @@
 a {
-  color: orange;
+  color: #9178e4;
 }
 
 ::selection {
-  background: #f1ee36;
+  background: #ffe600;
+  color: #94881c;
+  border-radius: 10px;
 }
 
 .container {
@@ -15,10 +17,36 @@ header {
   grid-area: header;
   grid-column-start: 1;
   grid-column-end: 5;
-  box-shadow: 0 0 30px #b4bbdd;
+  box-shadow: 0 0 10px #b4bbdd;
   padding: 20px;
-  background: #100e17;
+  background: #1f1936;
   margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: unset;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: unset;
+}
+
+header a {
+  color: white;
+  padding: 2rem;
 }
 
 section {
@@ -32,14 +60,13 @@ footer {
   grid-column-start: 0;
   grid-column-end: 5;
   text-align: center;
-  background: grey;
   padding: 10px;
   margin-top: 45px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 300px 300px 1fr;
+  grid-template-columns: 1fr 400px 400px 1fr;
   grid-template-areas:
     "header header header header"
     ". main main ."
@@ -51,8 +78,13 @@ footer {
   margin: 0px;
 }
 
+.article-list li {
+  height: 35px;
+}
+
 .article-list a {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
+  margin: 0.1rem;
   color: hsl(253.3, 24.3%, 7.3%);
 }
