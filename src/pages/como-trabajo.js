@@ -18,7 +18,7 @@ export default ({ data }) => {
 export const query = graphql`
   {
     allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "como-trabajo" } } }
+      filter: { frontmatter: { title: { eq: "Cómo trabajo" } } }
     ) {
       edges {
         node {

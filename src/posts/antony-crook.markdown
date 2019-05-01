@@ -1,6 +1,6 @@
 ---
 title: "Antony Crook"
-date: 2017-02-28 20:00:00 +0100
+date: "2017-02-28 20:00:00 +0100"
 author: Ardillán
 ---
 
@@ -15,4 +15,3 @@ Buscando información sobre el disco de Mogwai he llegado a conocer a Antony Cro
 ![Imagen 4](/assets/images/antony-04.jpg)
 
 ![Imagen 5](/assets/images/antony-05.jpg)
-

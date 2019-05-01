@@ -12,11 +12,11 @@ const Hello = () => {
           interesa todo aquello que está relacionado con la tecnología, los
           videojuegos y la música.
         </p>
-        <small>
+        <p>
           Puedes echar un vistazo a mi twitter para ver qué cuento, ver{" "}
           <a href="/como-trabajo"> cómo trabajo</a> en mi día a día, para ver el
           flujo que utilizo en mi día a día, o bien, ver mis fotos en Instagram.
-        </small>
+        </p>
       </aside>
     </p>
   )

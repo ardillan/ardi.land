@@ -8,13 +8,14 @@ export default ({ data }) => {
   return (
     <Layout>
       <Hello />
-      <h3>Artículos</h3>
+      <h3>Entradas del blog</h3>
       <ul className="article-list">
         {data.allMarkdownRemark.edges.slice(0, 5).map(({ node }) => (
           <li key={node.id}>
             <Link to={node.fields.slug}>
               {" "}
-              <h3>{node.frontmatter.title}</h3>
+              <p>{node.frontmatter.title}</p>
+              {/* <p>{postDate}</p> */}
             </Link>{" "}
           </li>
         ))}
