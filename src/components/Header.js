@@ -6,8 +6,7 @@ const Header = () => {
     <header>
       <div className="brand">
         <Link to={`/`}>
-          Logotipo
-          <img />
+          <img alt="Logotipo" />
         </Link>
       </div>{" "}
       <nav className="links">
