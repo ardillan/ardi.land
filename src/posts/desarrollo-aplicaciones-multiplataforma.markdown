@@ -2,6 +2,7 @@
 title: "Desarrollo de Aplicaciones Multiplataforma"
 date: "2019-03-01 20:00:00 +0100"
 author: ardillan
+type: "post"
 ---
 
 Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso.
@@ -17,6 +18,7 @@ Sin más, comienzo con lo más básico: las asignaturas. Explicaré, un poco, c�
 ![Imagen Base de datos](/assets/images/dam-basedatos.jpg)
 
 # Bases de datos
+
 ### 7 horas semanales
 
 **Primeras semanas**
@@ -42,6 +44,7 @@ Junto a esto, seremos capaces de realizar búsquedas en nuestra base de datos de
 ![Imagem Sistemas](/assets/images/dam-sistemas.jpg)
 
 # Sistemas informáticos
+
 ### 7 horas semanales
 
 **Primeras Semanas**
@@ -58,12 +61,11 @@ Junto con esta materia teórica, también hemos contado con clases prácticas do
 
 Esta asignatura nos deja ver el qué y cómo se forma un ordenador. Hemos aprendido qué unidades forman la placa base, su lógica y su funcionamiento, hemos visto una parte del gran abanico de componentes que lo pueden formar de una forma específica y general al mismo tiempo.
 
-
 ![Imagen Programación](/assets/images/dam-programacion.jpg)
 
 # Programación (Java SE)
-### 8 horas semanales
 
+### 8 horas semanales
 
 **Primeras semanas**
 
@@ -83,6 +85,7 @@ En este primer curso no aprenderemos directamente a trabajar y crear aplicacione
 ![Imagen Lenguje de marcas](/assets/images/dam-lenguajemarcas.jpg)
 
 # Lenguajes de Marca y Sistemas de Gestión de la Información (LMSGI)
+
 ### 4 horas semanales
 
 **Primeras semanas**
@@ -101,6 +104,7 @@ Con el metalenguaje XML podremos ser capaces de organizar la información que de
 ![Imagen Entornos de desarrollo](/assets/images/dam-entornos.jpg)
 
 # Entornos de Desarrollo
+
 ### 2 horas semanales
 
 **Primeras semanas**
@@ -113,10 +117,10 @@ La conclusión de estas clases se resume en el aprendizaje de la versatilidad de
 
 **Final de curso**
 
-Esta asignatura, aparentemente poco importante por el número de horas, nos enseña muchas claves a la hora de trabajar y ser más productivos. El mero hecho de aprender a usar programas Subversion o SVN es una clara prueba ello. Como conclusión final, esta asignatura no enseñará que a la hora de trabajar en grupo deberemos regir nuestro trabajo bajo una serie de normas y directrices  para que nuestros proyectos maduren correctamente.
+Esta asignatura, aparentemente poco importante por el número de horas, nos enseña muchas claves a la hora de trabajar y ser más productivos. El mero hecho de aprender a usar programas Subversion o SVN es una clara prueba ello. Como conclusión final, esta asignatura no enseñará que a la hora de trabajar en grupo deberemos regir nuestro trabajo bajo una serie de normas y directrices para que nuestros proyectos maduren correctamente.
 
 Aprenderemos a depurar código, organizarlo, simplificarlo y a refactorizarlo. Veremos cómo crear un buen manual de uso y mantenimiento de nuestro software y aprenderemos a rematar y dar un buen acabado a todo aquello que desarrollemos ya bien sea sólos o en grupo.
 
-***
+---
 
 Todas las imágenes han sido obtenidas de [flaticon](http://flaticon.com)

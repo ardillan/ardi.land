@@ -2,6 +2,7 @@
 title: "Desarrollo de Aplicaciones Web"
 date: "2019-03-01 20:00:00 +0100"
 author: Ardillán
+type: "post"
 ---
 
 Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso.
@@ -12,14 +13,13 @@ Aclarado esto, pretendo mostrar con esta entrada, grosso modo, lo que supone el 
 
 Comenzaré indicando las asignaturas y sus horas:
 
-
-* **Desarrollo web en entorno servidor** 9 horas
-* **Desarrollo web en entorno cliente** 9 horas
-* **Despliegue de aplicaciones web** 4 horas
-* **Diseño de interfaces web** 5 horas
-* **Empresa e iniciativa emprendedora** 3 horas
-* **Formación en centros de trabajo** 350 horas (varía)
-* **Proyecto final de ciclo**
+- **Desarrollo web en entorno servidor** 9 horas
+- **Desarrollo web en entorno cliente** 9 horas
+- **Despliegue de aplicaciones web** 4 horas
+- **Diseño de interfaces web** 5 horas
+- **Empresa e iniciativa emprendedora** 3 horas
+- **Formación en centros de trabajo** 350 horas (varía)
+- **Proyecto final de ciclo**
 
 ![DAW - Entorno Servidor](/assets/images/daw-servidor.jpg)
 
@@ -30,7 +30,6 @@ Como bien dice su nombre, aprenderemos a desarrollar en un lenguaje que esté de
 Gracias a la base aprendida en el primer curso, la adaptación a este lenguaje fue fácil y dinámica. Los primeros meses estuvieron dedicados a una iniciación rápida a PHP. Practicamos con formularios web, fechas, intercambio de datos entre el usuario y el servidor; aprendimos los tipos de arquitectura existentes, los lenguajes disponibles para desarrollar web… En definitiva, tratamos de adquirir soltura con el lenguaje mediante ejercicios sencillos de programación.
 
 No fue hasta el segundo trimestre cuando entramos de lleno en la integración de Bases de Datos. Una vez que tuvimos nuestra cabeza amoldada al lenguaje, comenzamos a realizar pequeñas aplicaciones donde intercambiábamos información. Realizamos consultas e inserciones o modificamos datos para que, al final del trimestre, tuviéramos como resultado la clásica biblioteca / tienda ( ejercicio común en muchos ciclos ) en la que dispusiéramos de nuestra propia pantalla de login, formularios, logout, carrito de la compra… Como veis a continuación, estas son algunas de las capturas de mi aplicación web “El Colmenar”, una tienda de videojuegos sencilla y realizada en su totalidad en PHP y HTML.
-
 
 Una vez terminada la etapa de iniciación al lenguaje y su uso con las bases de datos, llegó el momento de entrar en el terreno de los objetos. Aquí aprendimos (y repasamos) qué son los objetos, sus interfaces, cómo se ejecuta la herencia entre ellos, cómo podemos instanciarlos y modificarlos y, en definitiva, de qué manera podrían sernos útiles en nuestro trabajo.
 
@@ -64,7 +63,6 @@ En mi ciclo, seguimos a rajatabla el libro de DAW de la Editorial Garceta (en es
 
 ![DAW - Diseño](/assets/images/daw-diseno.jpg)
 
-
 ## Diseño de interfaces web
 
 Asignatura ligada a la parte más visual del desarrollo web. Aquí practicamos todo lo relacionado con html y css en relación al diseño de su interfaz. Ejercitamos también la gran cantidad de utilidades que existen, como los tipos de licencia existentes, las características para hacer que nuestra web sea más accesible, las formas de protitipado web…
@@ -93,6 +91,6 @@ Como es obvio, la experiencia de cada uno se verá supeditada al lugar donde rea
 
 A la par que se realizan las FCT, se desarrolla el culmen del curso: el trabajo de final de ciclo. Este consiste en una aplicación web donde aplicar e incluir todo lo aprendido hasta el momento. Tras finalizar las FCT, llega la prueba de fuego: defenderlo ante un tribunal junto con nuestro plan de empresa.
 
-***
+---
 
 Todas las imágenes han sido obtenidas de [flaticon](http://flaticon.com)

@@ -2,6 +2,7 @@
 title: "Cómo trabajo"
 date: "2019-02-28 20:00:00 +0100"
 author: Ardillán
+type: "page"
 ---
 
 Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o pequeños scripts facilitan el trabajo de la gente. A continuación indico qué aplicaciones utilizo en mi día a día, qué música escucho o qué utilizo para editar gráficos. Esta idea de contar cómo trabajo inspirada por un artículo que leí de Richard Stallaman titulado "[How I do my computing](https://stallman.org/stallman-computing.html)" el cual te recomiendo que leas.

@@ -2,6 +2,7 @@
 title: "Del código al píxel"
 date: "2018-06-30 20:00:00 +0100"
 author: Ardillán
+type: "post"
 ---
 
 Tras varios meses asistiendo a los eventos de Coders llegó la hora de mi charla. Mi experiencia está basada en el diseño

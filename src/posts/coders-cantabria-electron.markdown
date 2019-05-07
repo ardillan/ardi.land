@@ -2,8 +2,8 @@
 title: "Electron"
 date: "2017-05-01 12:00:00 +0100"
 author: Ardillán
+type: "post"
 ---
-
 
 Hoy tuve la oportunidad de asistir, por primera vez, a una sesión de [Coders Cantabria](https://coderscantabria.com/ "Web Coders Cantabria") donde se habló de Electron y las posibilidades que esta librería ofrece.
 
@@ -14,11 +14,12 @@ Durante la charla, pudimos ver el contexto en el que se se encuentra Electron, c
 Al finalizar, hubo un pequeño debate y turno de preguntas en el que, además, se propusieron los temas que se hablarían en las próximas quedadas.
 
 Puedes aprender más sobre Electron en los siguientes enlaces:
+
 - [Web](https://electron.atom.io/ "Web oficial de Electron")
 - [Github](https://github.com/electron/electron "Github Electron")
 
-
 También puedes seguir a Coders Cantabria a través de los siguientes enlaces:
+
 - [Twitter](https://twitter.com/coderscantabria?lang=es "Twitter Coders Cantabria")
 - [Github](https://github.com/coders-cantabria/coders-cantabria "Github Coders Cantabria")
 - [Web](https://twitter.com/coderscantabria?lang=es "Web Coders Cantabria")
