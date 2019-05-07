@@ -2,7 +2,7 @@ import React from "react"
 
 const Hello = () => {
   return (
-    <p>
+    <div>
       {" "}
       <aside>
         <h2>¡Hola!</h2>
@@ -18,7 +18,7 @@ const Hello = () => {
           flujo que utilizo en mi día a día, o bien, ver mis fotos en Instagram.
         </p>
       </aside>
-    </p>
+    </div>
   )
 }
 
