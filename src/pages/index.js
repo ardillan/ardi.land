@@ -8,13 +8,13 @@ export default ({ data }) => {
   return (
     <Layout>
       <Hello />
-      <h3>Entradas del blog</h3>
+      <h2>Entradas del blog</h2>
       <ul className="article-list">
         {data.allMarkdownRemark.edges.slice(0, 5).map(({ node }) => (
           <li key={node.id}>
             <Link to={node.fields.slug}>
               {" "}
-              <p>{node.frontmatter.title}</p>
+              {node.frontmatter.title}
               {/* <p>{postDate}</p> */}
             </Link>{" "}
           </li>
@@ -26,19 +26,25 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/posts/" }
+        frontmatter: { type: { eq: "post" } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       totalCount
       edges {
         node {
           id
-          frontmatter {
-            title
-            date
-          }
           fields {
             slug
           }
-          excerpt
+          frontmatter {
+            title
+            date
+            author
+          }
         }
       }
     }
