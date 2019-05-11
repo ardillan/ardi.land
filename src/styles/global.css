@@ -1,5 +1,5 @@
 a {
-  color: #9178e4;
+  color: #8a75f5;
 }
 
 ::selection {
@@ -11,6 +11,13 @@ a {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  margin: auto;
 }
 
 header {
@@ -26,33 +33,45 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-transition: height 0.3s ease;
-  transition: height 0.3s ease;
 }
 
 .brand {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex: unset;
+  justify-content: flex-start;
+  align-content: initial;
+}
+
+.brand img {
+  margin: 0px;
 }
 
 .links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex: unset;
+  justify-content: flex-end;
+}
+
+.links a {
+  padding: 8px;
+}
+
+.links a:hover {
+  background: #181426;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 header a {
   color: white;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section {
+main {
   grid-area: main;
   grid-column-start: 2;
   grid-column-end: 4;
+  padding: 0 1rem;
 }
 
 footer {
@@ -66,7 +85,7 @@ footer {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 400px 400px 1fr;
+  grid-template-columns: 1fr 300px 300px 1fr;
   grid-template-areas:
     "header header header header"
     ". main main ."
@@ -76,15 +95,30 @@ footer {
 .article-list {
   list-style-type: none;
   margin: 0px;
+  margin: 0 -1rem;
+}
+
+.article-list ul {
 }
 
 .article-list li {
-  height: 35px;
+  height: 55px;
+  padding: 0 1rem;
 }
 
-.article-list a {
-  font-size: 1.2rem;
+.article-list li {
+  width: 100%;
+  align-items: center;
+
+  display: flex;
+}
+
+.article-list li:hover {
+  box-shadow: inset 0 0 0 2px #cabfff;
+  border-radius: 5px;
+  background: #f6f4ff;
+}
+
+.article-list a:hover {
   text-decoration: none;
-  margin: 0.1rem;
-  color: hsl(253.3, 24.3%, 7.3%);
 }

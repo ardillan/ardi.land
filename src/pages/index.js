@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
 import Hello from "../components/Hello"
@@ -11,13 +11,12 @@ export default ({ data }) => {
       <h2>Entradas del blog</h2>
       <ul className="article-list">
         {data.allMarkdownRemark.edges.slice(0, 5).map(({ node }) => (
-          <li key={node.id}>
-            <Link to={node.fields.slug}>
-              {" "}
+          <a href={node.fields.slug}>
+            <li key={node.id}>
               {node.frontmatter.title}
               {/* <p>{postDate}</p> */}
-            </Link>{" "}
-          </li>
+            </li>
+          </a>
         ))}
       </ul>
     </Layout>
