@@ -1,51 +1,17 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
 import Hello from "../components/Hello"
+import PostList from "../components/PostsList"
 
-export default ({ data }) => {
+export default () => {
   return (
     <Layout>
       <Hello />
       <h2>Entradas del blog</h2>
-      <ul className="article-list">
-        {data.allMarkdownRemark.edges.slice(0, 5).map(({ node }) => (
-          <a href={node.fields.slug}>
-            <li key={node.id}>
-              {node.frontmatter.title}
-              {/* <p>{postDate}</p> */}
-            </li>
-          </a>
-        ))}
-      </ul>
+      <PostList length="5" type="post" />
+      <h2>Luétigas</h2>
+      <PostList length="5" type="luetiga" />
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "/posts/" }
-        frontmatter: { type: { eq: "post" } }
-      }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date
-            author
-          }
-        }
-      }
-    }
-  }
-`
