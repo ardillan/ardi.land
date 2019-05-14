@@ -15,7 +15,7 @@ Cabe decir que este ciclo comparte el mismo temario que el primer curso de DAW (
 
 Sin más, comienzo con lo más básico: las asignaturas. Explicaré, un poco, cómo nos las han presentado, cuál es su temario y qué cosas nos han ido enseñando durante el primer trimestre.
 
-![Imagen Base de datos](/assets/images/dam-basedatos.jpg)
+![Imagen Base de datos](/../../content/images/posts/desarrollo-aplicaciones-multiplataforma-1.jpg)
 
 # Bases de datos
 
@@ -41,7 +41,7 @@ Con esta asignatura seremos capaces de crear nuestra base de datos compuesta por
 
 Junto a esto, seremos capaces de realizar búsquedas en nuestra base de datos de una forma eficaz mediante el uso de SELECT, restricciones y filtros. Seremos capaces de identificar nuestras tablas mediante claves únicas así como relacionarlas entre ellas con claves foráneas. Asignaremos los valores que creamos oportunos a cada campo y podremos insertar, modificar o eliminar datos. Todo ello desde la consola de nuestro gestor de MySQL. También aprenderemos a gestionar usuarios mediante PHPMyAdmin.
 
-![Imagem Sistemas](/assets/images/dam-sistemas.jpg)
+![Imagem Sistemas](/../../content/images/posts/desarrollo-aplicaciones-multiplataforma-2.jpg)
 
 # Sistemas informáticos
 
@@ -60,8 +60,8 @@ Junto con esta materia teórica, también hemos contado con clases prácticas do
 **Final de curso**
 
 Esta asignatura nos deja ver el qué y cómo se forma un ordenador. Hemos aprendido qué unidades forman la placa base, su lógica y su funcionamiento, hemos visto una parte del gran abanico de componentes que lo pueden formar de una forma específica y general al mismo tiempo.
-
-![Imagen Programación](/assets/images/dam-programacion.jpg)
+irefox
+![Imagen Programación](/../../content/images/posts/desarrollo-aplicaciones-multiplataforma-3.jpg)
 
 # Programación (Java SE)
 
@@ -72,6 +72,7 @@ Esta asignatura nos deja ver el qué y cómo se forma un ordenador. Hemos aprend
 Podría decir que Programación es el tronco del ciclo o, al menos, durante el primer año, ya que es con la asignatura que más horas contamos a lo largo de la semana y con la que vamos a estar resolviendo problemas mediante código. En este caso, los primeros días hemos realizado una serie de ejercicios en Java bastante simples, que no me han dado ningún problema. Las siguientes semanas, hemos profundizado más en la creación de clases y bucles y, asimismo, en el Lenguaje Orientado a Objetos.
 
 **Final de trimestre**
+
 La conclusión del primer trimestre se traduce en una asignatura en la que, para aprobar, deberás practicar con muchos ejercicios de Java para conseguir cierta soltura a la hora de picar el código.
 
 Como resumen, en este primer trimestre, nos han enseñado a diseñar pequeños programas que, si bien no son complicados, podrían considerarse como una de las bases para crear aplicaciones potentes; hablamos de conceptos como arrays, bucles (for, while), creación de clases, métodos y objetos. Como es lógico, también hemos aprendido la relación que hay entre este tipo de eventos, así como la manera que tienen de llamarse, declararse e instanciarse.
@@ -82,13 +83,14 @@ Esta asignatura servirá para introducirnos en un lenguaje complejo como puede s
 
 En este primer curso no aprenderemos directamente a trabajar y crear aplicaciones Android (eso lo dejamos para el segundo) pero sí aprenderemos a implementar bases de datos y crear interfaces simples mediante el uso de librerías Swing. También implementaremos otro tipo de librerías como pueden ser de animación, manejo de ficheros, colecciones de objetos, lectura por teclado…
 
-![Imagen Lenguje de marcas](/assets/images/dam-lenguajemarcas.jpg)
+![Imagen Lenguje de marcas](/../../content/images/posts/desarrollo-aplicaciones-multiplataforma-4.jpg)
 
 # Lenguajes de Marca y Sistemas de Gestión de la Información (LMSGI)
 
 ### 4 horas semanales
 
 **Primeras semanas**
+
 En esta asignatura, nos centraremos más en el terreno web pues, como su propio nombre indica, veremos lenguajes de marcado, uno en los que se basan la mayoría de páginas web. La asignatura en sí es sencilla. En nuestro caso hemos aprendido a dar estilo a textos, centrándonos en tablas, variaciones de estilo en las fuentes, llamadas internas y externas, y formularios.
 
 **Final de trimestre**
@@ -101,7 +103,7 @@ Esta asignatura nos enseñará los conceptos básicos de los lenguajes html y cs
 
 Con el metalenguaje XML podremos ser capaces de organizar la información que deseemos, siempre dentro un orden y un determinado número de cláusulas.
 
-![Imagen Entornos de desarrollo](/assets/images/dam-entornos.jpg)
+![Imagen Entornos de desarrollo](/../../content/images/posts/desarrollo-aplicaciones-multiplataforma-5.jpg)
 
 # Entornos de Desarrollo
 
