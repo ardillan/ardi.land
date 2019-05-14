@@ -1,10 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
-export default ({ data }) => (
+import retrato from "../../content/images/general/sobre-mi.jpg"
+
+export default () => (
   <Layout>
-    <h1>Sobre {data.site.siteMetadata.title}</h1>
+    <h1>Sobre mí</h1>
+    <img src={retrato} alt="Autoretrato" />
     <p>
       Me llamo Adrián, aunque mucha gente me conoce como Ardillán. Tengo 30 años
       y, actualmente, estoy inmerso en el mundo del desarrollo web. Me interesa
@@ -13,13 +15,3 @@ export default ({ data }) => (
     </p>
   </Layout>
 )
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

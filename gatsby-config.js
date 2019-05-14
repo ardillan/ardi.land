@@ -4,7 +4,7 @@ module.exports = {
     description: `Blog personal donde se habla de tecnología, música y videojuegos`,
     social: {
       twitter: "@ardillan_",
-      instagram: "@ardillan",
+      instagram: "ardillan",
     },
   },
   plugins: [
