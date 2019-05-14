@@ -1,10 +1,24 @@
 a {
-  color: #8a75f5;
+  color: #002aff;
+}
+
+li {
+  list-style: none;
+}
+
+li:before {
+  content: "\2022";
+  display: block;
+  position: relative;
+  max-width: 0px;
+  max-height: 0px;
+  left: -15px;
+  top: -1px;
+  color: #022bff;
 }
 
 ::selection {
-  background: #ffe600;
-  color: #94881c;
+  background: rgb(255, 239, 94);
   border-radius: 10px;
 }
 
@@ -60,6 +74,14 @@ header {
   color: #ccc;
 }
 
+figcaption {
+  text-align: center;
+  color: #4660e4;
+  font-size: 0.7rem;
+  padding: 10px;
+  background: #f9fbfb;
+}
+
 header a {
   color: white;
   display: flex;
@@ -79,8 +101,10 @@ footer {
   grid-column-start: 0;
   grid-column-end: 5;
   text-align: center;
-  padding: 10px;
   margin-top: 45px;
+  border-top: 1px solid #eaeaea;
+  padding: 20px 0 10px 0;
+  font-size: 0.8rem;
 }
 
 .container {
@@ -104,13 +128,13 @@ footer {
 .article-list li {
   height: 55px;
   padding: 0 1rem;
-}
-
-.article-list li {
   width: 100%;
   align-items: center;
-
   display: flex;
+}
+
+.article-list li:before {
+  content: "";
 }
 
 .article-list li:hover {
