@@ -21,7 +21,7 @@ Comenzaré indicando las asignaturas y sus horas:
 - **Formación en centros de trabajo** 350 horas (varía)
 - **Proyecto final de ciclo**
 
-![DAW - Entorno Servidor](/assets/images/daw-servidor.jpg)
+![DAW - Entorno Servidor](/../../content/images/posts/desarrollo-de-aplicaciones-web-1.jpg)
 
 ## Desarrollo web en entorno Servidor
 
@@ -35,7 +35,7 @@ Una vez terminada la etapa de iniciación al lenguaje y su uso con las bases de 
 
 Debido a que el segundo ciclo de Web es corto (6 meses), el temario es reducido y directo. Aprendimos cosas como patrones Modelo-Vista-Controlador, muy prácticos para entender las diferentes etapas de desarrollo que puede tener una aplicación, la integración con servicios web en aplicaciones, JAXAX y las librerías de PHP, la integración con JavaScript…; en resumen, lo suficiente como para tener un mínima base con la que practicar en la asignatura de FCT.
 
-![DAW - Entorno Cliente](/assets/images/daw-cliente.jpg)
+![DAW - Entorno Cliente](/../../content/images/posts/desarrollo-de-aplicaciones-web-2.jpg)
 
 ## Desarrollo web en entorno cliente
 
@@ -49,7 +49,7 @@ Al igual que en DWES, fuimos cogiendo soltura con el lenguaje para, después, da
 
 Cabe decir que, en mi caso, librerías externas como JQuery no se usaron a apenas. Bien es cierto que aprendimos el lenguaje de una manera pura, desde los de eventos, y las interacciones por ajax, así como la modificación de elementos en el DOM.
 
-![DAW - Despliegue](/assets/images/daw-despliegue.jpg)
+![DAW - Despliegue](/../../content/images/posts/desarrollo-de-aplicaciones-web-3.jpg)
 
 ## Despliegue de aplicaciones web
 
@@ -61,7 +61,7 @@ Si bien a la hora de trabajar en una empresa, tendremos un departamento de IT qu
 
 En mi ciclo, seguimos a rajatabla el libro de DAW de la Editorial Garceta (en este enlace podrás consultar su temario), con el que fuimos poco a poco desplegando una red de servidores Linux y Windows bajo un MikroTik, a la vez que controlamos las conexiones entre ellos. Gestionamos el entorno de usuarios y el tipo de conexiones que existen entre los servidores; desplegamos un servidor Apache Tomcat donde lanzar una aplicación web; creamos y jugamos con DNS… Esto es, aprendimos a gestionar un servidor para extender nuestras aplicaciones.
 
-![DAW - Diseño](/assets/images/daw-diseno.jpg)
+![DAW - Diseño](/../../content/images/posts/desarrollo-de-aplicaciones-web-4.jpg)
 
 ## Diseño de interfaces web
 
@@ -71,7 +71,7 @@ Sin ser la asignatura más pesada del ciclo, estudiamos cuáles son las necesida
 
 Delimitaremos la asignatura en todo aquello que no sólo mejora el aspecto de nuestra web, si no que la dota de una valor más allá de lo estético, haciendo que nuestra web sea más usable.
 
-![DAW - EIE](/assets/images/daw-eie.jpg)
+![DAW - EIE](/../../content/images/posts/desarrollo-de-aplicaciones-web-5.jpg)
 
 ## Empresa e iniciativa emprendedora
 
@@ -79,7 +79,7 @@ Asignatura común para todos los ciclos de grado superior. Durante el transcurso
 
 Esta asignatura fue aquella gracias a la cual conocimos cómo plantear una empresa desde los cimientos. Aprendimos de qué manera llevar a cabo la formación de nuestra sociedad, pasando por su desarrollo hasta llegar a su establecimiento (de una manera ficticia). El fin no era otro que simular la labor de empresarios (o emprendedores), defendiendo su viabilidad, junto a nuestra aplicación web.
 
-![DAW - FCT](/assets/images/daw-formacion.jpg)
+![DAW - FCT](/../../content/images/posts/desarrollo-de-aplicaciones-web-6.jpg)
 
 ## Formación en centros de trabajo y Proyecto final de ciclo
 
