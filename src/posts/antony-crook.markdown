@@ -7,12 +7,8 @@ type: "post"
 
 Buscando información sobre el disco de Mogwai he llegado a conocer a Antony Crook, un fotógrafo inglés que me ha dejado impresionado con su trabajo. Para ver portfolio puedes visitar [su web](http://www.antonycrook.com/).
 
-![Imagen 1](/assets/images/antony-01.jpg)
-
-![Imagen 2](/assets/images/antony-02.jpg)
-
-![Imagen 3](/assets/images/antony-04.jpg)
-
-![Imagen 4](/assets/images/antony-04.jpg)
-
-![Imagen 5](/assets/images/antony-05.jpg)
+![Imagen 1](../../content/images/posts/antony-crook-1.jpg)
+![Imagen 2](../../content/images/posts/antony-crook-2.jpg)
+![Imagen 3](../../content/images/posts/antony-crook-3.jpg)
+![Imagen 4](../../content/images/posts/antony-crook-4.jpg)
+![Imagen 5](../../content/images/posts/antony-crook-5.jpg)
