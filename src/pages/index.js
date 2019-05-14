@@ -4,6 +4,8 @@ import Layout from "../components/Layout"
 import Hello from "../components/Hello"
 import PostList from "../components/PostsList"
 
+import "../styles/main.scss"
+
 export default () => {
   return (
     <Layout>
