@@ -8,6 +8,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -20,6 +21,14 @@ module.exports = {
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              showCaptions: false,
+              quality: 100,
             },
           },
         ],
@@ -35,8 +44,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
+        name: `data`,
         path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/content/images/`,
       },
     },
     {
