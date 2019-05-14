@@ -1,5 +1,5 @@
 /*
-Name:   Base2Tone-Evening Light
+Name:   Base2Tone-Drawbridge Light
 Author: by Bram de Haan, adapted from DuoTone themes by Simurai (http://simurai.com/projects/2016/01/01/duotone-themes)
 
 http://atelierbram.github.io/Base2Tone-prism/demo/evening/light/
@@ -20,7 +20,6 @@ pre[class*="language-"] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  border-radius: 5px;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -30,8 +29,8 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #fbfaf9;
-  color: #9a86fd;
+  background: #f9fbfb;
+  color: #7289fd;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -39,7 +38,7 @@ pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #fbfaf9;
+  background: #f9fbfb;
 }
 
 pre[class*="language-"]::selection,
@@ -47,7 +46,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #fbfaf9;
+  background: #f9fbfb;
 }
 
 /* Code blocks */
@@ -67,11 +66,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #c3bdb6;
+  color: #b7c0c2;
 }
 
 .token.punctuation {
-  color: #c3bdb6;
+  color: #b7c0c2;
 }
 
 .token.namespace {
@@ -81,23 +80,23 @@ pre[class*="language-"] {
 .token.tag,
 .token.operator,
 .token.number {
-  color: #6a51e6;
+  color: #4961da;
 }
 
 .token.property,
 .token.function {
-  color: #e09142;
+  color: #4db0cb;
 }
 
 .token.tag-id,
 .token.selector,
 .token.atrule-id {
-  color: #b37537;
+  color: #289dbd;
 }
 
 code.language-javascript,
 .token.attr-name {
-  color: #e09142;
+  color: #4db0cb;
 }
 
 code.language-css,
@@ -117,12 +116,12 @@ code.language-scss,
 .token.statement,
 .token.regex,
 .token.atrule {
-  color: #8a75f5;
+  color: #627af4;
 }
 
 .token.placeholder,
 .token.variable {
-  color: #c4b9fe;
+  color: #a5b3fe;
 }
 
 .token.deleted {
@@ -130,7 +129,7 @@ code.language-scss,
 }
 
 .token.inserted {
-  border-bottom: 1px dotted #b37537;
+  border-bottom: 1px dotted #289dbd;
   text-decoration: none;
 }
 
@@ -144,7 +143,7 @@ code.language-scss,
 }
 
 .token.important {
-  color: #e09142;
+  color: #4db0cb;
 }
 
 .token.entity {
@@ -152,7 +151,7 @@ code.language-scss,
 }
 
 pre > code.highlight {
-  outline: 0.4em solid #e09142;
+  outline: 0.4em solid #4db0cb;
   outline-offset: 0.4em;
 }
 
@@ -160,11 +159,11 @@ pre > code.highlight {
  * http://prismjs.com/plugins/line-numbers/
  */
 .line-numbers .line-numbers-rows {
-  border-right-color: #ebe6e0;
+  border-right-color: #e1e8ea;
 }
 
 .line-numbers-rows > span:before {
-  color: #d8d1ca;
+  color: #cbd4d7;
 }
 
 /* overrides color-values for the Line Highlight plugin
@@ -173,6 +172,6 @@ pre > code.highlight {
  * https://drafts.csswg.org/css-color/#hex-notation
  */
 .line-highlight {
-  background: #b3753733;
-  background: linear-gradient(to right, #b3753733 70%, #b3753700);
+  background: #289dbd33;
+  background: linear-gradient(to right, #289dbd33 70%, #289dbd00);
 }
