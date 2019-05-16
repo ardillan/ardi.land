@@ -36,7 +36,7 @@ export default props => (
       return (
         <ul className="article-list">
           {posts.slice(0, props.length).map(post => (
-            <a href={post.node.fields.slug} key={post.node.id}>
+            <a href={`/${post.node.fields.slug}`} key={post.node.id}>
               <li key={post.node.id}>
                 <p>{post.node.frontmatter.title}</p>
               </li>
