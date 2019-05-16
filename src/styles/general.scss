@@ -7,13 +7,18 @@ figcaption {
 }
 
 a {
-  color: #002aff;
+  color: $primary-color;
+
+  &:hover {
+    border-bottom: 3px solid $primary-color-light;
+    text-decoration: none;
+  }
 }
 
 li {
   list-style: none;
 
-  &.before {
+  &:before {
     content: "\2022";
     display: block;
     position: relative;
@@ -21,7 +26,7 @@ li {
     max-height: 0px;
     left: -15px;
     top: -1px;
-    color: #022bff;
+    color: $primary-color-light;
   }
 }
 
@@ -55,21 +60,40 @@ li {
     }
   }
 
+  small {
+    color: $text-color-grey;
+  }
+
   li {
-    height: 55px;
     padding: 0 1rem;
     width: 100%;
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title link";
 
     &:before {
       content: "";
     }
 
     &:hover {
-      box-shadow: inset 0 0 0 2px #cabfff;
       border-radius: 5px;
-      background: #f6f4ff;
+      background: $primary-color-lighter;
     }
+  }
+
+  p {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    margin: initial;
+    padding: 0.7rem 0 0.7rem;
+  }
+
+  small {
+    grid-area: link;
+    display: flex;
+    display: flex;
+    justify-content: flex-end;
   }
 }

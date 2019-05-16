@@ -35,13 +35,25 @@ export default props => (
 
       return (
         <ul className="article-list">
-          {posts.slice(0, props.length).map(post => (
-            <a href={`/${post.node.fields.slug}`} key={post.node.id}>
-              <li key={post.node.id}>
-                <p>{post.node.frontmatter.title}</p>
-              </li>
-            </a>
-          ))}
+          {posts.slice(0, props.length).map(post => {
+            let postDate = new Date(
+              post.node.frontmatter.date
+            ).toLocaleDateString("es-ES", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+
+            return (
+              <a href={`/${post.node.fields.slug}`} key={post.node.id}>
+                <li key={post.node.id}>
+                  <p>{post.node.frontmatter.title}</p>
+                  <small>{postDate.toString()}</small>
+                </li>
+              </a>
+            )
+          })}
         </ul>
       )
     }}
