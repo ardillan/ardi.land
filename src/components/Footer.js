@@ -41,6 +41,7 @@ export default ({ data }) => {
                 >
                   Twitter
                 </a>
+                {` `}
               </span>
               <span>
                 <a
