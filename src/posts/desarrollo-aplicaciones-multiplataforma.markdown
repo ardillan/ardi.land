@@ -2,7 +2,7 @@
 title: "Desarrollo de Aplicaciones Multiplataforma"
 date: "2019-03-01 20:00:00 +0100"
 author: ardillan
-type: "post"
+type: "blog"
 ---
 
 Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso.

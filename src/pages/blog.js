@@ -6,7 +6,7 @@ export default () => {
   return (
     <Layout>
       <h2>Todos las entradas</h2>
-      <PostsList length="20" type="post" />
+      <PostsList length="20" type="blog" />
     </Layout>
   )
 }

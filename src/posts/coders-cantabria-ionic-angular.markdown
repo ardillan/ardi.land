@@ -2,7 +2,7 @@
 title: "IONIC"
 date: "2018-03-30 20:00:00 +0100"
 author: Ardillán
-type: "post"
+type: "blog"
 ---
 
 Una vez más tuve la oportunidad de asistir a Coders Cantabria, como ya viene siendo habitual tras los últimos meses. La primera sesión del año tuvo lugar en el [Espacio Joven de Santander](http://www.juventudsantander.es "Espacio Joven de Santander"). Una ubicación mucho más céntrica y que además tiene cantidad de comodidades que hacen que las charlas sean mucho más fáciles de dar gracias al espacio de las salas.

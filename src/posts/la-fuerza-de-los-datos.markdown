@@ -2,7 +2,7 @@
 title: "El poder de los datos"
 date: "2018-11-01 20:00:00 +0100"
 author: Ardillán
-type: "post"
+type: "blog"
 ---
 
 Liberación de datos y acceso público a la información. Esta es mi propuesta para la mejora de la movilidad urbana en la ciudad de Torrelavega.

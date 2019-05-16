@@ -2,7 +2,7 @@
 title: "Bienvenido a Jekyll"
 date: "2017-01-01 20:00:00 +0100"
 author: Ardillán
-type: "post"
+type: "blog"
 ---
 
 Así es, estreno blog con una nueva tecnología: **Jekyll**. Una plataforma de _blogging_ la cual es capaz de generar un pequeño _site_ sin la necesidad de base de datos. Los post están escritos en [Markdown](https://es.wikipedia.org/wiki/Markdown) y la navegación por la web es bastante rápida.

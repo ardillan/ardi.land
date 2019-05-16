@@ -2,7 +2,7 @@
 title: "Torrelavega a través del cartel"
 date: "2015-12-01 12:00:00 +0100"
 author: Ardillán
-type: "post"
+type: "blog"
 ---
 
 Hace tiempo que llevo queriendo hacer una retrospectiva con motivo de la historia del cartel de las fiestas patronales de mi ciudad (Torrelavega). El hecho de ir recopilando información sobre cada uno de ellos me parecía una labor bastante grande, así que lo fui dejando y dejando hasta que la idea quedó prácticamente en el olvido.
