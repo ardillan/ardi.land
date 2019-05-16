@@ -1,6 +1,6 @@
 ---
 title: "Bienvenido a Jekyll"
-date: "2017-01-01 20:00:00 +0100"
+date: "2017-01-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

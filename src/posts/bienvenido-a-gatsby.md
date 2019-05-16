@@ -1,6 +1,6 @@
 ---
 title: "Bienvenido a Gatsby"
-date: "2019-02-28 20:00:00 +0100"
+date: "2019-02-28T20:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

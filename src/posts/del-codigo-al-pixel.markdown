@@ -1,6 +1,6 @@
 ---
 title: "Del código al píxel"
-date: "2018-06-30 20:00:00 +0100"
+date: "2018-06-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

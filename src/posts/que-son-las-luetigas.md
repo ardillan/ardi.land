@@ -1,5 +1,5 @@
 ---
-date: "2019-03-11"
+date: "2019-03-11T12:00:00.0100"
 title: "¿Qué son las luétigas?"
 type: "luetiga"
 ---

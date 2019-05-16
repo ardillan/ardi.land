@@ -1,6 +1,6 @@
 ---
 title: "El poder de los datos"
-date: "2018-11-01 20:00:00 +0100"
+date: "2018-11-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

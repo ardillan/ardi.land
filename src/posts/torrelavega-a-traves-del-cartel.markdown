@@ -1,6 +1,6 @@
 ---
 title: "Torrelavega a través del cartel"
-date: "2015-12-01 12:00:00 +0100"
+date: "2015-12-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "IONIC"
-date: "2018-03-30 20:00:00 +0100"
+date: "2018-03-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
 ---

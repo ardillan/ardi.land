@@ -1,6 +1,6 @@
 ---
 title: "WordCamp 2017"
-date: "2017-12-01 12:00:00 +0100"
+date: "2017-12-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
 ---
