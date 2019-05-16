@@ -8,7 +8,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value:
+        node.frontmatter.type != "page"
+          ? node.frontmatter.type.concat(slug)
+          : node.frontmatter.type,
     })
   }
 }
