@@ -26,8 +26,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19"
+    "typeface-pt-sans": "0.0.72",
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.16.4"

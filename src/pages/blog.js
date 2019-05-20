@@ -2,11 +2,32 @@ import React from "react"
 import Layout from "../components/Layout"
 import PostsList from "../components/PostsList"
 
-export default () => {
+export default ({ data }) => {
   return (
     <Layout>
-      <h2>Todos las entradas</h2>
-      <PostsList length="20" type="blog" />
+      <h1>Blog</h1>
+      <h2>En esta página se muestran todas las entradas del blog.</h2>
+      <PostsList length="50" type="blog" />
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allMarkdownRemark(
+      filter: { frontmatter: { title: { eq: "Diseño gráfico" } } }
+    ) {
+      edges {
+        node {
+          fileAbsolutePath
+          id
+          frontmatter {
+            title
+            date
+          }
+          html
+        }
+      }
+    }
+  }
+`

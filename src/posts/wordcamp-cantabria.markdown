@@ -3,6 +3,9 @@ title: "WordCamp 2017"
 date: "2017-12-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
+category:
+  - Desarrollo
+  - Eventos
 ---
 
 Este fin de semana tuve la ocasión de acudir, una vez más, a la tercera edición de la WordCamp Cantabria. No quiero escribir una entrada en relación a lo bien que ha estado el congreso o a cuánto he disfrutado de los ponentes, las charlas y el ambiente. En su lugar, me gustaría hacer una pequeña reflexión en la que refleje cómo este evento no requiere una pasión incondicional por WordPress, ni mucho menos.

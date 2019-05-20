@@ -1,16 +1,19 @@
 figcaption {
   text-align: center;
-  color: #4660e4;
   font-size: 0.7rem;
   padding: 10px;
-  background: #f9fbfb;
+}
+
+img {
+  box-shadow: none;
 }
 
 a {
   color: $primary-color;
+  text-decoration: none;
 
   &:hover {
-    border-bottom: 3px solid $primary-color-light;
+    border-bottom: 2px dashed $secondary-color;
     text-decoration: none;
   }
 }
@@ -39,14 +42,23 @@ li {
 
     &:hover {
       text-decoration: none;
-      color: #ccc;
+      color: $secondary-color;
     }
   }
 }
 
 ::selection {
-  background: rgb(255, 239, 94);
+  background: $secondary-color-light;
   border-radius: 10px;
+}
+
+main {
+  img {
+    box-shadow: 0px 0px 15px 0px #4e455d66;
+    width: 900px;
+    margin-left: -4.5rem;
+    max-width: initial;
+  }
 }
 
 .article-list {
@@ -55,9 +67,7 @@ li {
   margin: 0 -1rem;
 
   a {
-    &:hover {
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 
   small {
@@ -96,4 +106,18 @@ li {
     display: flex;
     justify-content: flex-end;
   }
+}
+
+.post-title {
+  h1 {
+    margin: 0px;
+  }
+  h2 {
+    margin-bottom: 0px;
+  }
+}
+
+.post-meta {
+  margin: 0.8rem 0 1rem 0;
+  font-size: 0.8rem;
 }

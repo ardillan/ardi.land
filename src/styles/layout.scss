@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 400px 400px 1fr;
+  grid-template-columns: 1fr 480px 480px 1fr;
   grid-template-areas:
     "header header header header"
     ". main main ."
@@ -9,7 +9,7 @@
 
 .nav-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
   max-width: 800px;
   margin: auto;
   width: 100%;
@@ -19,24 +19,34 @@ header {
   grid-area: header;
   grid-column-start: 1;
   grid-column-end: 5;
-  box-shadow: 0 0 10px #b4bbdd;
+  box-shadow: 0 0 30px #b4bbdd80;
   padding: 20px;
-  background: #1f1936;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   padding: 0 1.5rem;
-  height: 55px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   a {
-    color: white;
+    color: $text-color-dark;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+
     &:hover {
       border-bottom: none;
     }
+  }
+}
+
+.hello {
+  margin: 30px 0 95px 0;
+
+  small {
+    font-size: 18px;
+    line-heign: 22px;
   }
 }
 
@@ -53,7 +63,12 @@ main {
   grid-area: main;
   grid-column-start: 2;
   grid-column-end: 4;
-  padding: 0 1rem;
+  padding: 0 6rem;
+
+  figure {
+    margin: 0 0 0 -6rem;
+    width: 960px;
+  }
 }
 
 footer {
@@ -65,4 +80,40 @@ footer {
   border-top: 1px solid #eaeaea;
   padding: 20px 0 10px 0;
   font-size: 0.8rem;
+}
+
+// Mediums screens
+@media (max-width: 960px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 50% 50% 1fr;
+    grid-template-areas:
+      "header header header header"
+      ". main main ."
+      "footer footer footer footer";
+  }
+  main {
+    padding: 0 2rem;
+    figure {
+      margin: 0 0 0 -2rem;
+      width: 100vw;
+    }
+  }
+}
+
+// Smartphones
+@media (max-width: 400px) {
+  .nav-container {
+    grid-template-areas: "navigation navigation";
+    grid-template-rows: 1fr;
+
+    .brand {
+      display: none;
+    }
+
+    nav {
+      grid-area: navigation;
+      justify-content: center;
+    }
+  }
 }

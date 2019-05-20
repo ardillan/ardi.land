@@ -39,7 +39,6 @@ export default props => (
             let postDate = new Date(
               post.node.frontmatter.date
             ).toLocaleDateString("es-ES", {
-              weekday: "long",
               year: "numeric",
               month: "long",
               day: "numeric",

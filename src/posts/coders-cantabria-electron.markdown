@@ -3,6 +3,8 @@ title: "Electron"
 date: "2017-05-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
+category:
+  - Desarrollo
 ---
 
 Hoy tuve la oportunidad de asistir, por primera vez, a una sesión de [Coders Cantabria](https://coderscantabria.com/ "Web Coders Cantabria") donde se habló de Electron y las posibilidades que esta librería ofrece.

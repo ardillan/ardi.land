@@ -1,11 +1,12 @@
 ---
 title: "Desarrollo de Aplicaciones Web"
+subtitle: "Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso."
 date: "2019-03-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
+category:
+  - Desarrollo
 ---
-
-Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso.
 
 Aunque con algo de retraso, lanzo a la red la segunda parte de la crónica relativa al ciclo superior que he realizado. Hace cosa de un año, escribí esta entrada donde describía el primer año de “Desarrollo de aplicaciones multiplataforma”. Notarás que el post hace referencia a otra titulación; esto se debe a que a mitad de curso, decidí cambiar de disciplina puesto que encontraba que lo que iba a aprender me iba a resultar más útil que los contenidos de multiplataforma. No obstante, habrá también otra entrada del segundo ciclo de DAM escrita por compañeros del primer curso.
 

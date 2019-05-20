@@ -8,13 +8,15 @@ export default ({ data }) => (
       dangerouslySetInnerHTML={{
         __html: data.allMarkdownRemark.edges[0].node.html,
       }}
-    />
+    />{" "}
   </Layout>
 )
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { title: { eq: "Sobre mí" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { title: { eq: "Diseño gráfico" } } }
+    ) {
       edges {
         node {
           fileAbsolutePath

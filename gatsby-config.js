@@ -27,9 +27,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-              showCaptions: false,
-              quality: 100,
+              maxWidth: 960,
+              showCaptions: true,
+              quality: 80,
+              linkImagesToOriginal: false,
             },
           },
         ],
@@ -60,6 +61,7 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: true,
       },
     },
   ],

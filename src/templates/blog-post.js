@@ -4,11 +4,21 @@ import Layout from "../components/Layout"
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  let postDate = new Date(post.frontmatter.date).toLocaleDateString("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
   return (
     <Layout>
       <div>
-        {" "}
-        <h1>{post.frontmatter.title}</h1>{" "}
+        <div className="post-title">
+          <h1>{post.frontmatter.title}</h1> <h2>{post.frontmatter.subtitle}</h2>{" "}
+        </div>
+        <div className="post-meta">
+          <time>Escrito el {postDate}</time>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />{" "}
       </div>{" "}
     </Layout>
@@ -21,6 +31,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        subtitle
+        date
       }
     }
   }

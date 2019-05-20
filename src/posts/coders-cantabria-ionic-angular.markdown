@@ -3,6 +3,8 @@ title: "IONIC"
 date: "2018-03-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
+category:
+  - Desarrollo
 ---
 
 Una vez más tuve la oportunidad de asistir a Coders Cantabria, como ya viene siendo habitual tras los últimos meses. La primera sesión del año tuvo lugar en el [Espacio Joven de Santander](http://www.juventudsantander.es "Espacio Joven de Santander"). Una ubicación mucho más céntrica y que además tiene cantidad de comodidades que hacen que las charlas sean mucho más fáciles de dar gracias al espacio de las salas.
@@ -16,8 +18,6 @@ sus experiencias y su trabajo con Angular en sus diferentes versiones. La segund
 Ionic, qué usos tiene y la cantidad de ventajas que ofrece. Más tarde con una demo en vivo pudimos ver algunas de estas
 ventajas como, por ejemplo, la capacidad de reducir tiempos de desarrollo ya que con una sola versión de código podemos mantener
 varias aplicaciones para diferentes plataformas (como Android e iOS).
-
-![Cartel de Coders Cantabria](/assets/images/coders-cantabria-ionic.png)
 
 ---
 

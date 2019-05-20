@@ -5,7 +5,9 @@ author: Ardillán
 type: "page"
 ---
 
-Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o pequeños scripts facilitan el trabajo de la gente. A continuación indico qué aplicaciones utilizo en mi día a día, qué música escucho o qué utilizo para editar gráficos. Esta idea de contar cómo trabajo inspirada por un artículo que leí de Richard Stallaman titulado "[How I do my computing](https://stallman.org/stallman-computing.html)" el cual te recomiendo que leas.
+## Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o pequeños scripts facilitan el trabajo de la gente. A continuación indico qué aplicaciones utilizo en mi día a día, qué música escucho o qué utilizo para editar gráficos y construir interfaces.
+
+## Esta idea de contar cómo trabajo inspirada por un artículo que leí de Richard Stallaman titulado "[How I do my computing](https://stallman.org/stallman-computing.html)" el cual te recomiendo que leas.
 
 ### 🦖 Sistema
 
@@ -56,7 +58,13 @@ Esta es mi configuración para VS Code:
 }
 ```
 
-### 💎 Gráficos
+```javascript
+{
+  "Gráficos",
+}
+```
+
+## 💎 Gráficos
 
 Para montar un flujo de pantallas y diseñar interfaces utilizo [Affinity Designer](https://affinity.serif.com/es/designer/). Un editor de gráficos vectoriales que funciona a las mil maravillas.
 

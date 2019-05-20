@@ -3,6 +3,8 @@ title: "CakePHP + macOS"
 date: "2018-03-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
+category:
+  - Desarrollo
 ---
 
 _"Cierro el chiringo"_ Éso fué lo que dije la última vez que intenté instalar [Cake](https://cakephp.org/) en mi equipo. Acabé tirándome de los pelos (mi amigo [Luís](https://twitter.com/luisangelarpe) puede dar fé de ello). Sí, sé que es fácil instalarlo y mucho más si usas [composer](https://getcomposer.org/). El problema que tenía son las dichosas extensiones [intl](http://php.net/manual/es/intro.intl.php) que me resultaban imposibles de instalar/localizar; o bien el link de Stack Overflow estaba desactualizado, o bien mi equipo lanzaba un error que hacía engorroso seguir adelante.

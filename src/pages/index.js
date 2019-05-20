@@ -12,8 +12,6 @@ export default () => {
       <Hello />
       <h2>Entradas del blog</h2>
       <PostList length="5" type="blog" />
-      <h2>Luétigas</h2>
-      <PostList length="5" type="luetiga" />
     </Layout>
   )
 }
