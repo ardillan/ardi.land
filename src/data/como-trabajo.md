@@ -1,6 +1,6 @@
 ---
 title: "Cómo trabajo"
-date: "2019-02-28 20:00:00 +0100"
+date: "2019-05-18T16:00:00.0100"
 author: Ardillán
 type: "page"
 ---
@@ -15,35 +15,27 @@ Utilizo un Macbook Air de finales de 2014. Vengo utilizando equipos de Apple des
 
 ### 🦄 Desarrollo
 
-Como editor de código principal utilizo [Visual Studio Code.](https://code.visualstudio.com/) He probado Sublime, Atom, Brackets y algún que otro IDE. Éste por ahora es mi favorito por su velocidad, integración con git y la facilidad de añadir una configuración personalizada para editar código.
+Como **editor de código** principal utilizo [Visual Studio Code.](https://code.visualstudio.com/) He probado Sublime, Atom, Brackets y algún que otro IDE. Éste por ahora es mi favorito por su velocidad, integración con git y la facilidad de añadir una configuración personalizada para editar código.
 
-Para manera bases de datos utilizo [Sequel Pro](https://www.sequelpro.com/). Ligero, rápido y visual. No llega a la cantidad de cosas que puede tener MySQL Workbench, pero cumple de sobra para el día a día.
+Para **comunicarme** día a día confío en Telegram y Slack. Ambos me encantan aunque, si tengo que elegir, es Slack donde más cómodo me siento, sobretodo para cuestiones de trabajo.
 
-Para comunicarme día a día confío en Telegram y Slack. Ambos me encantan aunque, si tengo que elegir, es Slack donde más cómodo me siento, sobretodo para cuestiones de trabajo.
-
-Para conectar de manera remota a un servidor con una carpeta montada siempre utilizo [SSHFS.](https://github.com/osxfuse/osxfuse/wiki/SSHFS) Con esta herramienta puedo montar carpetas en mi ordenador para trabajar en tiempo real. Es un poco caos, pero es la única manera que he encontrado para hacerlo desde macOS.
-
-Si lo que quiero es navegar por un servidor y editar algún archivo de manera puntual siempre confío en [ForkLift](https://www.binarynights.com/forklift/).
+Como terminal siempre uso [iTerm2](https://www.iterm2.com/). No soy un usuario avanzado, pero me gusta mucho poder configurar [Zsh](https://ohmyz.sh/) y aprovechar las características que trae. Como tema principal utilizo `powerlevel9k/powerlevel9k`, como configuración de colores uso `argonaut`.
 
 Esta es mi configuración para VS Code:
 
 ```json
 {
-  // Tema e Iconos
-  // "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "hydra",
+  // Tema
+  "workbench.colorTheme": "Andromeda Italic",
 
   // Fuente y ligaduras
   "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "editor.lineHeight": 22,
   "editor.fontLigatures": true,
 
   // Tamaño de iconos barra lateral
-  "window.zoomLevel": 1,
-
-  // Elementos de pantalla
-  // "editor.renderWhitespace": "boundary",
+  "window.zoomLevel": 0.8,
 
   // Mostrar reglas
   "editor.rulers": [80, 120],
@@ -58,17 +50,11 @@ Esta es mi configuración para VS Code:
 }
 ```
 
-```javascript
-{
-  "Gráficos",
-}
-```
-
 ## 💎 Gráficos
 
-Para montar un flujo de pantallas y diseñar interfaces utilizo [Affinity Designer](https://affinity.serif.com/es/designer/). Un editor de gráficos vectoriales que funciona a las mil maravillas.
+Para montar un **flujo de pantallas** y diseñar interfaces utilizo [Sketch App](https://www.sketch.com/).
 
-Si necesito editar fotografías utilizo [Affinity Photo](https://affinity.serif.com/es/photo/). Al ser aplicaciones desarrolladas por Serif la integración entre ellas es total.
+Si necesito **editar vectores** utilizo [Affinity Designer](https://affinity.serif.com/es/designer/), en cambio para **fotografías** utilizo [Affinity Photo](https://affinity.serif.com/es/photo/). Ambas aplicaciones están desarrolladas por Serif, por lo que la integración entre ellas es total.
 
 ## ✏️ Notas
 
@@ -78,8 +64,8 @@ Para pequeñas listas _to-do_ siempre me gusta echar mano de [Clear](https://itu
 
 Siempre trabajo con música de fondo. Como cada situación y momento del día es muy diferente la música que suena siempre varía. No obstante estos son algunos de los discos que reproduzco a menudo en mi ordenador.
 
-1. [Liberal Arts OST](http://www.imdb.com/title/tt1872818/soundtrack)
-2. [Maxwell Young](https://soundcloud.com/maxwell_young)
+1. [The Mercury Program](https://themercuryprogram.bandcamp.com/)
+2. [Jaga Jazzist](https://jagajazzist.bandcamp.com/)
 3. [A wilhelm scream](https://jumpstartrecords.bandcamp.com/album/career-suicide)
 4. [Maseratti](https://maserati.bandcamp.com/album/passages)
 5. [And So I Watch You From Afar](https://asiwyfa.bandcamp.com/)
@@ -90,11 +76,8 @@ También tengo listas de reproducción creadas por mí que tocan muchos estilos.
 
 Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. Esta sería la lista de mis podcast favoritos.
 
-1.  [Puromac](http://www.puromac.com/)
-2.  Binarios
-3.  Mixx.io
-4.  Game Over
-5.  WeDevelopers
-6.  WeCodesign
-7.  HabloGeek
-8.  Fallo de sistema
+1.  [El Complejo Lambda](www.complejolambda.com)
+2.  [Podcast Replay](https://www.podcastreplay.com)
+3.  [Mixx.io](https://mixx.io/)
+4.  [WeCodesign](http://wedevelopers.com/)
+5.  [Fallo de Sistema](http://www.rtve.es/alacarta/audios/fallo-de-sistema/)

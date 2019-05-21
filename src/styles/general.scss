@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    border-bottom: 2px dashed $secondary-color;
+    border-bottom: 2px solid $secondary-color;
     text-decoration: none;
   }
 }
