@@ -1,6 +1,6 @@
 import React from "react"
 
-const Hello = () => {
+const Hello = props => {
   return (
     <div>
       {" "}
@@ -14,11 +14,15 @@ const Hello = () => {
         </h2>
         <p>
           <small>
-            Puedes echar un vistazo a mi{" "}
-            <a href="https://twitter.com/_ardillan">twitter</a> para ver qué
-            cuento, ver qué herramientas uso y{" "}
+            Si quieres, puedes echar un vistazo a mi{" "}
+            <a href={`https://twitter.com/${props.social.twitter}`}>twitter</a>{" "}
+            para ver qué cuento, ver qué herramientas uso y{" "}
             <a href="/como-trabajo"> cómo me organizo</a> en mi día a día o ver{" "}
-            mis fotos en <a href="https://instagram.com/ardillan">Instagram</a>.
+            mis fotos en{" "}
+            <a href={`https://instagram.com/${props.social.instagram}`}>
+              Instagram
+            </a>
+            .
           </small>
         </p>
       </aside>

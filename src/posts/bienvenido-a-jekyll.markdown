@@ -7,6 +7,8 @@ category:
   - Desarrollo
 ---
 
+> Esta entrada fué escrita antes de conocer [Gatsby](bienvenido-a-gatsby/), la tecnología que se utiliza actualmente para mantener esta web. La tecnología que se utilizó en su momento para la creación de este blog fué Jekyll. Un excelente [generador de sitios estáticos](https://jekyllrb.com/).
+
 Así es, estreno blog con una nueva tecnología: **Jekyll**. Una plataforma de _blogging_ la cual es capaz de generar un pequeño _site_ sin la necesidad de base de datos. Los post están escritos en [Markdown](https://es.wikipedia.org/wiki/Markdown) y la navegación por la web es bastante rápida.
 
 El año que llevo desarrollando me ha permitido ver que hay más vida allá de WordPress, es por eso que he decidido dar el paso hacia este tipo de web (aún en desarrollo) y con la que me siento mucho más cómodo. Las razones que más me han llamado la atención han sido:

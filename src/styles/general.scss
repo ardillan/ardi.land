@@ -18,6 +18,13 @@ a {
   }
 }
 
+blockquote {
+  background: $primary-color-lighter;
+  padding: 1rem;
+  border-left: 5px solid $primary-color;
+  margin-left: -1rem;
+}
+
 li {
   list-style: none;
 
@@ -29,7 +36,7 @@ li {
     max-height: 0px;
     left: -15px;
     top: -1px;
-    color: $primary-color-light;
+    color: $primary-color;
   }
 }
 
