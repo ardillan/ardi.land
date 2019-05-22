@@ -12,7 +12,7 @@ Esta web está construida con [GatsbyJS](http://gatsbyjs.org), un generador de s
 npm install
 ```
 
-- Lanza la web con Gatsby
+- Lanza la web con el comando de Gatsby
 
 ```
 gatsby develop
