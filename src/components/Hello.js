@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Hello = props => {
   return (
@@ -17,8 +18,8 @@ const Hello = props => {
             Si quieres, puedes echar un vistazo a mi{" "}
             <a href={`https://twitter.com/${props.social.twitter}`}>twitter</a>{" "}
             para ver qué cuento, ver qué herramientas uso y{" "}
-            <a href="/como-trabajo"> cómo me organizo</a> en mi día a día o ver{" "}
-            mis fotos en{" "}
+            <Link to="/como-trabajo"> cómo me organizo</Link> en mi día a día o
+            ver mis fotos en{" "}
             <a href={`https://instagram.com/${props.social.instagram}`}>
               Instagram
             </a>

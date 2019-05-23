@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { Link } from "gatsby"
 
 export default () => {
   return (
@@ -14,7 +15,7 @@ export default () => {
         <a href="https://en.wikipedia.org/wiki/AI_takeover">
           alzamiento de las máquinas
         </a>{" "}
-        a toda costa, te aconsejo que vuelvas al <a href="/">inicio</a>.
+        a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
       </h2>
     </Layout>
   )

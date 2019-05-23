@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 export default props => (
   <StaticQuery
@@ -45,12 +45,12 @@ export default props => (
             })
 
             return (
-              <a href={`/${post.node.fields.slug}`} key={post.node.id}>
+              <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
                 <li key={post.node.id}>
                   <p>{post.node.frontmatter.title}</p>
                   <small>{postDate.toString()}</small>
                 </li>
-              </a>
+              </Link>
             )
           })}
         </ul>
