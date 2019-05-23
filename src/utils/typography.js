@@ -1,5 +1,4 @@
 import Typography from "typography"
-require("typeface-pt-sans")
 
 const typography = new Typography({
   baseFontSize: "18px",
