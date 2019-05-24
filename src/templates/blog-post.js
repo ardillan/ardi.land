@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -12,6 +13,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={`Ardillan.com | ${post.frontmatter.title}`} />
       <div>
         <div className="post-title">
           <h1>{post.frontmatter.title}</h1> <h2>{post.frontmatter.subtitle}</h2>{" "}
