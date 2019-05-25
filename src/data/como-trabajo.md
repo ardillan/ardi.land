@@ -76,7 +76,7 @@ También tengo listas de reproducción creadas por mí que tocan muchos estilos.
 
 Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. Esta sería la lista de mis podcast favoritos.
 
-1.  [El Complejo Lambda](www.complejolambda.com)
+1.  [El Complejo Lambda](http://www.complejolambda.com)
 2.  [Podcast Replay](https://www.podcastreplay.com)
 3.  [Mixx.io](https://mixx.io/)
 4.  [WeCodesign](http://wedevelopers.com/)
