@@ -128,3 +128,11 @@ main {
   margin: 0.8rem 0 1rem 0;
   font-size: 0.8rem;
 }
+
+.post-content {
+  img {
+    box-shadow: initial;
+    margin: initial;
+    width: 100%;
+  }
+}

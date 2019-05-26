@@ -23,7 +23,10 @@ export default ({ data }) => {
         <div className="post-meta">
           <time>Escrito el {postDate}</time>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />{" "}
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />{" "}
       </div>{" "}
     </Layout>
   )
