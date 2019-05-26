@@ -34,6 +34,12 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
         ],
       },
     },
