@@ -10,10 +10,12 @@ export default ({ data }) => {
     month: "long",
     day: "numeric",
   })
-
   return (
     <Layout>
-      <SEO title={`Ardillan.com | ${post.frontmatter.title}`} />
+      <SEO
+        title={`Ardillan.com | ${post.frontmatter.title}`}
+        postDescription={post.excerpt}
+      />
       <div>
         <div className="post-title">
           <h1>{post.frontmatter.title}</h1> <h2>{post.frontmatter.subtitle}</h2>{" "}
@@ -31,6 +33,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         title
         subtitle

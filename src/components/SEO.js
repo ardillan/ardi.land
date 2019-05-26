@@ -1,16 +1,51 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from "react"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { StaticQuery, graphql } from "gatsby"
+import favicon from "../../content/images/general/favicon.png"
 
-function SEO({ title }) {
-    return (
-        <Helmet
-            title={title} />
-    )
+const SEO = data => {
+  const { postDescription, title } = data
+
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              social {
+                twitter
+                instagram
+              }
+            }
+          }
+        }
+      `}
+      render={queryData => {
+        return (
+          <Helmet
+            title={title}
+            meta={[
+              {
+                name: "description",
+                content: postDescription
+                  ? postDescription
+                  : queryData.site.siteMetadata.description,
+              },
+            ]}
+          >
+            <link rel="shortcut icon" type="image/png" href={favicon} />
+          </Helmet>
+        )
+      }}
+    />
+  )
 }
 
 SEO.propTypes = {
-    title: PropTypes.string.isRequired,
+  data: PropTypes.object,
 }
 
 export default SEO

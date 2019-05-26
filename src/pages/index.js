@@ -11,7 +11,10 @@ import "../styles/main.scss"
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Ardillan.com" />
+      <SEO
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+      />
       <Hello social={data.site.siteMetadata.social} />
       <h2>Entradas del blog</h2>
       <PostList length="5" type="blog" />
@@ -23,6 +26,8 @@ export const query = graphql`
   {
     site {
       siteMetadata {
+        title
+        description
         social {
           twitter
           instagram
