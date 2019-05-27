@@ -132,7 +132,9 @@ main {
 .post-content {
   img {
     box-shadow: initial;
-    margin: initial;
-    width: 100%;
+    margin: auto;
+    width: auto;
+    display: flex;
+    align-content: center;
   }
 }
