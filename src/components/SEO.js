@@ -37,6 +37,12 @@ const SEO = data => {
             ]}
           >
             <link rel="shortcut icon" type="image/png" href={favicon} />
+            <link
+              rel="alternate"
+              type="application/rss+xml"
+              title="Listado de entradas del blog de Ardillán"
+              href="/rss.xml"
+            />
           </Helmet>
         )
       }}
