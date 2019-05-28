@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ardillán`,
     description: `Blog personal donde se habla de tecnología, música y videojuegos`,
-    siteUrl: `https://www.ardillan.com`,
+    siteUrl: `https://www.ardillan.com/`,
     social: {
       twitter: "@ardillan_",
       instagram: "ardillan",
