@@ -42,8 +42,6 @@ header {
 }
 
 .hello {
-  margin: 30px 0 95px 0;
-
   small {
     font-size: 18px;
     line-height: 22px;
@@ -78,7 +76,7 @@ footer {
   text-align: center;
   margin-top: 45px;
   border-top: 1px solid #eaeaea;
-  padding: 20px 0 10px 0;
+  padding: 2rem;
   font-size: 0.8rem;
 }
 
@@ -103,6 +101,10 @@ footer {
 
 // Smartphones
 @media (max-width: 400px) {
+  header {
+    margin-bottom: 1rem;
+  }
+
   .nav-container {
     grid-template-areas: "navigation navigation";
     grid-template-rows: 1fr;

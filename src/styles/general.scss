@@ -134,7 +134,8 @@ main {
     box-shadow: initial;
     margin: auto;
     width: auto;
-    display: flex;
     align-content: center;
+    display: block;
+    max-width: 100%;
   }
 }
