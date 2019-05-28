@@ -4,6 +4,7 @@ subtitle: "Liberación de datos y acceso público a la información. Esta es mi 
 date: "2018-11-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
+description: "Idea para mejorar la calidad y transparencia de la ciudad de Torrelavega mediante el uso de datos abiertos"
 category:
   - Reflexión
   - Desarrollo

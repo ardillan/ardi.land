@@ -4,6 +4,7 @@ subtitle: "Con esta entrada, comienza lo que va a ser un pequeño resumen del pr
 date: "2019-03-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
+description: "Resumen del segundo año del ciclo superior de Desarrollo de Aplicaciones Web. Listado de asignaturas, horas y explicación de cada una de ellas"
 category:
   - Desarrollo
 ---

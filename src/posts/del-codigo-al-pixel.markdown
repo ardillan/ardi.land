@@ -4,6 +4,7 @@ subtitle: "Mi charla sobre intefaces de usuario en Coders Cantabria"
 date: "2018-06-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
+description: "Charla de Ardillán sobre interfaces de usuario. Centrada en la historia de las interfaces desde principios de siglo hasta nuestros días."
 category:
   - Desarrollo
 ---

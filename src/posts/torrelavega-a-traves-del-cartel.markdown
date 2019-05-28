@@ -3,6 +3,7 @@ title: "Torrelavega a través del cartel"
 subtitle: "Conjunto de carteles de las fiestas de Torrelavega"
 date: "2015-12-01T12:00:00.0100"
 author: Ardillán
+description: "Muestra de carteles de la ciudad de Torrelavega a través de la historia de sus fiestas. Historia del diseño que va desde finales de 1800 hasta nuestros días"
 type: "blog"
 category:
   - Diseño

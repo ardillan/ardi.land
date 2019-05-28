@@ -14,7 +14,7 @@ export default ({ data }) => {
     <Layout>
       <SEO
         title={`Ardillan.com | ${post.frontmatter.title}`}
-        postDescription={post.excerpt}
+        postDescription={post.frontmatter.description}
       />
       <div>
         <div className="post-title">
@@ -41,6 +41,7 @@ export const query = graphql`
         title
         subtitle
         date
+        description
       }
     }
   }
