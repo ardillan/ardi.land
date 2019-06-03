@@ -8,7 +8,7 @@ category:
   - Videojuegos
 ---
 
-Octopath Traveller es un juego que compré por mi **cariño a los píxeles**. Si no recuerdo mal, anticiparon el desarrollo en 2017 y, aunque no soy un amante de los [JRPG](https://es.wikipedia.org/wiki/Videojuego_de_rol#Historia), sabía perfectamente que iba a formar parte de mi catálogo.
+Octopath Traveller es un juego que compré por mi **cariño a los píxeles**. Si no recuerdo mal anticiparon el desarrollo en 2017 y, aunque no soy un amante de los [JRPG](https://es.wikipedia.org/wiki/Videojuego_de_rol#Historia), sabía perfectamente que iba a formar parte de mi catálogo.
 
 ![Octopath traveveller](/../../content/images/posts/octopath-traveller-1.jpg)
 
@@ -20,4 +20,4 @@ La historia la protagonizan **ocho personajes principales** que recorrerán el r
 
 ![Octopath traveveller](/../../content/images/posts/octopath-traveller-2.jpg)
 
-Este tipo de juegos suelen ser de **uso intensivo**, es decir, para completarlo al 100% (y me refiero a la historia principal), habrá que inventir una buena cantidad de horas. En mi caso, con 70 horas (o más) de juego solamente conseguí **completar la historia principal**, dejando de lado muchas misiones secundarias. No obstante, si te gustan este tipo de aventuras, Octopath Traveller es un **fiel compañero** para los viajes de tren, en caso de que lleves la consola en modo portátil, o para estar cómodamente en tu salón disfrutando de una aventura sin precedentes.
+Este tipo de juegos suelen ser de **uso intensivo**, es decir, para completarlo al 100% habrá que inventir una buena cantidad de horas. En mi caso, con 70 horas (o más) de juego solamente conseguí **completar la historia principal** de cada personaje, dejando de lado muchas misiones secundarias. No obstante, si te gustan este tipo de aventuras, Octopath Traveller es un **fiel compañero** para los viajes de tren, en caso de que lleves la consola en modo portátil, o para estar cómodamente en tu salón disfrutando de una aventura sin precedentes.
