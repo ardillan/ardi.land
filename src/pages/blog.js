@@ -14,23 +14,3 @@ export default ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Diseño gráfico" } } }
-    ) {
-      edges {
-        node {
-          fileAbsolutePath
-          id
-          frontmatter {
-            title
-            date
-          }
-          html
-        }
-      }
-    }
-  }
-`
