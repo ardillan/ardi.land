@@ -45,12 +45,12 @@ export default props => (
             })
 
             return (
-              <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
-                <li key={post.node.id}>
+              <li key={post.node.id}>
+                <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
                   <p>{post.node.frontmatter.title}</p>
                   <small>{postDate.toString()}</small>
-                </li>
-              </Link>
+                </Link>
+              </li>
             )
           })}
         </ul>
