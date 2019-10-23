@@ -7,8 +7,6 @@ type: "page"
 
 ## Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o pequeños scripts facilitan el trabajo de la gente. A continuación indico qué aplicaciones utilizo en mi día a día, qué música escucho o qué utilizo para editar gráficos y construir interfaces.
 
-## Esta idea de contar cómo trabajo inspirada por un artículo que leí de Richard Stallaman titulado "[How I do my computing](https://stallman.org/stallman-computing.html)" el cual te recomiendo que leas.
-
 ### 🦖 Sistema
 
 Utilizo un Macbook Air de finales de 2014. Vengo utilizando equipos de Apple desde hace unos 10 años. Me encuentro muy cómodo trabajando con macOS. Ahora plataformas como Windows y GNU/Linux han mejorado muchísimo, por lo que siempre estoy abierto a probar nuevos sistemas.
@@ -26,27 +24,29 @@ Esta es mi configuración para VS Code:
 ```json
 {
   // Tema
-  "workbench.colorTheme": "Andromeda Italic",
-
+  "workbench.colorTheme": "Monokai Vibrant",
   // Fuente y ligaduras
   "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
-  "editor.fontSize": 14,
-  "editor.lineHeight": 22,
+  "editor.fontSize": 15,
+  "editor.lineHeight": 24,
   "editor.fontLigatures": true,
-
   // Tamaño de iconos barra lateral
-  "window.zoomLevel": 0.8,
-
+  "window.zoomLevel": 1,
   // Mostrar reglas
   "editor.rulers": [80, 120],
   "editor.renderIndentGuides": true,
-
   // Configuración Prettier
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "editor.formatOnSave": true,
-  "javascript.updateImportsOnFileMove.enabled": "never"
+  // General
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "workbench.fontAliasing": "auto",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 ```
 
