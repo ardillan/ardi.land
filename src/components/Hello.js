@@ -9,7 +9,7 @@ const Hello = props => {
         <h1>¡Hola!</h1>
         <h2>
           <strong>Me llamo Adrián</strong>, aunque mucha gente me conoce como
-          Ardillán. Tengo 30 años y, actualmente, estoy inmerso en el mundo del
+          Ardillán. Tengo 31 años y, actualmente, estoy inmerso en el mundo del
           desarrollo web. Me interesa todo aquello que está relacionado con la
           tecnología, los videojuegos y la música.
         </h2>
