@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { getAge } from "../utils/helpers"
 
 const Hello = props => {
   return (
@@ -9,9 +10,9 @@ const Hello = props => {
         <h1>¡Hola!</h1>
         <h2>
           <strong>Me llamo Adrián</strong>, aunque mucha gente me conoce como
-          Ardillán. Tengo 31 años y, actualmente, estoy inmerso en el mundo del
-          desarrollo web. Me interesa todo aquello que está relacionado con la
-          tecnología, los videojuegos y la música.
+          Ardillán. Tengo {getAge()} años y, actualmente, estoy inmerso en el
+          mundo del desarrollo web. Me interesa todo aquello que está
+          relacionado con la tecnología, los videojuegos y la música.
         </h2>
         <p>
           <small>
