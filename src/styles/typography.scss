@@ -1,0 +1,60 @@
+:root {
+  font-size: $main-size;
+  color: $text-color-dark;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 2px solid $secondary-color;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+}
+
+// Lists
+li {
+  list-style: none;
+
+  &:before {
+    content: "\2022";
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -15px;
+    top: -1px;
+    color: $primary-color;
+  }
+}
+
+// Responsive
+@media (max-width: $mobile-screen) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+}
