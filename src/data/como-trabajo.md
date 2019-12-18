@@ -53,7 +53,7 @@ Esta es mi configuración para VS Code:
 }
 ```
 
----
+<br />
 
 ## 💎 Gráficos
 
