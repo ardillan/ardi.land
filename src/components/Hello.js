@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { getAge } from "../utils/helpers"
 
 const Hello = props => {
@@ -14,19 +13,6 @@ const Hello = props => {
           mundo del desarrollo web. Me interesa todo aquello que está
           relacionado con la tecnología, los videojuegos y la música.
         </h2>
-        <p>
-          <small>
-            Si quieres, puedes echar un vistazo a mi{" "}
-            <a href={`https://twitter.com/${props.social.twitter}`}>twitter</a>{" "}
-            para ver qué cuento, ver qué herramientas uso y{" "}
-            <Link to="/como-trabajo"> cómo me organizo</Link> en mi día a día o
-            ver mis fotos en{" "}
-            <a href={`https://instagram.com/${props.social.instagram}`}>
-              Instagram
-            </a>
-            .
-          </small>
-        </p>
       </aside>
     </div>
   )
