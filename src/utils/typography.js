@@ -1,8 +1,11 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  headerFontFamily: ["PT Sans"],
+  headerFontFamily: ["Inter"],
+  baseFontSize: "18px",
+  headerWeight: "bold",
   bodyFontFamily: [
+    "Inter",
     "-apple-system",
     "BlinkMacSystemFont",
     "Segoe UI",

@@ -1,15 +1,13 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 480px 480px 1fr;
+  grid-template-columns: 1fr 380px 380px 1fr;
   grid-template-areas:
-    "header header header header"
+    ". header header ."
     ". main main ."
     "footer footer footer footer";
 }
 
 .nav-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
   max-width: 800px;
   margin: auto;
   width: 100%;
@@ -19,8 +17,6 @@ header {
   grid-area: header;
   grid-column-start: 1;
   grid-column-end: 5;
-  box-shadow: 0 0 30px #b4bbdd80;
-  padding: 20px;
   margin-bottom: 4rem;
   padding: 0 1.5rem;
   height: 80px;
@@ -48,20 +44,10 @@ header {
   }
 }
 
-.brand {
-  display: flex;
-  justify-content: flex-start;
-  align-content: initial;
-  img {
-    margin: 0px;
-  }
-}
-
 main {
   grid-area: main;
   grid-column-start: 2;
   grid-column-end: 4;
-  padding: 0 6rem;
 
   figure {
     margin: 0 0 0 -6rem;

@@ -8,16 +8,6 @@ img {
   box-shadow: none;
 }
 
-a {
-  color: $primary-color;
-  text-decoration: none;
-
-  &:hover {
-    border-bottom: 2px solid $secondary-color;
-    text-decoration: none;
-  }
-}
-
 blockquote {
   background: $primary-color-lighter;
   padding: 1rem;
@@ -25,24 +15,8 @@ blockquote {
   margin-left: -1rem;
 }
 
-li {
-  list-style: none;
-
-  &:before {
-    content: "\2022";
-    display: block;
-    position: relative;
-    max-width: 0px;
-    max-height: 0px;
-    left: -15px;
-    top: -1px;
-    color: $primary-color;
-  }
-}
-
 .links {
   display: flex;
-  justify-content: flex-end;
 
   a {
     padding: 8px;
