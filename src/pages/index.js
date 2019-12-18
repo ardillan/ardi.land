@@ -6,8 +6,6 @@ import SEO from "../components/SEO"
 import Hello from "../components/Hello"
 import PostList from "../components/PostsList"
 
-import "../styles/main.scss"
-
 export default ({ data }) => {
   return (
     <Layout>
