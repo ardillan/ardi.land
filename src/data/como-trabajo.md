@@ -7,9 +7,13 @@ type: "page"
 
 ## Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o pequeños scripts facilitan el trabajo de la gente. A continuación indico qué aplicaciones utilizo en mi día a día, qué música escucho o qué utilizo para editar gráficos y construir interfaces.
 
+---
+
 ### 🦖 Sistema
 
 Utilizo un Macbook Air de finales de 2014. Vengo utilizando equipos de Apple desde hace unos 10 años. Me encuentro muy cómodo trabajando con macOS. Ahora plataformas como Windows y GNU/Linux han mejorado muchísimo, por lo que siempre estoy abierto a probar nuevos sistemas.
+
+---
 
 ### 🦄 Desarrollo
 
@@ -25,30 +29,31 @@ Esta es mi configuración para VS Code:
 {
   // Tema
   "workbench.colorTheme": "Monokai Vibrant",
+  "workbench.iconTheme": "material-icon-theme",
   // Fuente y ligaduras
   "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.lineHeight": 24,
   "editor.fontLigatures": true,
-  // Tamaño de iconos barra lateral
-  "window.zoomLevel": 1,
   // Mostrar reglas
-  "editor.rulers": [80, 120],
   "editor.renderIndentGuides": true,
-  // Configuración Prettier
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  // Prettier
   "editor.formatOnSave": true,
-  // General
-  "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 0,
-  "workbench.fontAliasing": "auto",
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
+}
 ```
+
+---
 
 ## 💎 Gráficos
 
@@ -56,9 +61,15 @@ Para montar un **flujo de pantallas** y diseñar interfaces utilizo [Sketch App]
 
 Si necesito **editar vectores** utilizo [Affinity Designer](https://affinity.serif.com/es/designer/), en cambio para **fotografías** utilizo [Affinity Photo](https://affinity.serif.com/es/photo/). Ambas aplicaciones están desarrolladas por Serif, por lo que la integración entre ellas es total.
 
+---
+
 ## ✏️ Notas
 
 Para pequeñas listas _to-do_ siempre me gusta echar mano de [Clear](https://itunes.apple.com/us/app/clear-tasks-reminders-to-do-lists/id504544917?mt=12). Una aplicación súper rápida que sirve para tomar notas.
+
+Si lo que necesito es tomar notas con más detalle o compartir ideas, utilizo [Notion](https://www.notion.so/)
+
+---
 
 ## 🕺 Música
 
@@ -69,15 +80,19 @@ Siempre trabajo con música de fondo. Como cada situación y momento del día es
 3. [A wilhelm scream](https://jumpstartrecords.bandcamp.com/album/career-suicide)
 4. [Maseratti](https://maserati.bandcamp.com/album/passages)
 5. [And So I Watch You From Afar](https://asiwyfa.bandcamp.com/)
+6. [Poké&Chill](https://music.gamechops.com/album/pok-chill)
 
 También tengo listas de reproducción creadas por mí que tocan muchos estilos. Por ejemplo mi [lista de Epixelia](https://itunes.apple.com/es/playlist/epixelia/pl.u-BNA6rgWCpXPK5z) donde se oyen canciones de videojuegos, o la [lista de Novecientos](https://itunes.apple.com/es/playlist/novecientos/pl.u-leyl1XRCxZ3y0L) donde suenan canciones de diferentes estilos, o incluso mi lista de [Waltasia](https://itunes.apple.com/es/playlist/waltasia/pl.u-6mo448etZkj7EP) que dejo que descubras por tí mismo.
+
+---
 
 ## 👑 Podcast
 
 Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. Esta sería la lista de mis podcast favoritos.
 
-1.  [El Complejo Lambda](http://www.complejolambda.com)
+1.  [El Complejo Lambda](https://www.complejolambda.com)
 2.  [Podcast Replay](https://www.podcastreplay.com)
 3.  [Mixx.io](https://mixx.io/)
-4.  [WeCodesign](http://wedevelopers.com/)
-5.  [Fallo de Sistema](http://www.rtve.es/alacarta/audios/fallo-de-sistema/)
+4.  [WeCodesign](https://wedevelopers.com/)
+5.  [Fallo de Sistema](https://www.rtve.es/alacarta/audios/fallo-de-sistema/)
+6.  [Loop Infinito](https://www.applesfera.com/applesfera-podcast/bienvenidos-a-loop-infinito-nuevo-podcast-applesfera)
