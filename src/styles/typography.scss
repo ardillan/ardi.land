@@ -1,4 +1,4 @@
-:root {
+body {
   font-size: $main-size;
   color: $text-color-dark;
 }
@@ -22,15 +22,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 400;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 200;
+  line-height: 1.4em;
 }
 
 // Lists
