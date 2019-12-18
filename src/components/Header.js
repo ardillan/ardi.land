@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../../content/images/general/logo-icon.svg"
 
 const Header = () => {
   return (
