@@ -6,12 +6,8 @@ const Header = () => {
   return (
     <header>
       <div className="nav-container">
-        <div className="brand">
-          <Link to={`/`}>
-            <img alt="Logotipo" src={logo} height="30px" />
-          </Link>
-        </div>{" "}
         <nav className="links">
+          <Link to={`/`}>Inicio</Link>
           <Link to={`/sobre-mi/`}>Sobre mí</Link>
           <Link to={`/como-trabajo/`}>Cómo trabajo</Link>
           <Link to={`/blog/`}>Blog</Link>
