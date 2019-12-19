@@ -8,6 +8,14 @@ category:
   - Videojuegos
 ---
 
-Un juego que compré por su "bajo" precio. No lo conocía en aquel momento, pero las imágenes que aparecían en la contraportada fueron sufientes para que me lo llevase a casa.
+Slain es un juego que me encontré en una estantería por unos 17 euros. No lo conocía en aquel momento, pero las imágenes que aparecían en la contraportada fueron sufientes para que me lo llevase a casa.
 
 ![Imagen del videojuego](/../../content/images/posts/slain-back-from-hell.jpg)
+
+### Plataformas a ritmo de metal
+
+Y es que nuestro barbudo protagonista tiene por delante la tarea de recorrer escenarios de plataformas con una **dificultad en ocasiones elevada**, donde tendrá que derrotar a un elenco de enemigos con una apariencia tenebrosa.
+
+**Bathoryn**, nuestro personaje, portará una espada como única arma para defenderse. A medida que vayamos recorriendo los diferentes reinos y derrotando a sus jefes finales se nos irá descubriendo poco a poco la historia de Slain. Decir que la música, como no podía ser de otra manera, está claramente inspirada en composiciones de **heavy-metal**, además Bathoryn será capaz de rendir pleitesía al dios del Metal mediante [Headbanging](https://es.wikipedia.org/wiki/Headbanging).
+
+Como reflexión final, disfruté jugando a Slain, pero si no hubiese sido por su bajo precio no creo que fuese un juego por el que sintiese una especial devoción.
