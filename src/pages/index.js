@@ -13,8 +13,16 @@ export default ({ data }) => {
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
       />
+
       <Hello social={data.site.siteMetadata.social} />
-      <PostList length="5" type="blog" />
+
+      <section className="featured-posts">
+        <h1>Mis artículos destacados</h1>
+        <PostList length="3" type="blog" />
+        <Link className="button-view-more" to="/blog">
+          Ver todos los artículos del blog
+        </Link>
+      </section>
     </Layout>
   )
 }

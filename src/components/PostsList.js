@@ -22,6 +22,8 @@ export default props => (
                 date
                 author
                 type
+                description
+                category
               }
             }
           }
@@ -29,19 +31,37 @@ export default props => (
       }
     `}
     render={data => {
+      console.log(data)
       let posts = data.allMarkdownRemark.edges
       if (props.type) {
         posts = posts.filter(post => post.node.frontmatter.type === props.type)
       }
 
       return (
-        <ul className="article-list">
+        <ul>
           {posts.slice(0, props.length).map(post => {
             return (
               <li key={post.node.id}>
                 <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
-                  <p>{post.node.frontmatter.title}</p>
-                  <small>{getPostDate(post.node.frontmatter.date)}</small>
+                  <article>
+                    <header>
+                      <h2>{post.node.frontmatter.title}</h2>
+                      {props.showPostDate ? (
+                        <p>
+                          Escrito el{" "}
+                          <time dateTime={post.node.frontmatter.date}>
+                            {getPostDate()}
+                          </time>
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </header>
+                    <p className="category">{post.node.frontmatter.category}</p>
+                    <p className="excerpt">
+                      {post.node.frontmatter.description}
+                    </p>
+                  </article>
                 </Link>
               </li>
             )
