@@ -3,13 +3,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
+import { getPostDate } from "../utils/helpers"
+
 export default ({ data }) => {
   const post = data.markdownRemark
-  let postDate = new Date(post.frontmatter.date).toLocaleDateString("es-ES", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })
+
   return (
     <Layout>
       <SEO
@@ -21,7 +19,7 @@ export default ({ data }) => {
           <h1>{post.frontmatter.title}</h1> <h2>{post.frontmatter.subtitle}</h2>{" "}
         </div>
         <div className="post-meta">
-          <time>Escrito el {postDate}</time>
+          <time>Escrito el {getPostDate(post.frontmatter.date)} </time>
         </div>
         <div
           className="post-content"

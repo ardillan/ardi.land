@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
+import { getPostDate } from "../utils/helpers"
 
 export default props => (
   <StaticQuery
@@ -36,19 +37,11 @@ export default props => (
       return (
         <ul className="article-list">
           {posts.slice(0, props.length).map(post => {
-            let postDate = new Date(
-              post.node.frontmatter.date
-            ).toLocaleDateString("es-ES", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-
             return (
               <li key={post.node.id}>
                 <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
                   <p>{post.node.frontmatter.title}</p>
-                  <small>{postDate.toString()}</small>
+                  <small>{getPostDate(post.node.frontmatter.date)}</small>
                 </Link>
               </li>
             )
