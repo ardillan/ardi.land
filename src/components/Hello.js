@@ -7,6 +7,7 @@ const Hello = () => {
       <div className="column is-5">
         <img src="https://images.unsplash.com/photo-1525550557089-27c1bfedd06c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" />
         <div className="shadow" />
+        <p className="vertical-text">1988•{new Date().getFullYear()}</p>
       </div>
 
       <div className="column is-7 presentation">
