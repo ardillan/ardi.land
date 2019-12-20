@@ -4,14 +4,12 @@ import { Link } from "gatsby"
 const Header = () => {
   return (
     <header>
-      <div className="nav-container">
-        <nav className="links">
-          <Link to={`/`}>Inicio</Link>
-          <Link to={`/sobre-mi/`}>Sobre mí</Link>
-          <Link to={`/como-trabajo/`}>Cómo trabajo</Link>
-          <Link to={`/blog/`}>Blog</Link>
-        </nav>
-      </div>
+      <nav>
+        <Link to={`/`}>Inicio</Link>
+        <Link to={`/sobre-mi/`}>Sobre mí</Link>
+        <Link to={`/proyectos/`}>Proyectos</Link>
+        <Link to={`/blog/`}>Blog</Link>
+      </nav>
     </header>
   )
 }
