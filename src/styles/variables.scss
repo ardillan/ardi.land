@@ -10,11 +10,18 @@ $secondary-color-light: #66e989;
 $secondary-color-lighter: #9afab4;
 
 // Text colors
-$text-color-dark: #080a13;
-$text-color-grey: #676180;
+$text-color-dark: #241c38;
+$text-color-grey: #806180;
+
+$text-color-link: #203bb3;
 
 // Font sizes
 $main-size: 20px;
 
 // Breakpoints
 $mobile-screen: 570px;
+
+// Fonts
+$main-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";

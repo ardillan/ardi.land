@@ -1,107 +1,20 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 380px 380px 1fr;
-  grid-template-areas:
-    ". header header ."
-    ". main main ."
-    "footer footer footer footer";
-}
-
-.nav-container {
   max-width: 800px;
   margin: auto;
-  width: 100%;
 }
 
 header {
-  grid-area: header;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  margin-bottom: 4rem;
-  padding: 0 1.5rem;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  a {
-    color: $text-color-dark;
+  nav {
+    height: 80px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-decoration: none;
+    justify-content: left;
 
-    &:hover {
-      border-bottom: none;
-    }
-  }
-}
-
-.hello {
-  small {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-main {
-  grid-area: main;
-  grid-column-start: 2;
-  grid-column-end: 4;
-
-  figure {
-    margin: 0 0 0 -6rem;
-    width: 960px;
-  }
-}
-
-footer {
-  grid-area: footer;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  text-align: center;
-  margin-top: 45px;
-  border-top: 1px solid #eaeaea;
-  padding: 2rem;
-  font-size: 0.8rem;
-}
-
-// Mediums screens
-@media (max-width: 960px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 50% 50% 1fr;
-    grid-template-areas:
-      "header header header header"
-      ". main main ."
-      "footer footer footer footer";
-  }
-  main {
-    padding: 0 2rem;
-    figure {
-      margin: 0 0 0 -2rem;
-      width: 100vw;
-    }
-  }
-}
-
-// Smartphones
-@media (max-width: 400px) {
-  header {
-    margin-bottom: 1rem;
-  }
-
-  .nav-container {
-    grid-template-areas: "navigation navigation";
-    grid-template-rows: 1fr;
-
-    .brand {
-      display: none;
-    }
-
-    nav {
-      grid-area: navigation;
-      justify-content: center;
+    a {
+      font-size: 15px;
+      padding-right: 15px;
+      color: $text-color-dark;
+      text-transform: uppercase;
     }
   }
 }
