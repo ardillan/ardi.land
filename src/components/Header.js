@@ -5,10 +5,20 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <Link to={`/`}>Inicio</Link>
-        <Link to={`/sobre-mi/`}>Sobre mí</Link>
-        <Link to={`/proyectos/`}>Proyectos</Link>
-        <Link to={`/blog/`}>Blog</Link>
+        <ul>
+          <li>
+            <Link to={`/`}>Inicio</Link>
+          </li>
+          <li>
+            <Link to={`/sobre-mi/`}>Sobre mí</Link>
+          </li>
+          <li>
+            <Link to={`/proyectos/`}>Proyectos</Link>
+          </li>
+          <li>
+            <Link to={`/blog/`}>Blog</Link>
+          </li>
+        </ul>
       </nav>
     </header>
   )
