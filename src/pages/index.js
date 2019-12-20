@@ -14,26 +14,6 @@ export default ({ data }) => {
         description={data.site.siteMetadata.description}
       />
       <Hello social={data.site.siteMetadata.social} />
-      <p>
-        Si quieres, puedes echar un vistazo a mi{" "}
-        <a
-          href={`https://twitter.com/${data.site.siteMetadata.social.twitter}`}
-        >
-          twitter
-        </a>{" "}
-        para ver qué cuento, ver qué herramientas uso y{" "}
-        <Link to="/como-trabajo"> cómo me organizo</Link> en mi día a día o ver
-        mis fotos en{" "}
-        <a
-          href={`https://instagram.com/${
-            data.site.siteMetadata.social.instagram
-          }`}
-        >
-          Instagram
-        </a>
-        .
-      </p>
-      <h2>Entradas del blog</h2>
       <PostList length="5" type="blog" />
     </Layout>
   )

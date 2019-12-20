@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+.is-flex {
+  display: flex;
+}
+
 header {
   nav {
     height: 80px;
@@ -15,6 +19,52 @@ header {
       padding-right: 15px;
       color: $text-color-dark;
       text-transform: uppercase;
+    }
+  }
+}
+
+main {
+  .hello-container {
+    padding: 40px 0;
+    position: relative;
+    img {
+      width: 300px;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .presentation {
+      h1 {
+        font-size: 50px;
+        font-weight: 800;
+        padding-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      a {
+        color: $text-color-dark;
+        font-size: 12px;
+        background: $secondary-color;
+        margin-top: 15px;
+        min-width: 95px;
+        padding: 5px 0px;
+        text-align: center;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+    }
+
+    .shadow {
+      border: 3px solid $text-color-dark;
+      position: absolute;
+      width: 290px;
+      height: 280px;
+      top: 55px;
+      transform: rotate(-5deg);
+      left: -10px;
+      z-index: -10;
     }
   }
 }
