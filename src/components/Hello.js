@@ -10,7 +10,12 @@ const Hello = () => {
           src="https://images.unsplash.com/photo-1525550557089-27c1bfedd06c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
         />
         <div className="shadow" />
-        <p className="vertical-text">🐝 {new Date().getFullYear()}</p>
+        <p className="vertical-text">
+          <span role="img" aria-label="Icono de una abeja">
+            🐝
+          </span>{" "}
+          {new Date().getFullYear()}
+        </p>
       </div>
 
       <div className="column is-7 presentation">
@@ -22,9 +27,15 @@ const Hello = () => {
           relacionado con la tecnología, los videojuegos y la música.
         </p>
         <div className="is-flex">
-          <a href="https://www.github.com/ardillan">Github</a>
-          <a href="https://www.github.com/ardillan">Twitter</a>
-          <a href="https://www.github.com/ardillan">Portafolio</a>
+          <a className="btn-main" href="https://www.github.com/ardillan">
+            Github
+          </a>
+          <a className="btn-main" href="https://www.github.com/ardillan">
+            Twitter
+          </a>
+          <a className="btn-main" href="https://www.github.com/ardillan">
+            Portafolio
+          </a>
         </div>
       </div>
     </aside>

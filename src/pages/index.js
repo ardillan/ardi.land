@@ -19,7 +19,7 @@ export default ({ data }) => {
       <section className="featured-posts">
         <h1>Mis artículos destacados</h1>
         <PostList length="3" type="blog" />
-        <Link className="button-view-more" to="/blog">
+        <Link className="btn-view-more" to="/blog">
           Ver todos los artículos del blog
         </Link>
       </section>

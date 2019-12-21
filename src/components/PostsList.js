@@ -31,7 +31,6 @@ export default props => (
       }
     `}
     render={data => {
-      console.log(data)
       let posts = data.allMarkdownRemark.edges
       if (props.type) {
         posts = posts.filter(post => post.node.frontmatter.type === props.type)
