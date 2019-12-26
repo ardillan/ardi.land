@@ -32,27 +32,6 @@ export default ({ data }) => {
                 </a>
               </p>
             </div>
-            <div>
-              <span>
-                <a
-                  href={`https://twitter.com/${
-                    data.site.siteMetadata.social.twitter
-                  }`}
-                >
-                  Twitter
-                </a>
-                {` `}
-              </span>
-              <span>
-                <a
-                  href={`https://instagram.com/${
-                    data.site.siteMetadata.social.instagram
-                  }`}
-                >
-                  Instagram
-                </a>
-              </span>
-            </div>
           </footer>
         )
       }}
