@@ -4,6 +4,7 @@ subtitle: "Recicla tus cintas y aprovéchalas"
 date: "2014-09-02T15:30:00.0100"
 type: "blog"
 description: "Utiliza cintas de casette para hacer cajas de videojuegos de Game Boy"
+featured: true
 category:
   - Videojuegos
 ---
