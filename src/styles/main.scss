@@ -7,9 +7,9 @@
 
 // Custom CSS
 @import "./variables.scss";
-@import "./prism.scss";
 
+@import "./fonts";
+@import "./fonts-inter";
 @import "./layout";
 @import "./buttons";
-@import "./fonts-inter";
-@import "./fonts";
+@import "./prism.scss";
