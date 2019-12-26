@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
@@ -18,10 +18,7 @@ export default ({ data }) => {
 
       <section className="featured-posts">
         <h1>Mis artículos destacados</h1>
-        <PostList length="3" type="blog" />
-        <Link className="btn-view-more" to="/blog">
-          Ver todos los artículos del blog
-        </Link>
+        <PostList length="3" type="blog" featured />
       </section>
     </Layout>
   )
