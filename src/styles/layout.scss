@@ -38,18 +38,19 @@ main {
       width: 300px;
       height: 280px;
       object-fit: cover;
+      border: 3px solid $text-color-dark;
+    }
 
-      &:after {
-        content: "";
-        border: 3px solid $text-color-dark;
-        position: absolute;
-        width: 290px;
-        height: 280px;
-        top: 55px;
-        transform: rotate(-5deg);
-        left: -10px;
-        z-index: -10;
-      }
+    .shadow {
+      content: "";
+      border: 3px solid $text-color-dark;
+      position: absolute;
+      width: 290px;
+      height: 280px;
+      top: 55px;
+      transform: rotate(-5deg);
+      left: -10px;
+      z-index: -10;
     }
 
     .presentation {
