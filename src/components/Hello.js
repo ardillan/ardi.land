@@ -1,14 +1,25 @@
 import React from "react"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import { getAge } from "../utils/helpers"
 
 const Hello = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "general/portrait.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <aside className="hello-container columns is-multiline">
       <div className="column is-5">
-        <img
-          alt="autoretrato"
-          src="https://images.unsplash.com/photo-1525550557089-27c1bfedd06c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-        />
+        <Img fluid={data.file.childImageSharp.fluid} alt="Autoretrato" />
         <div className="shadow" />
         <p className="vertical-text">
           <span role="img" aria-label="Icono de una abeja">
