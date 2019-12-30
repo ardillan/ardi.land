@@ -16,7 +16,7 @@ export default ({ data }) => {
 
       <Hello social={data.site.siteMetadata.social} />
 
-      <section className="featured-posts">
+      <section className="all-posts">
         <h1>Mis artículos destacados</h1>
         <PostList length="3" type="blog" featured />
       </section>
