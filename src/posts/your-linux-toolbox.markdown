@@ -1,16 +1,15 @@
 ---
-title: "Cassette-Boy"
-subtitle: "Recicla tus cintas y aprovéchalas"
-date: "2014-09-02T15:30:00.0100"
+title: "Your Linux ToolBox: fanzines para controlar el mundo"
+subtitle: "Una colección de fanzines para controlar el mundo"
+date: "2019-12-28T15:30:00.0100"
 type: "blog"
-description: "Utiliza cintas de casette para hacer cajas de videojuegos de Game Boy"
+description: "Un muestrario de libros donde se recogen trucos para mejorar tu destraza en sistemas UNIX"
 featured: true
-featuredImage: ../../content/images/posts/casette-boy-featured.jpg
+featuredImage: ../../content/images/posts/your-linux-toolbox-featured.jpg
 category:
-  - Videojuegos
+  - Desarrollo
+  - Libros
 ---
-
-![Fotografía de ejemplo](../../content/images/posts/casette-boy-1.jpg)
 
 Hace no mucho encontré este tutorial en [El Retro Consolero](http://elretroconsolero.blogspot.com/2013/08/cajas-de-casette-para-juegos-de-game.html#more) en donde se muestra **cómo reciclar nuestras viejas cajas de cassette** para convertirlas en útiles **cajas de Game Boy**. Me pareció muy buena idea, el único problema es que las plantillas que encontraba no me gustaban demasiado. Es por eso que voy a aportar mi granito de arena con una plantilla hecha por mí, con disposiciones ligeramente diferentes, resolución a 300 ppp y algún que otro icono personalizado.
 
