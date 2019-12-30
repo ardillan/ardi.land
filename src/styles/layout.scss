@@ -1,10 +1,15 @@
 .container {
   max-width: 800px;
   margin: auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $font-size-regular;
+  }
 }
 
 .is-flex {
   display: flex;
+  justify-content: center;
 }
 
 ::selection {
@@ -18,20 +23,29 @@ header {
       display: flex;
       align-items: center;
       justify-content: left;
+      margin-bottom: 40px;
     }
 
     a {
-      font-size: 15px;
+      font-size: $font-size-regular * 0.8;
       padding-right: 15px;
       color: $text-color-dark;
       text-transform: uppercase;
+    }
+
+    .active {
+      span {
+        background: $yellow;
+        padding: 10px;
+        border-radius: 5px;
+      }
     }
   }
 }
 
 main {
   .hello-container {
-    padding: 40px 0;
+    padding: 0;
     position: relative;
 
     img {
@@ -39,6 +53,16 @@ main {
       height: 280px;
       object-fit: cover;
       border: 3px solid $text-color-dark;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      position: absolute;
+      height: 300px;
+      font-size: $font-size-regular * 0.6;
+      left: -70px;
+      top: 130px;
     }
 
     .shadow {
@@ -64,21 +88,58 @@ main {
         line-height: 25px;
       }
     }
+  }
 
-    .vertical-text {
+  .post-container {
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    time {
+      font-size: 15px;
+    }
+
+    .featured-image {
+      border-radius: $border-radius;
+      min-height: 350px;
+    }
+
+    .vertical-category {
       writing-mode: vertical-rl;
       text-orientation: upright;
       position: absolute;
       height: 300px;
-      font-size: 15px;
-      left: -70px;
-      top: 130px;
+      left: -60px;
+      top: 20px;
+      text-transform: uppercase;
+      p {
+        font-size: $font-size-regular * 0.5;
+        span {
+          background: $yellow;
+          padding: 5px;
+        }
+      }
     }
+
+    // .content {
+    //   p {
+    //     font-size: 20px;
+    //     line-height: 30px;
+    //   }
+    // }
   }
 
   section {
     padding-bottom: 50px;
-    &.featured-posts {
+    &.all-posts {
       h1 {
         font-size: 12px;
         text-transform: uppercase;
@@ -92,9 +153,7 @@ main {
           display: inline-block;
           width: 15px;
           height: 15px;
-          -moz-border-radius: 7.5px;
-          -webkit-border-radius: 7.5px;
-          border-radius: 7.5px;
+          border-radius: 50%;
           background-color: $yellow;
           margin-right: 5px;
         }
@@ -110,31 +169,41 @@ main {
           padding: 15px;
           article {
             transition: all $time $ease;
+
+            img {
+              padding-bottom: 15px;
+            }
+
             h2 {
-              font-size: 17px;
-              line-height: 20px;
-              font-weight: 600;
+              font-size: $font-size-regular * 0.8;
               color: $text-color-dark;
-              height: 50px;
+              text-align: center;
+              line-height: 20px;
+              font-weight: 800;
             }
 
             .category {
-              color: $blue;
-              font-size: 10px;
-              text-transform: uppercase;
-              font-weight: 600;
-              padding-bottom: 10px;
+              text-align: center;
+              span {
+                color: $text-color-dark;
+                font-size: $font-size-regular * 0.5;
+                background: $yellow;
+                padding: $font-size-regular * 0.4 $font-size-regular * 0.5;
+                font-weight: 800;
+                text-transform: uppercase;
+                margin-right: $font-size-regular;
+              }
             }
 
             .excerpt {
               color: $text-color-dark;
-              font-size: 14px;
-              line-height: 18px;
+              font-size: $font-size-regular * 0.8;
+              line-height: $font-size-regular;
             }
 
             &:hover {
               background: $yellow;
-              border-radius: 5px;
+              border-radius: $border-radius;
               padding: 15px;
               margin: -15px;
             }
@@ -149,6 +218,6 @@ footer {
   margin-top: 50px;
   text-align: center;
   p {
-    font-size: 15px;
+    font-size: $font-size-regular;
   }
 }
