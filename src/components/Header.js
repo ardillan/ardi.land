@@ -7,16 +7,24 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to={`/`}>Inicio</Link>
+            <Link activeClassName="active" to={`/`}>
+              <span>Inicio</span>
+            </Link>
           </li>
           <li>
-            <Link to={`/sobre-mi/`}>Sobre mí</Link>
+            <Link activeClassName="active" to={`/sobre-mi/`}>
+              <span>Sobre mí</span>
+            </Link>
           </li>
           <li>
-            <Link to={`/proyectos/`}>Proyectos</Link>
+            <Link activeClassName="active" to={`/proyectos/`}>
+              <span>Proyectos</span>
+            </Link>
           </li>
           <li>
-            <Link to={`/blog/`}>Blog</Link>
+            <Link activeClassName="active" to={`/blog/`}>
+              <span>Blog</span>
+            </Link>
           </li>
         </ul>
       </nav>
