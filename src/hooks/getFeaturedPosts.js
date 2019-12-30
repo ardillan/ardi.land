@@ -25,6 +25,13 @@ export const getFeaturedPosts = () => {
                 type
                 description
                 category
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxWidth: 300, maxHeight: 200) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }

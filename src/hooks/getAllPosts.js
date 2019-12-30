@@ -19,6 +19,13 @@ export const getAllPosts = () => {
                 title
                 date
                 author
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxWidth: 300, maxHeight: 200) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
                 type
                 description
                 category
