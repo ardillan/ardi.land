@@ -4,11 +4,10 @@ subtitle: "Cada uno tiene su cometido"
 date: "2013-09-19T22:00:00.0100"
 type: "blog"
 description: "Listado de formatos de imagen explicados punto por punto"
+featuredImage: ../../content/images/posts/para-que-tantos-formatos-1.jpg
 category:
   - General
 ---
-
-![Imagen de cabecera](/../../content/images/posts/para-que-tantos-formatos-1.jpg)
 
 > El tutorial podría ir mucho más allá en cuanto a la profundización de las diferentes opciones de guardado que nos da Photoshop, pero yo solo he querido centrarme en la misión principal que cumple ,o puede cumplir, cada uno de los formatos, dejando de lado el abanico individual de cada formatO . Si además hay algo erróneo en las definiciones podéis dejar un comentario y con gusto lo cambiaré. Aprender es cosa de todos :).
 

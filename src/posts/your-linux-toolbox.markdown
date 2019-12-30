@@ -16,10 +16,3 @@ Hace no mucho encontré este tutorial en [El Retro Consolero](http://elretrocons
 En principio he hecho **el modelo para Game Boy**. Muchos de los elementos que contienen están vectorizados, por lo que no habrá problema a la hora de estirarlos. También he rediseñado alguna portada que no incluyo en la descarga, aunque si alguien la quiere estaré encantado de pasarla.
 
 [Puedes descargar aquí la plantilla en .psd](https://www.icloud.com/iclouddrive/08HqG_yNPK3e9a3Ximb_1IoUw#Game_Boy_-_Plantilla)
-
-![Diseño de una de las carátulas](../../content/images/posts/casette-boy-2.jpg)
-![Carátula de ejemplo](../../content/images/posts/casette-boy-3.jpg)
-![Carátula de ejemplo](../../content/images/posts/casette-boy-4.jpg)
-![Carátula de ejemplo](../../content/images/posts/casette-boy-5.jpg)
-![Carátula de ejemplo](../../content/images/posts/casette-boy-6.jpg)
-![Carátula de ejemplo](../../content/images/posts/casette-boy-7.jpg)

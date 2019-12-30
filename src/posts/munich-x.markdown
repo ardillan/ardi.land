@@ -4,6 +4,7 @@ subtitle: ""
 date: "2011-11-09T15:30:00.0100"
 type: "blog"
 description: "Munich es una marca de zapatillas conocida a nivel mundial"
+featuredImage: ../../content/images/posts/munich-x.jpg
 category:
   - General
 ---

@@ -3,6 +3,7 @@ title: "Antony Crook"
 date: "2017-02-28T20:00:00.0100"
 author: Ardillán
 type: "blog"
+featuredImage: ../../content/images/posts/antony-crook-1.jpg
 category:
   - Fotografía
 ---

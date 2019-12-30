@@ -3,12 +3,11 @@ title: "ARGH!"
 subtitle: "Pasión por las dos tintas"
 date: "2011-08-28T15:30:00.0100"
 type: "blog"
-description: "Serie de cómics donde colaboran diferentes dibujantes aportado su visión."
+description: "Serie de cómics donde colaboran diferentes dibujantes aportado su visión"
+featuredImage: ../../content/images/posts/argh-1.jpg
 category:
   - General
 ---
-
-![Imagen del videojuego](/../../content/images/posts/argh-1.jpg)
 
 Hace cosa de un año y medio (no lo recuerdo bien) veía en clase _preimpresión_ cómo el uso de las dos tintas podía dar al papel un grandísimo abanico de posibilidades. Una vez que fuí “instruido” en el tema (y fascinado a la vez) no pude evitar echar mano de Google para que me ilustrase con su sabiduría.
 

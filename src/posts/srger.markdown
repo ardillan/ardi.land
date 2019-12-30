@@ -4,11 +4,10 @@ subtitle: ""
 date: "2011-08-29T15:30:00.0100"
 type: "blog"
 description: "Diseñador gráfico sevillano"
+featuredImage: ../../content/images/posts/srger-1.jpg
 category:
   - Diseño
 ---
-
-![Diseño de disco de Srger](/../../content/images/posts/srger-1.jpg)
 
 Es un Diseñador gráfico Sevillano que goza de un gran gusto a la hora de combinar tipografías, colores y elementos. También produce ilustraciones en diferentes soportes, como pueden ser murales o bien digitales.
 

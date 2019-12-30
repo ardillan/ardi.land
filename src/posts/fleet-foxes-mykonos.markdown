@@ -4,11 +4,10 @@ subtitle: "Animación en stopmotion"
 date: "2011-09-22T15:30:00.0100"
 type: "blog"
 description: "Videoclip en stopmotion de la banda Fleet Foxes"
+featuredImage: ../../content/images/posts/fleet-foxes-mykonos-1.jpg
 category:
   - Música
 ---
-
-![Portada del disco Sun Giant](/../../content/images/posts/fleet-foxes-mykonos-1.jpg)
 
 El video de **Mykonos** de Fleet Foxes de su disco “Sun Giant” está hecho con una gran destreza y dedicación, además de buen gusto. Los encargados de hacerlo fueron [Grandchildren](www.grandchildren.tv) . Es curioso ver cómo unos simples recortes con cartulina y unas pocas luces consiguen recrear un nuevo mundo de papel.
 

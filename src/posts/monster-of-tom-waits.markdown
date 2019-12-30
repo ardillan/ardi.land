@@ -4,11 +4,10 @@ subtitle: "La voz"
 date: "2011-11-04T15:30:00.0100"
 type: "blog"
 description: "Tom Waits, una de las voces más importantes del planeta"
+featuredImage: ../../content/images/posts/monster-of-tom-waits-1.jpg
 category:
   - Música
 ---
-
-![Retrato de Tom Waits](/../../content/images/posts/monster-of-tom-waits-1.jpg)
 
 Aprovechando que Tom Waits acaba de sacar disco **Bad as me**, he decidido dedicarle un poco de mi blog para tal gran persona. Como tampoco quiero explayarme mucho para no resultar pesado, haré un breve repaso de alguna de las cosas que más me han llamado la atención en su carrera, ya bien sea en sus discos o en sus apariciones en la pantalla.
 

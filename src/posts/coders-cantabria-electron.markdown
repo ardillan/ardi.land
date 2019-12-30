@@ -3,6 +3,7 @@ title: "Electron"
 date: "2017-05-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
+featuredImage: ../../content/images/posts/coders-cantabria-electron-featured.jpg
 category:
   - Desarrollo
 ---

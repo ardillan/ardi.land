@@ -11,7 +11,7 @@ category:
 
 A pesar de que tenía bastantes ganas de echarle el guante, no puedo decir que me haya gustado el último plataformas de Donkey Kong. Desde su control hasta hasta la jugabilidad, las espectativas que tenía no han cumplido para nada mi pronóstico.
 
-### Espectativas vs. Realidad
+#### Espectativas vs. Realidad
 
 Mis ansias de querer jugar a un juego de este tipo se vieron juntadas con la crítica y el **hype** que había alrededor de este título. No sé por qué habrá sido, pero ni **Donkey, ni Diddy, ni siquiera Cranky** han sabido convencerme en lo que ha resultado, bajo mi punto de vista, un juego aburrido y falto de energía.
 

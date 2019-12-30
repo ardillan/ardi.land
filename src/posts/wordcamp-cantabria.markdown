@@ -3,6 +3,7 @@ title: "WordCamp 2017"
 date: "2017-12-01T12:00:00.0100"
 author: Ardillán
 type: "blog"
+featuredImage: ../../content/images/posts/wordcamp-cantabria-featured.jpg
 category:
   - Desarrollo
   - Eventos

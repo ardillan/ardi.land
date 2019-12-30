@@ -4,11 +4,11 @@ subtitle: ""
 date: "2011-08-25T15:30:00.0100"
 type: "blog"
 description: "Estudio de diseño responsable de la marca Millencolin, entre otras"
+featuredImage: ../../content/images/posts/eckhouse-design-1.jpg
+
 category:
   - Diseño
 ---
-
-![Diseños de Eckhouse](/../../content/images/posts/eckhouse-design-1.jpg)
 
 ¿A alguien le suena el grupo [Millencolin](http://es.wikipedia.org/wiki/Millencolin)? Si es así, te habrás fijado que todas las portadas suelen seguir una línea bastante parecida, eso es principalmente por que su guitarra Erik Ohlsson es el principal diseñador de todos sus discos, incluyendo el merchandising, el logo del grupo y multitud de carteles. Su estudio de diseño llamado Eckhouse Design, ubicado en Suecia, incluye trabajos de todo tipo que van desde logotipo, cartelería, ilustración y fotografía e incluso se mete en el terreno audiovisual.
 

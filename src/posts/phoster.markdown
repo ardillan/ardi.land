@@ -4,11 +4,10 @@ subtitle: "Cuando un póster se hace solo"
 date: "2013-07-03T15:30:00.0100"
 type: "blog"
 description: "Aplicación con la que se pueden realizar pósters mediante una serie de pasos"
+featuredImage: ../../content/images/posts/phoster-1.jpg
 category:
   - Diseño
 ---
-
-![Imagen de promoción](/../../content/images/posts/phoster-1.jpg)
 
 > Actualización: La aplicación para que ya no se encuentra disponible.
 

@@ -4,11 +4,10 @@ subtitle: "Y su relación con la arquitectura"
 date: "2011-09-25T15:30:00.0100"
 type: "blog"
 description: "Banda estadounidense que podría ser considerada como la pionera de la música Post-rock"
+featuredImage: ../../content/images/posts/tortoise-arquitectura.jpg
 category:
   - Música
 ---
-
-![Captura del vídeo](/../../content/images/posts/tortoise-arquitectura.jpg)
 
 Este fin de semana me han enseñado este pedazo video que ha mezclado al grupo de música <strong>Tortoise y la arquitectura, </strong>convirtiendo a ambos en un único concepto. Dirigido por [Andrew Paynter](http://andrewpaynter.com/videos/page/2), y producido por [Juice Design](http://juicedesign.com).
 

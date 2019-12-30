@@ -5,12 +5,10 @@ date: "2014-09-02T15:30:00.0100"
 type: "blog"
 description: "Utiliza cintas de casette para hacer cajas de videojuegos de Game Boy"
 featured: true
-featuredImage: ../../content/images/posts/casette-boy-featured.jpg
+featuredImage: ../../content/images/posts/casette-boy-1.jpg
 category:
   - Videojuegos
 ---
-
-![Fotografía de ejemplo](../../content/images/posts/casette-boy-1.jpg)
 
 Hace no mucho encontré este tutorial en [El Retro Consolero](http://elretroconsolero.blogspot.com/2013/08/cajas-de-casette-para-juegos-de-game.html#more) en donde se muestra **cómo reciclar nuestras viejas cajas de cassette** para convertirlas en útiles **cajas de Game Boy**. Me pareció muy buena idea, el único problema es que las plantillas que encontraba no me gustaban demasiado. Es por eso que voy a aportar mi granito de arena con una plantilla hecha por mí, con disposiciones ligeramente diferentes, resolución a 300 ppp y algún que otro icono personalizado.
 

@@ -4,11 +4,10 @@ subtitle: "Colorea la barra e intégrala con tu desarrollo web"
 date: "2014-12-15T15:30:00.0100"
 type: "blog"
 description: "Personaliza la barra de navegación de tu aplicación en Android"
+featuredImage: ../../content/images/posts/colorea-la-barra-de-chrome-en-android-1.jpg
 category:
   - Desarrollo
 ---
-
-![Ejemplo de barra personalizada](/../../content/images/posts/colorea-la-barra-de-chrome-en-android-1.jpg)
 
 **Android Lollipop** trae muchas novedades, una de las últimas es la posibilidad de colorear nuestra barra de navegación cuando entramos a nuestra web con nuestro dispositivo utilizando **Chrome**.
 

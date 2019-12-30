@@ -4,11 +4,10 @@ subtitle: "Diseñando en tiempo real"
 date: "2014-08-18T15:30:00.0100"
 type: "blog"
 description: "Aplicación que permite duplicar el contenido de tus diseños en tu dispositivo móvil"
+featuredImage: ../../content/images/posts/skala-preview-1.jpg
 category:
   - Diseño
 ---
-
-![Imagen de la aplicación](/../../content/images/posts/skala-preview-1.jpg)
 
 Ver tus diseños al instante en tu dispositivo móvil.
 

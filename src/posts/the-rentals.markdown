@@ -4,11 +4,10 @@ subtitle: "y su packaging a triscapellejo"
 date: "2012-10-29T15:30:00.0100"
 type: "blog"
 description: "The Rentals es una banda estadounidense con una larga trayectoria a sus espaldas"
+featuredImage: ../../content/images/posts/the-rentals.jpg
 category:
   - Música
 ---
-
-![Contenido del disco](/../../content/images/posts/the-rentals.jpg)
 
 A pesar de tener ya tiempo (2009) nunca he visto que se hablase de esto, así que me he visto obligado a mencionarlo. Uno de los packagins más personales, más potentes y más originales que he visto. The Rentals incluyen en su último disco una edición Deluxe y, obviamente, limitada de su trabajo **“Songs About Time”**, una grabación que va más allá de un simple LP y que se basa en un diario de viaje en el que relatan parte de sus vidas, combinándolo con una estética y música originales. Por supuesto, la música creada por ellos combina a la perfección con la edición en vídeo.
 

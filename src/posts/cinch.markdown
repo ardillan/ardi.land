@@ -4,11 +4,10 @@ subtitle: "Controla tus ventanas"
 date: "2013-12-10T15:30:00.0100"
 type: "blog"
 description: "Aplicación para macOS que permite gestionar las ventanas del escritorio."
+featuredImage: ../../content/images/posts/cinch.jpg
 category:
   - General
 ---
-
-![Imagen del icono de la aplicación](/../../content/images/posts/cinch.jpg)
 
 Pocas cosas hay que me gusten de Windows como sistema operativo. Su interfaz no me llama en absoluto la atención, me parece anticuada y confusa. No obstante, reconozco que tiene algo que envidio y que echo en falta en Mac OS; un sistema para ajustar y acomodar las ventanas de nuestro escritorio a la pantalla.
 
