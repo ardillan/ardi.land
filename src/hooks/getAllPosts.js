@@ -21,7 +21,7 @@ export const getAllPosts = () => {
                 author
                 featuredImage {
                   childImageSharp {
-                    fluid(maxWidth: 300, maxHeight: 200) {
+                    fluid(maxWidth: 600, maxHeight: 400, cropFocus: CENTER) {
                       ...GatsbyImageSharpFluid
                     }
                   }

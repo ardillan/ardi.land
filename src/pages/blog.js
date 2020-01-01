@@ -10,7 +10,7 @@ export default ({ data }) => {
       <h1>Blog</h1>
       <p>En esta página se muestran todas las entradas del blog. </p>
       <section className="all-posts">
-        <PostsList length="50" type="blog" />
+        <PostsList length="55" type="blog" />
       </section>
     </Layout>
   )

@@ -6,7 +6,7 @@ export const getGenericFeaturedImage = () => {
       {
         file(name: { eq: "genericFeaturedImage" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 200) {
+            fluid(maxWidth: 500, maxHeight: 500) {
               ...GatsbyImageSharpFluid
             }
           }

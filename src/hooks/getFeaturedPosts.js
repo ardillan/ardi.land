@@ -27,7 +27,7 @@ export const getFeaturedPosts = () => {
                 category
                 featuredImage {
                   childImageSharp {
-                    fluid(maxWidth: 300, maxHeight: 200) {
+                    fluid(maxWidth: 600, maxHeight: 400, cropFocus: CENTER) {
                       ...GatsbyImageSharpFluid
                     }
                   }

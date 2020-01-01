@@ -26,6 +26,8 @@ export default props => {
                     fluid={featuredImage}
                     className="featured-image"
                     fadeIn={true}
+                    alt={post.node.frontmatter.title}
+                    title={post.node.frontmatter.title}
                   />
                   <h2>{post.node.frontmatter.title}</h2>
                   {props.showPostDate ? (
@@ -39,9 +41,9 @@ export default props => {
                     ""
                   )}
                 </header>
-                <div className="is-flex">
-                  {post.node.frontmatter.category.map(category => (
-                    <p className="category">
+                <div className="is-flex-centered">
+                  {post.node.frontmatter.category.map((category, index) => (
+                    <p className="category" key={index}>
                       <span>{category}</span>
                     </p>
                   ))}

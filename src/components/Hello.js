@@ -8,8 +8,8 @@ const Hello = () => {
     {
       file(relativePath: { eq: "general/portrait.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 300, height: 300) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -19,7 +19,7 @@ const Hello = () => {
   return (
     <aside className="hello-container columns is-multiline">
       <div className="column is-5">
-        <Img fluid={data.file.childImageSharp.fluid} alt="Autoretrato" />
+        <Img fixed={data.file.childImageSharp.fixed} alt="Autoretrato" />
         <div className="shadow" />
         <p className="vertical-text">
           <span role="img" aria-label="Icono de una abeja">
@@ -43,9 +43,6 @@ const Hello = () => {
           </a>
           <a className="btn-main" href="https://www.github.com/ardillan">
             Twitter
-          </a>
-          <a className="btn-main" href="https://www.github.com/ardillan">
-            Portafolio
           </a>
         </div>
       </div>

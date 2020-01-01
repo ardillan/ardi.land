@@ -29,8 +29,8 @@ export default ({ data }) => {
             <h2>{post.frontmatter.subtitle}</h2>{" "}
             <time>Escrito el {formatDate(post.frontmatter.date)} </time>
             <div className="vertical-category">
-              {post.frontmatter.category.map(value => (
-                <p>
+              {post.frontmatter.category.map((value, index) => (
+                <p key={index}>
                   <span>{value}</span>
                 </p>
               ))}
@@ -62,7 +62,7 @@ export const query = graphql`
         category
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1200, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

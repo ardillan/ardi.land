@@ -4,7 +4,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 import Hello from "../components/Hello"
-import Img from "gatsby-image"
 
 export default ({ data }) => {
   const ToDoText = () => (
@@ -16,10 +15,6 @@ export default ({ data }) => {
       <SEO title="Ardillan.com | Sobre mí" />
       <Hello social={data.site.siteMetadata.social} />
 
-      <Img
-        fluid={data.fileName.childImageSharp.fluid}
-        alt="Retrato hecho por Sara del Hoyo"
-      />
       <br />
       <p>
         Mi interés está centrado en aprender todo lo posible sobre tecnologías
