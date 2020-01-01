@@ -9,6 +9,10 @@
 
 .is-flex {
   display: flex;
+}
+
+.is-flex-centered {
+  display: flex;
   justify-content: center;
 }
 
@@ -28,16 +32,25 @@ header {
 
     a {
       font-size: $font-size-regular * 0.8;
+      background: initial;
       padding-right: 15px;
       color: $text-color-dark;
       text-transform: uppercase;
+
+      &:hover {
+        background: initial;
+        span {
+          border-bottom: 2px solid $yellow-dark;
+          padding: 5px 0;
+        }
+      }
     }
 
     .active {
       span {
-        background: $yellow;
-        padding: 10px;
-        border-radius: 5px;
+        border-bottom: 2px solid $yellow;
+        padding: 5px 0;
+        font-weight: 800;
       }
     }
   }
@@ -69,9 +82,9 @@ main {
       content: "";
       border: 3px solid $text-color-dark;
       position: absolute;
-      width: 290px;
+      width: 300px;
       height: 280px;
-      top: 55px;
+      top: 35px;
       transform: rotate(-5deg);
       left: -10px;
       z-index: -10;
@@ -86,6 +99,39 @@ main {
       p {
         font-size: 20px;
         line-height: 25px;
+      }
+    }
+
+    &:hover {
+      .shadow {
+        transition: all $time $ease;
+        transform: rotate(-3deg);
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      img {
+        max-height: 230px;
+      }
+
+      .vertical-text {
+        writing-mode: initial;
+        text-orientation: initial;
+        position: initial;
+        height: initial;
+        font-size: $font-size-regular;
+        left: 0;
+        top: 0;
+      }
+
+      .shadow {
+        max-width: 100%;
+        height: 220px;
+        top: 25px;
+        transform: rotate(-3deg);
+        left: 0px;
+        z-index: -10;
+        position: absolute;
       }
     }
   }
@@ -117,7 +163,7 @@ main {
       text-orientation: upright;
       position: absolute;
       height: 300px;
-      left: -60px;
+      left: -70px;
       top: 20px;
       text-transform: uppercase;
       p {
@@ -129,12 +175,22 @@ main {
       }
     }
 
-    // .content {
-    //   p {
-    //     font-size: 20px;
-    //     line-height: 30px;
-    //   }
-    // }
+    @media (max-width: $breakpoint-mobile) {
+      .vertical-category {
+        writing-mode: initial;
+        text-orientation: initial;
+        position: initial;
+        height: initial;
+        left: initial;
+        top: initial;
+        text-transform: uppercase;
+        display: flex;
+        p {
+          margin-right: 10px;
+          margin-top: 20px;
+        }
+      }
+    }
   }
 
   section {
@@ -180,6 +236,7 @@ main {
               text-align: center;
               line-height: 20px;
               font-weight: 800;
+              min-height: 50px;
             }
 
             .category {
@@ -187,7 +244,7 @@ main {
               span {
                 color: $text-color-dark;
                 font-size: $font-size-regular * 0.5;
-                background: $yellow;
+                background: $yellow-light;
                 padding: $font-size-regular * 0.4 $font-size-regular * 0.5;
                 font-weight: 800;
                 text-transform: uppercase;
@@ -202,7 +259,7 @@ main {
             }
 
             &:hover {
-              background: $yellow;
+              background: $yellow-light;
               border-radius: $border-radius;
               padding: 15px;
               margin: -15px;
@@ -217,6 +274,10 @@ main {
 footer {
   margin-top: 50px;
   text-align: center;
+  a {
+    text-decoration: underline;
+    background: initial;
+  }
   p {
     font-size: $font-size-regular;
   }
