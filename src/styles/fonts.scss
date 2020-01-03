@@ -5,11 +5,13 @@ body {
 
 a {
   color: $text-color-link;
-  background: $yellow-light;
-  text-decoration: none;
+  border-color: $yellow-light;
+  text-decoration: underline;
+  text-decoration-color: $yellow-dark;
+  text-decoration-thickness: 0.15rem;
 
   &:hover {
-    background: $yellow-dark;
+    background: $yellow;
     transition: all $time $ease;
   }
 

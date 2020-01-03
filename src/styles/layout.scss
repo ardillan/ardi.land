@@ -32,11 +32,11 @@ header {
 
     a {
       font-size: $font-size-regular * 0.8;
+      text-decoration: none;
       background: initial;
       padding-right: 15px;
       color: $text-color-dark;
       text-transform: uppercase;
-
       &:hover {
         background: initial;
         span {
@@ -214,6 +214,7 @@ main {
           margin-right: 5px;
         }
       }
+
       ul {
         display: flex;
         margin-left: -15px;
@@ -223,6 +224,11 @@ main {
         li {
           width: calc(100vw / 3);
           padding: 15px;
+
+          a {
+            text-decoration: none;
+          }
+
           article {
             transition: all $time $ease;
 
@@ -274,10 +280,7 @@ main {
 footer {
   margin-top: 50px;
   text-align: center;
-  a {
-    text-decoration: underline;
-    background: initial;
-  }
+
   p {
     font-size: $font-size-regular;
   }
