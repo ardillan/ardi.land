@@ -3,13 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 export default () => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "proyectos/torlavega.com.png" }) {
         childImageSharp {
-          fluid(maxHeight: 500, cropFocus: CENTER) {
+          fluid(maxHeight: 800, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -19,16 +20,18 @@ export default () => {
 
   return (
     <Layout>
+      <SEO title="Ardillan.com | Proyectos" />
+
       <h1>Proyectos</h1>
       <p>
         Esta página muestra los proyectos en los que estoy trabajando
         actualmente.
       </p>
       <div className="columns is-multline">
-        <div className="column is-6">
+        <div className="column is-4">
           <Img
             fluid={data.file.childImageSharp.fluid}
-            alt="Captura de pantalla de la web de torlavega.com"
+            alt="Icono de la web de torlavega.com"
           />
           <h6>Torlavega.com</h6>
           <p>
