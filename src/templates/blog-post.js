@@ -28,6 +28,12 @@ export default ({ data }) => {
             <h1>{post.frontmatter.title}</h1>{" "}
             <h2>{post.frontmatter.subtitle}</h2>{" "}
             <time>Escrito el {formatDate(post.frontmatter.date)} </time>
+            <p className="time-to-read">
+              <span>
+                Tardas {post.timeToRead} minuto
+                {post.timeToRead === 1 ? "" : "s"} en leerlo
+              </span>
+            </p>
             <div className="vertical-category">
               {post.frontmatter.category.map((value, index) => (
                 <p key={index}>
@@ -54,6 +60,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
+      timeToRead
       frontmatter {
         title
         subtitle
