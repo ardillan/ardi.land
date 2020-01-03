@@ -158,6 +158,15 @@ main {
       min-height: 350px;
     }
 
+    .time-to-read {
+      span {
+        background: $cyan;
+        color: $text-color-dark;
+        font-size: $font-size-regular * 0.6;
+        padding: 3px;
+      }
+    }
+
     .vertical-category {
       writing-mode: vertical-rl;
       text-orientation: upright;
