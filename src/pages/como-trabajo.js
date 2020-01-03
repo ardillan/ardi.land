@@ -10,7 +10,7 @@ export default ({ data }) => {
       <h1>¿Cómo trabajo?</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.allMarkdownRemark.edges[0].node.html,
+          __html: data.markdownRemark.html,
         }}
       />{" "}
     </Layout>
@@ -19,20 +19,14 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Cómo trabajo" } } }
-    ) {
-      edges {
-        node {
-          fileAbsolutePath
-          id
-          frontmatter {
-            title
-            date
-          }
-          html
-        }
+    markdownRemark(frontmatter: { title: { eq: "Cómo trabajo" } }) {
+      fileAbsolutePath
+      id
+      frontmatter {
+        title
+        date
       }
+      html
     }
   }
 `
