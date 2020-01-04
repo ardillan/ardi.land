@@ -33,8 +33,8 @@ export default ({ data }) => {
       <p>
         Actualmente estoy centrado en mejorar mi carrera como desarrollador de
         software. Puedes echar un vistazo a mis{" "}
-        <Link to="proyectos">proyectos</Link> actuales, ver{" "}
-        <Link to="como-trabajo">cómo trabajo</Link>, o bien contactar conmigo
+        <Link to="/proyectos">proyectos</Link> actuales, ver{" "}
+        <Link to="/como-trabajo">cómo trabajo</Link>, o bien contactar conmigo
         vía <a href="https://www.github.com/ardillan">Twitter</a>.
       </p>
     </Layout>

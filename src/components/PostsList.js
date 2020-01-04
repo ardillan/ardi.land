@@ -18,7 +18,14 @@ export default props => {
             : getGenericFeaturedImage().childImageSharp.fluid
 
         return (
-          <li className="column is-4" key={post.node.id}>
+          <li
+            className={
+              props.featured
+                ? "column is-4 is-12-mobile"
+                : "column is-4 is-6-mobile"
+            }
+            key={post.node.id}
+          >
             <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
               <article>
                 <header>
