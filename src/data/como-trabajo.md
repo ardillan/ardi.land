@@ -80,3 +80,4 @@ Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. E
 4.  [WeCodesign](https://wedevelopers.com/)
 5.  [Fallo de Sistema](https://www.rtve.es/alacarta/audios/fallo-de-sistema/)
 6.  [Loop Infinito](https://www.applesfera.com/applesfera-podcast/bienvenidos-a-loop-infinito-nuevo-podcast-applesfera)
+7.  [Press Start Videojuegos](https://pressstartvideojuegos.com)
