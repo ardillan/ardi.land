@@ -1,23 +1,16 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 import Hello from "../components/Hello"
-import Img from "gatsby-image"
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Ardillan.com | Sobre mí" />
       <Hello social={data.site.siteMetadata.social} />
 
-      <Img
-        fluid={data.fileName.childImageSharp.fluid}
-        alt="Retrato hecho por Sara del Hoyo"
-      />
-      <br />
       <p>
         Mi interés está centrado en aprender todo lo posible sobre tecnologías
         {` `}
@@ -35,6 +28,14 @@ export default ({ data }) => {
         hasta derivar al soporte digital. He tenido el placer de realizar
         trabajos de cartelería, imagen corporativa o portadas para libros y
         discos.
+      </p>
+
+      <p>
+        Actualmente estoy centrado en mejorar mi carrera como desarrollador de
+        software. Puedes echar un vistazo a mis{" "}
+        <Link to="/proyectos">proyectos</Link> actuales, ver{" "}
+        <Link to="/como-trabajo">cómo trabajo</Link>, o bien contactar conmigo
+        vía <a href="https://www.github.com/ardillan">Twitter</a>.
       </p>
     </Layout>
   )

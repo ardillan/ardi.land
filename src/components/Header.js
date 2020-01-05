@@ -4,14 +4,30 @@ import { Link } from "gatsby"
 const Header = () => {
   return (
     <header>
-      <div className="nav-container">
-        <nav className="links">
-          <Link to={`/`}>Inicio</Link>
-          <Link to={`/sobre-mi/`}>Sobre mí</Link>
-          <Link to={`/como-trabajo/`}>Cómo trabajo</Link>
-          <Link to={`/blog/`}>Blog</Link>
-        </nav>
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <Link activeClassName="active" to={`/`}>
+              <span>Inicio</span>
+            </Link>
+          </li>
+          <li>
+            <Link activeClassName="active" to={`/sobre-mi/`}>
+              <span>Sobre mí</span>
+            </Link>
+          </li>
+          <li>
+            <Link activeClassName="active" to={`/proyectos/`}>
+              <span>Proyectos</span>
+            </Link>
+          </li>
+          <li>
+            <Link activeClassName="active" to={`/blog/`}>
+              <span>Blog</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }

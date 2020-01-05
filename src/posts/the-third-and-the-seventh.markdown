@@ -4,11 +4,10 @@ subtitle: ""
 date: "2011-11-23T15:30:00.0100"
 type: "blog"
 description: "Video donde se muestran las diferentes formas con las que se puede disfrutar de la arquitectura"
+featuredImage: ../../content/images/posts/the-third-and-the-seventh.jpg
 category:
   - Diseño
 ---
-
-![Fotograma](/../../content/images/posts/the-third-and-the-seventh.jpg)
 
 A pesar de que el video tiene su tiempo y ya se ha hablado de él, no he podido evitar dedicarle esta entrada. Para empezar, me encanta que lo primero que la descripción del vídeo sea “Fullscreen it, please”, eso quiere decir que nos espera algo bueno, así que quiero que encontréis 20 minutos de vuestro tiempo, os relajéis, os sentéis y disfrutéis de este pedazo de video.
 

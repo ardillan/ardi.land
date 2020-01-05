@@ -1,60 +1,65 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
+import { getFeaturedPosts } from "../hooks/getFeaturedPosts"
+import { getAllPosts } from "../hooks/getAllPosts"
+import { getGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
+import { formatDate } from "../utils/helpers"
+import Img from "gatsby-image"
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/posts/" } }
-          sort: { fields: frontmatter___date, order: DESC }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date
-                author
-                type
-              }
+export default props => {
+  const posts = props.featured ? getFeaturedPosts() : getAllPosts()
+
+  return (
+    <ul className="columns is-multiline">
+      {posts.slice(0, props.length).map(post => {
+        let featuredImage =
+          post.node.frontmatter.featuredImage !== null
+            ? post.node.frontmatter.featuredImage.childImageSharp.fluid
+            : getGenericFeaturedImage().childImageSharp.fluid
+
+        return (
+          <li
+            className={
+              props.featured
+                ? "column is-4 is-12-mobile"
+                : "column is-4 is-6-mobile"
             }
-          }
-        }
-      }
-    `}
-    render={data => {
-      let posts = data.allMarkdownRemark.edges
-      if (props.type) {
-        posts = posts.filter(post => post.node.frontmatter.type === props.type)
-      }
-
-      return (
-        <ul className="article-list">
-          {posts.slice(0, props.length).map(post => {
-            let postDate = new Date(
-              post.node.frontmatter.date
-            ).toLocaleDateString("es-ES", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-
-            return (
-              <li key={post.node.id}>
-                <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
-                  <p>{post.node.frontmatter.title}</p>
-                  <small>{postDate.toString()}</small>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      )
-    }}
-  />
-)
+            key={post.node.id}
+          >
+            <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
+              <article>
+                <header>
+                  <Img
+                    fluid={featuredImage}
+                    className="featured-image"
+                    fadeIn={true}
+                    alt={post.node.frontmatter.title}
+                    title={post.node.frontmatter.title}
+                  />
+                  <h2>{post.node.frontmatter.title}</h2>
+                  {props.showPostDate ? (
+                    <p>
+                      Escrito el{" "}
+                      <time dateTime={post.node.frontmatter.date}>
+                        {formatDate()}
+                      </time>
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </header>
+                <div className="is-flex-centered">
+                  {post.node.frontmatter.category.map((category, index) => (
+                    <p className="category" key={index}>
+                      <span>{category}</span>
+                    </p>
+                  ))}
+                </div>
+              </article>
+            </Link>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}

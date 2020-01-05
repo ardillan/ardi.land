@@ -4,11 +4,10 @@ subtitle: "Música para pasar un buen rato"
 date: "2011-09-28T15:30:00.0100"
 type: "blog"
 description: "Tokumaru es un música japonés que es capaz de realizar piezas musicales hasta con juguetes"
+featuredImage: ../../content/images/posts/un-gato-un-perro-y-shugo-tokumaru-1.jpg
 category:
   - Música
 ---
-
-![Retrato de Tokumaru](/../../content/images/posts/un-gato-un-perro-y-shugo-tokumaru-1.jpg)
 
 Como cada mañana, al levantarme enchufo la radio en mi iPod y sintonizo Radio3 para escuchar la sintonía de “Hoy empieza todo” y que ésta releve mis sueños. Mientras suena, pienso en la rutina diaria que me espera, hasta que un sonido familiar hace que despierte totalmente de mi semiinconsciencia. Se trataba de un cantante al que hacía meses había olvidado y con le que había disfrutado largo y tendido de su música tan **happy** y sonido japonés. Era nada más y nada menos que **Shugo Tokumaru**, un destacado cantante y compositor de Japón que combina música folk con un pop bien llevado a cabo y mezclado con una gran gama de instrumentos.
 

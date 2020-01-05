@@ -5,6 +5,8 @@ date: "2019-03-01T20:00:00.0100"
 author: Ardillán
 type: "blog"
 description: "Resumen del primer año del ciclo superior de Desarrollo de Aplicaciones Multiplataforma. Listado de asignaturas, horas y explicación de cada una de ellas"
+featured: true
+featuredImage: ../../content/images/posts/desarrollo-aplicaciones-multiplataforma-featured.png
 category:
   - Desarrollo
 ---

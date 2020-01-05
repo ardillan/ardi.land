@@ -4,11 +4,10 @@ subtitle: "La verdadera iconoclasta"
 date: "2012-08-25T15:30:00.0100"
 type: "blog"
 description: "Susan Kare es una diseñadora gráfica estadounidense"
+featuredImage: ../../content/images/posts/susan-kare-1.png
 category:
   - Diseño
 ---
-
-![Icono de un perro hecho por Susan Kare](/../../content/images/posts/susan-kare-1.png)
 
 Desarrolladora de iconos, tipografías e interfaces. Susan Kare ha marcado un buen punto de inflexión con sus diseños, basados en píxeles, donde destaca la sencillez y la funcionalidad.
 

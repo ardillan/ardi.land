@@ -4,11 +4,10 @@ subtitle: "Cómo volar sin necesidad de palabras"
 date: "2011-10-31T15:30:00.0100"
 type: "blog"
 description: "Video de la banda de Texas: explosions in the sky"
+featuredImage: ../../content/images/posts/explosions-in-the-sky-1.jpg
 category:
   - Música
 ---
-
-![Explosions in the sky](/../../content/images/posts/explosions-in-the-sky-1.jpg)
 
 Un grupo que para muchos no necesita presentación. Desde Texas y con amor. Explosions no son muy dados a hacer vídeos, es por ello que les dedico este post por su representar su tema **Be confortable, Creature** en una bonita pieza de casi 10 minutos de duración sacado de su nuevo album **Take Care, take care, take care**.
 

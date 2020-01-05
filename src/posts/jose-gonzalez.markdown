@@ -4,11 +4,10 @@ subtitle: ""
 date: "2012-04-19T15:30:00.0100"
 type: "blog"
 description: "José González es un cantante sueco"
+featuredImage: ../../content/images/posts/jose-gonzalez-1.jpg
 category:
   - Música
 ---
-
-![Título del DVD](/../../content/images/posts/jose-gonzalez-1.jpg)
 
 Meses de espera han valido la pena. El DVD documental de José González está por fin disponible por 18 míseros euros.
 

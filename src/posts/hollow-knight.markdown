@@ -4,13 +4,12 @@ subtitle: "El culto al Dios Insecto"
 date: "2019-05-26T23:40:00.0100"
 type: "blog"
 description: "Hollow Knight rinde culto al dios insecto en una aventura llena plataformas con un arte y banda sonora realmente cuidadas"
+featuredImage: ../../content/images/posts/hollow-knight-1.png
 category:
   - Videojuegos
 ---
 
 Hace tiempo que me apetecía jugar a algo del estilo [_metroidvania_](https://es.wikipedia.org/wiki/Metroidvania). Son un tipo de **videojuegos con los que disfruto bastante**; consiguen engancharme y rara vez me defraudan.
-
-![Personaje principal de Hollow Knight](/../../content/images/posts/hollow-knight-1.png)
 
 ### La decandencia de Hallownest
 

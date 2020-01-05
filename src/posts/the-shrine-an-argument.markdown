@@ -4,11 +4,10 @@ subtitle: "Fleet foxes en su estado puro"
 date: "2011-11-28T15:30:00.0100"
 type: "blog"
 description: "Video de Fleet Foxes de su álbum “Helplessness Blues”"
+featuredImage: ../../content/images/posts/the-shrine-an-argument-1.jpg
 category:
   - Música
 ---
-
-![Fotograma del video](/../../content/images/posts/the-shrine-an-argument-1.jpg)
 
 Nuevo video de Fleet Foxes de su álbum más reciente “Helplessness Blues” cuya canción es “The Shrine / An argument”. Realizado por la misma persona que hizo el video “Mykonos”, Sean Pecknold, el cual nos deleita ahora con un estilo parecido a su video anterior pero con un metraje y estética más elaborada.
 

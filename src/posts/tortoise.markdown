@@ -4,6 +4,7 @@ subtitle: "Tortoise como método de vida"
 date: "2011-12-19T15:30:00.0100"
 type: "blog"
 description: "Tortoise son una banda de Chicago. Considerados los padres del post-rock"
+featuredImage: ../../content/images/posts/tortoise.jpg
 category:
   - Música
 ---

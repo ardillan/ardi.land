@@ -4,11 +4,10 @@ subtitle: "Tu diseñador de iconos favorito"
 date: "2011-11-02T15:30:00.0100"
 type: "blog"
 description: "Diseñador de interfaces e iconos estadounidense"
+featuredImage: ../../content/images/posts/mantia-1.jpg
 category:
   - Diseño
 ---
-
-![Ejemplo de iconos de Mantia](/../../content/images/posts/mantia-1.jpg)
 
 Louie Mantia es un diseñador de interfaces visuales afincado en California. Allí, trabaja realizando iconos, wallpapers y demás aplicaciones para entornos iOS y OSX (en su mayoría).
 

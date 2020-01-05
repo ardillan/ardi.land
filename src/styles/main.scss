@@ -1,7 +1,15 @@
-@import "./variables.scss";
-@import "./prism.scss";
+@charset "utf-8";
 
-@import "./general.scss";
-@import "./layout";
+// Bulma CSS Framework
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/minireset.sass";
+@import "~bulma/sass/grid/columns.sass";
+
+// Custom CSS
+@import "./variables.scss";
+
+@import "./fonts-inter";
 @import "./fonts";
-@import "./typography";
+@import "./layout";
+@import "./buttons";
+@import "./prism.scss";

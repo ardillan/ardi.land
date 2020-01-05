@@ -4,13 +4,12 @@ subtitle: "Ha sido como jugar a una súper Súper Nintendo"
 date: "2019-05-30T12:00:00.0100"
 type: "blog"
 description: "Una aventura clásica de 16 bits mezclada con un 3D moderno. Octopath Traveller nos permite jugar a una súper Super Nintendo"
+featuredImage: ../../content/images/posts/octopath-traveller-1.jpg
 category:
   - Videojuegos
 ---
 
 Octopath Traveller es un juego que compré por mi **cariño a los píxeles**. Si no recuerdo mal anticiparon el desarrollo en 2017 y, aunque no soy un amante de los [JRPG](https://es.wikipedia.org/wiki/Videojuego_de_rol#Historia), sabía perfectamente que iba a formar parte de mi catálogo.
-
-![Octopath traveveller](/../../content/images/posts/octopath-traveller-1.jpg)
 
 ## De Cuernoburgo a Vadorriviera
 

@@ -4,11 +4,10 @@ subtitle: ""
 date: "2012-10-22T15:30:00.0100"
 type: "blog"
 description: "Pieza audiovisual donde se encuentra el arte de dalí animado como si una película de disney se tratase"
+featuredImage: ../../content/images/posts/dali-disney.jpg
 category:
   - General
 ---
-
-![Fotograma del video](/../../content/images/posts/dali-disney.jpg)
 
 Animación de 6 minutos donde se refleja el mundo surrealista de Dalí. La pieza está acompañada por una música acorde a las imágenes que nos ponen en el contexto de la visión del génio catalán.
 

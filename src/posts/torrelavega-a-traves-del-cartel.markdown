@@ -4,12 +4,11 @@ subtitle: "Conjunto de carteles de las fiestas de Torrelavega"
 date: "2015-12-01T12:00:00.0100"
 author: Ardillán
 description: "Muestra de carteles de la ciudad de Torrelavega a través de la historia de sus fiestas. Historia del diseño que va desde finales de 1800 hasta nuestros días"
+featuredImage: ../../content/images/posts/torrelavega-a-traves-del-cartel-1.jpg
 type: "blog"
 category:
   - Diseño
 ---
-
-![Carteles de las fiestas de Torrelavega](../../content/images/posts/torrelavega-a-traves-del-cartel-1.jpg)
 
 Hace tiempo que llevo queriendo hacer una retrospectiva con motivo de la historia del cartel de las fiestas patronales de mi ciudad (Torrelavega). El hecho de ir recopilando información sobre cada uno de ellos me parecía una labor bastante grande, así que lo fui dejando y dejando hasta que la idea quedó prácticamente en el olvido.
 

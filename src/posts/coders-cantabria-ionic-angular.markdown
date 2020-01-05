@@ -3,6 +3,7 @@ title: "IONIC"
 date: "2018-03-30T20:00:00.0100"
 author: Ardillán
 type: "blog"
+featuredImage: ../../content/images/posts/coders-cantabria-ionic-angular-featured.png
 category:
   - Desarrollo
 ---

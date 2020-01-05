@@ -4,15 +4,14 @@ subtitle: "No tan frío como promete"
 date: "2019-07-17T20:00:00.0100"
 type: "blog"
 description: "Bajo la piel de Donkey deberemos atravesar obstáculos en una multitud de niveles de plataforma"
+featuredImage: ../../content/images/posts/donkey-kong-country-tropical-freeze.jpg
 category:
   - Videojuegos
 ---
 
 A pesar de que tenía bastantes ganas de echarle el guante, no puedo decir que me haya gustado el último plataformas de Donkey Kong. Desde su control hasta hasta la jugabilidad, las espectativas que tenía no han cumplido para nada mi pronóstico.
 
-![Imagen del videojuego](/../../content/images/posts/donkey-kong-country-tropical-freeze.jpg)
-
-### Espectativas vs. Realidad
+#### Espectativas vs. Realidad
 
 Mis ansias de querer jugar a un juego de este tipo se vieron juntadas con la crítica y el **hype** que había alrededor de este título. No sé por qué habrá sido, pero ni **Donkey, ni Diddy, ni siquiera Cranky** han sabido convencerme en lo que ha resultado, bajo mi punto de vista, un juego aburrido y falto de energía.
 

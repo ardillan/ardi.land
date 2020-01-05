@@ -1,20 +1,30 @@
-// Main colors
-$primary-color: #870ff6;
-$primary-color-dark: #6620a7;
-$primary-color-light: #d3bbe9;
-$primary-color-lighter: #f8f0ff;
-
-$secondary-color: #08d43d;
-$secondary-color-dark: #086521;
-$secondary-color-light: #66e989;
-$secondary-color-lighter: #9afab4;
-
 // Text colors
-$text-color-dark: #080a13;
-$text-color-grey: #676180;
+$text-color-dark: #241c38;
+$text-color-link: #241c38;
+
+// Colors
+$yellow: #ffee62;
+$yellow-dark: #ffda10;
+$yellow-light: #ffef95;
+$cyan: #eefaff;
+$grey: rgb(208, 208, 238);
 
 // Font sizes
 $main-size: 20px;
 
 // Breakpoints
-$mobile-screen: 570px;
+$breakpoint-mobile: 768px;
+
+// Fonts
+$main-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+
+$font-size-regular: 1.2rem;
+
+// Animations
+$time: 0.2s;
+$ease: ease-in;
+
+// Radius
+$border-radius: 3px;

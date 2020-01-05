@@ -4,13 +4,12 @@ subtitle: "Y la llama que allí encontró"
 date: "2019-07-25T19:00:00.0100"
 type: "blog"
 description: "Aventura gráfica española con un diseño y artes esquisitos"
+featuredImage: ../../content/images/posts/candle-the-power-of-the-flame.jpg
 category:
   - Videojuegos
 ---
 
 Siempre me han encantado los videojuegos de [point-and-click](<https://es.wikipedia.org/wiki/Clic_(inform%C3%A1tica)#Point_and_click>), desde pequeño los he tenido muy presentes. Por eso, la historia de Teku no iba a ser una escepción, mucho más sabiendo que la producción viene del estudio turolense [Teku Studios](https://twitter.com/TekuStudios).
-
-![Imagen del videojuego](/../../content/images/posts/candle-the-power-of-the-flame.jpg)
 
 Y es que Teku es el nombre del protagonista de Candle, un personaje entrañable que tiene **una vela como mano** y que se presenta en apariencia como una raíz enmascarada. La historia comienza con un pequeño vídeo introductorio narrado por el ya desaparecido **Pepe Mediavilla**, donde se presentan los personajes, su contexto y el por qué de su existencia.
 

@@ -4,11 +4,10 @@ subtitle: "Diseño intransigente"
 date: "2011-12-05T15:30:00.0100"
 type: "blog"
 description: "Yossi Yemel, un diseñador israelí que deja mensajes claros y sin tapujos"
+featuredImage: ../../content/images/posts/yossi-lemel-1.jpg
 category:
   - Diseño
 ---
-
-![Cartel](/../../content/images/posts/yossi-lemel-1.jpg)
 
 Hoy, en mi visita a Bilbao, he coincidido con una pequeña exposición de carteles en plena calle. Uno de ellos carteles, que ha sido el que me ha llamado la atención , el de Yossi Yemel, un diseñador Israelí que deja mensajes claros y sin tapujos que incluso hacen girar la vista a quienes ven sus diseños. El de hoy no era de esos precisamente, pero tuvo el suficiente peso como para hacer que investigase más acerca de esta persona.
 
