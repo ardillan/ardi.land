@@ -55,7 +55,6 @@ export default props => {
                     </p>
                   ))}
                 </div>
-                {/* <p className="excerpt">{post.node.frontmatter.description}</p> */}
               </article>
             </Link>
           </li>
