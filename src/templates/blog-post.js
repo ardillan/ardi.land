@@ -34,13 +34,6 @@ export default ({ data }) => {
                 {post.timeToRead === 1 ? "" : "s"} en leerlo
               </span>
             </p>
-            <div className="vertical-category">
-              {post.frontmatter.category.map((value, index) => (
-                <p key={index}>
-                  <span>{value}</span>
-                </p>
-              ))}
-            </div>
           </div>
           <div className="column is-6">
             <Img fluid={featuredImage} className="featured-image" />
