@@ -8,7 +8,7 @@ const Hello = () => {
     {
       file(relativePath: { eq: "general/portrait.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 1000, quality: 100) {
+          fluid(maxWidth: 700, maxHeight: 700, quality: 85) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -42,10 +42,18 @@ const Hello = () => {
           relacionado con la tecnología, los videojuegos y la música.
         </p>
         <div className="is-flex">
-          <a className="btn-main" href="https://www.github.com/ardillan">
+          <a
+            className="btn-main"
+            href="https://www.github.com/ardillan"
+            target="_blank"
+          >
             Github
           </a>
-          <a className="btn-main" href="https://www.github.com/ardillan">
+          <a
+            className="btn-main"
+            href="https://www.twitter.com/ardillan_"
+            target="_blank"
+          >
             Twitter
           </a>
         </div>
