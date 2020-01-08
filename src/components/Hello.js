@@ -46,6 +46,7 @@ const Hello = () => {
             className="btn-main"
             href="https://www.github.com/ardillan"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Github
           </a>
@@ -53,6 +54,7 @@ const Hello = () => {
             className="btn-main"
             href="https://www.twitter.com/ardillan_"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Twitter
           </a>
