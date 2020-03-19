@@ -18,7 +18,7 @@ Mi forma de ver la ciudad del futuro está ligada al desarrollo tecnológico de 
 
 Por tanto, la propuesta que planteo podría resumirse en una frase: **el poder de los datos abiertos**.
 
-### Compresión del problema
+### Comprensión del problema
 
 Creo que antes de sugerir una peatonalización, un nuevo vial o un nuevo carril bici, es necesario comprender cómo actuar ante un problema. Hace unos meses, el ayuntamiento informaba acerca de que se estaba analizando el tráfico rodado de la ciudad ([noticia](http://www.torrelavega.es/index.php/component/k2/item/4959-la-concejal%C3%ADa-de-movilidad-urbana-comienza-a-configurar-el-pmus-para-mejorar-el-tr%C3%A1fico-rodado-y-peatonal-en-la-ciudad)): hasta 27 controladores que determinarían la afluencia de tráfico que hay en diferentes puntos de la ciudad. Esto es parte de la receta con la que se quiere dar salida al Plan de Movilidad.
 
