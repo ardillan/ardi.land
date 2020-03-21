@@ -80,7 +80,10 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img fluid={data.twitter.childImageSharp.fluid} alt="Logotipo" />
+              <Img
+                fluid={data.twitter.childImageSharp.fluid}
+                alt="Icono de Twitter"
+              />
             </a>
           </li>
           <li>
@@ -90,7 +93,10 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img fluid={data.github.childImageSharp.fluid} alt="Logotipo" />
+              <Img
+                fluid={data.github.childImageSharp.fluid}
+                alt="Icono de Github"
+              />
             </a>
           </li>
         </ul>
