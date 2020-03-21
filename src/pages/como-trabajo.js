@@ -7,12 +7,24 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Cómo trabajo" />
-      <h1>¿Cómo trabajo?</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.markdownRemark.html,
-        }}
-      />{" "}
+      <div className="page-container">
+        <section>
+          <div className="page-header">
+            <h1>¿Cómo trabajo?</h1>
+            <h2>
+              Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o
+              pequeños scripts facilitan el trabajo de la gente. A continuación
+              indico qué aplicaciones utilizo en mi día a día, qué música
+              escucho o qué utilizo para editar gráficos y construir interfaces.
+            </h2>
+          </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data.markdownRemark.html,
+            }}
+          />
+        </section>
+      </div>
     </Layout>
   )
 }

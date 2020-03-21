@@ -22,28 +22,34 @@ export default ({ data }) => {
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
-      <section className="post-container">
-        <div className="columns is-multiline">
-          <div className="column is-6" style={{ position: "relative" }}>
-            <h1>{post.frontmatter.title}</h1>{" "}
-            <h2>{post.frontmatter.subtitle}</h2>{" "}
-            <time>Escrito el {formatDate(post.frontmatter.date)} </time>
-            <p className="time-to-read">
-              <span>
+      <section className="page-container">
+        <article>
+          <header className="post-intro">
+            <h1>
+              <span>{post.frontmatter.title}</span>
+            </h1>
+            <h2>{post.frontmatter.subtitle}</h2>
+            <div>
+              <time>Escrito el {formatDate(post.frontmatter.date)} </time>
+              <p className="time-to-read">
+                <span role="img" aria-label="Reloj">
+                  🕐{" "}
+                </span>
                 Tardas {post.timeToRead} minuto
                 {post.timeToRead === 1 ? "" : "s"} en leerlo
-              </span>
-            </p>
-          </div>
-          <div className="column is-6">
-            <Img fluid={featuredImage} className="featured-image" />
-          </div>
+              </p>
+            </div>
+            <div className="post-featured-image">
+              <Img fluid={featuredImage} />
+            </div>
+          </header>
+
           <div
-            className="content column is-10 is-offset-2"
+            className="content"
             dangerouslySetInnerHTML={{ __html: post.html }}
-          />{" "}
-        </div>
-      </section>{" "}
+          />
+        </article>
+      </section>
     </Layout>
   )
 }
@@ -62,7 +68,7 @@ export const query = graphql`
         category
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1200, cropFocus: CENTER) {
+            fluid(maxWidth: 800, maxHeight: 450, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -7,10 +7,12 @@ import "../styles/main.scss"
 
 export default ({ children }) => {
   return (
-    <div className="container">
+    <div>
       <Header />
-      <main>{children}</main>
-      <Footer />
+      <div className="container">
+        <main>{children}</main>
+        <Footer />
+      </div>
     </div>
   )
 }

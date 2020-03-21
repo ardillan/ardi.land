@@ -10,7 +10,7 @@ export default () => {
     {
       file(relativePath: { eq: "proyectos/torlavega.com.png" }) {
         childImageSharp {
-          fluid(maxHeight: 800, cropFocus: CENTER) {
+          fluid(maxHeight: 700, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -21,30 +21,38 @@ export default () => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Proyectos" />
-
-      <h1>Proyectos</h1>
-      <p>
-        Esta página muestra los proyectos en los que estoy trabajando
-        actualmente.
-      </p>
-      <div className="columns is-multline">
-        <div className="column is-4">
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            alt="Icono de la web de torlavega.com"
-          />
-          <h6>Torlavega.com</h6>
-          <p>
-            Web donde se trata de recopilar, analizar y disponer de forma
-            pública y ordenada información relacionada con la ciudad de
-            Torrelavega.
-          </p>
-          <div className="is-flex">
-            <a className="btn-main" href="https://www.torlavega.com">
-              Visitar sitio
-            </a>
-          </div>
+      <div className="page-container">
+        <div className="page-header">
+          <h1>Proyectos</h1>
+          <h2>
+            Esta página muestra los proyectos en los que estoy trabajando
+            actualmente.
+          </h2>
         </div>
+
+        <a
+          className="btn-main"
+          href="https://www.torlavega.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article>
+            <header>
+              <Img
+                fluid={data.file.childImageSharp.fluid}
+                alt="Icono de la web de torlavega.com"
+                style={{ height: 500 }}
+              />
+              <h2>Torlavega.com</h2>
+
+              <p>
+                Web donde se trata de recopilar, analizar y disponer de forma
+                pública y ordenada información relacionada con la ciudad de
+                Torrelavega.
+              </p>
+            </header>
+          </article>
+        </a>
       </div>
     </Layout>
   )

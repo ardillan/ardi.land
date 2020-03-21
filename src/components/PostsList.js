@@ -8,9 +8,8 @@ import Img from "gatsby-image"
 
 export default props => {
   const posts = props.featured ? getFeaturedPosts() : getAllPosts()
-
   return (
-    <ul className="columns is-multiline">
+    <ul className={props.featured ? "featured" : ""}>
       {posts.slice(0, props.length).map(post => {
         let featuredImage =
           post.node.frontmatter.featuredImage !== null
@@ -18,14 +17,7 @@ export default props => {
             : getGenericFeaturedImage().childImageSharp.fluid
 
         return (
-          <li
-            className={
-              props.featured
-                ? "column is-4 is-12-mobile"
-                : "column is-4 is-6-mobile"
-            }
-            key={post.node.id}
-          >
+          <li key={post.node.id}>
             <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
               <article>
                 <header>
@@ -37,6 +29,7 @@ export default props => {
                     title={post.node.frontmatter.title}
                   />
                   <h2>{post.node.frontmatter.title}</h2>
+                  <p className="excerpt">{post.node.frontmatter.description}</p>
                   {props.showPostDate ? (
                     <p>
                       Escrito el{" "}
@@ -48,9 +41,9 @@ export default props => {
                     ""
                   )}
                 </header>
-                <div className="is-flex-centered">
+                <div className="category">
                   {post.node.frontmatter.category.map((category, index) => (
-                    <p className="category" key={index}>
+                    <p key={index}>
                       <span>{category}</span>
                     </p>
                   ))}

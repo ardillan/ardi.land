@@ -1,30 +1,34 @@
 // Text colors
-$text-color-dark: #241c38;
-$text-color-link: #241c38;
+$text-color-dark: #120d43;
+$text-color-link: #120d43;
 
 // Colors
 $yellow: #ffee62;
-$yellow-dark: #ffda10;
-$yellow-light: #ffef95;
+$yellow-dark: #ffcc00;
+$yellow-light: #fff7cb;
 $cyan: #eefaff;
 $grey: rgb(208, 208, 238);
 
 // Font sizes
 $main-size: 20px;
 
+$padding-regular: 20px;
+
 // Breakpoints
-$breakpoint-mobile: 768px;
+$breakpoint-mobile: 450px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
 
 // Fonts
-$main-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$font-size-regular: 1.2rem;
+$font-size-regular: 1rem;
+$font-size-small: 0.8rem;
 
 // Animations
-$time: 0.2s;
+$time: 0.1s;
 $ease: ease-in;
 
 // Radius
-$border-radius: 3px;
+$border-radius: 10px;

@@ -13,11 +13,14 @@ export default ({ data }) => {
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
       />
-
       <Hello social={data.site.siteMetadata.social} />
-
       <section className="all-posts">
-        <h1>Mis artículos destacados</h1>
+        <h1>
+          <span role="img" aria-label="Estrellas">
+            ✨
+          </span>{" "}
+          Mis artículos destacados
+        </h1>
         <PostList length="3" type="blog" featured />
       </section>
     </Layout>
