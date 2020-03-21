@@ -6,7 +6,6 @@ author: Ardillán
 type: "blog"
 description: "Idea para mejorar la calidad y transparencia de la ciudad de Torrelavega mediante el uso de datos abiertos"
 featuredImage: ../../content/images/posts/el-poder-de-los-datos-featured.jpg
-featured: true
 category:
   - Reflexión
   - Desarrollo
