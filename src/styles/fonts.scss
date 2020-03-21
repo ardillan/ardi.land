@@ -49,8 +49,14 @@ p {
   }
 }
 
-.page-container .content ul {
-  list-style-type: initial;
+.page-container .content {
+  ul {
+    list-style-type: initial;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
 }
 
 h1 {

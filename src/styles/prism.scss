@@ -60,6 +60,9 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
+  font-size: 0.8rem;
+  background: #fffdab;
+  color: #3f5ffc;
 }
 
 .token.comment,
