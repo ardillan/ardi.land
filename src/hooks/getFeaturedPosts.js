@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const getFeaturedPosts = () => {
+export const GetFeaturedPosts = () => {
   const posts = useStaticQuery(
     graphql`
       {

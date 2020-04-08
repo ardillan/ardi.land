@@ -1,20 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import { getFeaturedPosts } from "../hooks/getFeaturedPosts"
-import { getAllPosts } from "../hooks/getAllPosts"
-import { getGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
+import { GetFeaturedPosts } from "../hooks/getFeaturedPosts"
+import { GetAllPosts } from "../hooks/getAllPosts"
+import { GetGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
 import { formatDate } from "../utils/helpers"
 import Img from "gatsby-image"
 
 export default props => {
-  const posts = props.featured ? getFeaturedPosts() : getAllPosts()
+  const posts = props.featured ? GetFeaturedPosts() : GetAllPosts()
   return (
     <ul className={props.featured ? "featured" : ""}>
       {posts.slice(0, props.length).map(post => {
         let featuredImage =
           post.node.frontmatter.featuredImage !== null
             ? post.node.frontmatter.featuredImage.childImageSharp.fluid
-            : getGenericFeaturedImage().childImageSharp.fluid
+            : GetGenericFeaturedImage().childImageSharp.fluid
 
         return (
           <li key={post.node.id}>
