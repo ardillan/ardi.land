@@ -123,6 +123,11 @@ header {
           justify-content: center;
           cursor: pointer;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+
+          > button {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0);
+          }
         }
 
         .menu-mobile {
