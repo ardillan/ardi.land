@@ -48,14 +48,21 @@ const Header = () => {
           <Img fluid={data.logo.childImageSharp.fluid} alt="Logotipo" />
         </Link>
         <div className="menu-mobile-icon">
-          <img
-            src={hamburguer_icon}
-            width="19"
-            alt="Icono de menú"
+          <button
+            type="button"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen)
             }}
-          />
+            onKeyPress={event => {
+              if (event.keyCode !== 13) {
+                return false
+              }
+
+              setIsMenuOpen(!isMenuOpen)
+            }}
+          >
+            <img src={hamburguer_icon} width="19" alt="Icono de menú" />
+          </button>
         </div>
         <ul className={menuClass}>
           <li>
