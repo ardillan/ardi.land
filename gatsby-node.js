@@ -18,6 +18,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+  const { createRedirect } = actions
+  createRedirect({
+    fromPath: "/uses",
+    toPath: "/como-trabajo",
+    isPermanent: true,
+    statusCode: 200,
+  })
+
   return graphql(`
     {
       allMarkdownRemark {
