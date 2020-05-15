@@ -1,0 +1,8 @@
+# Redirecciones
+[[redirects]]
+    from = "/blog/dam"
+    to = "/blog/desarrollo-aplicaciones-multiplataforma"
+
+[[redirects]]
+    from = "/uses"
+    to = "/como-trabajo"
