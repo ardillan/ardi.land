@@ -132,22 +132,20 @@ header {
 
         .menu-mobile {
           position: absolute;
-          top: 100%;
-          height: calc(-55px + 100vh);
+          top: 55px;
           width: 100%;
-          z-index: 90;
-          background: white;
+          z-index: 1;
           overflow-x: scroll;
           left: 0;
           display: flex;
-          justify-content: center;
-          text-align: center;
           flex-direction: column;
-          align-items: center;
-          padding: 0;
+          padding: 40px 20px;
+          background: white;
+          align-items: start;
+          border-bottom: 1px solid #e1e1e1;
 
           li {
-            padding: $padding-regular * 3 0;
+            padding: 20px 0px;
             a {
               font-size: 30px;
               font-weight: bolder;
