@@ -302,6 +302,21 @@ main {
     }
   }
 
+  .spaces-grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row dense;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   section {
     &.all-posts {
       h1 {
