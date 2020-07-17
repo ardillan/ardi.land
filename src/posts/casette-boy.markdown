@@ -9,7 +9,7 @@ category:
   - Videojuegos
 ---
 
-Hace no mucho encontré este tutorial en [El Retro Consolero](http://elretroconsolero.blogspot.com/2013/08/cajas-de-casette-para-juegos-de-game.html#more) en donde se muestra **cómo reciclar nuestras viejas cajas de cassette** para convertirlas en útiles **cajas de Game Boy**. Me pareció muy buena idea, el único problema es que las plantillas que encontraba no me gustaban demasiado. Es por eso que voy a aportar mi granito de arena con una plantilla hecha por mí, con disposiciones ligeramente diferentes, resolución a 300 ppp y algún que otro icono personalizado.
+Hace no mucho encontré este tutorial en [El Retro Consolero](https://elretroconsolero.blogspot.com/2013/08/cajas-de-casette-para-juegos-de-game.html#more) en donde se muestra **cómo reciclar nuestras viejas cajas de cassette** para convertirlas en útiles **cajas de Game Boy**. Me pareció muy buena idea, el único problema es que las plantillas que encontraba no me gustaban demasiado. Es por eso que voy a aportar mi granito de arena con una plantilla hecha por mí, con disposiciones ligeramente diferentes, resolución a 300 ppp y algún que otro icono personalizado.
 
 En principio he hecho **el modelo para Game Boy**. Muchos de los elementos que contienen están vectorizados, por lo que no habrá problema a la hora de estirarlos. También he rediseñado alguna portada que no incluyo en la descarga, aunque si alguien la quiere estaré encantado de pasarla.
 

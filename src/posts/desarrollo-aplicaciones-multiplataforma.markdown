@@ -131,4 +131,4 @@ Aprenderemos a depurar código, organizarlo, simplificarlo y a refactorizarlo. V
 
 ---
 
-Todas las imágenes han sido obtenidas de [flaticon](http://flaticon.com)
+Todas las imágenes han sido obtenidas de [flaticon](https://flaticon.com)

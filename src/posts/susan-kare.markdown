@@ -13,4 +13,4 @@ Desarrolladora de iconos, tipografías e interfaces. Susan Kare ha marcado un bu
 
 Susan lleva desde 1983 dando guerra y fué la encargada del desarrollo de la interfaz clásica de Macintosh, entre otras, con la que se hizo un hueco entre lo más destacados. Como diseñadora que es, también realiza trabajos de identidad corporativa y campañas de marketing.
 
-Puedes ver aquí [su página web](http://www.kare.com).
+Puedes ver aquí [su página web](https://www.kare.com).

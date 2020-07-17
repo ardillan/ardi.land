@@ -13,7 +13,7 @@ Pocas cosas hay que me gusten de Windows como sistema operativo. Su interfaz no 
 
 Parecerá una tontería, pero el hecho de separar dos ventanas y aprovechar todo el espacio de una forma óptima y automática **es algo que debería venir por defecto en todo sistema**, sobretodo si la pantalla de nuestro ordenador es pequeña.
 
-En Windows 7 viene incorporado de forma nativa, pero en Mac OS necesitaremos instalar un programa llamado [**Cinch**](http://www.irradiatedsoftware.com/cinch/), producido por [Irradiated Sofware](http://www.irradiatedsoftware.com), el cual nos dará la posibilidad de aprovechar todo el espacio de nuestra pantalla de una forma rápida y automática.
+En Windows 7 viene incorporado de forma nativa, pero en Mac OS necesitaremos instalar un programa llamado [**Cinch**](https://www.irradiatedsoftware.com/cinch/), producido por [Irradiated Sofware](https://www.irradiatedsoftware.com), el cual nos dará la posibilidad de aprovechar todo el espacio de nuestra pantalla de una forma rápida y automática.
 
 El programa tiene un periodo de prueba ilimitado, aunque puedes comprar una licencia por 7 dólares (que son poco más de 5 Euros).
 

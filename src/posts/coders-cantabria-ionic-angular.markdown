@@ -8,7 +8,7 @@ category:
   - Desarrollo
 ---
 
-Una vez más tuve la oportunidad de asistir a Coders Cantabria, como ya viene siendo habitual tras los últimos meses. La primera sesión del año tuvo lugar en el [Espacio Joven de Santander](http://www.juventudsantander.es "Espacio Joven de Santander"). Una ubicación mucho más céntrica y que además tiene cantidad de comodidades que hacen que las charlas sean mucho más fáciles de dar gracias al espacio de las salas.
+Una vez más tuve la oportunidad de asistir a Coders Cantabria, como ya viene siendo habitual tras los últimos meses. La primera sesión del año tuvo lugar en el [Espacio Joven de Santander](https://www.juventudsantander.es "Espacio Joven de Santander"). Una ubicación mucho más céntrica y que además tiene cantidad de comodidades que hacen que las charlas sean mucho más fáciles de dar gracias al espacio de las salas.
 
 Esta ocasión tocaba hablar de de Ionic y Angular. Dos charlas de unos 40 minutos que nos dieron un enfoque general al
 estado y Angular por un lado y las posibilidades que nos ofrece Ionic por otro.

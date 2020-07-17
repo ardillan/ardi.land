@@ -19,7 +19,7 @@ Como ejemplo, pondría la genial [charla de Juan Hernando](https://ciudadanob.co
 
 También hablaría de Ana Cirujano que ,con su [ponencia](https://www.easyworkation.com/tipografia-responsive/) _Tipografía responsive: maqueta textos para todos los dispositivos_ nos describió por qué la tipografía es fundamental para nuestras webs, además de aclararnos cómo combinar, contrastar y hacer un buen uso de las fuentes en un contexto digital, siempre teniendo en cuenta que quien lee contenido ha de hacerlo de una forma fluida y cómoda ( _&nbsp_ rules 😁).
 
-Por último, pero no por ello menos importante, haría mención a la charla de Darío B.F. [El ~~no~~ futuro de CSS – Layouts con Grid](http://slides.dariobf.com/WCSantander2017/)). En esta ponencia, se hizo un pequeño recorrido por la nueva especificación de CSS **Grid**. Se mostró cómo esta herramienta está cada vez más presente en nuestros navegadores y que, además, ofrece una abanico de posibilidades a la hora de componer nuestro _layout_ de una manera rápida y sencilla.
+Por último, pero no por ello menos importante, haría mención a la charla de Darío B.F. [El ~~no~~ futuro de CSS – Layouts con Grid](https://slides.dariobf.com/WCSantander2017/)). En esta ponencia, se hizo un pequeño recorrido por la nueva especificación de CSS **Grid**. Se mostró cómo esta herramienta está cada vez más presente en nuestros navegadores y que, además, ofrece una abanico de posibilidades a la hora de componer nuestro _layout_ de una manera rápida y sencilla.
 
 ## Más que un congreso
 

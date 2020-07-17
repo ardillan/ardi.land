@@ -19,13 +19,13 @@ Por tanto, la propuesta que planteo podría resumirse en una frase: **el poder d
 
 ### Comprensión del problema
 
-Creo que antes de sugerir una peatonalización, un nuevo vial o un nuevo carril bici, es necesario comprender cómo actuar ante un problema. Hace unos meses, el ayuntamiento informaba acerca de que se estaba analizando el tráfico rodado de la ciudad ([noticia](http://www.torrelavega.es/index.php/component/k2/item/4959-la-concejal%C3%ADa-de-movilidad-urbana-comienza-a-configurar-el-pmus-para-mejorar-el-tr%C3%A1fico-rodado-y-peatonal-en-la-ciudad)): hasta 27 controladores que determinarían la afluencia de tráfico que hay en diferentes puntos de la ciudad. Esto es parte de la receta con la que se quiere dar salida al Plan de Movilidad.
+Creo que antes de sugerir una peatonalización, un nuevo vial o un nuevo carril bici, es necesario comprender cómo actuar ante un problema. Hace unos meses, el ayuntamiento informaba acerca de que se estaba analizando el tráfico rodado de la ciudad ([noticia](https://www.torrelavega.es/index.php/component/k2/item/4959-la-concejal%C3%ADa-de-movilidad-urbana-comienza-a-configurar-el-pmus-para-mejorar-el-tr%C3%A1fico-rodado-y-peatonal-en-la-ciudad)): hasta 27 controladores que determinarían la afluencia de tráfico que hay en diferentes puntos de la ciudad. Esto es parte de la receta con la que se quiere dar salida al Plan de Movilidad.
 
-Creo que la idea es buena, pero las ciudades crecen y evolucionan; pierden y ganan población; son orgánicas y responden a un factor: sus usuarios. A pesar de que ["el futuro de la ciudad se encuentra amenazado"](http://www.eldiariomontanes.es/torrelavega/perdida-habitantes-envejecimiento-20180218211136-nt.html), no signfica que no pueda estar a la altura de las mejores. Para ello veo necesario una verdadera disposición de los datos, a **tiempo real**, con **acceso totalmente público** y que además pueda ser **reutilizado**.
+Creo que la idea es buena, pero las ciudades crecen y evolucionan; pierden y ganan población; son orgánicas y responden a un factor: sus usuarios. A pesar de que ["el futuro de la ciudad se encuentra amenazado"](https://www.eldiariomontanes.es/torrelavega/perdida-habitantes-envejecimiento-20180218211136-nt.html), no signfica que no pueda estar a la altura de las mejores. Para ello veo necesario una verdadera disposición de los datos, a **tiempo real**, con **acceso totalmente público** y que además pueda ser **reutilizado**.
 
 ### El poder de los datos
 
-[Este texto](http://www.uitp.org/sites/default/files/cck-focus-papers-files/AP%20-%20Benefits%20of%20open%20data%20EN.pdf) de la Advancing Public Transport explica algunos de los beneficios que tiene liberar la información, en este caso la del transporte. Entre ellos se encuentran:
+[Este texto](https://www.uitp.org/sitçes/default/files/cck-focus-papers-files/AP%20-%20Benefits%20of%20open%20data%20EN.pdf) de la Advancing Public Transport explica algunos de los beneficios que tiene liberar la información, en este caso la del transporte. Entre ellos se encuentran:
 
 1. La disposición para reutilizar esos datos en beneficio de los usuarios.
 2. La posibilidad de analizar a diario los servicios de transporte.
@@ -35,13 +35,13 @@ En un escenario donde los datos son públicos, es el conjunto de la ciudadanía 
 
 ### Ejemplos de uso
 
-No tenemos que irnos muy lejos para encontrar ejemplos de esta naturaleza. Santander dispone de un portal donde se muestra esta idea de mantener una ciudad actualizada ([enlace](http://datos.santander.es/data/?groups=transporte)).
+No tenemos que irnos muy lejos para encontrar ejemplos de esta naturaleza. Santander dispone de un portal donde se muestra esta idea de mantener una ciudad actualizada ([enlace](https://datos.santander.es/data/?groups=transporte)).
 
 Otros ejemplos de ciudades que han participado de la liberación de sus datos son:
 
-1. [Barcelona](http://opendata-ajuntament.barcelona.cat/es/)
+1. [Barcelona](https://opendata-ajuntament.barcelona.cat/es/)
 2. [Bilbao](https://www.bilbao.eus/opendata/es/inicio)
-3. [Sevilla](http://datosabiertos.sevilla.org/)
+3. [Sevilla](https://datosabiertos.sevilla.org/)
 4. [Madrid](https://datos.madrid.es/portal/site/egob/)
 5. [Gijón](https://transparencia.gijon.es/page/1808-catalogo-de-datos)
 

@@ -10,7 +10,7 @@ category:
   - Diseño
 ---
 
-¿A alguien le suena el grupo [Millencolin](http://es.wikipedia.org/wiki/Millencolin)? Si es así, te habrás fijado que todas las portadas suelen seguir una línea bastante parecida, eso es principalmente por que su guitarra Erik Ohlsson es el principal diseñador de todos sus discos, incluyendo el merchandising, el logo del grupo y multitud de carteles. Su estudio de diseño llamado Eckhouse Design, ubicado en Suecia, incluye trabajos de todo tipo que van desde logotipo, cartelería, ilustración y fotografía e incluso se mete en el terreno audiovisual.
+¿A alguien le suena el grupo [Millencolin](https://es.wikipedia.org/wiki/Millencolin)? Si es así, te habrás fijado que todas las portadas suelen seguir una línea bastante parecida, eso es principalmente por que su guitarra Erik Ohlsson es el principal diseñador de todos sus discos, incluyendo el merchandising, el logo del grupo y multitud de carteles. Su estudio de diseño llamado Eckhouse Design, ubicado en Suecia, incluye trabajos de todo tipo que van desde logotipo, cartelería, ilustración y fotografía e incluso se mete en el terreno audiovisual.
 
 A continuación un pequeño extracto sacado de la web donde su creador (Erik) habla un poco de lo que es Eckhouse Design:
 

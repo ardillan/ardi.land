@@ -96,4 +96,4 @@ A la par que se realizan las FCT, se desarrolla el culmen del curso: el trabajo 
 
 ---
 
-Todas las imágenes han sido obtenidas de [flaticon](http://flaticon.com)
+Todas las imágenes han sido obtenidas de [flaticon](https://flaticon.com)

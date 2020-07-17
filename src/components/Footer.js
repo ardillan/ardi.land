@@ -6,7 +6,7 @@ export default () => {
       <div>
         <p>
           {" "}
-          Esta web está hecha con <a href="http://gatsbyjs.org/">GatsbyJS</a> y
+          Esta web está hecha con <a href="https://gatsbyjs.org/">GatsbyJS</a> y
           algo de café
           <br /> desde la verde y gris{" "}
           <a href="https://es.wikipedia.org/wiki/Torrelavega">Torrelavega</a>
