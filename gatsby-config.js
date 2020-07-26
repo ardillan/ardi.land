@@ -48,22 +48,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/posts`,
+        name: `posts`,
+        path: `${__dirname}/src/content/posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/content/images/`,
+        name: `videogames`,
+        path: `${__dirname}/src/content/videogames`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/data/`,
+        name: `music`,
+        path: `${__dirname}/src/content/music`,
       },
     },
   ],
