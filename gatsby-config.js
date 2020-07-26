@@ -48,6 +48,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `general`,
+        path: `${__dirname}/src/images/general`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `posts`,
         path: `${__dirname}/src/content/posts`,
       },
@@ -64,6 +71,13 @@ module.exports = {
       options: {
         name: `music`,
         path: `${__dirname}/src/content/music`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `spaces`,
+        path: `${__dirname}/src/pages/espacios`,
       },
     },
   ],

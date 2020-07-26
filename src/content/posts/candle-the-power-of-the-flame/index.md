@@ -4,7 +4,7 @@ subtitle: "Y la llama que allí encontró"
 date: "2019-07-25T19:00:00.0100"
 type: "blog"
 description: "Aventura gráfica española con un diseño y artes esquisitos"
-featuredImage: ".candle-the-power-of-the-flame.jpg"
+featuredImage: "./candle-the-power-of-the-flame.jpg"
 category:
   - Videojuegos
 ---

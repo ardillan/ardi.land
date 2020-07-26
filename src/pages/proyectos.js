@@ -1,23 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "proyectos/torlavega.com.png" }) {
-        childImageSharp {
-          fluid(maxHeight: 700, cropFocus: CENTER) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <SEO title="Ardillan.com | Proyectos" />
@@ -38,11 +24,6 @@ export default () => {
         >
           <article>
             <header>
-              <Img
-                fluid={data.file.childImageSharp.fluid}
-                alt="Icono de la web de torlavega.com"
-                style={{ height: 500 }}
-              />
               <h2>Torlavega.com</h2>
 
               <p>

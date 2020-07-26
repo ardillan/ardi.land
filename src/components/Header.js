@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import hamburguer_icon_open from "../../content/images/general/icon-menu-open.svg"
-import hamburguer_icon_close from "../../content/images/general/icon-menu-close.svg"
+import hamburguer_icon_open from "../images/general/icon-menu-open.svg"
+import hamburguer_icon_close from "../images/general/icon-menu-close.svg"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +45,7 @@ const Header = () => {
     <header className="top-header">
       <nav>
         <Link to={`/`} className="logo">
-          <Img fluid={data.logo.childImageSharp.fluid} alt="Logotipo" />
+          Logotipo
         </Link>
         <div className="menu-mobile-icon">
           <button
@@ -53,7 +53,7 @@ const Header = () => {
             onClick={() => {
               setIsMenuOpen(!isMenuOpen)
             }}
-            onKeyPress={event => {
+            onKeyPress={(event) => {
               if (event.keyCode !== 13) {
                 return false
               }

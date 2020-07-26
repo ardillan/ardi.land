@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
-import favicon from "../../content/images/general/favicon.png"
+import favicon from "../images/general/favicon.png"
 
-const SEO = data => {
+const SEO = (data) => {
   const { postDescription, title } = data
 
   return (
@@ -23,7 +23,7 @@ const SEO = data => {
           }
         }
       `}
-      render={queryData => {
+      render={(queryData) => {
         return (
           <Helmet
             title={title}

@@ -2,6 +2,7 @@
 album: "Vortex"
 band: "Toundra"
 date: "2020-07-01T12:00:00.0100"
+type: "music"
 featuredImage: "./cover.jpg"
 genres:
   - Post-Rock

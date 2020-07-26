@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "../../components/Layout"
+import SEO from "../../components/SEO"
 import Img from "gatsby-image"
 
 export default () => {
@@ -49,7 +49,7 @@ export default () => {
         </section>
       </div>
       <div className="spaces-grid">
-        {spaces_images.allFile.edges.map(image => {
+        {spaces_images.allFile.edges.map((image) => {
           return <Img fluid={image.node.childImageSharp.fluid} />
         })}
       </div>

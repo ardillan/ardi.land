@@ -2,6 +2,7 @@
 title: "Bioshock: The collection"
 platform: "Nintendo Switch"
 date: "2020-07-01T12:00:00.0100"
+type: "videogames"
 featuredImage: "./cover.jpg"
 genres:
   - Shooter
