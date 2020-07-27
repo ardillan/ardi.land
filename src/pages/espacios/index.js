@@ -5,10 +5,13 @@ import SEO from "../../components/SEO"
 import Img from "gatsby-image"
 
 export default () => {
-  const spaces_images = useStaticQuery(graphql`
+  const spaces = useStaticQuery(graphql`
     {
       allFile(
-        filter: { relativePath: { regex: "/spaces/" } }
+        filter: {
+          sourceInstanceName: { eq: "spaces" }
+          extension: { regex: "/jpg|png|jpeg/" }
+        }
         sort: { fields: name, order: DESC }
       ) {
         edges {
@@ -16,7 +19,6 @@ export default () => {
             sourceInstanceName
             relativePath
             size
-            publicURL
             name
             childImageSharp {
               fluid(maxWidth: 800, cropFocus: CENTER, quality: 90) {
@@ -49,7 +51,7 @@ export default () => {
         </section>
       </div>
       <div>
-        {spaces_images.allFile.edges.map((image) => {
+        {spaces.allFile.edges.map((image) => {
           return <Img fluid={image.node.childImageSharp.fluid} />
         })}
       </div>
