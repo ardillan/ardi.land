@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { type: { in: "blog" } } }) {
         edges {
           node {
             fields {
