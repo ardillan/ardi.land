@@ -79,5 +79,12 @@ module.exports = {
         path: `${__dirname}/src/pages/espacios`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ],
 }
