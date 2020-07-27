@@ -22,32 +22,29 @@ export default ({ data }) => {
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
-      <section className="page-container">
+      <section>
         <article>
-          <header className="post-intro">
+          <header>
             <h1>
               <span>{post.frontmatter.title}</span>
             </h1>
             <h2>{post.frontmatter.subtitle}</h2>
             <div>
               <time>Escrito el {formatDate(post.frontmatter.date)} </time>
-              <p className="time-to-read">
+              <p>
                 <span role="img" aria-label="Reloj">
-                  🕐{" "}
+                  🕐
                 </span>
                 Tardas {post.timeToRead} minuto
                 {post.timeToRead === 1 ? "" : "s"} en leerlo
               </p>
             </div>
-            <div className="post-featured-image">
+            <div>
               <Img fluid={featuredImage} />
             </div>
           </header>
 
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
       </section>
     </Layout>

@@ -7,8 +7,8 @@ export default () => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Proyectos" />
-      <div className="page-container">
-        <div className="page-header">
+      <div>
+        <div>
           <h1>Proyectos</h1>
           <h2>
             Esta página muestra los proyectos en los que estoy trabajando
@@ -17,7 +17,6 @@ export default () => {
         </div>
 
         <a
-          className="btn-main"
           href="https://www.torlavega.com"
           target="_blank"
           rel="noopener noreferrer"

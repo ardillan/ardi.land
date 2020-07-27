@@ -3,7 +3,7 @@ import { getAge } from "../utils/helpers"
 
 const Hello = () => {
   return (
-    <section className="hello-container">
+    <section>
       <h1>¡Hola!</h1>
       <p>
         <strong>Me llamo Adrián</strong>, aunque mucha gente me conoce como

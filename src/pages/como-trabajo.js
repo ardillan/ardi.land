@@ -7,9 +7,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Cómo trabajo" />
-      <div className="page-container">
+      <div>
         <section>
-          <div className="page-header">
+          <div>
             <h1>¿Cómo trabajo?</h1>
             <h2>
               Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o

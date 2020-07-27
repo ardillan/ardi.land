@@ -35,9 +35,9 @@ export default () => {
         title={`Ardillan.com | Espacios`}
         postDescription="Espacios de trabajo"
       />
-      <div className="page-container">
+      <div>
         <section>
-          <div className="page-header">
+          <div>
             <h1>Mis espacios</h1>
             <h2>
               Aquí muestro los diferentes espacios en los que he tenido el
@@ -48,7 +48,7 @@ export default () => {
           </div>
         </section>
       </div>
-      <div className="spaces-grid">
+      <div>
         {spaces_images.allFile.edges.map((image) => {
           return <Img fluid={image.node.childImageSharp.fluid} />
         })}

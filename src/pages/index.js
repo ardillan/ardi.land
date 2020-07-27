@@ -14,7 +14,7 @@ export default ({ data }) => {
         description={data.site.siteMetadata.description}
       />
       <Hello social={data.site.siteMetadata.social} />
-      <section className="all-posts">
+      <section>
         <h1>
           <span role="img" aria-label="Estrellas">
             ✨

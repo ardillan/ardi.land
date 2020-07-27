@@ -6,11 +6,11 @@ import { GetGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
 import { formatDate } from "../utils/helpers"
 import Img from "gatsby-image"
 
-export default props => {
+export default (props) => {
   const posts = props.featured ? GetFeaturedPosts() : GetAllPosts()
   return (
-    <ul className={props.featured ? "featured" : ""}>
-      {posts.slice(0, props.length).map(post => {
+    <ul>
+      {posts.slice(0, props.length).map((post) => {
         let featuredImage =
           post.node.frontmatter.featuredImage !== null
             ? post.node.frontmatter.featuredImage.childImageSharp.fluid
@@ -23,13 +23,12 @@ export default props => {
                 <header>
                   <Img
                     fluid={featuredImage}
-                    className="featured-image"
                     fadeIn={true}
                     alt={post.node.frontmatter.title}
                     title={post.node.frontmatter.title}
                   />
                   <h2>{post.node.frontmatter.title}</h2>
-                  <p className="excerpt">{post.node.frontmatter.description}</p>
+                  <p>{post.node.frontmatter.description}</p>
                   {props.showPostDate ? (
                     <p>
                       Escrito el{" "}
@@ -41,7 +40,7 @@ export default props => {
                     ""
                   )}
                 </header>
-                <div className="category">
+                <div>
                   {post.node.frontmatter.category.map((category, index) => (
                     <p key={index}>
                       <span>{category}</span>

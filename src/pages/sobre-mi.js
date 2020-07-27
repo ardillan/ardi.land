@@ -10,7 +10,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Ardillan.com | Sobre mí" />
       <Hello social={data.site.siteMetadata.social} />
-      <div className="page-container">
+      <div>
         <p>
           Mi interés está centrado en aprender todo lo posible sobre tecnologías
           {` `}
