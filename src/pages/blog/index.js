@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout"
-import PostsList from "../components/PostsList"
-import SEO from "../components/SEO"
+import Layout from "../../components/Layout"
+import PostsList from "../../components/PostsList"
+import SEO from "../../components/SEO"
 
 export default () => {
   return (
