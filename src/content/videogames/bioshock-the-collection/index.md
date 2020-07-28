@@ -8,4 +8,4 @@ genres:
   - Shooter
 ---
 
-Pude disfrutar en Xbox 360 de este título en su día, pero gracias al lanzamiento de la trilogía para Nintendo Switch he decidido jugar los tres títulos para conocer a fondo la historia de Rapture y Columbia.
+Pude disfrutar en Xbox 360 de este juego en su día, pero gracias al lanzamiento de la trilogía para Nintendo Switch he decidido jugar los tres títulos para conocer a fondo la historia de Rapture y Columbia.
