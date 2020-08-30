@@ -4,19 +4,23 @@ import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 
 export default (props) => {
   const Footer = styled.footer`
-    background: light;
+    a {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
   `
 
-  console.log(props)
   const setLightTheme = () => {
+    localStorage.setItem("theme", JSON.stringify(LightTheme))
     props.setTheme(LightTheme)
   }
 
   const setDarkTheme = () => {
+    localStorage.setItem("theme", JSON.stringify(DarkTheme))
     props.setTheme(DarkTheme)
   }
 
   const setGameBoyTheme = () => {
+    localStorage.setItem("theme", JSON.stringify(GameBoyTheme))
     props.setTheme(GameBoyTheme)
   }
 
