@@ -3,13 +3,10 @@ import { graphql, Link } from "gatsby"
 import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
 
-import Hello from "../../components/Hello"
-
 export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Sobre mí" />
-      <Hello social={data.site.siteMetadata.social} />
       <div>
         <p>
           Mi interés está centrado en aprender todo lo posible sobre tecnologías

@@ -26,8 +26,7 @@ const Normalize = createGlobalStyle`
 
     body {
     margin: 0;
-    background: ${(props) => props.theme.colors.primary};
-}
+    }
 
     /**
      * Render the 'main' element consistently in IE.

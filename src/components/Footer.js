@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 
-export default (props) => {
-  const Footer = styled.footer`
-    a {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
-  `
+const Footer = styled.footer`
+  a {
+    color: ${(props) => props.theme.colors.fonts.anchor};
+  }
+`
 
+export default (props) => {
   const setLightTheme = () => {
     localStorage.setItem("theme", JSON.stringify(LightTheme))
     props.setTheme(LightTheme)

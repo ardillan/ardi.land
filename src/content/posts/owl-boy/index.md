@@ -4,7 +4,7 @@ subtitle: "¡Vuela chico búho!"
 date: "2019-05-27T22:00:00.0100"
 type: "blog"
 description: "Owlboy es un juego de aventura en el que nos pondremos en la piel de  Otus, un tímido aprendiz de búho que tendrá que enfrentarse a su destino"
-featuredImage: "./owlboy-1.jpg"
+featuredImage: "./owlboy-1.png"
 category:
   - Videojuegos
 ---

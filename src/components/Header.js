@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 const HeaderContainer = styled.header`
   nav {
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.background.main};
     grid-template-columns: 1fr 1fr;
 
     a {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.fonts.anchor.text};
     }
   }
 
