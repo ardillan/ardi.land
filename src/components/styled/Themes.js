@@ -1,11 +1,35 @@
 export const LightTheme = {
-  colors: { primary: "lightgray", secondary: "red" },
+  colors: {
+    background: {
+      main: "#FFFFFF",
+    },
+    fonts: {
+      text: "#232A42",
+      anchor: "#EA0054",
+    },
+  },
 }
 
 export const DarkTheme = {
-  colors: { primary: "darkslategray", secondary: "lime" },
+  colors: {
+    background: {
+      main: "#232A42",
+    },
+    fonts: {
+      text: "#232A42",
+      anchor: "#FFC51C",
+    },
+  },
 }
 
 export const GameBoyTheme = {
-  colors: { primary: "#9bbc0f", secondary: "#0f380f" },
+  colors: {
+    background: {
+      main: "#9bbc0f",
+    },
+    fonts: {
+      text: "#232A42",
+      anchor: "#306230",
+    },
+  },
 }
