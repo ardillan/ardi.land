@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
-const GlobalStyle = createGlobalStyle`
+const Normalize = createGlobalStyle`
   
     /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -26,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
 
     body {
     margin: 0;
-    }
+    background: ${(props) => props.theme.colors.primary};
+}
 
     /**
      * Render the 'main' element consistently in IE.
@@ -354,4 +355,4 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-export default GlobalStyle
+export default Normalize
