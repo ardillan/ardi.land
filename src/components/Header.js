@@ -1,9 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const HeaderContainer = styled.header`
+  nav {
+    background-color: ${(props) => props.theme.colors.primary};
+    grid-template-columns: 1fr 1fr;
+
+    a {
+      color: ${(props) => props.theme.colors.secondary};
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+  }
+`
 
 const Header = () => {
   return (
-    <header>
+    <HeaderContainer>
       <nav>
         <Link to={`/`}>Logotipo</Link>
         <ul>
@@ -12,7 +30,6 @@ const Header = () => {
               <span>Sobre mí</span>
             </Link>
           </li>
-
           <li>
             <Link to={`/blog/`}>
               <span>Blog!</span>
@@ -20,7 +37,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </HeaderContainer>
   )
 }
 
