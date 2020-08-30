@@ -1,11 +1,17 @@
 import React, { useState } from "react"
-import { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import { LightTheme } from "./styled/Themes"
 
 import Normalize from "../components/styled/Normalize"
 import Main from "../components/styled/Main"
+import Fonts from "../components/styled/Fonts"
 import Header from "./Header"
 import Footer from "./Footer"
+
+const Container = styled.main`
+  width: 900px;
+  margin: auto;
+`
 
 export default ({ children }) => {
   const currentTheme = !localStorage.getItem("theme")
@@ -17,10 +23,13 @@ export default ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Normalize />
+      <Fonts />
       <Main />
       <Header />
-      <main>{children}</main>
-      <Footer setTheme={setTheme} />
+      <Container>{children}</Container>
+      <Container>
+        <Footer setTheme={setTheme} />
+      </Container>
     </ThemeProvider>
   )
 }
