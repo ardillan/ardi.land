@@ -6,7 +6,12 @@ export const LightTheme = {
     },
     fonts: {
       text: "#232A42",
-      anchor: "tomato",
+      anchor: "#EA0054",
+      anchorBackground: "#fffacd",
+    },
+    gradients: {
+      top: "#ffe600",
+      bottom: "#ff3566",
     },
   },
 }
@@ -20,6 +25,11 @@ export const DarkTheme = {
     fonts: {
       text: "#FFFFFF",
       anchor: "#FFC51C",
+      anchorBackground: "#2f3753",
+    },
+    gradients: {
+      top: "#4597ff",
+      bottom: "#00fd67",
     },
   },
 }
@@ -27,12 +37,17 @@ export const DarkTheme = {
 export const GameBoyTheme = {
   colors: {
     background: {
-      main: "#9bbc0f",
-      meta: "#91ae17",
+      main: "#CEEFAD",
+      meta: "#91AE17",
     },
     fonts: {
       text: "#3C4224",
       anchor: "#306230",
+      anchorBackground: "#91ae17",
+    },
+    gradients: {
+      top: "#637515",
+      bottom: "#637515",
     },
   },
 }
