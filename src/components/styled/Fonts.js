@@ -6,7 +6,7 @@ import InterBlack from "../../fonts/inter/Inter-Black.woff"
 
 import NotoSerifRegular from "../../fonts/notoSerif/NotoSerif-Regular.ttf"
 
-import GlutenRegular from "../../fonts/gluten/Gluten-Light.ttf"
+import GlutenRegular from "../../fonts/gluten/Gluten-Thin.ttf"
 
 const Fonts = createGlobalStyle`
     @font-face {

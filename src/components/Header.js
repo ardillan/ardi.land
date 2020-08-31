@@ -4,18 +4,28 @@ import styled from "styled-components"
 
 const HeaderContainer = styled.header`
   nav {
-    background-color: ${(props) => props.theme.colors.background.main};
-    grid-template-columns: 1fr 1fr;
-
-    a {
-      color: ${(props) => props.theme.colors.fonts.anchor.text};
-    }
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    min-height: 70px;
+    align-content: center;
+    padding: 0 5rem;
   }
 
   ul {
     display: flex;
     justify-content: end;
     list-style-type: none;
+    li {
+      padding-left: 20px;
+
+      a {
+        color: ${(props) => props.theme.colors.fonts.anchor};
+        font-family: Inter;
+        font-size: 17px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
   }
 `
 

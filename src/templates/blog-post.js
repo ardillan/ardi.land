@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
+import Img from "gatsby-image"
+
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-import Img from "gatsby-image"
 import { GetGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
@@ -71,7 +72,7 @@ const PostContent = styled.div`
   figcaption {
     text-align: center;
     color: ${(props) => props.theme.colors.fonts.text};
-    background: ${(props) => props.theme.colors.background.meta};
+    background: ${(props) => props.theme.colors.fonts.caption};
     padding: 10px 10px;
     font-size: 13px;
     font-family: "Inter";

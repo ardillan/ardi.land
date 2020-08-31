@@ -9,6 +9,8 @@ category:
   - Videojuegos
 ---
 
+![Enemigos de Hollow Knight](./hollow-knight-3.jpg)
+
 Hace tiempo que me apetecía jugar a algo del estilo [_metroidvania_](https://es.wikipedia.org/wiki/Metroidvania). Son un tipo de **videojuegos con los que disfruto bastante**; consiguen engancharme y rara vez me defraudan.
 
 ### La decandencia de Hallownest

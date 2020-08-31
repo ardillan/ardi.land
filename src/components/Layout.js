@@ -5,6 +5,7 @@ import { LightTheme } from "./styled/Themes"
 import Normalize from "../components/styled/Normalize"
 import Main from "../components/styled/Main"
 import Fonts from "../components/styled/Fonts"
+import Prism from "../components/styled/Prism"
 import Header from "./Header"
 import Footer from "./Footer"
 
@@ -24,6 +25,7 @@ export default ({ children }) => {
     <ThemeProvider theme={theme}>
       <Normalize />
       <Fonts />
+      <Prism />
       <Main />
       <Header />
       <Container>{children}</Container>
