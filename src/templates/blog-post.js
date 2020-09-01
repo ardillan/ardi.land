@@ -13,23 +13,6 @@ import { formatDate } from "../utils/helpers"
 const PostContainer = styled.div`
   width: 600px;
   margin: 0 auto 20px;
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: ${(props) => props.theme.colors.fonts.text};
-  }
-
-  p,
-  ul,
-  li {
-    font-size: 18px;
-    line-height: 30px;
-  }
 `
 
 const PostContent = styled.div`
@@ -42,44 +25,8 @@ const PostContent = styled.div`
   h4,
   h5,
   h6 {
-    color: ${(props) => props.theme.colors.fonts.text};
     width: 600px;
     margin: auto;
-  }
-
-  a {
-    color: ${(props) => props.theme.colors.fonts.anchor};
-    background: ${(props) => props.theme.colors.fonts.anchorBackground};
-    text-decoration: none;
-  }
-
-  p,
-  ul,
-  ol,
-  li {
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 30px;
-  }
-
-  code {
-    background: ${(props) => props.theme.colors.background.meta};
-    font-size: 17px;
-    padding: 2px;
-    border-radius: 5px;
-  }
-
-  figcaption {
-    text-align: center;
-    color: ${(props) => props.theme.colors.fonts.text};
-    background: ${(props) => props.theme.colors.fonts.caption};
-    padding: 10px 10px;
-    font-size: 13px;
-    font-family: "Inter";
-    font-weight: 400;
-    width: max-content;
-    margin: 10px auto;
-    border-radius: 5px;
   }
 `
 
@@ -126,8 +73,6 @@ const Subtitle = styled.div`
     font-size: 18px;
     margin: 20px 0;
     padding: 10px 0;
-    width: max-content;
-    max-width: fit-content;
   }
 `
 
