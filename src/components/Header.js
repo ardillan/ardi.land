@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
 
   ul {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     list-style-type: none;
     li {
       padding-left: 20px;
@@ -24,6 +24,7 @@ const HeaderContainer = styled.header`
         font-size: 17px;
         font-weight: 400;
         text-decoration: none;
+        background: none;
       }
     }
   }
