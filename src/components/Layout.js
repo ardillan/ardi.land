@@ -9,7 +9,7 @@ import Prism from "../components/styled/Prism"
 import Header from "./Header"
 import Footer from "./Footer"
 
-const Container = styled.main`
+const Container = styled.maindiv`
   width: 900px;
   margin: auto;
 `
@@ -28,7 +28,9 @@ export default ({ children }) => {
       <Prism />
       <Main />
       <Header />
-      <Container>{children}</Container>
+      <main>
+        <Container>{children}</Container>
+      </main>
       <Container>
         <Footer setTheme={setTheme} />
       </Container>
