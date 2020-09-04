@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import FeaturedBanner from "../components/FeaturedBanner"
 
 import PostList from "../components/PostsList"
 
@@ -13,13 +14,8 @@ export default ({ data }) => {
         description={data.site.siteMetadata.description}
       />
       <section>
-        <h1>
-          <span role="img" aria-label="Estrellas">
-            ✨
-          </span>{" "}
-          Mis artículos destacados
-        </h1>
-        <PostList length="3" type="blog" featured />
+        <FeaturedBanner />
+        {/* <PostList length="3" type="blog" featured /> */}
       </section>
     </Layout>
   )

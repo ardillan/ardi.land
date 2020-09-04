@@ -14,9 +14,10 @@ const Main = createGlobalStyle`
 
     /*  💅🏻 Paragraphs */
     p {
+      color: ${(props) => props.theme.colors.fonts.text};
       font-size: 18px;
       line-height: 30px;
-      color: ${(props) => props.theme.colors.fonts.text};
+      padding-bottom: 15px;
     }
 
     /*  💅🏻 Lists */
@@ -34,7 +35,7 @@ const Main = createGlobalStyle`
         font-family: Inter;
         font-weight: 400;
         margin-top: 30px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         padding-top: 30px;
     }
 
@@ -68,7 +69,6 @@ const Main = createGlobalStyle`
         background: ${(props) => props.theme.colors.fonts.anchorBackground};
         text-decoration: none;
     }
-
 
     code {
         background: ${(props) => props.theme.colors.background.meta};
