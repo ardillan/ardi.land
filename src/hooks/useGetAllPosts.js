@@ -1,14 +1,11 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const GetFeaturedPosts = () => {
+export const useGetAllPosts = () => {
   const posts = useStaticQuery(
     graphql`
-      {
+      query {
         allMarkdownRemark(
-          filter: {
-            fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { featured: { eq: true } }
-          }
+          filter: { fileAbsolutePath: { regex: "/posts/" } }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           totalCount
@@ -22,9 +19,6 @@ export const GetFeaturedPosts = () => {
                 title
                 date
                 author
-                type
-                description
-                category
                 featuredImage {
                   childImageSharp {
                     fluid(maxWidth: 600, maxHeight: 400, cropFocus: CENTER) {
@@ -32,6 +26,9 @@ export const GetFeaturedPosts = () => {
                     }
                   }
                 }
+                type
+                description
+                category
               }
             }
           }

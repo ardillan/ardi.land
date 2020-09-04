@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-import { GetGenericFeaturedImage } from "../hooks/getGenericFeaturedImage"
+import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
 
@@ -96,7 +96,7 @@ export default ({ data }) => {
   const featuredImage =
     post.frontmatter.featuredImage !== null
       ? post.frontmatter.featuredImage.childImageSharp.fluid
-      : GetGenericFeaturedImage().childImageSharp.fluid
+      : useGetGenericFeaturedImage().childImageSharp.fluid
 
   return (
     <Layout>

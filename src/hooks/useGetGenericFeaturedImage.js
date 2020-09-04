@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const GetGenericFeaturedImage = () => {
+export const useGetGenericFeaturedImage = () => {
   const image = useStaticQuery(
     graphql`
       {
