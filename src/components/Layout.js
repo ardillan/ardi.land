@@ -9,7 +9,7 @@ import Prism from "../components/styled/Prism"
 import Header from "./Header"
 import Footer from "./Footer"
 
-const Container = styled.maindiv`
+const Container = styled.div`
   width: 900px;
   margin: auto;
 `
