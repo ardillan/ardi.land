@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 const HeaderContainer = styled.header`
@@ -12,29 +13,59 @@ const HeaderContainer = styled.header`
   }
 
   ul {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     li {
       padding-left: 20px;
 
       a {
+        background: none;
         color: ${(props) => props.theme.colors.fonts.anchor};
         font-family: Inter;
         font-size: 17px;
         font-weight: 400;
+        margin-left: 15px;
         text-decoration: none;
-        background: none;
       }
     }
   }
 `
 
+const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background: initial;
+  }
+`
+
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query LogoQuery {
+      file(relativePath: { eq: "icon-logo.png" }) {
+        absolutePath
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <HeaderContainer>
       <nav>
-        <Link to={`/`}>Logotipo</Link>
+        <Logo>
+          <Link to={`/`}>
+            <Img fixed={data.file.childImageSharp.fixed} />
+          </Link>
+        </Logo>
         <ul>
           <li>
             <Link to={`/sobre-mi/`}>
