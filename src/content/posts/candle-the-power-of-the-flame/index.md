@@ -4,10 +4,16 @@ subtitle: "Y la llama que allí encontró"
 date: "2019-07-25T19:00:00.0100"
 type: "blog"
 description: "Aventura gráfica española con un diseño y artes esquisitos"
-featuredImage: "./candle-the-power-of-the-flame.jpg"
+featuredImage: "./candle-the-power-of-the-flame-01.png"
 category:
   - Videojuegos
 ---
+
+<div class="gallery-post__3-columns">
+  <img src="./candle-the-power-of-the-flame-01.png" alt="Captura del juego" />
+  <img src="./candle-the-power-of-the-flame-02.jpg" alt="Captura del juego" />
+  <img src="./candle-the-power-of-the-flame-03.jpg" alt="Captura del juego" />
+</div>
 
 Siempre me han encantado los videojuegos de [point-and-click](<https://es.wikipedia.org/wiki/Clic_(inform%C3%A1tica)#Point_and_click>), desde pequeño los he tenido muy presentes. Por eso, la historia de Teku no iba a ser una escepción, mucho más sabiendo que la producción viene del estudio turolense [Teku Studios](https://twitter.com/TekuStudios).
 

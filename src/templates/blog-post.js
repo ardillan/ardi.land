@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -27,6 +27,52 @@ const PostContent = styled.div`
   h6 {
     width: 600px;
     margin: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .gallery-post__3-columns {
+    background: #fffdef;
+    display: grid;
+    margin: 35px 0;
+    grid-gap: 10px;
+    grid-template-areas:
+      "a b"
+      "a c";
+
+    .gatsby-resp-image-wrapper {
+      height: 100%;
+    }
+
+    .gatsby-resp-image-background-image {
+      padding-bottom: 0;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    figure:nth-child(1) {
+      grid-area: a;
+    }
+    figure:nth-child(2) {
+      grid-area: b;
+    }
+    figure:nth-child(3) {
+      grid-area: c;
+    }
+
+    figcaption {
+      display: none;
+      background: red;
+    }
+
+    figure {
+      padding: 0;
+      margin: 0;
+    }
   }
 `
 
@@ -121,7 +167,9 @@ export default ({ data }) => {
             <Meta>
               <time>Escrito el {formatDate(post.frontmatter.date)} </time> en{" "}
               {post.frontmatter.category.map((cat) => (
-                <Link to={`/categoria/${cat}`}>{cat}</Link>
+                <Link to={`/categoria/${cat}`} key={cat}>
+                  {cat}
+                </Link>
               ))}
             </Meta>
           </PostContainer>
