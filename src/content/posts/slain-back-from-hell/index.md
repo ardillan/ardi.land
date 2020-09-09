@@ -4,7 +4,7 @@ subtitle: "Bajo el metal más progresivo "
 date: "2019-07-17T20:00:00.0100"
 type: "blog"
 description: "Un plataformas de estilo clásico con un estilo sangriento"
-featuredImage: "./slain-back-from-hell.jpg"
+featuredImage: "./slain-back-from-hell-01.png"
 category:
   - Videojuegos
 ---
