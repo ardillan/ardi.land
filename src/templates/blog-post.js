@@ -171,11 +171,11 @@ export default ({ data }) => {
       <section>
         <article>
           <PostContainer>
-            <BackArrow>
-              <Link to={`../`}>
+            <Link to={`../`}>
+              <BackArrow>
                 <img src={backArrow} />
-              </Link>
-            </BackArrow>
+              </BackArrow>
+            </Link>
 
             <PostHeader>
               <PostHeaderTitle>
