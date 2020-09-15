@@ -5,7 +5,7 @@ export const getAge = () => {
   return Math.abs(ageDate.getUTCFullYear() - 1970)
 }
 
-export const formatDate = postDate => {
+export const formatDate = (postDate) => {
   return new Date(postDate).toLocaleDateString("es-ES", {
     year: "numeric",
     month: "long",
