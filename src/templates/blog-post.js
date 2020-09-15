@@ -7,6 +7,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
+import backArrow from "../images/general/back-arrow.png"
 
 import { formatDate } from "../utils/helpers"
 
@@ -122,6 +123,23 @@ const Subtitle = styled.div`
   }
 `
 
+const BackArrow = styled.div`
+  position: absolute;
+  padding: 30px;
+  margin-left: -87px;
+  margin-top: -3px;
+  border-radius: 50%;
+  &:hover {
+    background: lemonchiffon;
+  }
+  img {
+    width: 25px;
+    position: absolute;
+    left: 17px;
+    top: 20px;
+  }
+`
+
 const Meta = styled.div`
   background: ${(props) => props.theme.colors.background.meta};
   color: ${(props) => props.theme.colors.fonts.text};
@@ -153,6 +171,12 @@ export default ({ data }) => {
       <section>
         <article>
           <PostContainer>
+            <BackArrow>
+              <Link to={`../`}>
+                <img src={backArrow} />
+              </Link>
+            </BackArrow>
+
             <PostHeader>
               <PostHeaderTitle>
                 <h1>{post.frontmatter.title}</h1>
