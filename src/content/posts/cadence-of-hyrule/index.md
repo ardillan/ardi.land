@@ -4,7 +4,7 @@ subtitle: "Bajo la cripta del ritmo"
 date: "2019-07-17T19:00:00.0100"
 type: "blog"
 description: "Un videojuego que ofrece la delicia de recorrer Hyrule en su estilo más clásico bajo una banda sonora de espanto"
-featuredImage: "./cadence-of-hyrule-featured.jpg"
+featuredImage: "./cadence-of-hyrule-featured.png"
 category:
   - Videojuegos
 ---
