@@ -13,7 +13,7 @@ export default () => {
           <h2>En esta página se muestran todas las entradas del blog. </h2>
         </div>
         <section>
-          <PostsList length="55" type="blog" />
+          <PostsList length="55" type="blog" showPostDate />
         </section>
       </div>
     </Layout>
