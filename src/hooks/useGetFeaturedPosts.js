@@ -20,15 +20,21 @@ export const useGetFeaturedPosts = () => {
               }
               frontmatter {
                 title
+                subtitle
                 date
                 author
                 type
                 description
                 category
+                backgroundColor
+                featuredImageBanner {
+                  publicURL
+                }
                 featuredImage {
+                  sourceInstanceName
                   childImageSharp {
                     fluid(maxWidth: 600, maxHeight: 400, cropFocus: CENTER) {
-                      ...GatsbyImageSharpFluid
+                      src
                     }
                   }
                 }
