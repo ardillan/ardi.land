@@ -15,15 +15,15 @@ export const LightTheme = {
       bottom: "#ff3566",
     },
     cursor: {
-      selection: "lemonchiffon",
-      color: "initial",
+      selection: "#9affce",
+      color: "#101810",
     },
     rainBow: {
-      0: "#EA0054",
+      0: "#2abd7d",
       1: "#FF9C43",
       2: "#FFE600",
       3: "#CD1D5C",
-      4: "#FF6747",
+      4: "#0078ff",
     },
   },
 }
@@ -35,9 +35,9 @@ export const DarkTheme = {
       meta: "#141a33",
     },
     fonts: {
-      text: "#FFFFFF",
-      anchor: "#FFC51C",
-      anchorBackground: "#2f3753",
+      text: "#e4e4e4",
+      anchor: "#3dd1ff",
+      anchorBackground: "#191e2f",
       caption: "#1a203c",
     },
     gradients: {
@@ -45,15 +45,15 @@ export const DarkTheme = {
       bottom: "#00fd67",
     },
     cursor: {
-      selection: "#716318",
-      color: "lemonchiffon",
+      selection: "#ffe600f0",
+      color: "#564b21",
     },
     rainBow: {
       0: "#3eace6",
       1: "#17ed86",
       2: "#2dcac6",
-      3: "#7cffad",
-      4: "#00f9ff",
+      3: "#ff6ea2",
+      4: "#ffde32",
     },
   },
 }

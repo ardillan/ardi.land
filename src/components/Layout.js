@@ -15,9 +15,12 @@ const Container = styled.div`
 `
 
 export default ({ children }) => {
-  const currentTheme = !localStorage.getItem("theme")
-    ? LightTheme
-    : JSON.parse(localStorage.getItem("theme"))
+  const currentTheme =
+    typeof window !== "undefined"
+      ? !localStorage.getItem("theme")
+        ? LightTheme
+        : JSON.parse(localStorage.getItem("theme"))
+      : LightTheme
 
   const [theme, setTheme] = useState(currentTheme)
 
@@ -32,7 +35,7 @@ export default ({ children }) => {
         <Container>{children}</Container>
       </main>
       <Container>
-        <Footer setTheme={setTheme} />
+        <Footer setTheme={setTheme} theme={theme} />
       </Container>
     </ThemeProvider>
   )

@@ -27,7 +27,6 @@ const Footer = styled.footer`
     color: #c3c3c3;
   }
 `
-
 const Info = styled.div``
 const Social = styled.p`
   font-size: 16px;
@@ -42,7 +41,6 @@ const Social = styled.p`
     text-decoration: none;
   }
 `
-
 const ThemeSelector = styled.div`
   text-align: right;
   p {
@@ -76,6 +74,8 @@ export default (props) => {
     localStorage.setItem("theme", JSON.stringify(GameBoyTheme))
     props.setTheme(GameBoyTheme)
   }
+
+  console.log(props)
 
   return (
     <Footer>

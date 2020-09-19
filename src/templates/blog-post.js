@@ -7,7 +7,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
-import backArrow from "../images/general/back-arrow.png"
+import { BackArrow } from "../images/general/icons"
 
 import { formatDate } from "../utils/helpers"
 
@@ -122,14 +122,15 @@ const Subtitle = styled.div`
   }
 `
 
-const BackArrow = styled.div`
+const BackArrowContainer = styled.div`
   position: absolute;
-  padding: 30px;
-  margin-left: -87px;
-  margin-top: -3px;
+  padding: 17px;
+  margin-left: -85px;
   border-radius: 50%;
+  transform: rotateY(180deg);
+  fill: ${(props) => props.theme.colors.fonts.anchor};
   &:hover {
-    background: lemonchiffon;
+    background: ${(props) => props.theme.colors.fonts.anchorBackground};
   }
   img {
     width: 25px;
@@ -171,9 +172,9 @@ export default ({ data }) => {
         <article>
           <PostContainer>
             <Link to={`../`}>
-              <BackArrow>
-                <img src={backArrow} />
-              </BackArrow>
+              <BackArrowContainer>
+                <BackArrow />
+              </BackArrowContainer>
             </Link>
 
             <PostHeader>

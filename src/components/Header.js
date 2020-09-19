@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { Logo } from "../images/general/icons"
 
 const HeaderContainer = styled.header`
   nav {
@@ -35,12 +36,23 @@ const HeaderContainer = styled.header`
   }
 `
 
-const Logo = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   a {
     background: initial;
+    svg {
+      #dot {
+        fill: ${(props) => props.theme.colors.rainBow[2]};
+      }
+      #ard {
+        fill: ${(props) => props.theme.colors.fonts.text};
+      }
+      #bg {
+        fill: ${(props) => props.theme.colors.background.main};
+      }
+    }
   }
 `
 
@@ -61,11 +73,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <nav>
-        <Logo>
+        <LogoContainer>
           <Link to={`/`}>
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <Logo />
           </Link>
-        </Logo>
+        </LogoContainer>
         <ul>
           <li>
             <Link to={`/sobre-mi/`}>
