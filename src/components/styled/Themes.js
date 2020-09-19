@@ -18,6 +18,13 @@ export const LightTheme = {
       selection: "lemonchiffon",
       color: "initial",
     },
+    rainBow: {
+      0: "#EA0054",
+      1: "#FF9C43",
+      2: "#FFE600",
+      3: "#CD1D5C",
+      4: "#FF6747",
+    },
   },
 }
 
@@ -41,6 +48,13 @@ export const DarkTheme = {
       selection: "#716318",
       color: "lemonchiffon",
     },
+    rainBow: {
+      0: "#3eace6",
+      1: "#17ed86",
+      2: "#2dcac6",
+      3: "#7cffad",
+      4: "#00f9ff",
+    },
   },
 }
 
@@ -63,6 +77,13 @@ export const GameBoyTheme = {
     cursor: {
       selection: "#ceefad",
       color: "#0c0f1d",
+    },
+    rainBow: {
+      0: "#306230",
+      1: "#306230",
+      2: "#306230",
+      3: "#306230",
+      4: "#306230",
     },
   },
 }

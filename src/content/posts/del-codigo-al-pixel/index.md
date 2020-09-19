@@ -6,7 +6,6 @@ author: Ardillán
 type: "blog"
 description: "Charla de Ardillán sobre interfaces de usuario. Centrada en la historia de las interfaces desde principios de siglo hasta nuestros días."
 featuredImage: "./del-codigo-al-pixel-featured.jpg"
-featured: true
 category:
   - Desarrollo
 ---

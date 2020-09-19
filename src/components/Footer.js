@@ -3,6 +3,10 @@ import styled from "styled-components"
 import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 
 const Footer = styled.footer`
+  margin-top: 100px;
+  padding-top: 50px;
+  border-top: 1px solid ${(props) => props.theme.colors.fonts.anchor};
+
   a {
     color: ${(props) => props.theme.colors.fonts.anchor};
   }

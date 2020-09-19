@@ -35,7 +35,6 @@ const PostContent = styled.div`
   }
 
   .gallery-post__3-columns {
-    background: #fffdef;
     display: grid;
     margin: 35px 0;
     grid-gap: 10px;
