@@ -1,15 +1,16 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useGetAllPosts = () => {
-  const posts = useStaticQuery(
+export const useGetLastVideogame = () => {
+  const videogame = useStaticQuery(
     graphql`
-      query {
+      {
         allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { showInPostsList: { nin: false } }
+            frontmatter: { type: { eq: "videogames" } }
           }
           sort: { fields: frontmatter___date, order: DESC }
+          limit: 1
         ) {
           totalCount
           edges {
@@ -20,18 +21,19 @@ export const useGetAllPosts = () => {
               }
               frontmatter {
                 title
+                platform
                 date
-                author
+                type
+                genres
+                description
                 featuredImage {
+                  sourceInstanceName
                   childImageSharp {
-                    fixed(width: 150, height: 150, cropFocus: CENTER) {
-                      ...GatsbyImageSharpFixed
+                    fluid(maxWidth: 600, maxHeight: 600) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
-                type
-                description
-                category
               }
             }
           }
@@ -39,5 +41,5 @@ export const useGetAllPosts = () => {
       }
     `
   )
-  return posts.allMarkdownRemark.edges
+  return videogame.allMarkdownRemark.edges[0].node
 }

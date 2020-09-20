@@ -75,8 +75,6 @@ export default (props) => {
     props.setTheme(GameBoyTheme)
   }
 
-  console.log(props)
-
   return (
     <Footer>
       <Info>

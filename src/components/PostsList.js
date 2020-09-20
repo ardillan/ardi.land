@@ -9,59 +9,59 @@ import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
 
-export default (props) => {
-  const PostsListContainer = styled.ul`
-    display: grid;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr 1fr;
-    list-style-type: none;
+const PostsListContainer = styled.ul`
+  display: grid;
+  grid-row-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`
+
+const Post = styled.li`
+  article {
+    display: flex;
+  }
+  header {
+    margin-right: 15px;
+    img {
+      border-radius: 50%;
+    }
+  }
+  h2  {
+    font-family: "Gluten";
+    padding: 0;
+    margin: 0;
+    font-size: 23px;
+    line-height: 22px;
+  }
+  p {
+    font-family: "Inter";
     margin: 0;
     padding: 0;
-  `
+    font-size: 14px;
+  }
+`
 
-  const Post = styled.li`
-    article {
-      display: flex;
-    }
-    header {
-      margin-right: 15px;
-      img {
-        border-radius: 50%;
-      }
-    }
-    h2  {
-      font-family: "Gluten";
-      padding: 0;
-      margin: 0;
-      font-size: 23px;
-      line-height: 22px;
-    }
-    p {
-      font-family: "Inter";
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-    }
-  `
+const Category = styled.div`
+  display: flex;
+  span {
+    color: ${(props) => props.theme.colors.fonts.anchor};
+    font-family: "Inter";
+    font-size: 14px;
+    margin-right: 5px;
+    margin: 0;
+    padding: 0;
+  }
+`
 
-  const Category = styled.div`
-    display: flex;
-    span {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-      font-family: "Inter";
-      font-size: 14px;
-      margin-right: 5px;
-      margin: 0;
-      padding: 0;
-    }
-  `
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
 
-  const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  `
-
+export default (props) => {
   const posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
   return (
     <PostsListContainer>

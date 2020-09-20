@@ -20,6 +20,14 @@ const Main = createGlobalStyle`
       padding-bottom: 15px;
     }
 
+    small {
+        color: ${(props) => props.theme.colors.fonts.text};
+    }
+
+    table > a {
+        color: ${(props) => props.theme.colors.fonts.text};
+    }
+
     /*  💅🏻 Lists */
     ol, ul {
         padding-top: 15px;

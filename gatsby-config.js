@@ -62,20 +62,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `videogames`,
-        path: `${__dirname}/src/content/videogames`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `music`,
-        path: `${__dirname}/src/content/music`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `spaces`,
         path: `${__dirname}/src/pages/espacios`,
       },

@@ -10,6 +10,9 @@ export const LightTheme = {
       anchorBackground: "#fffacd",
       caption: "#f5f5fb",
     },
+    table: {
+      border: "#FFF5A7",
+    },
     gradients: {
       top: "#ffe600",
       bottom: "#ff3566",
@@ -40,6 +43,9 @@ export const DarkTheme = {
       anchorBackground: "#191e2f",
       caption: "#1a203c",
     },
+    table: {
+      border: "#3dd1ff",
+    },
     gradients: {
       top: "#4597ff",
       bottom: "#00fd67",
@@ -69,6 +75,9 @@ export const GameBoyTheme = {
       anchor: "#306230",
       anchorBackground: "#efffe0",
       caption: "#ceefad",
+    },
+    table: {
+      border: "#7d885f",
     },
     gradients: {
       top: "#637515",

@@ -1,15 +1,16 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useGetAllPosts = () => {
-  const posts = useStaticQuery(
+export const useGetLastAlbum = () => {
+  const album = useStaticQuery(
     graphql`
-      query {
+      {
         allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { showInPostsList: { nin: false } }
+            frontmatter: { category: { in: "Música" } }
           }
           sort: { fields: frontmatter___date, order: DESC }
+          limit: 1
         ) {
           totalCount
           edges {
@@ -19,19 +20,20 @@ export const useGetAllPosts = () => {
                 slug
               }
               frontmatter {
-                title
+                album
+                band
                 date
-                author
+                type
+                description
+                genres
                 featuredImage {
+                  sourceInstanceName
                   childImageSharp {
-                    fixed(width: 150, height: 150, cropFocus: CENTER) {
-                      ...GatsbyImageSharpFixed
+                    fluid(maxWidth: 600, maxHeight: 600) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
-                type
-                description
-                category
               }
             }
           }
@@ -39,5 +41,5 @@ export const useGetAllPosts = () => {
       }
     `
   )
-  return posts.allMarkdownRemark.edges
+  return album.allMarkdownRemark.edges[0].node
 }

@@ -1,13 +1,16 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useGetAllPosts = () => {
-  const posts = useStaticQuery(
+export const useGetAllBestiaryPosts = () => {
+  const bestiaryPosts = useStaticQuery(
     graphql`
       query {
         allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { showInPostsList: { nin: false } }
+            frontmatter: {
+              showInPostsList: { nin: false }
+              category: { in: "Bestiario" }
+            }
           }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
@@ -39,5 +42,5 @@ export const useGetAllPosts = () => {
       }
     `
   )
-  return posts.allMarkdownRemark.edges
+  return bestiaryPosts.allMarkdownRemark.edges
 }

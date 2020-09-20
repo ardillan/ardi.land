@@ -4,6 +4,10 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
+import { useGetLastAlbum } from "../hooks/useGetLastAlbum"
+import { useGetLastVideogame } from "../hooks/useGetLastVideogame"
+import { useGetAllBestiaryPosts } from "../hooks/useGetAllBestiaryPosts"
+
 import { Arrow } from "../images/general/icons"
 
 import Layout from "../components/Layout"
@@ -129,23 +133,57 @@ const AboutContainer = styled.div`
   h3 {
     font-family: "Gluten";
     font-size: 25px;
+    padding: 0;
+    margin: 0;
   }
   p {
     font-family: "Inter";
   }
 `
-const Listenin = styled.div`
+const AboutInfo = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
 `
-const Playing = styled.div`
+const Title = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 60px;
+`
+const Cover = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
+  margin: 20px 0;
+  align-items: center;
+`
+const AboutTable = styled.section`
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    border: 2px solid ${(props) => props.theme.colors.table.border};
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+  }
+  a {
+    font-family: "Gluten";
+    background: none;
+    font-size: 20px;
+  }
 `
 const Home = ({ data }) => {
   const posts = useGetAllPosts()
+  const bestiary = useGetAllBestiaryPosts()
+  const music = useGetLastAlbum()
+  const videogame = useGetLastVideogame()
+  console.log(bestiary)
   return (
     <Layout>
       <SEO
@@ -166,7 +204,7 @@ const Home = ({ data }) => {
           <ul>
             {posts.slice(0, 5).map((post) => {
               return (
-                <li key={post.node.frontmatter.title}>
+                <li key={`article-${post.node.frontmatter.title}`}>
                   <Link to={post.node.fields.slug}>
                     <Arrow />
                     {post.node.frontmatter.title}
@@ -202,18 +240,18 @@ const Home = ({ data }) => {
       <Articles>
         <RandomArticles>
           <ul>
-            {posts.slice(0, 6).map((post) => {
+            {bestiary.slice(0, 6).map((beast) => {
               return (
-                <li key={post.node.frontmatter.title}>
-                  <Link to={post.node.fields.slug}>
+                <li key={beast.node.frontmatter.title}>
+                  <Link to={beast.node.fields.slug}>
                     <Img
                       fixed={
-                        post.node.frontmatter.featuredImage.childImageSharp
+                        beast.node.frontmatter.featuredImage.childImageSharp
                           .fixed
                       }
                       fadeIn={true}
-                      alt={post.node.frontmatter.title}
-                      title={post.node.frontmatter.title}
+                      alt={beast.node.frontmatter.title}
+                      title={beast.node.frontmatter.title}
                       style={{ width: 130, height: 130 }}
                     />
                   </Link>
@@ -230,7 +268,7 @@ const Home = ({ data }) => {
             personal.
           </p>
           <ul>
-            {posts.slice(0, 5).map((post) => {
+            {bestiary.slice(0, 5).map((post) => {
               return (
                 <li key={post.node.frontmatter.title}>
                   <Link to={post.node.fields.slug}>
@@ -246,28 +284,79 @@ const Home = ({ data }) => {
       <About>
         <h2>Sobre mí</h2>
         <AboutContainer>
-          <Listenin>
+          <AboutInfo>
             <small>Últimamente escucho bastante</small>
-            <h3>Vortex de Toundra</h3>
-            <p>
-              Mucha melodía en esta banda de post-rock nacional. Les pude ver
-              hace años (¡2011!) en Torrelavega. Aunque nunca les he prestado
-              especial atención, ahora les estoy escuchando con mucha más
-              intensidad.
-            </p>
-          </Listenin>
-          <Playing>
+            <Cover>
+              <Img
+                fluid={music.frontmatter.featuredImage.childImageSharp.fluid}
+                fadeIn={true}
+                alt={music.frontmatter.title}
+                title={music.frontmatter.title}
+                style={{
+                  width: 150,
+                  height: 150,
+                }}
+              />
+            </Cover>
+            <Title>
+              <h3>
+                <span style={{ fontWeight: 600 }}>
+                  {music.frontmatter.album}
+                </span>{" "}
+                de{" "}
+                <span style={{ fontWeight: 600 }}>
+                  {music.frontmatter.band}
+                </span>
+              </h3>
+            </Title>
+            <p>{music.frontmatter.description}</p>
+          </AboutInfo>
+          <AboutInfo>
             <small>Ahora mismo estoy jugando a</small>
-            <h3>Paper Mario de Nintendo</h3>
-            <p>
-              Mucha melodía en esta banda de post-rock nacional. Les pude ver
-              hace años (¡2011!) en Torrelavega. Aunque nunca les he prestado
-              especial atención, ahora les estoy escuchando con mucha más
-              intensidad.
-            </p>
-          </Playing>
+            <Cover>
+              <Img
+                fluid={
+                  videogame.frontmatter.featuredImage.childImageSharp.fluid
+                }
+                fadeIn={true}
+                alt={videogame.frontmatter.title}
+                title={videogame.frontmatter.title}
+                style={{
+                  width: 150,
+                  height: 150,
+                }}
+              />
+            </Cover>
+            <Title>
+              <h3>
+                <span style={{ fontWeight: 600 }}>
+                  {videogame.frontmatter.title}
+                </span>{" "}
+                de{" "}
+                <span style={{ fontWeight: 600 }}>
+                  {videogame.frontmatter.platform}
+                </span>
+              </h3>{" "}
+            </Title>
+            <p>{videogame.frontmatter.description}</p>
+          </AboutInfo>
         </AboutContainer>
       </About>
+      <AboutTable>
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td>
+                <Link to={`/sobre-mi`}>Sobre mí</Link>
+              </td>
+              <td>
+                <Link to={`/espacios`}>Mis espacios</Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </AboutTable>
     </Layout>
   )
 }

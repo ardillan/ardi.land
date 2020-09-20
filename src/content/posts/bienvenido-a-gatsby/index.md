@@ -6,6 +6,7 @@ type: "blog"
 featuredImage: "./bienvenido-a-gatsby.png"
 category:
   - Desarrollo
+  - Bestiario
 ---
 
 De nuevo estreno blog con una tecnología complementamente diferete. [GatsbyJS](https://www.gatsbyjs.org/) es un generador de páginas web que funciona con [ReactJS](https://reactjs.org/), una de las librerías más famosas para construir interfaces gráficas.

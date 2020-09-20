@@ -8,6 +8,7 @@ description: "Charla de Ardillán sobre interfaces de usuario. Centrada en la hi
 featuredImage: "./del-codigo-al-pixel-featured.jpg"
 category:
   - Desarrollo
+  - Bestiario
 ---
 
 Tras varios meses asistiendo a los eventos de Coders llegó la hora de mi charla. Mi experiencia está basada en el diseño

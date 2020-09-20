@@ -8,6 +8,7 @@ description: "Resumen del primer año del ciclo superior de Desarrollo de Aplica
 featuredImage: "./desarrollo-aplicaciones-multiplataforma-featured.png"
 category:
   - Desarrollo
+  - Bestiario
 ---
 
 Con esta entrada, comienza lo que va a ser un pequeño resumen del primer curso del Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma) y todo lo que ofrece a lo largo del curso.

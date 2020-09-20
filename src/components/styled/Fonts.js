@@ -7,6 +7,7 @@ import InterBlack from "../../fonts/inter/Inter-Black.woff"
 import NotoSerifRegular from "../../fonts/notoSerif/NotoSerif-Regular.ttf"
 
 import GlutenRegular from "../../fonts/gluten/Gluten-Light.ttf"
+import GlutenBold from "../../fonts/gluten/Gluten-Bold.ttf"
 
 const Fonts = createGlobalStyle`
     @font-face {
@@ -43,6 +44,13 @@ const Fonts = createGlobalStyle`
         font-style: regular;
         font-weight: 400;
         src: url(${GlutenRegular}) 
+    }
+
+    @font-face {
+        font-family: 'Gluten';
+        font-style: bold;
+        font-weight: 600;
+        src: url(${GlutenBold}) 
     }
 `
 

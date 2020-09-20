@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(filter: { frontmatter: { type: { in: "blog" } } }) {
+      allMarkdownRemark {
         edges {
           node {
             fields {
@@ -37,6 +37,8 @@ exports.createPages = ({ graphql, actions }) => {
         path: node.fields.slug,
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
           slug: node.fields.slug,
         },
       })

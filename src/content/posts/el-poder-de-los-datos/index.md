@@ -9,6 +9,7 @@ featuredImage: "./el-poder-de-los-datos-featured.jpg"
 category:
   - Reflexión
   - Desarrollo
+  - Bestiario
 ---
 
 La redacción del Plan de Movilidad Urbana que se está llevando a cabo en Torrelavega da la posibilidad de que los ciudadanos expresemos cómo entendemos que podemos mejorar la ciudad. En su web, ya indican [algunas de las medidas](https://www.pmustorrelavega.es/noticias) que se están llevando a cabo: encuestas telefónicas, instalación de [aforadores de tráfico](https://www.proinbal.es/web/es/project/aforador-de-trafico/), buzón de sugerencias…
