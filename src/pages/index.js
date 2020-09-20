@@ -94,6 +94,18 @@ const Articles = styled.section`
       transform: scale(1);
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 35px;
+    margin: 20px 0;
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
 `
 const RandomArticles = styled.div`
   display: flex;
@@ -112,6 +124,14 @@ const RandomArticles = styled.div`
           border-radius: 3px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      width: 100%;
     }
   }
 `
@@ -138,6 +158,11 @@ const AboutContainer = styled.div`
   }
   p {
     font-family: "Inter";
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 `
 const AboutInfo = styled.div`
@@ -177,13 +202,16 @@ const AboutTable = styled.section`
     background: none;
     font-size: 20px;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    padding: 0 20px;
+  }
 `
 const Home = ({ data }) => {
   const posts = useGetAllPosts()
   const bestiary = useGetAllBestiaryPosts()
   const music = useGetLastAlbum()
   const videogame = useGetLastVideogame()
-  console.log(bestiary)
   return (
     <Layout>
       <SEO
@@ -352,6 +380,14 @@ const Home = ({ data }) => {
               </td>
               <td>
                 <Link to={`/espacios`}>Mis espacios</Link>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Link to={`/como-trabajo`}>¿Cómo trabajo?</Link>
+              </td>
+              <td>
+                <Link to={`/proyectos`}>Mis proyectos</Link>
               </td>
             </tr>
           </tbody>

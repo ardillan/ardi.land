@@ -20,11 +20,19 @@ const Footer = styled.footer`
   }
   a {
     color: ${(props) => props.theme.colors.fonts.text};
-    text-decoration underline;
+    text-decoration: underline;
     background: none;
   }
+
   small {
     color: #c3c3c3;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 50px 0;
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 `
 const Info = styled.div``
@@ -56,6 +64,14 @@ const ThemeSelector = styled.div`
     margin: 0;
     padding: 0;
     margin-left: 10px;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    text-align: left;
+    button {
+      margin-left: 0;
+      margin-right: 10px;
+    }
   }
 `
 

@@ -2,29 +2,62 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
+import styled from "styled-components"
+
+const SectionTitle = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 600px;
+  h1 {
+    font-family: "Inter";
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background: -webkit-linear-gradient(
+      ${(props) => props.theme.colors.gradients.top},
+      ${(props) => props.theme.colors.gradients.bottom}
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  h2 {
+    border-bottom: 2px dashed #ffde32;
+    border-top: 2px dashed #ffde32;
+    font-family: "Gluten";
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 10px 0;
+  }
+`
+
+const Container = styled.div`
+  width: 600px;
+  margin: 0 auto 20px;
+`
 
 export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Cómo trabajo" />
-      <div>
-        <section>
-          <div>
-            <h1>¿Cómo trabajo?</h1>
-            <h2>
-              Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o
-              pequeños scripts facilitan el trabajo de la gente. A continuación
-              indico qué aplicaciones utilizo en mi día a día, qué música
-              escucho o qué utilizo para editar gráficos y construir interfaces.
-            </h2>
-          </div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.markdownRemark.html,
-            }}
-          />
-        </section>
-      </div>
+      <SectionTitle>
+        <h1>¿Cómo trabajo?</h1>
+        <h2>
+          Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o
+          pequeños scripts facilitan el trabajo de la gente. A continuación
+          indico qué aplicaciones utilizo en mi día a día, qué música escucho o
+          qué utilizo para editar gráficos y construir interfaces.
+        </h2>
+      </SectionTitle>
+      <Container
+        dangerouslySetInnerHTML={{
+          __html: data.markdownRemark.html,
+        }}
+      />
     </Layout>
   )
 }

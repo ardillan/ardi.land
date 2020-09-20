@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { Logo } from "../images/general/icons"
 
@@ -34,6 +33,13 @@ const HeaderContainer = styled.header`
       }
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    nav {
+      padding: 0 20px;
+      margin: 0;
+    }
+  }
 `
 
 const LogoContainer = styled.div`
@@ -57,19 +63,6 @@ const LogoContainer = styled.div`
 `
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query LogoQuery {
-      file(relativePath: { eq: "icon-logo.png" }) {
-        absolutePath
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <HeaderContainer>
       <nav>

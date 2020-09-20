@@ -12,6 +12,11 @@ import Footer from "./Footer"
 const Container = styled.div`
   width: 900px;
   margin: auto;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: 100%;
+    margin: auto;
+  }
 `
 
 export default ({ children }) => {

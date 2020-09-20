@@ -1,3 +1,9 @@
+const breakPoints = {
+  mobile: "425px",
+  tablet: "768px",
+  desktop: "960px",
+}
+
 export const LightTheme = {
   colors: {
     background: {
@@ -29,6 +35,7 @@ export const LightTheme = {
       4: "#0078ff",
     },
   },
+  breakPoints: breakPoints,
 }
 
 export const DarkTheme = {
@@ -62,6 +69,7 @@ export const DarkTheme = {
       4: "#ffde32",
     },
   },
+  breakPoints: breakPoints,
 }
 
 export const GameBoyTheme = {
@@ -95,4 +103,5 @@ export const GameBoyTheme = {
       4: "#306230",
     },
   },
+  breakPoints: breakPoints,
 }

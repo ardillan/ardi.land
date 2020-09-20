@@ -16,6 +16,13 @@ const FeaturedBannerContainer = styled.div`
   margin: 30px 0;
   min-height: 400px;
   padding: 15px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: 200px;
+  }
 `
 
 const BannerInfo = styled.div`
@@ -50,6 +57,10 @@ const BannerInfo = styled.div`
     padding-bottom: 10px;
     padding-top: 10px;
     width: max-content;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin-left: 20px;
   }
 `
 

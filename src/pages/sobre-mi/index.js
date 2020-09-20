@@ -9,13 +9,10 @@ import styled from "styled-components"
 
 const SectionTitle = styled.section`
   display: grid;
-  width: 900px;
-  margin: auto;
-  grid-gap: 100px;
-  grid-template-columns: 200px 400px;
-  align-items: center;
+  grid-template-columns: 260px 1fr;
   justify-content: center;
-  margin-bottom: 70px;
+  margin: 50px auto;
+  max-width: 600px;
   h1 {
     font-family: "Inter";
     font-size: 50px;

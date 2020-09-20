@@ -6,8 +6,11 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const SectionTitle = styled.section`
-  width: 600px;
-  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 600px;
   h1 {
     font-family: "Inter";
     font-size: 50px;
