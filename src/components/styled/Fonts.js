@@ -5,6 +5,7 @@ import InterBold from "../../fonts/inter/Inter-Bold.woff"
 import InterBlack from "../../fonts/inter/Inter-Black.woff"
 
 import NotoSerifRegular from "../../fonts/notoSerif/NotoSerif-Regular.ttf"
+import NotoSerifBold from "../../fonts/notoSerif/NotoSerif-Bold.ttf"
 
 import GlutenRegular from "../../fonts/gluten/Gluten-Light.ttf"
 import GlutenBold from "../../fonts/gluten/Gluten-Bold.ttf"
@@ -36,6 +37,13 @@ const Fonts = createGlobalStyle`
         font-style: regular;
         font-weight: 400;
         src: url(${NotoSerifRegular})
+    }
+
+    @font-face {
+        font-family: 'Noto Serif';
+        font-style: bold;
+        font-weight: 600;
+        src: url(${NotoSerifBold})
     }
 
 
