@@ -18,16 +18,14 @@ category:
   <img src="./florence-03.jpg" alt="Captura del juego" />
 </div>
 
-Hace tiempo que me apetecía jugar a algo del estilo [_metroidvania_](https://es.wikipedia.org/wiki/Metroidvania). Son un tipo de **videojuegos con los que disfruto bastante**; consiguen engancharme y rara vez me defraudan.
+Florence es un videojuego que me atrapó, como muchas otras veces, por su estética. Sabía perfectamente que su duración no iba a ser demasiado larga y que su banda sonora no me iba a defraudar. Por eso no dudé en comprarlo.
 
-### La decandencia de Hallownest
+### La cotidiana vida de Florence Yeoh
 
-Desde el diseño del personaje hasta la ambientación, pasando por su **[increible banda sonora](https://christopherlarkin.bandcamp.com/album/hollow-knight-original-soundtrack)**. Todos los factores se combinan perfectamente para que nos metamos de lleno en Hallownest, un reino en declive que experimenta una infección que asola todo el territorio y donde tiene lugar la trama principal.
+Florence es una historia interactiva, lo que quiere decir que **no sigue el patrón** clásico al que estamos acostumbrados en otros videojuegos. Al comenzar, se nos presenta a **Florence Yeoh**, una joven que se encuentra atascada en la cotidianidad de su vida y de la cual no logra escapar.
 
-Nuestro pequeño héroe deberá adentrarse hasta lo más profundo de este nido repleto de enemigos de toda clase: mantis, abejas, [bichos bola](https://es.wikipedia.org/wiki/Oniscidea), escarabajos... todo ello a la par que descubrimos el por qué de la decadencia de Hallownest e incluso de nuestra propia existencia.
+A medida que avanza la historia (a través de capítulos), veremos cómo logra superar diferentes obstaculos que se le plantean. La **dificultad** de este tipo de juegos suele ser más bien **baja**; no puede haber fricción para que podamos disfrutar de la historia y los gráficos cómodamente.
 
-![Equipo de desarrollo de Florence](./florence-04.jpg)
+Cabe mencionar la gran integración que hay entre el apartado artístico, la historia y la música, siendo esta última sútil y bien acompasada a medida que avanza la aventura.
 
-El estilo de juego, como ya he mencionado, trata con unas **mecánicas clásicas**. Visitaremos los mismos lugares **una y otra vez**, podremos aumentar las destrezas de nuestro personaje a medida que avance la historia. Conseguiremos habilidades que nos permitirán **descubrir nuevas zonas del mapa** y enemiglsos a los que derrotar.
-
-Para todas las personas que quieran disfrutar una aventura dentro del genéro _metroidvania_, esta es sin lugar a dudas un referente.
+![Florence dejándose llevar por el sonido de la música](./florence-05.jpg)
