@@ -10,9 +10,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -30,9 +30,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 960,
+              maxWidth: 900,
               showCaptions: true,
-              quality: 80,
+              quality: 85,
               linkImagesToOriginal: false,
             },
           },
@@ -48,22 +48,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/posts`,
+        name: `general`,
+        path: `${__dirname}/src/images/general`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/content/images/`,
+        name: `posts`,
+        path: `${__dirname}/src/content/posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/data/`,
+        name: `spaces`,
+        path: `${__dirname}/src/pages/espacios`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
   ],

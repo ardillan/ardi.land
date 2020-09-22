@@ -1,114 +1,90 @@
-import React, { useState } from "react"
-import Img from "gatsby-image"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import hamburguer_icon_open from "../../content/images/general/icon-menu-open.svg"
-import hamburguer_icon_close from "../../content/images/general/icon-menu-close.svg"
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import { Logo } from "../images/general/icons"
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      logo: file(extension: { eq: "png" }, name: { regex: "/logo/" }) {
-        name
-        childImageSharp {
-          fluid(maxWidth: 45) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      twitter: file(extension: { eq: "png" }, name: { regex: "/twitter/" }) {
-        name
-        childImageSharp {
-          fluid(maxWidth: 30) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      github: file(extension: { eq: "png" }, name: { regex: "/github/" }) {
-        name
-        childImageSharp {
-          fluid(maxWidth: 30) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+const HeaderContainer = styled.header`
+  nav {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    min-height: 70px;
+    align-content: center;
+    padding: 0 5rem;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding-left: 20px;
+
+      a {
+        background: none;
+        color: ${(props) => props.theme.colors.fonts.anchor};
+        font-family: Inter;
+        font-size: 17px;
+        font-weight: 400;
+        margin-left: 15px;
+        text-decoration: none;
       }
     }
-  `)
+  }
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    nav {
+      padding: 0 20px;
+      margin: 0;
+    }
+  }
+`
 
-  const menuClass = isMenuOpen ? "menu-mobile" : "menu-desktop"
-  const hamburguer_icon = isMenuOpen
-    ? hamburguer_icon_close
-    : hamburguer_icon_open
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background: initial;
+    svg {
+      #dot {
+        fill: ${(props) => props.theme.colors.rainBow[2]};
+      }
+      #ard {
+        fill: ${(props) => props.theme.colors.fonts.text};
+      }
+      #bg {
+        fill: ${(props) => props.theme.colors.background.main};
+      }
+    }
+  }
+`
 
+const Header = () => {
   return (
-    <header className="top-header">
+    <HeaderContainer>
       <nav>
-        <Link to={`/`} className="logo">
-          <Img fluid={data.logo.childImageSharp.fluid} alt="Logotipo" />
-        </Link>
-        <div className="menu-mobile-icon">
-          <button
-            type="button"
-            onClick={() => {
-              setIsMenuOpen(!isMenuOpen)
-            }}
-            onKeyPress={event => {
-              if (event.keyCode !== 13) {
-                return false
-              }
-
-              setIsMenuOpen(!isMenuOpen)
-            }}
-          >
-            <img src={hamburguer_icon} width="19" alt="Icono de menú" />
-          </button>
-        </div>
-        <ul className={menuClass}>
+        <LogoContainer>
+          <Link to={`/`}>
+            <Logo />
+          </Link>
+        </LogoContainer>
+        <ul>
           <li>
-            <Link activeClassName="active" to={`/sobre-mi/`}>
+            <Link to={`/sobre-mi/`}>
               <span>Sobre mí</span>
             </Link>
           </li>
           <li>
-            <Link activeClassName="active" to={`/proyectos/`}>
-              <span>Proyectos</span>
-            </Link>
-          </li>
-          <li>
-            <Link activeClassName="active" to={`/blog/`}>
+            <Link to={`/blog/`}>
               <span>Blog!</span>
             </Link>
           </li>
-          <li>
-            <a
-              className="social-media"
-              href="https://www.twitter.com/ardillan_"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Img
-                fluid={data.twitter.childImageSharp.fluid}
-                alt="Icono de Twitter"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              className="social-media"
-              href="https://www.github.com/ardillan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Img
-                fluid={data.github.childImageSharp.fluid}
-                alt="Icono de Github"
-              />
-            </a>
-          </li>
         </ul>
       </nav>
-    </header>
+    </HeaderContainer>
   )
 }
 

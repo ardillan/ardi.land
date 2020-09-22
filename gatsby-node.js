@@ -18,13 +18,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const { createRedirect } = actions
-  createRedirect({
-    fromPath: "/uses",
-    toPath: "/como-trabajo",
-    isPermanent: true,
-    statusCode: 200,
-  })
 
   return graphql(`
     {
@@ -38,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
