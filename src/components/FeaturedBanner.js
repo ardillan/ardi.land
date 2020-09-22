@@ -116,7 +116,6 @@ const FeaturedBanner = () => {
   const bannerBackgroundImage =
     featuredPost.node.frontmatter.featuredImageBanner.publicURL
   const bannerBackgroundColor = featuredPost.node.frontmatter.backgroundColor
-  console.log(featuredPost)
   return (
     <FeaturedBannerContainer
       image={bannerBackgroundImage}
