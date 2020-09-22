@@ -9,10 +9,11 @@ import styled from "styled-components"
 
 const SectionTitle = styled.section`
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   margin: 50px auto;
   max-width: 600px;
+  grid-gap: 40px;
   h1 {
     font-family: "Inter";
     font-size: 50px;
@@ -36,11 +37,38 @@ const SectionTitle = styled.section`
     margin: 20px 0;
     padding: 10px 0;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    width: auto;
+    margin: 0;
+    grid-template-columns: 1fr;
+
+    h1  {
+      transform: rotate(-4deg);
+      text-align: center;
+      font-size: 40px;
+      margin: 30px 0;
+      font-size: 75px;
+      margin: -40px 0 30px 0;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
 `
-const SectionDescription = styled.section`
+
+const Container = styled.div`
   width: 600px;
-  margin: auto;
+  margin: 0 auto 20px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    width: auto;
+  }
 `
+
 const Portrait = styled.div``
 const Description = styled.div`
   max-width: 600px;
@@ -56,13 +84,6 @@ export default ({ data }) => {
             fadeIn={true}
             alt="Autoretrato hecho a modo ilustración"
             title="Autoretrato"
-            style={{
-              width: 240,
-              height: 240,
-              borderRadius: "50%",
-              marginTop: 10,
-              backgroundColor: "lime",
-            }}
           />
         </Portrait>
         <Description>
@@ -75,7 +96,7 @@ export default ({ data }) => {
           </h2>
         </Description>
       </SectionTitle>
-      <SectionDescription>
+      <Container>
         <p>
           Mi interés está centrado en aprender todo lo posible sobre tecnologías{" "}
           <a href="https://es.wikipedia.org/wiki/Front-end_y_back-end">
@@ -102,7 +123,7 @@ export default ({ data }) => {
           el placer de decicar horas en frente de mi pantalla, o bien contactar
           conmigo vía <a href="https://www.github.com/ardillan">Twitter</a>.
         </p>
-      </SectionDescription>
+      </Container>
     </Layout>
   )
 }

@@ -34,11 +34,35 @@ const SectionTitle = styled.section`
     margin: 20px 0;
     padding: 10px 0;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    width: auto;
+    margin: 0;
+
+    h1  {
+      transform: rotate(-4deg);
+      text-align: center;
+      font-size: 40px;
+      margin: 30px 0;
+    }
+
+    h2 {
+      transform: rotate(2deg);
+      margin: 0;
+    }
+  }
 `
+
 const Spaces = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+  margin-top: 30px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+  }
 `
 
 export default () => {

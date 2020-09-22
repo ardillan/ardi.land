@@ -33,6 +33,10 @@ const SectionTitle = styled.section`
     margin: 20px 0;
     padding: 10px 0;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+  }
 `
 
 export default () => {
@@ -43,7 +47,6 @@ export default () => {
         <h1>Blog</h1>
         <h2>En esta página se muestran todas las entradas del blog.</h2>
       </SectionTitle>
-
       <section>
         <PostsList length="55" type="blog" showPostDate />
       </section>

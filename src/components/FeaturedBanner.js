@@ -3,8 +3,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 
-import { formatDate } from "../utils/helpers"
-
 const FeaturedBannerContainer = styled.div`
   background-position: 300px;
   background-repeat: no-repeat;
@@ -21,7 +19,10 @@ const FeaturedBannerContainer = styled.div`
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-position: 200px;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    background-position: 0;
   }
 `
 
@@ -48,8 +49,9 @@ const BannerInfo = styled.div`
   }
 
   h2 {
-    border-bottom: 2px dashed #ffde32;
-    border-top: 2px dashed #ffde32;
+    border-bottom: 2px dashed ${(props) => props.theme.colors.gradients.top};
+    border-top: 2px dashed ${(props) => props.theme.colors.gradients.top};
+    color: ${(props) => props.theme.colors.fonts.text};
     font-family: "Gluten";
     font-size: 1.3rem;
     font-size: 1.3rem;
@@ -62,20 +64,50 @@ const BannerInfo = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     margin-left: 20px;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    max-height: initial;
+    padding: 0;
+    padding: 20px 20px;
+    width: 100%;
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      display: none;
+    }
+  }
 `
 
-const Meta = styled.div`
-  background: ${(props) => props.theme.colors.background.meta};
-  color: ${(props) => props.theme.colors.fonts.text};
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  padding: 10px;
-  width: max-content;
-  margin-top: 15px;
+const TellMeMoreButton = styled.div`
+  margin-top: 30px;
+
   a {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-family: Inter;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
     color: ${(props) => props.theme.colors.fonts.anchor};
-    text-decoration: none;
+    font-weight: 600;
+    background: white;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      border-radius: 50px;
+      background: ${(props) => props.theme.colors.fonts.anchor};
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    display: none;
   }
 `
 
@@ -84,6 +116,7 @@ const FeaturedBanner = () => {
   const bannerBackgroundImage =
     featuredPost.node.frontmatter.featuredImageBanner.publicURL
   const bannerBackgroundColor = featuredPost.node.frontmatter.backgroundColor
+  console.log(featuredPost)
   return (
     <FeaturedBannerContainer
       image={bannerBackgroundImage}
@@ -92,18 +125,9 @@ const FeaturedBanner = () => {
       <BannerInfo>
         <h1>{featuredPost.node.frontmatter.title}</h1>
         <h2>{featuredPost.node.frontmatter.subtitle}</h2>
-        <Meta>
-          {" "}
-          <time>
-            Escrito el {formatDate(featuredPost.node.frontmatter.date)}{" "}
-          </time>{" "}
-          en{" "}
-          {featuredPost.node.frontmatter.category.map((cat) => (
-            <Link to={`/categoria/${cat}`} key={cat}>
-              {cat}
-            </Link>
-          ))}
-        </Meta>
+        <TellMeMoreButton>
+          <Link to={`${featuredPost.node.fields.slug}`}>Cuéntame más</Link>
+        </TellMeMoreButton>
       </BannerInfo>
     </FeaturedBannerContainer>
   )

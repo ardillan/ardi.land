@@ -33,6 +33,34 @@ const SectionTitle = styled.section`
     margin: 20px 0;
     padding: 10px 0;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    width: auto;
+    margin: 0;
+
+    h1  {
+      transform: rotate(-4deg);
+      text-align: center;
+      font-size: 40px;
+      margin: 30px 0;
+    }
+
+    h2 {
+      transform: rotate(2deg);
+      margin: 0;
+    }
+  }
+`
+
+const Container = styled.div`
+  width: 600px;
+  margin: 0 auto 20px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    width: auto;
+  }
 `
 
 export default () => {
@@ -46,23 +74,25 @@ export default () => {
           actualmente.
         </h2>
       </SectionTitle>
-      <a
-        href="https://www.torlavega.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <article>
-          <header>
-            <h2>Torlavega.com</h2>
 
-            <p>
-              Web donde se trata de recopilar, analizar y disponer de forma
-              pública y ordenada información relacionada con la ciudad de
-              Torrelavega.
-            </p>
-          </header>
-        </article>
-      </a>
+      <Container>
+        <a
+          href="https://www.torlavega.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article>
+            <header>
+              <h2>Torlavega.com</h2>
+              <p>
+                Web donde se trata de recopilar, analizar y disponer de forma
+                pública y ordenada información relacionada con la ciudad de
+                Torrelavega.
+              </p>
+            </header>
+          </article>
+        </a>
+      </Container>
     </Layout>
   )
 }

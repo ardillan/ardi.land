@@ -14,6 +14,17 @@ import { formatDate } from "../utils/helpers"
 const PostContainer = styled.div`
   width: 600px;
   margin: 0 auto 20px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: 600px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: 100%;
+    padding: 0;
+  }
 `
 
 const PostContent = styled.div`
@@ -74,6 +85,22 @@ const PostContent = styled.div`
       margin: 0;
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+
+    p,
+    ol,
+    ul,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: auto;
+    }
+  }
 `
 
 const PostHeader = styled.header`
@@ -96,9 +123,30 @@ const PostHeader = styled.header`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: 100%;
+    padding: 0;
+    margin: 50px auto 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-gap: 0px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
 `
 
-const PostHeaderTitle = styled.div``
+const PostHeaderTitle = styled.div`
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+`
 
 const FeaturedImage = styled.div`
   background: #ffc313;
@@ -108,6 +156,17 @@ const FeaturedImage = styled.div`
   width: 150px;
   img {
     border-radius: 50%;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    border-radius: 0;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 10px;
+    img {
+      border-radius: 0;
+    }
   }
 `
 
@@ -119,6 +178,10 @@ const Subtitle = styled.div`
     font-size: 18px;
     margin: 20px 0;
     padding: 10px 0;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0;
   }
 `
 
@@ -138,6 +201,9 @@ const BackArrowContainer = styled.div`
     left: 17px;
     top: 20px;
   }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    display: none;
+  }
 `
 
 const Meta = styled.div`
@@ -151,6 +217,12 @@ const Meta = styled.div`
   a {
     color: ${(props) => props.theme.colors.fonts.anchor};
     text-decoration: none;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    margin: 0 20px;
+    width: auto;
+    line-height: 30px;
   }
 `
 

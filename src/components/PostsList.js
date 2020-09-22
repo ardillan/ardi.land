@@ -16,6 +16,18 @@ const PostsListContainer = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    grid-template-columns: 1fr;
+    width: 600px;
+    margin: auto;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    grid-template-columns: 1fr;
+    width: auto;
+    margin: auto;
+  }
 `
 
 const Post = styled.li`
@@ -41,6 +53,20 @@ const Post = styled.li`
     padding: 0;
     font-size: 14px;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: auto;
+    a {
+      background: none;
+      article {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 `
 
 const Category = styled.div`
@@ -52,6 +78,10 @@ const Category = styled.div`
     margin-right: 5px;
     margin: 0;
     padding: 0;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    justify-content: center;
   }
 `
 
