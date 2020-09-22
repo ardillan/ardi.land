@@ -13,4 +13,15 @@ export const formatDate = (postDate) => {
   })
 }
 
+export const formatDateTime = (commitTime) => {
+  return new Date(commitTime).toLocaleDateString("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  })
+}
+
 export const shuffleArray = (array) => array.sort(() => Math.random() - 0.5)

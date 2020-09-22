@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
+import { formatDateTime } from "../utils/helpers"
 
 const Footer = styled.footer`
   margin-top: 100px;
@@ -25,7 +26,8 @@ const Footer = styled.footer`
   }
 
   small {
-    color: #c3c3c3;
+    color: ${(props) => props.theme.colors.fonts.text};
+    opacity: 0.7;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -91,6 +93,15 @@ export default (props) => {
     props.setTheme(GameBoyTheme)
   }
 
+  const [latestCommit, setLatestCommit] = useState(null)
+  useEffect(() => {
+    fetch("https://api.github.com/repos/ardillan/ardillan.com")
+      .then((res) => res.json())
+      .then((commit) => {
+        setLatestCommit(commit)
+      })
+  }, [])
+
   return (
     <Footer>
       <Info>
@@ -120,7 +131,12 @@ export default (props) => {
           </a>
         </Social>
         <small>
-          Esta web se actualizó por última vez el 28 de agosto de 2020
+          Esta web se actualizó por última vez el{" "}
+          {latestCommit === null ? (
+            <span>...</span>
+          ) : (
+            <span>{formatDateTime(latestCommit.updated_at)}</span>
+          )}
         </small>
       </Info>
       <ThemeSelector>
