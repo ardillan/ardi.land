@@ -262,11 +262,15 @@ export default ({ data }) => {
             </PostHeader>
             <Meta>
               <time>Escrito el {formatDate(post.frontmatter.date)} </time> en{" "}
-              {post.frontmatter.category.map((cat) => (
-                <Link to={`/categoria/${cat}`} key={cat}>
-                  {cat}
-                </Link>
-              ))}
+              {post.frontmatter.category ? (
+                post.frontmatter.category.map((cat) => (
+                  <Link to={`/categoria/${cat}`} key={cat}>
+                    {cat}
+                  </Link>
+                ))
+              ) : (
+                <span>Sin categoría</span>
+              )}
             </Meta>
           </PostContainer>
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
