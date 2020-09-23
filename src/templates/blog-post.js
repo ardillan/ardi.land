@@ -17,7 +17,7 @@ const PostContainer = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 600px;
-    margin: auto;
+    margin-bottom: 20px;
     padding: 0 20px;
   }
 
