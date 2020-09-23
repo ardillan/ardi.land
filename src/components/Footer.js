@@ -36,6 +36,14 @@ const Footer = styled.footer`
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    background: ${(props) => props.theme.colors.fonts.text}08;
+    padding: 40px 20px;
+    margin: 0;
+  }
 `
 const Info = styled.div``
 const Social = styled.p`
