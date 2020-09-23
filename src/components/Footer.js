@@ -8,7 +8,7 @@ const Footer = styled.footer`
   margin-bottom: 100px;
   padding-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 70% 1fr;
 
   small,
   button,
