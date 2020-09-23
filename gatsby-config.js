@@ -14,6 +14,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          // Cache fuentes las 4evah
+          "/src/fonts/*": [
+            "Cache-Control: public",
+            "Cache-Control: max-age=365000000",
+            "Cache-Control: immutable",
+          ],
+        },
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
