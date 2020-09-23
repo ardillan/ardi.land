@@ -93,7 +93,6 @@ const Main = createGlobalStyle`
         font-size: 13px;
         font-family: "Inter";
         font-weight: 400;
-        width: max-content;
         margin: 10px auto;
         border-radius: 5px;
     }
