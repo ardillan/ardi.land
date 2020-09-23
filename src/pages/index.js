@@ -187,6 +187,7 @@ const Cover = styled.div`
   align-items: center;
 `
 const AboutTable = styled.section`
+  margin: 50px 0;
   table {
     width: 100%;
   }
