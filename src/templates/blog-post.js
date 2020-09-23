@@ -24,6 +24,7 @@ const PostContainer = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     width: 100%;
     padding: 0;
+    margin-bottom: 20px;
   }
 `
 
@@ -143,7 +144,9 @@ const PostHeader = styled.header`
 
 const PostHeaderTitle = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    font-size: 30px;
+    h1 {
+      font-size: 30px;
+    }
     padding: 0 20px;
   }
 `
@@ -214,9 +217,11 @@ const Meta = styled.div`
   font-weight: 400;
   padding: 10px;
   width: max-content;
+
   a {
     color: ${(props) => props.theme.colors.fonts.anchor};
     text-decoration: none;
+    margin-right: 5px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -294,7 +299,7 @@ export const query = graphql`
         category
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 150, maxHeight: 150, cropFocus: CENTER) {
+            fluid(maxWidth: 375, maxHeight: 375, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }
