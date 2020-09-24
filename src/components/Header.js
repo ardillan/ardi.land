@@ -7,7 +7,6 @@ const HeaderContainer = styled.header`
   nav {
     display: grid;
     grid-template-columns: 100px 1fr;
-    min-height: 70px;
     align-content: center;
     padding: 0 5rem;
   }
@@ -40,6 +39,27 @@ const HeaderContainer = styled.header`
       margin: 0;
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    nav {
+      grid-template-columns: 40px 1fr;
+      margin: 5px 0;
+    }
+
+    ul {
+      li {
+        a {
+          border-radius: 4px;
+          border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
+          color: ${(props) => props.theme.colors.fonts.anchor};
+          font-size: 13px;
+          margin: 0;
+          padding: 5px 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 `
 
 const LogoContainer = styled.div`
@@ -56,7 +76,16 @@ const LogoContainer = styled.div`
         fill: ${(props) => props.theme.colors.fonts.text};
       }
       #bg {
-        fill: ${(props) => props.theme.colors.background.main};
+        fill: none;
+      }
+    }
+  }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    a {
+      svg {
+        width: 40px;
+        height: 40px;
+        display: flex;
       }
     }
   }
