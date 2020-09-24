@@ -105,10 +105,6 @@ const TellMeMoreButton = styled.div`
       color: white;
     }
   }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: none;
-  }
 `
 
 const FeaturedBanner = () => {
