@@ -7,7 +7,7 @@ export const useGetLastVideogame = () => {
         allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { type: { eq: "videogames" } }
+            frontmatter: { showInPlaying: { eq: true } }
           }
           sort: { fields: frontmatter___date, order: DESC }
           limit: 1

@@ -7,7 +7,7 @@ export const useGetLastAlbum = () => {
         allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { category: { in: "Música" } }
+            frontmatter: { showInListening: { in: true } }
           }
           sort: { fields: frontmatter___date, order: DESC }
           limit: 1
