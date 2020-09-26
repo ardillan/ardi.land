@@ -14,10 +14,16 @@ const Main = createGlobalStyle`
 
     /*  💅🏻 Paragraphs */
     p {
-      color: ${(props) => props.theme.colors.fonts.text};
-      font-size: 18px;
-      line-height: 30px;
-      padding-bottom: 15px;
+        color: ${(props) => props.theme.colors.fonts.text};
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 15px;
+        margin-top: 5px;
+    }
+
+    /*  💅🏻 Code */
+    pre {
+        margin: 30px auto;
     }
 
     small {
@@ -30,7 +36,7 @@ const Main = createGlobalStyle`
 
     /*  💅🏻 Lists */
     ol, ul {
-        padding-top: 15px;
+        padding: 0px 0 20px 20px;
         font-size: 18px;
         line-height: 30px;
         color: ${(props) => props.theme.colors.fonts.text};
@@ -42,9 +48,9 @@ const Main = createGlobalStyle`
         color: ${(props) => props.theme.colors.fonts.text};
         font-family: Inter;
         font-weight: 400;
-        margin-top: 30px;
-        padding-bottom: 10px;
-        padding-top: 30px;
+        margin:0;
+        padding-top: 15px;
+        padding-bottom: 5px;
     }
 
     h1 {
