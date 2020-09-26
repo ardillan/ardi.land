@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 import { formatDateTime } from "../utils/helpers"
 
@@ -46,6 +47,31 @@ const Footer = styled.footer`
   }
 `
 const Info = styled.div``
+const ThemeAndLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  button {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Inter;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    align-items: initial;
+  }
+`
 const Social = styled.p`
   font-size: 16px;
 
@@ -78,6 +104,7 @@ const ThemeSelector = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     text-align: left;
+    margin-bottom: 30px;
     button {
       margin-left: 0;
       margin-right: 10px;
@@ -147,12 +174,15 @@ export default (props) => {
           )}
         </small>
       </Info>
-      <ThemeSelector>
-        <p>Tema de color</p>
-        <button onClick={() => setLightTheme()}>Claro</button>
-        <button onClick={() => setDarkTheme()}>Oscuro</button>
-        <button onClick={() => setGameBoyTheme()}>Game Boy</button>
-      </ThemeSelector>
+      <ThemeAndLinks>
+        <ThemeSelector>
+          <p>Tema de color</p>
+          <button onClick={() => setLightTheme()}>Claro</button>
+          <button onClick={() => setDarkTheme()}>Oscuro</button>
+          <button onClick={() => setGameBoyTheme()}>Game Boy</button>
+        </ThemeSelector>
+        <Link to={`/mapa-del-sitio`}>Mapa del sitio</Link>
+      </ThemeAndLinks>
     </Footer>
   )
 }
