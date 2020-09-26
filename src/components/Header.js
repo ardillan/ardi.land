@@ -67,8 +67,9 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   a {
-    background: initial;
+    background: none;
     svg {
+      transition: all 0.3s;
       #dot {
         fill: ${(props) => props.theme.colors.rainBow[2]};
       }
@@ -78,8 +79,27 @@ const LogoContainer = styled.div`
       #bg {
         fill: none;
       }
+
+      &:hover {
+        #dot {
+          animation: RichKidsOnLSD 0.8s infinite;
+          animation-timing-function: ease-in-out;
+        }
+      }
+
+      @keyframes RichKidsOnLSD {
+        50% {
+          fill: ${(props) => props.theme.colors.rainBow[0]};
+          transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -83.734);
+        }
+
+        100% {
+          transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -80.734);
+        }
+      }
     }
   }
+
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     a {
       svg {
