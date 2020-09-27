@@ -172,7 +172,7 @@ export default (props) => {
           </a>{" "}
           ó{" "}
           <a
-            href="https://www.githib.com/ardillan"
+            href="https://www.github.com/ardillan"
             target="_blank"
             rel="noreferrer"
           >
