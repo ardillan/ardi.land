@@ -12,6 +12,7 @@ import { formatDate } from "../utils/helpers"
 const PostsListContainer = styled.ul`
   display: grid;
   grid-row-gap: 40px;
+  grid-column-gap: 40px;
   grid-template-columns: 1fr 1fr;
   list-style-type: none;
   margin: 0;
@@ -52,6 +53,22 @@ const Post = styled.li`
     margin: 0;
     padding: 0;
     font-size: 14px;
+  }
+
+  &:hover {
+    article {
+      transition: all 0.2s;
+      background: ${(props) => props.theme.colors.fonts.anchorBackground};
+      padding: 20px;
+      margin: -20px;
+      border-radius: 10px;
+    }
+
+    h2,
+    p {
+      transition: all 0.2s;
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
