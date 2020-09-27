@@ -82,6 +82,12 @@ const Main = createGlobalStyle`
         color: ${(props) => props.theme.colors.fonts.anchor};
         background: ${(props) => props.theme.colors.fonts.anchorBackground};
         text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+            background: ${(props) => props.theme.colors.fonts.anchor};
+            color: ${(props) => props.theme.colors.fonts.anchorBackground};
+        }
     }
 
     code {
