@@ -46,6 +46,11 @@ const PostContent = styled.div`
     width: 100%;
   }
 
+  figure {
+    padding: 0;
+    margin: 0;
+  }
+
   .gallery-post__3-columns {
     display: grid;
     margin: 35px 0;
