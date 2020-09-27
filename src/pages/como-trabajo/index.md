@@ -7,7 +7,7 @@ type: "page"
 
 ##### Sistema
 
-Utilizo un Macbook Air de finales de 2014. Vengo utilizando equipos de Apple desde hace unos 10 años. Me encuentro muy cómodo trabajando con macOS. Ahora plataformas como Windows y GNU/Linux han mejorado muchísimo, por lo que siempre estoy abierto a probar nuevos sistemas.
+Utilizo un Macbook Air de finales de 2014. Vengo utilizando equipos de Apple desde hace unos 12 años. Me encuentro muy cómodo trabajando con macOS. Ahora plataformas como Windows y GNU/Linux han mejorado muchísimo, por lo que siempre estoy abierto a probar nuevos sistemas.
 
 ##### Desarrollo
 
@@ -45,7 +45,7 @@ Esta es mi configuración para VS Code:
 
 ##### Gráficos
 
-Para montar un **flujo de pantallas** y diseñar interfaces utilizo [Sketch App](https://www.sketch.com/).
+Para montar un **flujo de pantallas** y diseñar interfaces utilizo ~~Photoshop~~, ~~Affinity Designer~~, ~~[Sketch App](https://www.sketch.com/)~~, [Figma](https://www.figma.com/).
 
 Si necesito **editar vectores** utilizo [Affinity Designer](https://affinity.serif.com/es/designer/), en cambio para **fotografías** utilizo [Affinity Photo](https://affinity.serif.com/es/photo/). Ambas aplicaciones están desarrolladas por Serif, por lo que la integración entre ellas es total.
 
@@ -59,12 +59,13 @@ Si lo que necesito es tomar notas con más detalle o compartir ideas, utilizo [N
 
 Siempre trabajo con música de fondo. Como cada situación y momento del día es muy diferente la música que suena siempre varía. No obstante estos son algunos de los discos que reproduzco a menudo en mi ordenador.
 
-1. [The Mercury Program](https://themercuryprogram.bandcamp.com/)
-2. [Jaga Jazzist](https://jagajazzist.bandcamp.com/)
-3. [A wilhelm scream](https://jumpstartrecords.bandcamp.com/album/career-suicide)
-4. [Maseratti](https://maserati.bandcamp.com/album/passages)
-5. [And So I Watch You From Afar](https://asiwyfa.bandcamp.com/)
-6. [Poké&Chill](https://music.gamechops.com/album/pok-chill)
+- [Jaga Jazzist](https://jagajazzist.bandcamp.com/)
+- [The Mercury Program](https://themercuryprogram.bandcamp.com/)
+- [Mouse on the keys](https://motk.bandcamp.com/album/tres)
+- [A wilhelm scream](https://jumpstartrecords.bandcamp.com/album/career-suicide)
+- [Maseratti](https://maserati.bandcamp.com/album/passages)
+- [And So I Watch You From Afar](https://asiwyfa.bandcamp.com/)
+- [Poké&Chill](https://music.gamechops.com/album/pok-chill)
 
 También tengo listas de reproducción creadas por mí que tocan muchos estilos. Por ejemplo mi [lista de Epixelia](https://itunes.apple.com/es/playlist/epixelia/pl.u-BNA6rgWCpXPK5z) donde se oyen canciones de videojuegos, o la [lista de Novecientos](https://itunes.apple.com/es/playlist/novecientos/pl.u-leyl1XRCxZ3y0L) donde suenan canciones de diferentes estilos, o incluso mi lista de [Waltasia](https://itunes.apple.com/es/playlist/waltasia/pl.u-6mo448etZkj7EP) que dejo que descubras por tí mismo.
 
@@ -72,10 +73,13 @@ También tengo listas de reproducción creadas por mí que tocan muchos estilos.
 
 Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. Esta sería la lista de mis podcast favoritos.
 
-1.  [El Complejo Lambda](https://www.complejolambda.com)
-2.  [Podcast Replay](https://www.podcastreplay.com)
-3.  [Mixx.io](https://mixx.io/)
-4.  [WeCodesign](https://wedevelopers.com/)
-5.  [Fallo de Sistema](https://www.rtve.es/alacarta/audios/fallo-de-sistema/)
-6.  [Loop Infinito](https://www.applesfera.com/applesfera-podcast/bienvenidos-a-loop-infinito-nuevo-podcast-applesfera)
-7.  [Press Start Videojuegos](https://pressstartvideojuegos.com)
+- [Loop Infinito](https://www.applesfera.com/applesfera-podcast/bienvenidos-a-loop-infinito-nuevo-podcast-applesfera)
+- [El Arroyo Dev](https://elarroyo.dev/)
+- [Un billete a Chattanooga](https://unbilleteachattanooga.com/)
+- [El Complejo Lambda](https://www.complejolambda.com)
+- [Podcast Replay](https://www.podcastreplay.com)
+- [Mixx.io](https://mixx.io/)
+- [Cupertino](https://mixx.io/cupertino)
+- [Kernel](https://mixx.io/kernel)
+- [Web Reactiva](https://www.danielprimo.io/podcast)
+- [Press Start Videojuegos](https://pressstartvideojuegos.com)
