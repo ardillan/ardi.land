@@ -62,6 +62,9 @@ const HeaderContainer = styled.header`
           margin: 0;
           padding: 5px 10px;
           text-transform: uppercase;
+          &:hover {
+            outline: none;
+          }
         }
       }
     }
