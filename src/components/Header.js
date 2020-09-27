@@ -18,23 +18,22 @@ const HeaderContainer = styled.header`
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: all 0.2s;
     li {
-      padding-left: 20px;
-
+      padding: 0 10px;
       a {
         background: none;
         color: ${(props) => props.theme.colors.fonts.anchor};
         font-family: Inter;
         font-size: 17px;
         font-weight: 400;
-        margin-left: 15px;
         text-decoration: none;
-        padding: 5px 10px;
-        transition: none;
-        &:hover {
-          outline: 2px solid ${(props) => props.theme.colors.fonts.anchor}5e;
-          outline-style: dotted;
-        }
+        padding: 5px;
+      }
+
+      &:hover {
+        background: ${(props) => props.theme.colors.fonts.anchorBackground};
+        border-radius: 5px;
       }
     }
   }
@@ -62,7 +61,11 @@ const HeaderContainer = styled.header`
           margin: 0;
           padding: 5px 10px;
           text-transform: uppercase;
-          &:hover {
+        }
+
+        &:hover {
+          background: none;
+          a {
             outline: none;
           }
         }
