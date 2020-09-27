@@ -8,6 +8,7 @@ export const LightTheme = {
     background: {
       main: "#FFFFFF",
       meta: "lemonchiffon",
+      line: "#ffe600",
     },
     fonts: {
       text: "#232A42",
@@ -42,6 +43,7 @@ export const DarkTheme = {
     background: {
       main: "#0c0f1d",
       meta: "#141a33",
+      line: "#4597ff",
     },
     fonts: {
       text: "#e4e4e4",
@@ -76,6 +78,7 @@ export const GameBoyTheme = {
     background: {
       main: "#ddf7c4",
       meta: "#ceefad",
+      line: "#637515",
     },
     fonts: {
       text: "#5b5f4f",

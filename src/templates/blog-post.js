@@ -180,8 +180,8 @@ const FeaturedImage = styled.div`
 
 const Subtitle = styled.div`
   h2 {
-    border-bottom: 2px dashed #ffde32;
-    border-top: 2px dashed #ffde32;
+    border-bottom: 2px dashed ${(props) => props.theme.colors.background.line};
+    border-top: 2px dashed ${(props) => props.theme.colors.background.line};
     font-family: "Gluten";
     font-size: 18px;
     margin: 20px 0;
