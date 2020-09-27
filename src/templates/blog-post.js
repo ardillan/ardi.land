@@ -227,6 +227,11 @@ const Meta = styled.div`
     color: ${(props) => props.theme.colors.fonts.anchor};
     text-decoration: none;
     margin-right: 5px;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
