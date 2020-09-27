@@ -136,8 +136,8 @@ const Content = styled.div`
 export default (props) => {
   const posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
 
-  const [searchTerm, setSearchTerm] = React.useState("")
-  const [searchResults, setSearchResults] = React.useState(posts)
+  const [searchTerm, setSearchTerm] = useState("")
+  const [searchResults, setSearchResults] = useState(posts)
 
   const handleChange = (event) => {
     console.log(event.target.value)
