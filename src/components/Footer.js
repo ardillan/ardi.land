@@ -24,6 +24,10 @@ const Footer = styled.footer`
     color: ${(props) => props.theme.colors.fonts.text};
     text-decoration: underline;
     background: none;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
   }
 
   small {
@@ -55,7 +59,10 @@ const ThemeAndLinks = styled.div`
 
   button {
     &:hover {
-      text-decoration: underline;
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
+    &:focus {
+      outline: none;
     }
   }
 
@@ -78,11 +85,18 @@ const Social = styled.p`
   a:nth-child(1) {
     color: #1da1f2;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   a:nth-child(2) {
     color: #ff0068;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 const ThemeSelector = styled.div`
