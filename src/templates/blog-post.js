@@ -157,7 +157,7 @@ const PostHeaderTitle = styled.div`
 `
 
 const FeaturedImage = styled.div`
-  background: #ffc313;
+  background: ${(props) => props.theme.colors.background.main};
   border-radius: 50%;
   height: 150px;
   object-fit: cover;
@@ -200,8 +200,10 @@ const BackArrowContainer = styled.div`
   border-radius: 50%;
   transform: rotateY(180deg);
   fill: ${(props) => props.theme.colors.fonts.anchor};
+  display: flex;
   &:hover {
     background: ${(props) => props.theme.colors.fonts.anchorBackground};
+    animation: moveBackArrow 0.5s infinite;
   }
   img {
     width: 25px;
@@ -211,6 +213,16 @@ const BackArrowContainer = styled.div`
   }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     display: none;
+  }
+
+  @keyframes moveBackArrow {
+    0% {
+      transform: rotateY(180deg) scale(1.1);
+      filter: saturation(0.2);
+    }
+    100% {
+      transform: rotateY(180deg) scale(1);
+    }
   }
 `
 
