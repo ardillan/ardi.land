@@ -27,6 +27,9 @@ export const LightTheme = {
       selection: "#9affce",
       color: "#101810",
     },
+    images: {
+      blendMode: "none",
+    },
     rainBow: {
       0: "#2abd7d",
       1: "#FF9C43",
@@ -62,6 +65,9 @@ export const DarkTheme = {
       selection: "#ffe600f0",
       color: "#564b21",
     },
+    images: {
+      blendMode: "none",
+    },
     rainBow: {
       0: "#3eace6",
       1: "#17ed86",
@@ -76,33 +82,36 @@ export const DarkTheme = {
 export const GameBoyTheme = {
   colors: {
     background: {
-      main: "#ddf7c4",
-      meta: "#ceefad",
-      line: "#637515",
+      main: "#a8ff55",
+      meta: "#9cfd3e",
+      line: "#8aec2b",
     },
     fonts: {
-      text: "#5b5f4f",
-      anchor: "#306230",
-      anchorBackground: "#efffe0",
+      text: "#3b402b",
+      anchor: "#282b1c",
+      anchorBackground: "#c8ff94",
       caption: "#ceefad",
     },
     table: {
-      border: "#7d885f",
+      border: "#9af345",
     },
     gradients: {
-      top: "#637515",
-      bottom: "#637515",
+      top: "#11130c",
+      bottom: "#11130c",
     },
     cursor: {
       selection: "#ceefad",
       color: "#0c0f1d",
     },
+    images: {
+      blendMode: "luminosity",
+    },
     rainBow: {
-      0: "#306230",
-      1: "#306230",
-      2: "#306230",
-      3: "#306230",
-      4: "#306230",
+      0: "#55c34b",
+      1: "#40a038",
+      2: "#2e6d29",
+      3: "#0ca700",
+      4: "#14610e",
     },
   },
   breakPoints: breakPoints,

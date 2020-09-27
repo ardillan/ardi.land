@@ -32,6 +32,7 @@ const Articles = styled.section`
     padding: 0;
     li {
       padding-bottom: 5px;
+      mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};
       a {
         color: ${(props) => props.theme.colors.fonts.text};
         background: none;

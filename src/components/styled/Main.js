@@ -34,6 +34,12 @@ const Main = createGlobalStyle`
         color: ${(props) => props.theme.colors.fonts.text};
     }
 
+
+    /*  💅🏻 Images */
+    img, .gatsby-image-wrapper, picture, figure {
+
+        mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};;
+    }
     /*  💅🏻 Lists */
     ol, ul {
         padding: 0px 0 20px 20px;

@@ -8,6 +8,7 @@ const FeaturedBannerContainer = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("${(props) => props.image}");
+  mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};
   background-color: ${(props) => props.backgroundColor};
   display: flex;
   flex-direction: row;
