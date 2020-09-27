@@ -29,6 +29,12 @@ const HeaderContainer = styled.header`
         font-weight: 400;
         margin-left: 15px;
         text-decoration: none;
+        padding: 5px 10px;
+        transition: none;
+        &:hover {
+          outline: 2px solid ${(props) => props.theme.colors.fonts.anchor}5e;
+          outline-style: dotted;
+        }
       }
     }
   }
@@ -79,22 +85,14 @@ const LogoContainer = styled.div`
       #bg {
         fill: none;
       }
+    }
 
-      &:hover {
+    &:hover {
+      background: none;
+      svg {
         #dot {
           animation: RichKidsOnLSD 0.8s infinite;
           animation-timing-function: ease-in-out;
-        }
-      }
-
-      @keyframes RichKidsOnLSD {
-        50% {
-          fill: ${(props) => props.theme.colors.rainBow[0]};
-          transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -83.734);
-        }
-
-        100% {
-          transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -80.734);
         }
       }
     }
@@ -107,6 +105,17 @@ const LogoContainer = styled.div`
         height: 40px;
         display: flex;
       }
+    }
+  }
+
+  @keyframes RichKidsOnLSD {
+    50% {
+      fill: ${(props) => props.theme.colors.rainBow[1]};
+      transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -83.734);
+    }
+
+    100% {
+      transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -80.734);
     }
   }
 `
