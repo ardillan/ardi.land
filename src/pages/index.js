@@ -189,6 +189,7 @@ const Cover = styled.div`
 const AboutTable = styled.section`
   margin: 50px 0;
   table {
+    border-collapse: collapse;
     width: 100%;
   }
   th,
@@ -196,12 +197,20 @@ const AboutTable = styled.section`
     border: 2px solid ${(props) => props.theme.colors.table.border};
     width: 50%;
     text-align: center;
-    padding: 10px;
-  }
-  a {
-    font-family: "Gluten";
-    background: none;
-    font-size: 20px;
+    a {
+      font-family: "Gluten";
+      background: none;
+      font-size: 20px;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    &:hover {
+      background: ${(props) => props.theme.colors.fonts.anchorBackground};
+      a {
+        color: ${(props) => props.theme.colors.fonts.anchor};
+      }
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
