@@ -186,6 +186,7 @@ const Subtitle = styled.div`
     font-size: 18px;
     margin: 20px 0;
     padding: 10px 0;
+    width: fit-content;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
