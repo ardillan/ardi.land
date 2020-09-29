@@ -194,6 +194,34 @@ const Subtitle = styled.div`
   }
 `
 
+const EditPost = styled.a`
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: Inter;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
+  color: ${(props) => props.theme.colors.fonts.anchor};
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border-radius: 50px;
+    background: ${(props) => props.theme.colors.fonts.anchor};
+    color: white;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    margin: 0 20px;
+  }
+`
+
 const BackArrowContainer = styled.div`
   position: absolute;
   padding: 17px;
@@ -234,8 +262,7 @@ const Meta = styled.div`
   font-size: 14px;
   font-weight: 400;
   padding: 10px;
-  width: max-content;
-
+  width: fit-content;
   a {
     color: ${(props) => props.theme.colors.fonts.anchor};
     text-decoration: none;
@@ -251,6 +278,17 @@ const Meta = styled.div`
     margin: 0 20px;
     width: auto;
     line-height: 30px;
+  }
+`
+
+const PostInfo = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-gap: 10px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    grid-template-columns: 1fr;
   }
 `
 
@@ -288,19 +326,32 @@ export default ({ data }) => {
                 <Img fluid={featuredImage} />
               </FeaturedImage>
             </PostHeader>
-            <Meta>
-              <time>Escrito el {formatDate(post.frontmatter.date)} </time> en{" "}
-              {post.frontmatter.category ? (
-                post.frontmatter.category.map((cat) => (
-                  <Link to={`/categoria/${cat}`} key={cat}>
-                    {cat}
-                  </Link>
-                ))
-              ) : (
-                <span>Sin categoría</span>
-              )}
-            </Meta>
+            <PostInfo>
+              <Meta>
+                <time>Escrito el {formatDate(post.frontmatter.date)} </time> en{" "}
+                {post.frontmatter.category ? (
+                  post.frontmatter.category.map((cat) => (
+                    <Link to={`/categoria/${cat}`} key={cat}>
+                      {cat}
+                    </Link>
+                  ))
+                ) : (
+                  <span>Sin categoría</span>
+                )}
+              </Meta>
+              <EditPost
+                target="_blank"
+                rel="noopener nofollow"
+                href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${post.fields.slug.replace(
+                  "blog/",
+                  ""
+                )}index.md`}
+              >
+                Editar entrada
+              </EditPost>
+            </PostInfo>
           </PostContainer>
+
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
       </section>
@@ -314,6 +365,10 @@ export const query = graphql`
       html
       excerpt
       timeToRead
+      fileAbsolutePath
+      fields {
+        slug
+      }
       frontmatter {
         title
         subtitle
