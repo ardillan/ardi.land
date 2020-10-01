@@ -21,6 +21,7 @@ const HeaderContainer = styled.header`
     transition: all 0.2s;
     li {
       padding: 0 10px;
+      transition: all 0.3s;
       a {
         background: none;
         color: ${(props) => props.theme.colors.fonts.anchor};
@@ -32,8 +33,11 @@ const HeaderContainer = styled.header`
       }
 
       &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        border-radius: 50px;
         background: ${(props) => props.theme.colors.fonts.anchorBackground};
-        border-radius: 5px;
+        color: white;
       }
     }
   }
