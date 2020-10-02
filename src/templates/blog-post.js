@@ -295,6 +295,11 @@ const PostInfo = styled.div`
 export default ({ data }) => {
   const post = data.markdownRemark
 
+  const gitHubFile = post.fileAbsolutePath.substring(
+    post.fileAbsolutePath.lastIndexOf("posts/") + 6,
+    post.fileAbsolutePath.length
+  )
+
   const featuredImage =
     post.frontmatter.featuredImage !== null
       ? post.frontmatter.featuredImage.childImageSharp.fluid
@@ -342,10 +347,7 @@ export default ({ data }) => {
               <EditPost
                 target="_blank"
                 rel="noopener nofollow"
-                href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${post.fields.slug.replace(
-                  "blog/",
-                  ""
-                )}index.md`}
+                href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
               >
                 Editar entrada
               </EditPost>
