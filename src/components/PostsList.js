@@ -140,8 +140,6 @@ export default (props) => {
   const [searchResults, setSearchResults] = useState(posts)
 
   const handleChange = (event) => {
-    console.log(event.target.value)
-    console.log(searchResults)
     setSearchTerm(event.target.value)
   }
 
