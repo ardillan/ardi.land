@@ -12,8 +12,8 @@ import { BackArrow } from "../images/general/icons"
 import { formatDate } from "../utils/helpers"
 
 const PostContainer = styled.div`
-  width: 600px;
-  margin: 0 auto 20px;
+  width: 680px;
+  margin: 60px 0;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 600px;
@@ -39,7 +39,6 @@ const PostContent = styled.div`
   h5,
   h6 {
     width: 600px;
-    margin: auto;
   }
 
   img {
@@ -49,6 +48,15 @@ const PostContent = styled.div`
   figure {
     padding: 0;
     margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};
+    text-decoration-thickness: 3px;
+    &:hover  {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
   }
 
   .gallery-post__3-columns {
@@ -111,23 +119,18 @@ const PostContent = styled.div`
 
 const PostHeader = styled.header`
   display: grid;
-  grid-gap: 40px;
-  grid-template-columns: 1fr 150px;
-  margin: auto;
-  width: 600px;
+  grid-gap: 15px;
+  grid-template-columns: 115px 1fr;
+  grid-template-areas:
+    "image title"
+    "description description";
   h1 {
-    font-family: "Inter";
-    font-size: 50px;
-    font-weight: 800;
+    font-family: "Noto serif";
+    font-size: 40px;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     width: auto;
-    background: -webkit-linear-gradient(
-      ${(props) => props.theme.colors.gradients.top},
-      ${(props) => props.theme.colors.gradients.bottom}
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -139,7 +142,7 @@ const PostHeader = styled.header`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     grid-gap: 0px;
     margin: 0 auto;
     padding: 0;
@@ -148,6 +151,12 @@ const PostHeader = styled.header`
 `
 
 const PostHeaderTitle = styled.div`
+  grid-area: title;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     h1 {
       font-size: 30px;
@@ -158,12 +167,13 @@ const PostHeaderTitle = styled.div`
 
 const FeaturedImage = styled.div`
   background: ${(props) => props.theme.colors.background.main};
-  border-radius: 50%;
-  height: 150px;
+  grid-area: image;
+  border-radius: 3px;
+  height: 115px;
   object-fit: cover;
-  width: 150px;
+  width: 115px;
   img {
-    border-radius: 50%;
+    border-radius: 3px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -178,13 +188,31 @@ const FeaturedImage = styled.div`
   }
 `
 
+const Description = styled.div`
+  color: ${(props) => props.theme.colors.fonts.text};
+  grid-area: description;
+  font-family: "Inter";
+  display: flex;
+  line-height: 25px;
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+  font-weight: 200;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+  }
+`
+
 const Subtitle = styled.div`
+  grid-area: subtitle;
   h2 {
-    border-bottom: 2px dashed ${(props) => props.theme.colors.background.line};
-    border-top: 2px dashed ${(props) => props.theme.colors.background.line};
-    font-family: "Gluten";
+    font-family: "Inter";
     font-size: 18px;
-    margin: 20px 0;
+    font-weight: 200;
+    opacity: 0.7;
     padding: 10px 0;
     width: fit-content;
   }
@@ -195,40 +223,27 @@ const Subtitle = styled.div`
 `
 
 const EditPost = styled.a`
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-family: Inter;
-  text-transform: uppercase;
-  font-size: 14px;
-  border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
-  color: ${(props) => props.theme.colors.fonts.anchor};
-  font-weight: 600;
-  background: transparent;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  color: ${(props) => props.theme.colors.fonts.text};
+  background: initial;
   &:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    border-radius: 50px;
-    background: ${(props) => props.theme.colors.fonts.anchor};
-    color: white;
+    color: ${(props) => props.theme.colors.fonts.anchor};
+    background: initial;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    margin: 0 20px;
+    margin: 0;
   }
 `
 
 const BackArrowContainer = styled.div`
   position: absolute;
   padding: 17px;
+  top: 170px;
   margin-left: -85px;
   border-radius: 50%;
   transform: rotateY(180deg);
-  fill: ${(props) => props.theme.colors.fonts.anchor};
+  fill: ${(props) => props.theme.colors.fonts.text};
   display: flex;
   &:hover {
     background: ${(props) => props.theme.colors.fonts.anchorBackground};
@@ -256,23 +271,11 @@ const BackArrowContainer = styled.div`
 `
 
 const Meta = styled.div`
-  background: ${(props) => props.theme.colors.background.meta};
   color: ${(props) => props.theme.colors.fonts.text};
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
-  padding: 10px;
   width: fit-content;
-  a {
-    color: ${(props) => props.theme.colors.fonts.anchor};
-    text-decoration: none;
-    margin-right: 5px;
-
-    &:hover {
-      background: none;
-      text-decoration: underline;
-    }
-  }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     margin: 0 20px;
@@ -281,11 +284,30 @@ const Meta = styled.div`
   }
 `
 
+const Category = styled.span`
+  a {
+    background: ${(props) => props.theme.colors.fonts.anchor};
+    color: initial;
+    border-radius: 40px;
+    color: white;
+    font-family: "Inter";
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 0;
+  }
+`
+
 const PostInfo = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 70% 1fr;
   grid-gap: 10px;
+  align-items: center;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     grid-template-columns: 1fr;
@@ -321,36 +343,39 @@ export default ({ data }) => {
             </Link>
 
             <PostHeader>
+              <FeaturedImage>
+                <Img fluid={featuredImage} />
+              </FeaturedImage>
               <PostHeaderTitle>
                 <h1>{post.frontmatter.title}</h1>
                 <Subtitle>
                   <h2>{post.frontmatter.subtitle}</h2>
                 </Subtitle>
               </PostHeaderTitle>
-              <FeaturedImage>
-                <Img fluid={featuredImage} />
-              </FeaturedImage>
+              <Description>{post.frontmatter.description}</Description>
             </PostHeader>
             <PostInfo>
               <Meta>
-                <time>Escrito el {formatDate(post.frontmatter.date)} </time> en{" "}
+                <time>Escrito el {formatDate(post.frontmatter.date)}</time> •{" "}
+                <EditPost
+                  target="_blank"
+                  rel="noopener nofollow"
+                  href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
+                >
+                  Editar entrada
+                </EditPost>
+              </Meta>
+              <div>
                 {post.frontmatter.category ? (
                   post.frontmatter.category.map((cat) => (
-                    <Link to={`/categoria/${cat}`} key={cat}>
-                      {cat}
-                    </Link>
+                    <Category key={cat}>
+                      <Link to={`/categoria/${cat}`}>{cat}</Link>
+                    </Category>
                   ))
                 ) : (
                   <span>Sin categoría</span>
                 )}
-              </Meta>
-              <EditPost
-                target="_blank"
-                rel="noopener nofollow"
-                href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
-              >
-                Editar entrada
-              </EditPost>
+              </div>
             </PostInfo>
           </PostContainer>
 

@@ -9,6 +9,7 @@ const HeaderContainer = styled.header`
     grid-template-columns: 100px 1fr;
     align-content: center;
     padding: 0 5rem;
+    background: ${(props) => props.theme.colors.background.header};
   }
 
   ul {
@@ -24,7 +25,7 @@ const HeaderContainer = styled.header`
       transition: all 0.3s;
       a {
         background: none;
-        color: ${(props) => props.theme.colors.fonts.anchor};
+        color: ${(props) => props.theme.colors.fonts.header};
         font-family: Inter;
         font-size: 17px;
         font-weight: 400;
@@ -34,10 +35,7 @@ const HeaderContainer = styled.header`
 
       &:hover {
         cursor: pointer;
-        transform: scale(1.1);
-        border-radius: 50px;
-        background: ${(props) => props.theme.colors.fonts.anchorBackground};
-        color: white;
+        opacity: 0.7;
       }
     }
   }
@@ -52,15 +50,13 @@ const HeaderContainer = styled.header`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     nav {
       grid-template-columns: 40px 1fr;
-      margin: 5px 0;
+      margin: 0;
     }
 
     ul {
       li {
         a {
-          border-radius: 4px;
-          border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
-          color: ${(props) => props.theme.colors.fonts.anchor};
+          color: ${(props) => props.theme.colors.fonts.header};
           font-size: 13px;
           margin: 0;
           padding: 5px 10px;
@@ -90,20 +86,14 @@ const LogoContainer = styled.div`
         fill: ${(props) => props.theme.colors.rainBow[2]};
       }
       #ard {
-        fill: ${(props) => props.theme.colors.fonts.text};
+        fill: ${(props) => props.theme.colors.fonts.header};
       }
       #bg {
         fill: none;
       }
-    }
 
-    &:hover {
-      background: none;
-      svg {
-        #dot {
-          animation: RichKidsOnLSD 0.8s infinite;
-          animation-timing-function: ease-in-out;
-        }
+      &:hover {
+        background: transparent;
       }
     }
   }
@@ -115,17 +105,6 @@ const LogoContainer = styled.div`
         height: 40px;
         display: flex;
       }
-    }
-  }
-
-  @keyframes RichKidsOnLSD {
-    50% {
-      fill: ${(props) => props.theme.colors.rainBow[1]};
-      transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -83.734);
-    }
-
-    100% {
-      transform: matrix(0.273427, 0, 0, 0.273427, -70.1173, -80.734);
     }
   }
 `

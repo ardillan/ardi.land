@@ -21,7 +21,7 @@ const Articles = styled.section`
   margin: 100px 0;
 
   h2 {
-    font-family: "Gluten";
+    font-family: "Noto serif";
     padding: 0;
     margin: 0;
   }
@@ -139,7 +139,7 @@ const RandomArticles = styled.div`
 const About = styled.section`
   h2 {
     text-align: center;
-    font-family: "Gluten";
+    font-family: "Noto serif";
   }
 `
 const AboutContainer = styled.div`
@@ -152,7 +152,7 @@ const AboutContainer = styled.div`
     font-family: "Inter";
   }
   h3 {
-    font-family: "Gluten";
+    font-family: "Noto serif";
     font-size: 25px;
     padding: 0;
     margin: 0;
@@ -199,7 +199,7 @@ const AboutTable = styled.section`
     width: 50%;
     text-align: center;
     a {
-      font-family: "Gluten";
+      font-family: "Noto serif";
       background: none;
       font-size: 20px;
       padding: 15px 20px;

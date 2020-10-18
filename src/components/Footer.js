@@ -10,7 +10,8 @@ const Footer = styled.footer`
   padding-top: 50px;
   display: grid;
   grid-template-columns: 70% 1fr;
-
+  padding: 30px;
+  border: 3px solid ${(props) => props.theme.colors.fonts.text};
   small,
   button,
   p {

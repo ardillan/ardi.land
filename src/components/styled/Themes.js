@@ -7,12 +7,13 @@ export const LightTheme = {
   colors: {
     background: {
       main: "#FFFFFF",
-      meta: "lemonchiffon",
+      header: "#1c2545",
       line: "#ffe600",
     },
     fonts: {
-      text: "#232A42",
+      text: "#1C2545",
       anchor: "#EA0054",
+      header: "white",
       anchorBackground: "#fffacd",
       caption: "#f5f5fb",
     },
@@ -45,12 +46,13 @@ export const DarkTheme = {
   colors: {
     background: {
       main: "#0c0f1d",
-      meta: "#141a33",
+      header: "#141a33",
       line: "#4597ff",
     },
     fonts: {
       text: "#e4e4e4",
       anchor: "#3dd1ff",
+      header: "white",
       anchorBackground: "#191e2f",
       caption: "#1a203c",
     },
@@ -83,12 +85,13 @@ export const GameBoyTheme = {
   colors: {
     background: {
       main: "#a8ff55",
-      meta: "#9cfd3e",
+      header: "#9cfd3e",
       line: "#8aec2b",
     },
     fonts: {
       text: "#3b402b",
       anchor: "#282b1c",
+      header: "3b402b",
       anchorBackground: "#c8ff94",
       caption: "#ceefad",
     },

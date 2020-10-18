@@ -50,10 +50,8 @@ const BannerInfo = styled.div`
   }
 
   h2 {
-    border-bottom: 2px dashed ${(props) => props.theme.colors.gradients.top};
-    border-top: 2px dashed ${(props) => props.theme.colors.gradients.top};
     color: ${(props) => props.theme.colors.fonts.text};
-    font-family: "Gluten";
+    font-family: "Noto serif";
     font-size: 1.3rem;
     font-size: 1.3rem;
     margin: 0;

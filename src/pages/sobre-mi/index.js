@@ -6,58 +6,7 @@ import { getAge } from "../../utils/helpers"
 import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
 import styled from "styled-components"
-
-const SectionTitle = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  margin: 50px auto;
-  max-width: 600px;
-  grid-gap: 40px;
-  h1 {
-    font-family: "Inter";
-    font-size: 50px;
-    font-weight: 800;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    background: -webkit-linear-gradient(
-      ${(props) => props.theme.colors.gradients.top},
-      ${(props) => props.theme.colors.gradients.bottom}
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-
-  h2 {
-    border-bottom: 2px dashed ${(props) => props.theme.colors.background.line};
-    border-top: 2px dashed ${(props) => props.theme.colors.background.line};
-    font-family: "Gluten";
-    font-size: 18px;
-    margin: 20px 0;
-    padding: 10px 0;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
-    width: auto;
-    margin: 0;
-    grid-template-columns: 1fr;
-
-    h1  {
-      transform: rotate(-4deg);
-      text-align: center;
-      font-size: 40px;
-      margin: 30px 0;
-      font-size: 75px;
-      margin: -40px 0 30px 0;
-    }
-
-    h2 {
-      margin: 0;
-    }
-  }
-`
+import { SectionTitleWithImage } from "../../components/styled/Interface"
 
 const Container = styled.div`
   width: 600px;
@@ -69,33 +18,25 @@ const Container = styled.div`
   }
 `
 
-const Portrait = styled.div``
-const Description = styled.div`
-  max-width: 600px;
-`
 export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ardillan.com | Sobre mí" />
-      <SectionTitle>
-        <Portrait>
-          <Img
-            fluid={data.fileName.childImageSharp.fluid}
-            fadeIn={true}
-            alt="Autoretrato hecho a modo ilustración"
-            title="Autoretrato"
-          />
-        </Portrait>
-        <Description>
-          <h1>¡Hola!</h1>
-          <h2>
-            <strong>Me llamo Adrián</strong>, aunque mucha gente me conoce como
-            Ardillán. Tengo {getAge()} años y, actualmente, estoy inmerso en el
-            mundo del desarrollo web. Me interesa todo aquello que está
-            relacionado con la tecnología, los videojuegos y la música.
-          </h2>
-        </Description>
-      </SectionTitle>
+      <SectionTitleWithImage>
+        <Img
+          fluid={data.fileName.childImageSharp.fluid}
+          fadeIn={true}
+          alt="Autoretrato hecho a modo ilustración"
+          title="Autoretrato"
+        />
+        <h1>¡Hola!</h1>
+        <h2>
+          <strong>Me llamo Adrián</strong>, aunque mucha gente me conoce como
+          Ardillán. Tengo {getAge()} años y, actualmente, estoy inmerso en el
+          mundo del desarrollo web. Me interesa todo aquello que está
+          relacionado con la tecnología, los videojuegos y la música.
+        </h2>
+      </SectionTitleWithImage>
       <Container>
         <p>
           Mi interés está centrado en aprender todo lo posible sobre tecnologías{" "}

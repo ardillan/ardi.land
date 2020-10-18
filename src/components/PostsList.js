@@ -69,7 +69,7 @@ const Post = styled.li`
     }
   }
   h2  {
-    font-family: "Gluten";
+    font-family: "Noto serif";
     padding: 0;
     margin: 0;
     font-size: 23px;
