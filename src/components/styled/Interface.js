@@ -4,7 +4,7 @@ export const SectionTitle = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: 50px auto;
+  margin: 50px auto 0;
   max-width: 600px;
   h1 {
     font-family: "Noto Serif";
@@ -26,6 +26,11 @@ export const SectionTitle = styled.section`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 0 20px;
+    margin: 40px auto 10px;
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
   }
 `
 
@@ -68,16 +73,12 @@ export const SectionTitleWithImage = styled.section`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 0 20px;
     width: auto;
-    margin: 0;
-    grid-template-columns: 1fr;
+    margin: 40px 0 0;
+    grid-template-columns: 1fr 1fr;
 
     h1  {
-      transform: rotate(-4deg);
       text-align: center;
-      font-size: 40px;
-      margin: 30px 0;
-      font-size: 75px;
-      margin: -40px 0 30px 0;
+      font-size: 25px;
     }
 
     h2 {

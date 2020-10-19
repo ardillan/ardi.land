@@ -24,7 +24,7 @@ const PostContainer = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     width: 100%;
     padding: 0;
-    margin-bottom: 20px;
+    margin: 0;
   }
 `
 
@@ -119,7 +119,8 @@ const PostContent = styled.div`
 
 const PostHeader = styled.header`
   display: grid;
-  grid-gap: 15px;
+  grid-column-gap: 35px;
+  grid-row-gap: 20px;
   grid-template-columns: 115px 1fr;
   grid-template-areas:
     "image title"
@@ -147,6 +148,10 @@ const PostHeader = styled.header`
     margin: 0 auto;
     padding: 0;
     width: 100%;
+
+    h1 {
+      font-size: 25px;
+    }
   }
 `
 
@@ -219,6 +224,11 @@ const Subtitle = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 0;
+    h2 {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+      background: initial;
+      font-weight: 200;
+    }
   }
 `
 
@@ -269,6 +279,13 @@ const BackArrowContainer = styled.div`
     }
   }
 `
+const Categories = styled.div`
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+`
 
 const Meta = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
@@ -278,9 +295,9 @@ const Meta = styled.div`
   width: fit-content;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    margin: 0 20px;
+    margin: 20px;
     width: auto;
-    line-height: 30px;
+    line-height: 20px;
   }
 `
 
@@ -365,7 +382,7 @@ export default ({ data }) => {
                   Editar entrada
                 </EditPost>
               </Meta>
-              <div>
+              <Categories>
                 {post.frontmatter.category ? (
                   post.frontmatter.category.map((cat) => (
                     <Category key={cat}>
@@ -375,7 +392,7 @@ export default ({ data }) => {
                 ) : (
                   <span>Sin categoría</span>
                 )}
-              </div>
+              </Categories>
             </PostInfo>
           </PostContainer>
 

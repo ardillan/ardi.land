@@ -47,8 +47,9 @@ const Footer = styled.footer`
     grid-template-columns: 1fr;
     grid-gap: 20px;
     background: ${(props) => props.theme.colors.fonts.text}08;
-    padding: 40px 20px;
-    margin: 0;
+    padding: 20px;
+    margin: 20px;
+}
   }
 `
 const Info = styled.div``
