@@ -21,6 +21,20 @@ const Main = createGlobalStyle`
         margin-top: 5px;
     }
 
+    blockquote {
+        border-left: 5px solid ${(props) =>
+          props.theme.colors.cursor.selection};
+        padding: 40px 55px;
+        margin: 0;
+        background: #8080800f;
+        width: max-content;
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            font-family: sans-serif;
+        }
+    }
+
     /*  💅🏻 Code */
     pre {
         margin: 30px auto;
