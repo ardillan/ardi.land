@@ -9,7 +9,7 @@ import SEO from "../components/SEO"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 import { BackArrow } from "../images/general/icons"
 
-import { formatDate } from "../utils/helpers"
+import { formatDate, slugify } from "../utils/helpers"
 
 const PostContainer = styled.div`
   width: 680px;
@@ -27,7 +27,6 @@ const PostContainer = styled.div`
     margin: 0;
   }
 `
-
 const PostContent = styled.div`
   p,
   ol,
@@ -116,7 +115,6 @@ const PostContent = styled.div`
     }
   }
 `
-
 const PostHeader = styled.header`
   display: grid;
   grid-column-gap: 35px;
@@ -154,7 +152,6 @@ const PostHeader = styled.header`
     }
   }
 `
-
 const PostHeaderTitle = styled.div`
   grid-area: title;
   display: flex;
@@ -169,7 +166,6 @@ const PostHeaderTitle = styled.div`
     padding: 0 20px;
   }
 `
-
 const FeaturedImage = styled.div`
   background: ${(props) => props.theme.colors.background.main};
   grid-area: image;
@@ -192,7 +188,6 @@ const FeaturedImage = styled.div`
     }
   }
 `
-
 const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
   grid-area: description;
@@ -210,7 +205,6 @@ const Description = styled.div`
     margin: 0;
   }
 `
-
 const Subtitle = styled.div`
   grid-area: subtitle;
   h2 {
@@ -231,7 +225,6 @@ const Subtitle = styled.div`
     }
   }
 `
-
 const EditPost = styled.a`
   color: ${(props) => props.theme.colors.fonts.text};
   background: initial;
@@ -245,7 +238,6 @@ const EditPost = styled.a`
     margin: 0;
   }
 `
-
 const BackArrowContainer = styled.div`
   position: absolute;
   padding: 17px;
@@ -286,7 +278,6 @@ const Categories = styled.div`
     padding: 0 20px;
   }
 `
-
 const Meta = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
   font-family: "Inter";
@@ -300,7 +291,6 @@ const Meta = styled.div`
     line-height: 20px;
   }
 `
-
 const Category = styled.span`
   a {
     background: ${(props) => props.theme.colors.fonts.anchor};
@@ -318,7 +308,6 @@ const Category = styled.span`
     padding: 0;
   }
 `
-
 const PostInfo = styled.div`
   width: 100%;
   display: grid;
@@ -386,7 +375,9 @@ export default ({ data }) => {
                 {post.frontmatter.category ? (
                   post.frontmatter.category.map((cat) => (
                     <Category key={cat}>
-                      <Link to={`/categoria/${cat}`}>{cat}</Link>
+                      <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
+                        {cat}
+                      </Link>
                     </Category>
                   ))
                 ) : (

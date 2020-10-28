@@ -13,6 +13,7 @@ export default () => {
         <h1>Blog</h1>
         <h2>En esta página se muestran todas las entradas del blog.</h2>
       </SectionTitle>
+
       <section>
         <PostsList length="55" type="blog" showPostDate />
       </section>

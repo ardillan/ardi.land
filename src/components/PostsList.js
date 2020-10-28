@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
@@ -65,6 +65,8 @@ const Post = styled.li`
   header {
     margin-right: 15px;
     img {
+      width: 100px;
+      margin-right: 10px;
       border-radius: 50%;
     }
   }
