@@ -12,7 +12,11 @@ import { BackArrow } from "../images/general/icons"
 import { formatDate, slugify } from "../utils/helpers"
 
 const PostContainer = styled.div`
-  background: ${(props) => props.theme.colors.background.header};
+  background: linear-gradient(
+    -180deg,
+    ${(props) => props.theme.colors.gradients.top},
+    ${(props) => props.theme.colors.gradients.bottom}
+  );
   margin-bottom: 40px;
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 600px;
@@ -127,7 +131,8 @@ const PostHeaderContainer = styled.div`
 const PostHeader = styled.header`
   display: grid;
   grid-column-gap: 35px;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 230px 1fr;
+  padding: 30px 0;
   grid-template-areas:
     "image title"
     "description description";
@@ -175,21 +180,18 @@ const PostHeaderTitle = styled.div`
   }
 `
 const FeaturedImage = styled.div`
-  background: ${(props) => props.theme.colors.background.main};
   grid-area: image;
-  border-radius: 3px;
   img {
-    border-radius: 3px;
+    border-radius: 50%;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    border-radius: 0;
     height: auto;
     object-fit: cover;
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100px;
+    padding: 0 30px;
     img {
-      border-radius: 0;
+      border-radius: 50%;
     }
   }
 `
@@ -280,7 +282,6 @@ const Categories = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     margin: 0 auto;
     width: 100%;
-    padding: 0 20px;
   }
 `
 const Meta = styled.div`
@@ -292,7 +293,7 @@ const Meta = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     width: auto;
-    margin-bottom: 10px;
+    margin: 10px 0;
     line-height: 20px;
   }
 `
@@ -429,7 +430,7 @@ export const query = graphql`
         category
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 375, maxHeight: 375, cropFocus: CENTER) {
+            fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

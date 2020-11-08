@@ -82,6 +82,11 @@ const PostsLists = styled.ul`
   padding: 0;
   width: 900px;
   margin: 40px auto;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
 `
 export default ({ pageContext, data }) => {
   const category = pageContext.category

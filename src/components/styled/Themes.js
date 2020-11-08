@@ -21,8 +21,8 @@ export const LightTheme = {
       border: "#FFF5A7",
     },
     gradients: {
-      top: "#ffe600",
-      bottom: "#ff3566",
+      top: "#FFFFFF",
+      bottom: "#f8fbfb",
     },
     cursor: {
       selection: "#9affce",
@@ -60,8 +60,8 @@ export const DarkTheme = {
       border: "#3dd1ff",
     },
     gradients: {
-      top: "#4597ff",
-      bottom: "#00fd67",
+      top: "#0d0f1e",
+      bottom: "#2f1079",
     },
     cursor: {
       selection: "#ffe600f0",

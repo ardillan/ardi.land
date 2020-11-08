@@ -4,8 +4,12 @@ export const SectionTitle = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  background: ${(props) => props.theme.colors.background.header};
-
+  background: linear-gradient(
+    -180deg,
+    ${(props) => props.theme.colors.gradients.top},
+    ${(props) => props.theme.colors.gradients.bottom}
+  );
+  padding: 35px 0;
   div {
     width: 900px;
     margin: auto;
@@ -51,7 +55,11 @@ export const SectionTitle = styled.section`
 `
 
 export const SectionTitleWithImage = styled.section`
-  background: ${(props) => props.theme.colors.background.header};
+  background: linear-gradient(
+    -180deg,
+    ${(props) => props.theme.colors.gradients.top},
+    ${(props) => props.theme.colors.gradients.bottom}
+  );
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 1fr;
