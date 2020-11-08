@@ -81,9 +81,10 @@ const MobileNavigation = styled.div`
   }
 `
 const MenuNavigation = styled.div`
-  padding: 30px;
-  border-top: 1px solid #1c254542;
   border-bottom: 1px solid #1c254542;
+  border-top: 1px solid #1c254542;
+  margin-bottom: 30px;
+  padding: 30px;
 `
 const Navigation = styled.nav`
   margin: auto;

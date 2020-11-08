@@ -29,11 +29,20 @@ const Articles = styled.section`
       a {
         display: grid;
         text-decoration: none;
-        grid-template-columns: 150px 1fr;
+        grid-template-areas:
+          "image title"
+          "image description";
         grid-column-gap: 25px;
-        grid-row-gap: 40px;
+
+        div {
+          grid-area: image;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
 
         h3 {
+          grid-area: title;
           font-family: "Inter";
           font-size: 19px;
           font-weight: 400;
@@ -42,24 +51,14 @@ const Articles = styled.section`
           line-height: 20px;
         }
 
-        img {
-          width: 150px;
-          height: 150px;
-        }
-
         p {
+          grid-area: description;
           font-size: 14px;
           line-height: 20px;
           padding-bottom: 15px;
           margin-top: 5px;
           font-family: "Inter";
           font-weight: 200;
-        }
-
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
         }
       }
     }
@@ -75,15 +74,32 @@ const Articles = styled.section`
         a {
           display: grid;
           text-decoration: none;
-          grid-template-columns: 1fr;
+          grid-template-areas:
+            "image title"
+            "description description";
           grid-row-gap: 0;
           margin-bottom: 20px;
-          border: 2px solid #f5f5f9;
+          border: 1px dashed #bdbdbd;
           padding: 20px 30px;
+          grid-template-columns: 40px 1fr;
+          grid-column-gap: 15px;
+          align-items: center;
 
+          .gatsby-image-wrapper,
+          picture,
           img {
-            width: 150px;
-            height: 150px;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50%;
+          }
+
+          h3 {
+            padding: 0;
+          }
+
+          p {
+            padding: 0;
+            margin-top: 20px;
           }
         }
       }
@@ -121,21 +137,17 @@ const Home = ({ data }) => {
               return (
                 <li key={post.node.frontmatter.title}>
                   <Link to={post.node.fields.slug}>
-                    <div>
-                      <Img
-                        fixed={
-                          post.node.frontmatter.featuredImage.childImageSharp
-                            .fixed
-                        }
-                        fadeIn={true}
-                        alt={post.node.frontmatter.title}
-                        title={post.node.frontmatter.title}
-                      />
-                    </div>
-                    <div>
-                      <h3>{post.node.frontmatter.title}</h3>
-                      <p>{post.node.frontmatter.description}</p>
-                    </div>
+                    <Img
+                      fixed={
+                        post.node.frontmatter.featuredImage.childImageSharp
+                          .fixed
+                      }
+                      fadeIn={true}
+                      alt={post.node.frontmatter.title}
+                      title={post.node.frontmatter.title}
+                    />
+                    <h3>{post.node.frontmatter.title}</h3>
+                    <p>{post.node.frontmatter.description}</p>
                   </Link>
                 </li>
               )

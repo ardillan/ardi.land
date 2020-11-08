@@ -39,10 +39,11 @@ export const SectionTitle = styled.section`
       width: auto;
       padding: 30px;
       margin: 0;
-    }
-    h1 {
-      font-size: 30px;
-      margin: 0;
+
+      h1 {
+        font-size: 30px;
+        margin: 0;
+      }
     }
   }
 

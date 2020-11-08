@@ -12,7 +12,7 @@ export const LightTheme = {
     },
     fonts: {
       text: "#1C2545",
-      anchor: "#EA0054",
+      anchor: "#8a75f5",
       header: "white",
       anchorBackground: "#fffacd",
       caption: "#f5f5fb",
