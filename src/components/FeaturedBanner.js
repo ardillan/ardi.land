@@ -1,25 +1,38 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
+
 import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 
 const FeaturedBannerContainer = styled.div`
-  background-position: 300px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("${(props) => props.image}");
-  mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};
-  background-color: ${(props) => props.backgroundColor};
-  display: flex;
-  flex-direction: row;
-  margin: 30px 0;
-  min-height: 400px;
-  padding: 15px;
+  display: grid;
+  grid-template-columns: 335px 1fr;
+  grid-column-gap: 65px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  .gatsby-image-wrapper,
+  img,
+  figure,
+  picture {
+    height: 335px;
+    width: 335px;
+  }
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    margin: 0;
-    padding: 0;
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    margin: 0 30px;
     background-size: cover;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    padding: 0;
+
+    .gatsby-image-wrapper,
+    img,
+    figure,
+    picture {
+      width: 100%;
+      height: 200px;
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -30,34 +43,32 @@ const FeaturedBannerContainer = styled.div`
 const BannerInfo = styled.div`
   flex-direction: column;
   justify-content: center;
-  width: 380px;
   display: flex;
-  margin-left: 70px;
+  height: auto;
+  max-width: 400px;
 
+  small {
+    color: #ea0054;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 15px;
+  }
   h1 {
     font-family: "Inter";
-    font-size: 50px;
-    font-weight: 800;
+    color: ${(props) => props.theme.colors.fonts.text};
+    font-size: 25px;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     width: auto;
-    background: -webkit-linear-gradient(
-      ${(props) => props.theme.colors.gradients.top},
-      ${(props) => props.theme.colors.gradients.bottom}
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
   }
 
   h2 {
     color: ${(props) => props.theme.colors.fonts.text};
-    font-family: "Noto serif";
-    font-size: 1.3rem;
-    font-size: 1.3rem;
-    margin: 0;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: max-content;
+    font-family: "Inter";
+    font-size: 17px;
+    font-weight: 200;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -71,12 +82,12 @@ const BannerInfo = styled.div`
     max-height: initial;
     padding: 0;
     padding: 20px 20px;
-    width: 100%;
+    width: auto;
     h1 {
-      font-size: 30px;
+      font-size: 17px;
     }
     h2 {
-      display: none;
+      font-size: 14px;
     }
   }
 `
@@ -95,6 +106,7 @@ const TellMeMoreButton = styled.div`
     font-weight: 600;
     background: white;
     transition: all 0.3s;
+    text-decoration: none;
 
     &:hover {
       cursor: pointer;
@@ -104,23 +116,45 @@ const TellMeMoreButton = styled.div`
       color: white;
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    a {
+      padding: 0;
+      font-family: Inter;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #ea0054;
+      font-weight: 600;
+      background: white;
+      transition: all 0.3s;
+      text-decoration: none;
+      border: none;
+    }
+  }
 `
 
 const FeaturedBanner = () => {
   const featuredPost = useGetFeaturedPosts()[0]
-  const bannerBackgroundImage =
-    featuredPost.node.frontmatter.featuredImageBanner.publicURL
-  const bannerBackgroundColor = featuredPost.node.frontmatter.backgroundColor
+
   return (
-    <FeaturedBannerContainer
-      image={bannerBackgroundImage}
-      backgroundColor={bannerBackgroundColor}
-    >
+    <FeaturedBannerContainer>
+      <Img
+        fluid={
+          featuredPost.node.frontmatter.featuredImage.childImageSharp.fluid
+        }
+        fadeIn={true}
+        alt="Imagen destacada"
+        title="Imagen destacada"
+      />
+
       <BannerInfo>
+        <small>Artículo destacado</small>
         <h1>{featuredPost.node.frontmatter.title}</h1>
-        <h2>{featuredPost.node.frontmatter.subtitle}</h2>
+        <h2>{featuredPost.node.frontmatter.description}</h2>
         <TellMeMoreButton>
-          <Link to={`${featuredPost.node.fields.slug}`}>Cuéntame más</Link>
+          <Link to={`${featuredPost.node.fields.slug}`}>
+            ¡Mola! cuéntame más
+          </Link>
         </TellMeMoreButton>
       </BannerInfo>
     </FeaturedBannerContainer>

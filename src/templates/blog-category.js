@@ -11,6 +11,9 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const Post = styled.li`
+  a {
+    text-decoration: none;
+  }
   article {
     display: flex;
   }
@@ -76,8 +79,9 @@ const PostsLists = styled.ul`
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  width: 900px;
+  margin: 40px auto;
 `
 export default ({ pageContext, data }) => {
   const category = pageContext.category
@@ -88,11 +92,13 @@ export default ({ pageContext, data }) => {
       <SEO title={`Ardillan.com`} />
       <section>
         <SectionTitle>
-          <h1>Categoría: {category}</h1>
-          <h2>
-            Hay un total de <strong>{posts.length}</strong> entradas etiquetadas
-            con la categoría <strong>{category}</strong>
-          </h2>
+          <div>
+            <h1>Categoría: {category}</h1>
+            <h2>
+              Hay un total de <strong>{posts.length}</strong> entradas
+              etiquetadas con la categoría <strong>{category}</strong>
+            </h2>
+          </div>
         </SectionTitle>
 
         <PostsLists>
@@ -102,7 +108,6 @@ export default ({ pageContext, data }) => {
                 ? post.node.frontmatter.featuredImage.childImageSharp.fixed
                 : useGetGenericFeaturedImage().childImageSharp.fixed
 
-            console.log(featuredImage)
             return (
               <Post key={post.node.id}>
                 <Link to={`/${post.node.fields.slug}`} key={post.node.id}>

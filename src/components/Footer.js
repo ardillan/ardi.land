@@ -5,13 +5,14 @@ import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 import { formatDateTime } from "../utils/helpers"
 
 const Footer = styled.footer`
-  margin-top: 100px;
-  margin-bottom: 100px;
   padding-top: 50px;
   display: grid;
   grid-template-columns: 70% 1fr;
   padding: 30px;
   border: 3px solid ${(props) => props.theme.colors.fonts.text};
+  margin: 120px auto;
+  width: 900px;
+
   small,
   button,
   p {
@@ -37,19 +38,22 @@ const Footer = styled.footer`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: auto;
     margin: 50px 0;
     padding: 0 20px;
     grid-template-columns: 1fr;
     grid-gap: 20px;
+    margin: 70px 30px;
+    padding: 30px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: auto;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     background: ${(props) => props.theme.colors.fonts.text}08;
     padding: 20px;
-    margin: 20px;
-}
+    margin: 30px;
   }
 `
 const Info = styled.div``

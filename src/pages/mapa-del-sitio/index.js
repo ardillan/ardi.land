@@ -4,39 +4,16 @@ import { graphql, Link } from "gatsby"
 import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
 import styled from "styled-components"
-import { SectionTitle } from "../../components/styled/Interface"
+import { SectionTitle, PageContainer } from "../../components/styled/Interface"
 
-const Container = styled.div`
-  width: 600px;
-  margin: 0 auto 20px;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
-    width: auto;
-  }
-`
-const Description = styled.div`
-  max-width: 600px;
-`
 const ContentContainer = styled.div`
-  background: tomate;
-
-  ul {
+  ol {
     padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+    list-style-type: decimal;
     li {
       a {
-        background: ${(props) => props.theme.colors.fonts.anchorBackground};
-        border-radius: 50px;
-        color: ${(props) => props.theme.colors.fonts.anchor};
         font-family: "Inter";
         font-size: 17px;
-        margin-right: 10px;
-        margin-top: 10px;
-        padding: 0 10px;
-        line-height: 50px;
         text-transform: capitalize;
       }
     }
@@ -48,14 +25,14 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Ardillan.com | Sobre mí" />
       <SectionTitle>
-        <Description>
+        <div>
           <h1>Mapa del sitio</h1>
           <h2>Aquí puedes ver un índice de todo el contenido de la web.</h2>
-        </Description>
+        </div>
       </SectionTitle>
-      <Container>
+      <PageContainer>
         <p>Esta web tiene dos tipos de contenido:</p>
-        <ul>
+        <ol>
           <li>
             <strong>Páginas</strong> creadas <i>automágicamente</i> gracias a un
             al proceso interno que sigue GatsbyJS.
@@ -68,20 +45,20 @@ export default ({ data }) => {
             mediante una serie de plugins que permiten transformar el contenido{" "}
             <i>Markdown</i> a formato <i>html</i>.
           </li>
-        </ul>
+        </ol>
         <ContentContainer>
           <h3>Hay {pages.totalCount} páginas publicadas</h3>
           <p>
             Ahora mismo hay un total de <span>{pages.totalCount}</span>{" "}
             publicadas. Estas son:
           </p>
-          <ul>
+          <ol>
             {pages.nodes.map((page) => (
               <li key={page.path}>
                 <Link to={`${page.path}`}>{page.path.replace("-", " ")}</Link>
               </li>
             ))}
-          </ul>
+          </ol>
         </ContentContainer>
         <hr />
         <ContentContainer>
@@ -90,7 +67,7 @@ export default ({ data }) => {
             Ahora mismo hay un total de <span>{blogPosts.totalCount}</span>{" "}
             entradas publicadas. Estas son:
           </p>
-          <ul>
+          <ol>
             {blogPosts.edges.map((post) => (
               <li key={post.node.frontmatter.title}>
                 <Link to={`/${post.node.fields.slug}`}>
@@ -98,9 +75,9 @@ export default ({ data }) => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ol>
         </ContentContainer>
-      </Container>
+      </PageContainer>
     </Layout>
   )
 }

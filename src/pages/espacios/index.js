@@ -8,12 +8,13 @@ import { SectionTitle } from "../../components/styled/Interface"
 
 const Spaces = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
+  margin: 2px 0;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
+    padding: 0px 2px;
+    grid-template-columns: 1fr 1fr;
   }
 `
 
@@ -51,13 +52,15 @@ export default () => {
         postDescription="Espacios de trabajo"
       />
       <SectionTitle>
-        <h1>Mis espacios</h1>
-        <h2>
-          Aquí muestro los diferentes espacios en los que he tenido el placer de
-          trabajar con mi ordenador. Me encanta ser lo más nómada posible en
-          este aspecto, por eso siempre aprovecho la ocasión para poder cambiar
-          de ámbito.
-        </h2>
+        <div>
+          <h1>Mis espacios</h1>
+          <h2>
+            Aquí muestro los diferentes espacios en los que he tenido el placer
+            de trabajar con mi ordenador. Me encanta ser lo más nómada posible
+            en este aspecto, por eso siempre aprovecho la ocasión para poder
+            cambiar de ámbito.
+          </h2>
+        </div>
       </SectionTitle>
       <Spaces>
         {spaces.allFile.edges.map((image) => {

@@ -1,13 +1,13 @@
 const breakPoints = {
   mobile: "640px",
-  desktop: "960px",
+  desktop: "980px",
 }
 
 export const LightTheme = {
   colors: {
     background: {
       main: "#FFFFFF",
-      header: "#1c2545",
+      header: "#FFF100",
       line: "#ffe600",
     },
     fonts: {

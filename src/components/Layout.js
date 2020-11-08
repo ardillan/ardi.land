@@ -1,7 +1,7 @@
 import React, { useState } from "react"
+
 import styled, { ThemeProvider } from "styled-components"
 import { LightTheme } from "./styled/Themes"
-
 import Normalize from "../components/styled/Normalize"
 import Main from "../components/styled/Main"
 import Fonts from "../components/styled/Fonts"
@@ -10,7 +10,6 @@ import Header from "./Header"
 import Footer from "./Footer"
 
 const Container = styled.div`
-  width: 900px;
   margin: auto;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -19,7 +18,7 @@ const Container = styled.div`
   }
 `
 
-export default ({ children }) => {
+export default ({ props, children }) => {
   const currentTheme =
     typeof window !== "undefined"
       ? !localStorage.getItem("theme")

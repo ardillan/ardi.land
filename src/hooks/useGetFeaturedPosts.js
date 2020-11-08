@@ -33,7 +33,7 @@ export const useGetFeaturedPosts = () => {
                 featuredImage {
                   sourceInstanceName
                   childImageSharp {
-                    fluid(maxWidth: 600, maxHeight: 400, cropFocus: CENTER) {
+                    fluid(maxWidth: 600, maxHeight: 600, cropFocus: CENTER) {
                       src
                     }
                   }

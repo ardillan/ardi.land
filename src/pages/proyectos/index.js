@@ -5,13 +5,19 @@ import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
 import { SectionTitle } from "../../components/styled/Interface"
 
-const Container = styled.div`
-  width: 600px;
-  margin: 0 auto 20px;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
-    width: auto;
+const Projects = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 40px 30px;
+  grid-gap: 20px;
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-family: "Inter";
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 22px;
   }
 `
 
@@ -20,14 +26,16 @@ export default () => {
     <Layout>
       <SEO title="Ardillan.com | Proyectos" />
       <SectionTitle>
-        <h1>Proyectos</h1>
-        <h2>
-          Esta página muestra los proyectos en los que estoy trabajando
-          actualmente.
-        </h2>
+        <div>
+          <h1>Proyectos</h1>
+          <h2>
+            Esta página muestra los proyectos en los que estoy trabajando
+            actualmente.
+          </h2>
+        </div>
       </SectionTitle>
 
-      <Container>
+      <Projects>
         <a
           href="https://www.torlavega.com"
           target="_blank"
@@ -44,7 +52,7 @@ export default () => {
             </header>
           </article>
         </a>
-      </Container>
+      </Projects>
     </Layout>
   )
 }

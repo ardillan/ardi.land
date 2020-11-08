@@ -1,49 +1,104 @@
-import React from "react"
+import React, { useState } from "react"
+import { Location } from "@reach/router"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Logo } from "../images/general/icons"
 
-const HeaderContainer = styled.header`
-  nav {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-content: center;
-    padding: 0 5rem;
-    background: ${(props) => props.theme.colors.background.header};
-  }
+import portrait from "../images/general/portrait.png"
 
-  ul {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    transition: all 0.2s;
-    li {
-      padding: 0 10px;
-      transition: all 0.3s;
-      a {
-        background: none;
-        color: ${(props) => props.theme.colors.fonts.header};
-        font-family: Inter;
-        font-size: 17px;
-        font-weight: 400;
-        text-decoration: none;
-        padding: 5px;
-      }
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.7;
-      }
+const RandomText = styled.div`
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 45px;
+    span {
+      color: #ea0054;
     }
+  }
+  small {
+    font-weight: 200;
+    font-size: 20px;
+    padding-top: 10px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    h1 {
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+`
+const BannerContainer = styled.header`
+  background: ${(props) => props.theme.colors.background.header};
+`
+const HomeBanner = styled.div`
+  grid-column-gap: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin: auto;
+  width: 900px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    grid-column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    width: auto;
+    padding: 30px;
+  }
+`
+const PageBanner = styled.div`
+  height: 5px;
+`
+const MobileNavigation = styled.div`
+  display: none;
+  width: auto;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  button {
+    text-transform: uppercase;
+    background: white;
+    font-family: "Inter";
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 2px solid black;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    display: flex;
+    background: white;
+    padding: 15px 30px;
+  }
+`
+const MenuNavigation = styled.div`
+  padding: 30px;
+  border-top: 1px solid #1c254542;
+  border-bottom: 1px solid #1c254542;
+`
+const Navigation = styled.nav`
+  margin: auto;
+  width: 900px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    ul {
+      display: none;
+    }
+  }
+`
+const HeaderContainer = styled.header`
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     nav {
-      padding: 0 20px;
-      margin: 0;
+      display: none;
     }
   }
 
@@ -59,7 +114,7 @@ const HeaderContainer = styled.header`
           color: ${(props) => props.theme.colors.fonts.header};
           font-size: 13px;
           margin: 0;
-          padding: 5px 10px;
+          padding: 5px 30px;
           text-transform: uppercase;
         }
 
@@ -73,64 +128,233 @@ const HeaderContainer = styled.header`
     }
   }
 `
+const PortraitContainer = styled.div`
+  height: 250px;
+  width: 200px;
 
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  a {
-    background: none;
-    svg {
-      transition: all 0.3s;
-      #dot {
-        fill: ${(props) => props.theme.colors.rainBow[2]};
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    display: none;
+  }
+`
+const MenuListItems = styled.div`
+  height: 50px;
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 16px;
+    height: 100%;
+    li {
+      margin-right: 35px;
+      a {
+        text-decoration: none;
+        &:hover {
+          background: initial;
+        }
       }
-      #ard {
-        fill: ${(props) => props.theme.colors.fonts.header};
-      }
-      #bg {
-        fill: none;
-      }
-
       &:hover {
-        background: transparent;
+        span:not([role="img"]) {
+          text-decoration: underline;
+          cursor: pointer;
+          text-decoration-thickness: 3px;
+        }
       }
     }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    a {
-      svg {
-        width: 40px;
-        height: 40px;
-        display: flex;
+    height: auto;
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      li {
+        a {
+          color: initial;
+          font-size: 13px;
+          margin: 0;
+          padding: 5px 0px;
+          text-transform: uppercase;
+        }
       }
     }
   }
 `
 
-const Header = () => {
+const MenuList = () => (
+  <MenuListItems>
+    <ul>
+      <li>
+        <Link to={`/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            🦕
+          </span>
+          <span>Inicio</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/sobre-mi/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            🚲
+          </span>
+          <span>Sobre mí</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/como-trabajo/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            👨‍💻
+          </span>
+          <span>Cómo trabajo</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/proyectos/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            ⚡
+          </span>
+          <span>Mis proyectos</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/espacios/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            🌵
+          </span>
+          <span>Mis espacios</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/blog/`}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 20, margin: "0 15px 0 0" }}
+          >
+            ✏️
+          </span>
+          <span>Blog</span>
+        </Link>
+      </li>
+    </ul>
+  </MenuListItems>
+)
+
+const Header = (props) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [randomNumber, setRandomNumber] = useState(
+    Math.floor(Math.random() * 4)
+  )
+
+  const handleMenu = (e) => {
+    e.preventDefault()
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const randomText = [
+    {
+      text: "hazte un TachoCao®",
+      link: "http://www.hornosanjose.com/producto/tachocao/tachocao-700gr",
+    },
+    { text: "come Nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
+    {
+      text: "escucha post-rock",
+      link: "https://es.wikipedia.org/wiki/Post-rock",
+    },
+    {
+      text: "sé Manny Calavera",
+      link: "https://es.wikipedia.org/wiki/Grim_Fandango",
+    },
+    {
+      text: "treguna mekoides trecorum satis dee",
+      link: "https://es.wikipedia.org/wiki/Bedknobs_and_Broomsticks",
+    },
+    {
+      text: "deja algo de tu felicidad",
+      link: "https://es.wikipedia.org/wiki/Dr%C3%A1cula",
+    },
+  ]
+
   return (
     <HeaderContainer>
-      <nav>
-        <LogoContainer>
-          <Link to={`/`}>
-            <Logo />
-          </Link>
-        </LogoContainer>
-        <ul>
-          <li>
-            <Link to={`/sobre-mi/`}>
-              <span>Sobre mí</span>
-            </Link>
-          </li>
-          <li>
-            <Link to={`/blog/`}>
-              <span>Blog!</span>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <BannerContainer>
+        <Location>
+          {({ location }) => {
+            return location.pathname === "/" ? (
+              <HomeBanner>
+                <PortraitContainer>
+                  <Link to={`/`}>
+                    <img
+                      src={portrait}
+                      width="200"
+                      alt="Autoretrato de caricatura"
+                    />
+                  </Link>
+                </PortraitContainer>
+                <RandomText>
+                  <h1>
+                    Bienvenido a mi web,
+                    <br />
+                    siéntate y {`{`}
+                    <a href={randomText[randomNumber].link}>
+                      <span>{`${randomText[randomNumber].text}`}</span>
+                      {`}`}
+                    </a>
+                  </h1>
+                  <small>Soy Adrián, desarrollador web</small>
+                </RandomText>
+              </HomeBanner>
+            ) : (
+              <PageBanner />
+            )
+          }}
+        </Location>
+      </BannerContainer>
+      <MobileNavigation>
+        <Link to={`/`}>Inicio</Link>
+        <button onClick={(e) => handleMenu(e)}>
+          <span
+            role="img"
+            aria-label="Icono de un dinosaurio"
+            style={{ fontSize: 18, marginRight: "10px" }}
+          >
+            🍔
+          </span>
+          <span>Menú</span>
+        </button>
+      </MobileNavigation>
+      {isMenuOpen ? (
+        <MenuNavigation>
+          <MenuList />
+        </MenuNavigation>
+      ) : (
+        ""
+      )}
+      <Navigation>
+        <MenuList />
+      </Navigation>
     </HeaderContainer>
   )
 }

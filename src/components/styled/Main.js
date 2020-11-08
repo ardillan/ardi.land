@@ -100,8 +100,13 @@ const Main = createGlobalStyle`
     /* 💅🏻 Anchors */
     a {
         color: ${(props) => props.theme.colors.fonts.text};
-        text-decoration: none;
+        text-decoration: underline;
         transition: all 0.3s;
+        text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};;
+        &:hover{
+            text-decoration-color: ${(props) => props.theme.colors.fonts.text};
+            background: ${(props) => props.theme.colors.fonts.anchorBackground};
+        }
     }
 
     code {

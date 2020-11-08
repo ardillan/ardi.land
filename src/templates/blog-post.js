@@ -12,9 +12,8 @@ import { BackArrow } from "../images/general/icons"
 import { formatDate, slugify } from "../utils/helpers"
 
 const PostContainer = styled.div`
-  width: 680px;
-  margin: 60px 0;
-
+  background: ${(props) => props.theme.colors.background.header};
+  margin-bottom: 40px;
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 600px;
     margin-bottom: 20px;
@@ -28,6 +27,8 @@ const PostContainer = styled.div`
   }
 `
 const PostContent = styled.div`
+  width: 900px;
+  margin: auto;
   p,
   ol,
   ul,
@@ -100,8 +101,8 @@ const PostContent = styled.div`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
-
+    padding: 0 30px;
+    width: auto;
     p,
     ol,
     ul,
@@ -115,11 +116,18 @@ const PostContent = styled.div`
     }
   }
 `
+const PostHeaderContainer = styled.div`
+  width: 900px;
+  margin: auto;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: auto;
+  }
+`
 const PostHeader = styled.header`
   display: grid;
   grid-column-gap: 35px;
-  grid-row-gap: 20px;
-  grid-template-columns: 115px 1fr;
+  grid-template-columns: 300px 1fr;
   grid-template-areas:
     "image title"
     "description description";
@@ -160,19 +168,16 @@ const PostHeaderTitle = styled.div`
   justify-content: center;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    padding: 30px;
     h1 {
       font-size: 30px;
     }
-    padding: 0 20px;
   }
 `
 const FeaturedImage = styled.div`
   background: ${(props) => props.theme.colors.background.main};
   grid-area: image;
   border-radius: 3px;
-  height: 115px;
-  object-fit: cover;
-  width: 115px;
   img {
     border-radius: 3px;
   }
@@ -193,13 +198,12 @@ const Description = styled.div`
   grid-area: description;
   font-family: "Inter";
   display: flex;
-  line-height: 25px;
-  font-size: 20px;
+  line-height: 19px;
+  font-size: 15px;
   margin: 10px 0 20px 0;
   font-weight: 200;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
     font-size: 15px;
     line-height: 18px;
     margin: 0;
@@ -228,6 +232,7 @@ const Subtitle = styled.div`
 const EditPost = styled.a`
   color: ${(props) => props.theme.colors.fonts.text};
   background: initial;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
     color: ${(props) => props.theme.colors.fonts.anchor};
@@ -286,14 +291,15 @@ const Meta = styled.div`
   width: fit-content;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    margin: 20px;
     width: auto;
+    margin-bottom: 10px;
     line-height: 20px;
   }
 `
 const Category = styled.span`
   a {
     background: ${(props) => props.theme.colors.fonts.anchor};
+    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
     color: initial;
     border-radius: 40px;
     color: white;
@@ -302,6 +308,10 @@ const Category = styled.span`
     margin-right: 5px;
     padding: 5px 15px;
     text-decoration: none;
+    &:hover {
+      background: initial;
+      color: ${(props) => props.theme.colors.fonts.anchor};
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -348,43 +358,50 @@ export default ({ data }) => {
               </BackArrowContainer>
             </Link>
 
-            <PostHeader>
-              <FeaturedImage>
-                <Img fluid={featuredImage} />
-              </FeaturedImage>
-              <PostHeaderTitle>
-                <h1>{post.frontmatter.title}</h1>
-                <Subtitle>
-                  <h2>{post.frontmatter.subtitle}</h2>
-                </Subtitle>
-              </PostHeaderTitle>
-              <Description>{post.frontmatter.description}</Description>
-            </PostHeader>
-            <PostInfo>
-              <Meta>
-                <time>Escrito el {formatDate(post.frontmatter.date)}</time> •{" "}
-                <EditPost
-                  target="_blank"
-                  rel="noopener nofollow"
-                  href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
-                >
-                  Editar entrada
-                </EditPost>
-              </Meta>
-              <Categories>
-                {post.frontmatter.category ? (
-                  post.frontmatter.category.map((cat) => (
-                    <Category key={cat}>
-                      <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
-                        {cat}
-                      </Link>
-                    </Category>
-                  ))
-                ) : (
-                  <span>Sin categoría</span>
-                )}
-              </Categories>
-            </PostInfo>
+            <PostHeaderContainer>
+              <PostHeader>
+                <FeaturedImage>
+                  <Img fluid={featuredImage} />
+                </FeaturedImage>
+                <PostHeaderTitle>
+                  <h1>{post.frontmatter.title}</h1>
+                  <Subtitle>
+                    <h2>{post.frontmatter.subtitle}</h2>
+                  </Subtitle>
+                  <Description>{post.frontmatter.description}</Description>
+                  <PostInfo>
+                    <Meta>
+                      <time>
+                        Escrito el {formatDate(post.frontmatter.date)}
+                      </time>{" "}
+                      •{" "}
+                      <EditPost
+                        target="_blank"
+                        rel="noopener nofollow"
+                        href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
+                      >
+                        Editar entrada
+                      </EditPost>
+                    </Meta>
+                    <Categories>
+                      {post.frontmatter.category ? (
+                        post.frontmatter.category.map((cat) => (
+                          <Category key={cat}>
+                            <Link
+                              to={`/categoria/${slugify(cat).toLowerCase()}`}
+                            >
+                              {cat}
+                            </Link>
+                          </Category>
+                        ))
+                      ) : (
+                        <span>Sin categoría</span>
+                      )}
+                    </Categories>
+                  </PostInfo>
+                </PostHeaderTitle>
+              </PostHeader>
+            </PostHeaderContainer>
           </PostContainer>
 
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />

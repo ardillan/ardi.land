@@ -1,49 +1,11 @@
 import React from "react"
-import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styled from "styled-components"
 
-const Container = styled.div`
-  width: 600px;
-  margin: 0 auto 20px;
-
-  h1 {
-    font-size: 25px;
-    margin: 20px auto;
-    padding: 0;
-    text-align: center;
-    letter-spacing: 60px;
-    line-height: 7px;
-    animation: moveGlitch 20s infinite;
-  }
-
-  h2 {
-    font-size: 16px;
-    padding: 0;
-    text-align: center;
-    line-height: 30px;
-    width: 400px;
-    margin: auto;
-  }
-
-  @keyframes moveGlitch {
-    0% {
-      filter: saturation(1);
-    }
-    100% {
-      filter: saturation(4);
-      letter-spacing: 10px;
-      line-height: 37px;
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    padding: 0 20px;
-    width: auto;
-  }
-`
+import Layout from "../../components/Layout"
+import SEO from "../../components/SEO"
+import { PageContainer } from "../../components/styled/Interface"
 
 const Glitch = styled.div`
   span:nth-child(1) {
@@ -68,7 +30,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Ardillan.com | 404" />
       {/* <Img fluid={} /> */}
-      <Container>
+      <PageContainer>
         <Img
           fluid={data.fileName.childImageSharp.fluid}
           fadeIn={true}
@@ -90,7 +52,7 @@ export default ({ data }) => {
           </a>{" "}
           a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
         </h2>
-      </Container>
+      </PageContainer>
     </Layout>
   )
 }

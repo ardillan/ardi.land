@@ -11,7 +11,6 @@ import { formatDate } from "../utils/helpers"
 
 const SearchContainer = styled.div`
   padding: 20px 0;
-  margin: -40px 0 40px 0;
   display: flex;
   input {
     background: ${(props) => props.theme.colors.background.main};
@@ -20,7 +19,7 @@ const SearchContainer = styled.div`
     border: 2px solid #ea0054;
     border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
     height: 45px;
-    margin: 0;
+    margin: 40px 0;
     padding: 0 30px;
     width: 100%;
 
@@ -59,6 +58,9 @@ const PostsListContainer = styled.ul`
   }
 `
 const Post = styled.li`
+  a {
+    text-decoration: none;
+  }
   article {
     display: flex;
   }
@@ -136,7 +138,7 @@ const Content = styled.div`
 `
 
 export default (props) => {
-  const posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
+  let posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
 
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState(posts)

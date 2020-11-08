@@ -4,29 +4,45 @@ export const SectionTitle = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: 50px auto 0;
-  max-width: 600px;
-  h1 {
-    font-family: "Noto Serif";
-    font-size: 50px;
-    font-weight: 800;
-    margin: 0;
-    padding: 0;
-    width: auto;
+  background: ${(props) => props.theme.colors.background.header};
+
+  div {
+    width: 900px;
+    margin: auto;
+    padding: 30px 0;
+    h1 {
+      font-family: "Noto Serif";
+      font-size: 45px;
+      font-weight: 800;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+
+    h2 {
+      font-family: "Inter";
+      font-size: 18px;
+      margin-top: 10px;
+      padding: 0;
+      font-weight: 200;
+      line-height: 25px;
+    }
   }
 
-  h2 {
-    font-family: "Inter";
-    font-size: 18px;
-    margin: 20px 0;
-    padding: 10px 0;
-    font-weight: 200;
-    line-height: 25px;
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 0;
+    div {
+      width: auto;
+      padding: 30px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
-    margin: 40px auto 10px;
     h1 {
       font-size: 30px;
       margin: 0;
@@ -35,23 +51,23 @@ export const SectionTitle = styled.section`
 `
 
 export const SectionTitleWithImage = styled.section`
+  background: ${(props) => props.theme.colors.background.header};
   display: grid;
-  grid-template-columns: 150px 1fr;
-  grid-template-areas:
-    "image title"
-    "subtitle subtitle";
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  margin: 50px auto;
-  max-width: 600px;
   grid-gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
 
-  img {
-    grid-area: image;
+  img,
+  picture,
+  .gatsby-image-wrapper {
     border-radius: 3px;
+    width: auto;
+    height: 500px;
   }
-
   h1 {
-    grid-area: title;
     font-family: "Noto serif";
     font-size: 50px;
     font-weight: 800;
@@ -71,10 +87,10 @@ export const SectionTitleWithImage = styled.section`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 20px;
+    padding: 30px;
     width: auto;
-    margin: 40px 0 0;
-    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    grid-template-columns: 1fr;
 
     h1  {
       text-align: center;
@@ -83,6 +99,28 @@ export const SectionTitleWithImage = styled.section`
 
     h2 {
       margin: 0;
+    }
+  }
+`
+
+export const PageContainer = styled.div`
+  margin: auto;
+  width: 900px;
+  div {
+    max-width: 600px;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: auto;
+    div {
+      padding: 30px;
+    }
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: auto;
+    div {
+      padding: 30px;
     }
   }
 `
