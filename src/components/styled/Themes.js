@@ -50,7 +50,7 @@ export const DarkTheme = {
       line: "#4597ff",
     },
     fonts: {
-      text: "#e4e4e4",
+      text: "#ffffff",
       anchor: "#3dd1ff",
       header: "white",
       anchorBackground: "#191e2f",

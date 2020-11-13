@@ -117,7 +117,6 @@ const TellMeMoreButton = styled.div`
       font-size: 12px;
       color: ${(props) => props.theme.colors.fonts.anchor};
       font-weight: 600;
-      background: white;
       transition: all 0.3s;
       text-decoration: none;
       border: none;

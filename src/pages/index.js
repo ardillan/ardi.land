@@ -81,7 +81,7 @@ const Articles = styled.section`
             "description description";
           grid-row-gap: 0;
           margin-bottom: 20px;
-          border: 1px dashed #bdbdbd;
+          border: 1px dashed ${(props) => props.theme.colors.table.border};
           padding: 20px 30px;
           grid-template-columns: 40px 1fr;
           grid-column-gap: 15px;

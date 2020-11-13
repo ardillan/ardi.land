@@ -75,16 +75,16 @@ const MobileNavigation = styled.div`
   }
   button {
     text-transform: uppercase;
-    background: white;
     font-family: "Inter";
     font-weight: 600;
     padding: 5px 10px;
-    border: 2px solid black;
+    border: 2px solid ${(props) => props.theme.colors.table.border};
+    color: ${(props) => props.theme.colors.fonts.text};
+    background: transparent;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     display: flex;
-    background: white;
     padding: 15px 30px;
   }
 `
@@ -120,7 +120,6 @@ const HeaderContainer = styled.header`
     ul {
       li {
         a {
-          color: ${(props) => props.theme.colors.fonts.header};
           font-size: 13px;
           margin: 0;
           padding: 5px 30px;
@@ -160,6 +159,7 @@ const MenuListItems = styled.div`
       margin-right: 35px;
       a {
         text-decoration: none;
+        color: ${(props) => props.theme.colors.fonts.text};
         &:hover {
           background: initial;
         }
@@ -181,7 +181,6 @@ const MenuListItems = styled.div`
       align-items: flex-start;
       li {
         a {
-          color: initial;
           font-size: 13px;
           margin: 0;
           padding: 5px 0px;
