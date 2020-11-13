@@ -10,12 +10,16 @@ const RandomText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   h1 {
     font-weight: 800;
     font-size: 40px;
     line-height: 45px;
-    span {
-      color: #ea0054;
+    a {
+      text-decoration: none;
+      span {
+        color: ${(props) => props.theme.colors.fonts.anchor};
+      }
     }
   }
   small {
@@ -33,7 +37,11 @@ const RandomText = styled.div`
   }
 `
 const BannerContainer = styled.header`
-  background: ${(props) => props.theme.colors.background.header};
+  background: linear-gradient(
+    -180deg,
+    ${(props) => props.theme.colors.gradients.top},
+    ${(props) => props.theme.colors.gradients.bottom}
+  );
 `
 const HomeBanner = styled.div`
   grid-column-gap: 20px;

@@ -20,6 +20,7 @@ const Articles = styled.section`
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
     list-style-type: none;
     padding: 0;
 
@@ -28,6 +29,7 @@ const Articles = styled.section`
       padding: 0;
       a {
         display: grid;
+        padding-right: 30px;
         text-decoration: none;
         grid-template-areas:
           "image title"

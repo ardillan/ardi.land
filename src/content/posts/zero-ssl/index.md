@@ -4,7 +4,7 @@ subtitle: "Obtén un certificado SSL sin esfuerzo"
 date: "2020-03-21T15:50:00.0100"
 author: Ardillán
 type: "blog"
-description: "Hay ocasiones en las que contratamos un servidor que no ofrece la posibilidad de habilitar un certificado de seguridad de manera automática. Con ZeroSSL ya no hay excusa para dejar nuestro dominio desprotegido."
+description: "ZeroSSL permite generar un certificado válido en muy poco tiempo"
 featuredImage: "./zero-ssl-0.png"
 category:
   - Desarrollo

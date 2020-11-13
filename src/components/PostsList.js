@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
+import { slugify } from "../utils/helpers"
 import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
@@ -17,7 +18,7 @@ const SearchContainer = styled.div`
     color: ${(props) => props.theme.colors.fonts.text};
     border-radius: 50px;
     border: 2px solid #ea0054;
-    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
+    border: 2px solid ${(props) => props.theme.colors.table.border};
     height: 45px;
     margin: 40px 0;
     padding: 0 30px;
@@ -116,6 +117,21 @@ const Post = styled.li`
     }
   }
 `
+const Categories = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  a {
+    border: 1px solid ${(props) => props.theme.colors.table.border};
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+  }
+`
 const Category = styled.div`
   display: flex;
   span {
@@ -139,6 +155,15 @@ const Content = styled.div`
 
 export default (props) => {
   let posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
+
+  const categories = []
+
+  // Create categories pages
+  posts.map(({ node }) => {
+    node.frontmatter.category.map((cat) =>
+      categories.includes(cat) ? "" : categories.push(cat)
+    )
+  })
 
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState(posts)
@@ -166,7 +191,13 @@ export default (props) => {
           onChange={handleChange}
         />
       </SearchContainer>
-
+      <Categories>
+        {categories.map((cat) => (
+          <Link ket={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
+            {cat}
+          </Link>
+        ))}
+      </Categories>
       <PostsListContainer>
         {searchResults.slice(0, props.length).map((post) => {
           let featuredImage =

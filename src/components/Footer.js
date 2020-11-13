@@ -9,7 +9,7 @@ const Footer = styled.footer`
   display: grid;
   grid-template-columns: 70% 1fr;
   padding: 30px;
-  border: 3px solid ${(props) => props.theme.colors.fonts.text};
+  border: 1px solid ${(props) => props.theme.colors.table.border};
   margin: 120px auto;
   width: 900px;
 

@@ -48,11 +48,11 @@ const BannerInfo = styled.div`
   max-width: 400px;
 
   small {
-    color: #ea0054;
     font-family: "Inter";
     font-size: 15px;
     font-weight: 200;
     margin-bottom: 15px;
+    color: ${(props) => props.theme.colors.fonts.text}69;
   }
   h1 {
     font-family: "Inter";
@@ -96,24 +96,16 @@ const TellMeMoreButton = styled.div`
   margin-top: 30px;
 
   a {
-    padding: 10px 20px;
-    border-radius: 4px;
     font-family: Inter;
-    text-transform: uppercase;
-    font-size: 13px;
-    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
+    font-size: 15px;
     color: ${(props) => props.theme.colors.fonts.anchor};
-    font-weight: 600;
-    background: white;
+    font-weight: 400;
     transition: all 0.3s;
     text-decoration: none;
 
     &:hover {
       cursor: pointer;
-      transform: scale(1.05);
-      border-radius: 50px;
-      background: ${(props) => props.theme.colors.fonts.anchor};
-      color: white;
+      text-decoration: underline;
     }
   }
 
@@ -123,7 +115,7 @@ const TellMeMoreButton = styled.div`
       font-family: Inter;
       text-transform: uppercase;
       font-size: 12px;
-      color: #ea0054;
+      color: ${(props) => props.theme.colors.fonts.anchor};
       font-weight: 600;
       background: white;
       transition: all 0.3s;

@@ -7,26 +7,26 @@ export const LightTheme = {
   colors: {
     background: {
       main: "#FFFFFF",
-      header: "#FFF100",
+      header: "#755cfd",
       line: "#ffe600",
     },
     fonts: {
-      text: "#1C2545",
+      text: "#241a58",
       anchor: "#8a75f5",
       header: "white",
-      anchorBackground: "#fffacd",
+      anchorBackground: "#f3f1ff",
       caption: "#f5f5fb",
     },
     table: {
-      border: "#FFF5A7",
+      border: "#e0daff",
     },
     gradients: {
       top: "#FFFFFF",
       bottom: "#f8fbfb",
     },
     cursor: {
-      selection: "#9affce",
-      color: "#101810",
+      selection: "#f2f0ff",
+      color: "#3c3773",
     },
     images: {
       blendMode: "none",
@@ -57,15 +57,15 @@ export const DarkTheme = {
       caption: "#1a203c",
     },
     table: {
-      border: "#3dd1ff",
+      border: "#2b3471",
     },
     gradients: {
       top: "#0d0f1e",
-      bottom: "#2f1079",
+      bottom: "#1b1e33",
     },
     cursor: {
-      selection: "#ffe600f0",
-      color: "#564b21",
+      selection: "#0d0f1e",
+      color: "#5c6392",
     },
     images: {
       blendMode: "none",
@@ -99,8 +99,8 @@ export const GameBoyTheme = {
       border: "#9af345",
     },
     gradients: {
-      top: "#11130c",
-      bottom: "#11130c",
+      top: "#7cfd00",
+      bottom: "#7cfd00",
     },
     cursor: {
       selection: "#ceefad",
