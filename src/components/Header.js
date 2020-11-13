@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Location } from "@reach/router"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -272,9 +272,7 @@ const MenuList = () => (
 
 const Header = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [randomNumber, setRandomNumber] = useState(
-    Math.floor(Math.random() * 4)
-  )
+  const randomNumber = Math.floor(Math.random() * 5)
 
   const handleMenu = (e) => {
     e.preventDefault()
