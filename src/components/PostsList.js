@@ -131,6 +131,15 @@ const Categories = styled.div`
     display: flex;
     align-items: center;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: initial;
+    a {
+      margin: 0 10px 10px 0;
+    }
+  }
 `
 const Category = styled.div`
   display: flex;
