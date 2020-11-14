@@ -24,14 +24,16 @@ const Main = createGlobalStyle`
     blockquote {
         border-left: 5px solid ${(props) =>
           props.theme.colors.cursor.selection};
-        padding: 40px 55px;
+        padding: 20px 30px;
         margin: 0;
         background: #8080800f;
-        width: max-content;
+        max-width: 600px;
         p {
             font-size: 15px;
             line-height: 25px;
             font-family: sans-serif;
+            margin: 0;
+            padding: 0;
         }
     }
 
