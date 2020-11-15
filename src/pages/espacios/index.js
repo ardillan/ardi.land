@@ -66,7 +66,7 @@ export default () => {
         {spaces.allFile.edges.map((image) => {
           return (
             <Img
-              key={image.name}
+              key={image.node.name}
               alt="Imagen de un portátil"
               fluid={image.node.childImageSharp.fluid}
             />
