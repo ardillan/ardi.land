@@ -168,7 +168,7 @@ const MenuListItems = styled.div`
         span:not([role="img"]) {
           text-decoration: underline;
           cursor: pointer;
-          text-decoration-thickness: 3px;
+          text-decoration-thickness: 1px;
         }
       }
     }

@@ -57,7 +57,7 @@ const PostContent = styled.div`
   a {
     text-decoration: underline;
     text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     &:hover  {
       color: ${(props) => props.theme.colors.fonts.anchor};
     }
