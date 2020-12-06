@@ -7,7 +7,6 @@ description: "Título donde nos embarcaremos en una corta pero intensa aventura 
 featuredImage: "./florence-featured.png"
 featuredImageBanner: "./florence-featured.gif"
 backgroundColor: "#fff100"
-featured: true
 category:
   - Videojuegos
 ---
