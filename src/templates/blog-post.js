@@ -63,47 +63,6 @@ const PostContent = styled.div`
     }
   }
 
-  .gallery-post__3-columns {
-    display: grid;
-    margin: 35px 0;
-    grid-gap: 10px;
-    grid-template-areas:
-      "a b"
-      "a c";
-
-    .gatsby-resp-image-wrapper {
-      height: 100%;
-    }
-
-    .gatsby-resp-image-background-image {
-      padding-bottom: 0;
-    }
-
-    img {
-      object-fit: cover;
-    }
-
-    figure:nth-child(1) {
-      grid-area: a;
-    }
-    figure:nth-child(2) {
-      grid-area: b;
-    }
-    figure:nth-child(3) {
-      grid-area: c;
-    }
-
-    figcaption {
-      display: none;
-      background: red;
-    }
-
-    figure {
-      padding: 0;
-      margin: 0;
-    }
-  }
-
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 0 30px;
     width: auto;

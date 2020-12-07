@@ -22,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      categories: allMarkdownRemark(
+      blogCategories: allMarkdownRemark(
         filter: { frontmatter: { category: { nin: [null] } } }
       ) {
         edges {
@@ -33,7 +33,20 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-      pages: allMarkdownRemark {
+      blogPosts: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "blog" } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      projectPosts: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "proyecto" } } }
+      ) {
         edges {
           node {
             fields {
@@ -44,8 +57,19 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then((result) => {
-    // Create posts pages
-    result.data.pages.edges.forEach(({ node }) => {
+    // Crea las páginas de los proyectos
+    result.data.projectPosts.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve(`./src/templates/project-post.js`),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+
+    // Crea las páginas de las entradas del blog
+    result.data.blogPosts.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve(`./src/templates/blog-post.js`),
@@ -55,10 +79,10 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Crea las páginas para las categorías del blog
     const categories = []
 
-    // Create categories pages
-    result.data.categories.edges.map(({ node }) => {
+    result.data.blogCategories.edges.map(({ node }) => {
       node.frontmatter.category.map((cat) => {
         categories.includes(cat) ? "" : categories.push(cat)
       })

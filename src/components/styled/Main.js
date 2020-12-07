@@ -56,6 +56,112 @@ const Main = createGlobalStyle`
 
         mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};;
     }
+
+
+    .gallery-post__1-columns {
+      display: grid;
+      margin: 35px 0;
+      grid-gap: 10px;
+      grid-template-columns: 1fr;
+  
+      .gatsby-resp-image-wrapper {
+        height: 100%;
+      }
+  
+      .gatsby-resp-image-background-image {
+        padding-bottom: 0;
+      }
+  
+      img {
+        object-fit: cover;
+      }
+  
+      figcaption {
+        display: none;
+        background: red;
+      }
+  
+      figure {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+
+    .gallery-post__2-columns {
+        display: grid;
+        margin: 35px 0;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    
+        .gatsby-resp-image-wrapper {
+          height: 100%;
+        }
+    
+        .gatsby-resp-image-background-image {
+          padding-bottom: 0;
+        }
+    
+        img {
+          object-fit: cover;
+        }
+    
+        figcaption {
+          display: none;
+          background: red;
+        }
+    
+        figure {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+
+
+
+
+    .gallery-post__3-columns {
+        display: grid;
+        margin: 35px 0;
+        grid-gap: 10px;
+        grid-template-areas:
+          "a b"
+          "a c";
+    
+        .gatsby-resp-image-wrapper {
+          height: 100%;
+        }
+    
+        .gatsby-resp-image-background-image {
+          padding-bottom: 0;
+        }
+    
+        img {
+          object-fit: cover;
+        }
+    
+        figure:nth-child(1) {
+          grid-area: a;
+        }
+        figure:nth-child(2) {
+          grid-area: b;
+        }
+        figure:nth-child(3) {
+          grid-area: c;
+        }
+    
+        figcaption {
+          display: none;
+          background: red;
+        }
+    
+        figure {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
     /*  💅🏻 Lists */
     ol, ul {
         padding: 0px 0 20px 20px;

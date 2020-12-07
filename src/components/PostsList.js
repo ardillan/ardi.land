@@ -169,7 +169,7 @@ export default (props) => {
 
   // Create categories pages
   posts.map(({ node }) => {
-    node.frontmatter.category.map((cat) =>
+    return node.frontmatter.category.map((cat) =>
       categories.includes(cat) ? "" : categories.push(cat)
     )
   })
