@@ -43,6 +43,9 @@ const Projects = styled.div`
     grid-template-columns: 1fr 1fr;
     a {
       align-items: center;
+      text-align: center;
+      width: min-content;
+      margin: auto;
     }
   }
 
@@ -50,6 +53,9 @@ const Projects = styled.div`
     grid-template-columns: 1fr;
     a {
       align-items: center;
+      text-align: center;
+      width: min-content;
+      margin: auto;
     }
   }
 `
