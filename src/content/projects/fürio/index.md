@@ -21,10 +21,10 @@ Para ello, opté por utilizar diseños abstractos combinándolo con una tipograf
 
 <div class="gallery-post__3-columns">
   <img src="./furio-02.png" alt="Portada del disco Médulas de tiempo, del grupo Fürio" />
-  <img src="./furio-03.png" alt="Imagen del diseño de la página web de Recíclate YA!" />
-  <img src="./furio-04.png" alt="Imagen del diseño de la página web de Recíclate YA!" />
+  <img src="./furio-03.png" alt="Contraportada del disco Médulas de tiempo, del grupo Fürio" />
+  <img src="./furio-04.png" alt="Composición de imágenes del disco Médulas de tiempo, del grupo Fürio" />
 </div>
 
 <div class="gallery-post__1-columns">
-<img src="./furio-05.png" alt="Portada, contraportada e interior del disco 'Médulas de tiempo'" />
+<img src="./furio-05.png" alt="Composición de imágenes del disco Médulas de tiempo, del grupo Fürio" />
 </div>
