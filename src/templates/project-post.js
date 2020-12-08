@@ -133,8 +133,11 @@ const ProjectHeaderTitle = styled.div`
   }
 `
 const FeaturedImage = styled.div`
+  .gatsby-image-wrapper {
+    border-radius: 5px;
+  }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    img {
+    .gatsby-image-wrapper {
       border-radius: 0px;
     }
   }
@@ -194,7 +197,7 @@ export default ({ data }) => {
             <ProjectHeaderContainer>
               <PostHeader>
                 <FeaturedImage>
-                  <Img fluid={featuredImage} style={{ borderRadius: 5 }} />
+                  <Img fluid={featuredImage} />
                 </FeaturedImage>
                 <ProjectHeaderTitle>
                   <h1>{post.frontmatter.title}</h1>
