@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Location } from "@reach/router"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -270,38 +270,44 @@ const MenuList = () => (
   </MenuListItems>
 )
 
+const randomText = [
+  {
+    text: "hazte un TachoCao®",
+    link: "http://www.hornosanjose.com/producto/tachocao/tachocao-700gr",
+  },
+  { text: "come Nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
+  {
+    text: "escucha post-rock",
+    link: "https://es.wikipedia.org/wiki/Post-rock",
+  },
+  {
+    text: "sé Manny Calavera",
+    link: "https://es.wikipedia.org/wiki/Grim_Fandango",
+  },
+  {
+    text: "treguna mekoides trecorum satis dee",
+    link: "https://es.wikipedia.org/wiki/Bedknobs_and_Broomsticks",
+  },
+  {
+    text: "deja algo de tu felicidad",
+    link: "https://es.wikipedia.org/wiki/Dr%C3%A1cula",
+  },
+]
+
 const Header = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const randomNumber = Math.floor(Math.random() * 5)
+
+  const [randomNumber, setRandomNumber] = useState()
+
+  useEffect(() => {
+    let number = Math.floor(Math.random() * 5)
+    setRandomNumber(number)
+  }, [])
 
   const handleMenu = (e) => {
     e.preventDefault()
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const randomText = [
-    {
-      text: "hazte un TachoCao®",
-      link: "http://www.hornosanjose.com/producto/tachocao/tachocao-700gr",
-    },
-    { text: "come Nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
-    {
-      text: "escucha post-rock",
-      link: "https://es.wikipedia.org/wiki/Post-rock",
-    },
-    {
-      text: "sé Manny Calavera",
-      link: "https://es.wikipedia.org/wiki/Grim_Fandango",
-    },
-    {
-      text: "treguna mekoides trecorum satis dee",
-      link: "https://es.wikipedia.org/wiki/Bedknobs_and_Broomsticks",
-    },
-    {
-      text: "deja algo de tu felicidad",
-      link: "https://es.wikipedia.org/wiki/Dr%C3%A1cula",
-    },
-  ]
 
   return (
     <HeaderContainer>
@@ -323,11 +329,13 @@ const Header = (props) => {
                   <h1>
                     Bienvenido a mi web,
                     <br />
-                    siéntate y {`{`}
-                    <a href={randomText[randomNumber].link}>
-                      <span>{`${randomText[randomNumber].text}`}</span>
-                      {`}`}
-                    </a>
+                    siéntate y{`{`}
+                    {typeof randomNumber === "number" && (
+                      <a href={randomText[randomNumber].link}>
+                        <span>{`${randomText[randomNumber].text}`}</span>
+                      </a>
+                    )}
+                    {`}`}
                   </h1>
                   <small>Soy Adrián, desarrollador web</small>
                 </RandomText>
