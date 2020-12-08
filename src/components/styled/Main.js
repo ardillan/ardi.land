@@ -117,11 +117,39 @@ const Main = createGlobalStyle`
         }
       }
 
+      .gallery-post__3-columns {
+        display: grid;
+        margin: 35px 0;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+        .gatsby-resp-image-wrapper {
+          height: 100%;
+        }
+    
+        .gatsby-resp-image-background-image {
+          padding-bottom: 0;
+        }
+    
+        img {
+          object-fit: cover;
+        }
+    
+        figcaption {
+          display: none;
+          background: red;
+        }
+    
+        figure {
+          padding: 0;
+          margin: 0;
+        }
+      }
 
 
 
 
-    .gallery-post__3-columns {
+    .gallery-post__3-columns-masonry {
         display: grid;
         margin: 35px 0;
         grid-gap: 10px;

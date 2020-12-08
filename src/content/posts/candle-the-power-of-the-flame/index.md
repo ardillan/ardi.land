@@ -9,7 +9,7 @@ category:
   - Videojuegos
 ---
 
-<div class="gallery-post__3-columns">
+<div class="gallery-post__3-columns-masonry">
   <img src="./candle-the-power-of-the-flame-01.png" alt="Captura del juego" />
   <img src="./candle-the-power-of-the-flame-02.jpg" alt="Captura del juego" />
   <img src="./candle-the-power-of-the-flame-03.jpg" alt="Captura del juego" />

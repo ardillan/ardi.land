@@ -9,7 +9,7 @@ category:
   - Videojuegos
 ---
 
-<div class="gallery-post__3-columns">
+<div class="gallery-post__3-columns-masonry">
   <img src="./octopath-traveller-01.jpg" alt="Captura del juego" />
   <img src="./octopath-traveller-02.jpg" alt="Captura del juego" />
   <img src="./octopath-traveller-03.jpg" alt="Captura del juego" />

@@ -11,7 +11,7 @@ category:
   - Videojuegos
 ---
 
-<div class="gallery-post__3-columns">
+<div class="gallery-post__3-columns-masonry">
   <img src="./florence-01.jpg" alt="Captura del juego" />
   <img src="./florence-02.jpg" alt="Captura del juego" />
   <img src="./florence-03.jpg" alt="Captura del juego" />
