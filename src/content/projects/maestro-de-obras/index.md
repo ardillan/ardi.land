@@ -3,7 +3,7 @@ title: "El maestro de obras Pablo Piqué"
 subtitle: "Arquitectura y urbanismo para una ciudad industrial"
 date: "2020-12-08T17:00:00.0100"
 type: "proyecto"
-description: "Libro sobre Pablo Piqué, maestro de obras de Torrelavega del S.IXX que trabajó en el urbanismo de la ciudad."
+description: "Libro sobre Pablo Piqué, maestro de obras de Torrelavega del S.XIX que trabajó en el urbanismo de la ciudad."
 featuredImage: "./maestro-de-obras-01.png"
 category:
   - Diseño
