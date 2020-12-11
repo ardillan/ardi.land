@@ -12,6 +12,8 @@ category:
 
 Diseño y edición artesanal para la banda The Room, un dúo guitarra-batería instrumental de Torrelavega. El disco está hecho artesanalmente, la portada es un sello con un cuadrado que representa a la banda. Cada disco tiene su propio patrón único.
 
+Si lo deseas, puedes escuchar el disco en su [Bandcamp](https://somostheroom.bandcamp.com/album/tom-s)
+
 <div class="gallery-post__1-columns">
   <img src="./the-room-02.jpg" alt="Portada del disco 'Tomás!', de The Room" />
   <img src="./the-room-03.jpg" alt="Detalle del disco 'Tomás!', de The Room" />
