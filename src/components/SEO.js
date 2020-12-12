@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import favicon from "../images/general/favicon.png"
+import metaImage from "../images/general/meta-image-default.png"
 
 const SEO = (data) => {
   const { postDescription, title } = data
@@ -42,6 +43,14 @@ const SEO = (data) => {
               type="application/rss+xml"
               title="Listado de entradas del blog de Ardillán"
               href="/rss.xml"
+            />
+            <meta
+              property="og:image"
+              content={`https://www.ardillan.com${metaImage}`}
+            />
+            <meta
+              property="twitter:image"
+              content={`https://www.ardillan.com${metaImage}`}
             />
           </Helmet>
         )
