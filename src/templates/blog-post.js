@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import Helmet from "react-helmet"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -291,6 +292,7 @@ const PostInfo = styled.div`
 `
 
 export default ({ data }) => {
+  console.log(data)
   const post = data.markdownRemark
 
   const gitHubFile = post.fileAbsolutePath.substring(
@@ -309,6 +311,18 @@ export default ({ data }) => {
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
+      <Helmet>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta
+          property="og:url"
+          content={`http:s//www.ardillan.com/${post.fields.slug}`}
+        />
+        <meta
+          property="og:image"
+          content={post.frontmatter.featuredImage.publicURL}
+        />
+      </Helmet>
       <section>
         <article>
           <PostContainer>
@@ -388,6 +402,7 @@ export const query = graphql`
         description
         category
         featuredImage {
+          publicURL
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
