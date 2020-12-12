@@ -320,7 +320,7 @@ export default ({ data }) => {
         />
         <meta
           property="og:image"
-          content={post.frontmatter.featuredImage.publicURL}
+          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -335,7 +335,7 @@ export default ({ data }) => {
         />
         <meta
           property="twitter:image"
-          content={post.frontmatter.featuredImage.publicURL}
+          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
         />
       </Helmet>
       <section>
