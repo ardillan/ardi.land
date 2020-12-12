@@ -316,10 +316,25 @@ export default ({ data }) => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta
           property="og:url"
-          content={`http:s//www.ardillan.com/${post.fields.slug}`}
+          content={`https://www.ardillan.com/${post.fields.slug}`}
         />
         <meta
           property="og:image"
+          content={post.frontmatter.featuredImage.publicURL}
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://www.ardillan.com/${post.fields.slug}`}
+        />
+        <meta property="twitter:title" content={post.frontmatter.title} />
+        <meta
+          property="twitter:description"
+          content={post.frontmatter.description}
+        />
+        <meta
+          property="twitter:image"
           content={post.frontmatter.featuredImage.publicURL}
         />
       </Helmet>
