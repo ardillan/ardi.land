@@ -36,7 +36,7 @@ const SEO = (data) => {
                   : queryData.site.siteMetadata.description
               }
             />
-            <meta name="title" content={queryData.site.siteMetadata.title}>
+            <meta name="title" content={queryData.site.siteMetadata.title} />
             <link rel="shortcut icon" type="image/png" href={favicon} />
             <link
               rel="alternate"
