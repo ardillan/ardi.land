@@ -8,7 +8,10 @@ import { SectionTitle, PageContainer } from "../../components/styled/Interface"
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Ardillan.com | Cómo trabajo" />
+      <SEO
+        title="Ardillan.com | Cómo trabajo"
+        postDescription="Aquí muestro las aplicaciones utilizo para desarrollar y diseñar, la música que escucho o qué aplicación utilizo para tomar notas"
+      />
       <SectionTitle>
         <div>
           <h1>¿Cómo trabajo?</h1>
