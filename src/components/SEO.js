@@ -15,6 +15,7 @@ const SEO = (data) => {
           site {
             siteMetadata {
               title
+              siteUrl
               description
               social {
                 twitter
@@ -44,9 +45,39 @@ const SEO = (data) => {
               title="Listado de entradas del blog de Ardillán"
               href="/rss.xml"
             />
+
+            {/* {Facebook} */}
+            <meta property="og:type" content="website" />
+            <meta
+              property="og:url"
+              content={queryData.site.siteMetadata.siteUrl}
+            />
+            <meta
+              property="og:title"
+              content={queryData.site.siteMetadata.title}
+            />
+            <meta
+              property="og:description"
+              content={queryData.site.siteMetadata.description}
+            />
             <meta
               property="og:image"
               content={`https://www.ardillan.com${metaImage}`}
+            />
+
+            {/* {Twitter} */}
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta
+              property="twitter:url"
+              content={queryData.site.siteMetadata.siteUrl}
+            />
+            <meta
+              property="twitter:title"
+              content={queryData.site.siteMetadata.title}
+            />
+            <meta
+              property="twitter:description"
+              content={queryData.site.siteMetadata.description}
             />
             <meta
               property="twitter:image"
