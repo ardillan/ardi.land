@@ -7,7 +7,7 @@ import metaImage from "../images/general/meta-image-default.png"
 
 const SEO = (data) => {
   const { postDescription, title } = data
-
+  console.log(postDescription, title)
   return (
     <StaticQuery
       query={graphql`
@@ -27,17 +27,15 @@ const SEO = (data) => {
       `}
       render={(queryData) => {
         return (
-          <Helmet
-            title={title}
-            meta={[
-              {
-                name: "description",
-                content: postDescription
+          <Helmet title={title}>
+            <meta
+              name="description"
+              content={
+                postDescription
                   ? postDescription
-                  : queryData.site.siteMetadata.description,
-              },
-            ]}
-          >
+                  : queryData.site.siteMetadata.description
+              }
+            />
             <link rel="shortcut icon" type="image/png" href={favicon} />
             <link
               rel="alternate"

@@ -1,7 +1,9 @@
 import React, { useState } from "react"
-
 import styled, { ThemeProvider } from "styled-components"
+
 import { LightTheme } from "./styled/Themes"
+
+import SEO from "../components/SEO"
 import Normalize from "../components/styled/Normalize"
 import Main from "../components/styled/Main"
 import Fonts from "../components/styled/Fonts"
@@ -30,6 +32,7 @@ export default ({ props, children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <SEO />
       <Normalize />
       <Fonts />
       <Prism />
