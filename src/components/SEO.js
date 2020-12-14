@@ -17,6 +17,7 @@ const SEO = (data) => {
               title
               siteUrl
               description
+              keywords
               social {
                 twitter
                 instagram
@@ -35,6 +36,10 @@ const SEO = (data) => {
                   ? postDescription
                   : queryData.site.siteMetadata.description
               }
+            />
+            <meta
+              name="keywords"
+              content={queryData.site.siteMetadata.keywords.join(",")}
             />
             <meta name="title" content={queryData.site.siteMetadata.title} />
             <link rel="shortcut icon" type="image/png" href={favicon} />

@@ -10,7 +10,7 @@ export default ({ data }) => {
     <Layout>
       <SEO
         title="Ardillan.com | Cómo trabajo"
-        postDescription="Aquí muestro las aplicaciones utilizo para desarrollar y diseñar, la música que escucho o qué aplicación utilizo para tomar notas"
+        postDescription="Aquí muestro las aplicaciones que utilizo para desarrollar y diseñar, la música que escucho o qué utilidades uso para notas"
       />
       <SectionTitle>
         <div>
