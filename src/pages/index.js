@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
+
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -124,10 +126,10 @@ const Home = ({ data }) => {
   // const videogame = useGetLastVideogame()
   return (
     <Layout>
-      <SEO
-        title={data.site.siteMetadata.title}
-        description={data.site.siteMetadata.description}
-      />
+      <SEO />
+      <Helmet>
+        <meta name="description" content={data.site.siteMetadata.description} />
+      </Helmet>
       <Container>
         <section>
           <FeaturedBanner />
