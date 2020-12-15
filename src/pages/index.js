@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Helmet from "react-helmet"
 
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -127,12 +126,9 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={`Ardillan.com | Inicio`}
+        title="Ardillan.com | Inicio"
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />
-      <Helmet>
-        <meta name="description" content={data.site.siteMetadata.description} />
-      </Helmet>
       <Container>
         <section>
           <FeaturedBanner />

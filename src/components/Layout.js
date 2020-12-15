@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from "styled-components"
 
 import { LightTheme } from "./styled/Themes"
 
-import SEO from "../components/SEO"
 import Normalize from "../components/styled/Normalize"
 import Main from "../components/styled/Main"
 import Fonts from "../components/styled/Fonts"
