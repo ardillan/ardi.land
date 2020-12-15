@@ -32,7 +32,6 @@ export default ({ props, children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <SEO />
       <Normalize />
       <Fonts />
       <Prism />

@@ -126,7 +126,10 @@ const Home = ({ data }) => {
   // const videogame = useGetLastVideogame()
   return (
     <Layout>
-      <SEO title="Ardillan.com" />
+      <SEO
+        title={`Ardillan.com | Inicio`}
+        postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
+      />
       <Helmet>
         <meta name="description" content={data.site.siteMetadata.description} />
       </Helmet>
