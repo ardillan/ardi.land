@@ -8,50 +8,46 @@ import SEO from "../../components/SEO"
 import { PageContainer } from "../../components/styled/Interface"
 
 const Glitch = styled.div`
-  span:nth-child(1) {
-    color: ${(props) => props.theme.colors.rainBow[0]};
+  margin: auto;
+  text-align: center;
+  h1 {
+    font-size: 1.5rem;
   }
-  span:nth-child(2) {
-    color: ${(props) => props.theme.colors.rainBow[1]};
-  }
-  span:nth-child(3) {
-    color: ${(props) => props.theme.colors.rainBow[2]};
-  }
-  span:nth-child(4) {
-    color: ${(props) => props.theme.colors.rainBow[3]};
-  }
-  span:nth-child(5) {
-    color: ${(props) => props.theme.colors.rainBow[4]};
+  h2 {
+    font-size: 1rem;
   }
 `
 
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Ardillan.com | 404" />
-      {/* <Img fluid={} /> */}
+      <SEO
+        title="Ardillan.com | Matar humanos"
+        postDescription="Evita el alzamiento de las máquinas introduciendo una URL correcta."
+      />
       <PageContainer>
-        <Img
-          fluid={data.fileName.childImageSharp.fluid}
-          fadeIn={true}
-          alt="Captura del vídeo R.U.R, donde aparecen unos robots maltratando a un humano"
-          title="Captura de R.U.R"
-        />
         <Glitch>
+          <Img
+            fluid={data.fileName.childImageSharp.fluid}
+            fadeIn={true}
+            alt="Captura del vídeo R.U.R, donde aparecen unos robots maltratando a un humano"
+            title="Captura de R.U.R"
+          />
           <h1>
             <span style={{ textTransform: "italic" }}>¡Qué horrible</span>{" "}
-            <span style={{ fontWeight: 800 }}>pesadilla</span>! ¡
-            <span>Unos</span> y <span>ceros por todas partes</span>!
+            <span style={{ fontWeight: 800 }}>pesadilla</span>!<br />¡
+            <span>Unos</span> y <span>ceros por todas partes</span>!<br />
             <span>Hasta me pareció ver un 2</span>
           </h1>
+          <h2>
+            Si quieres evitar el{" "}
+            <a href="https://en.wikipedia.org/wiki/AI_takeover">
+              alzamiento de las máquinas
+              <br />
+            </a>{" "}
+            a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
+          </h2>
         </Glitch>
-        <h2>
-          Si quieres evitar el{" "}
-          <a href="https://en.wikipedia.org/wiki/AI_takeover">
-            alzamiento de las máquinas
-          </a>{" "}
-          a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
-        </h2>
       </PageContainer>
     </Layout>
   )
