@@ -1,0 +1,5 @@
+
+User-agent: *
+Disallow: /categoria/
+
+Sitemap: http://www.ardillan.com/sitemap.xml
