@@ -5,10 +5,7 @@ export const useGetAllProjects = () => {
     graphql`
       query {
         allMarkdownRemark(
-          filter: {
-            fileAbsolutePath: { regex: "/projects/" }
-            frontmatter: { showInPostsList: { nin: false } }
-          }
+          filter: { fileAbsolutePath: { regex: "/projects/" } }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           totalCount

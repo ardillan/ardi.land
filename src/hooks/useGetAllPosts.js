@@ -5,10 +5,7 @@ export const useGetAllPosts = () => {
     graphql`
       query {
         allMarkdownRemark(
-          filter: {
-            fileAbsolutePath: { regex: "/posts/" }
-            frontmatter: { showInPostsList: { nin: false } }
-          }
+          filter: { fileAbsolutePath: { regex: "/posts/" } }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           totalCount

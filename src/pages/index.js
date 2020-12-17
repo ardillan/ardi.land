@@ -5,9 +5,6 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
-// import { useGetLastAlbum } from "../hooks/useGetLastAlbum"
-// import { useGetLastVideogame } from "../hooks/useGetLastVideogame"
-// import { useGetAllBestiaryPosts } from "../hooks/useGetAllBestiaryPosts"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
