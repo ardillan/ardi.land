@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
@@ -191,6 +192,33 @@ export default ({ data }) => {
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
+      <Helmet>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta
+          property="og:url"
+          content={`https://www.ardillan.com/${post.fields.slug}`}
+        />
+        <meta
+          property="og:image"
+          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://www.ardillan.com/${post.fields.slug}`}
+        />
+        <meta property="twitter:title" content={post.frontmatter.title} />
+        <meta
+          property="twitter:description"
+          content={post.frontmatter.description}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+        />
+      </Helmet>
       <section>
         <article>
           <ProjectsContainer>
@@ -234,6 +262,7 @@ export const query = graphql`
         description
         category
         featuredImage {
+          publicURL
           childImageSharp {
             fluid(maxWidth: 900, maxHeight: 500, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
