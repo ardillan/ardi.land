@@ -292,7 +292,6 @@ const PostInfo = styled.div`
 `
 
 export default ({ data }) => {
-  console.log(data)
   const post = data.markdownRemark
 
   const gitHubFile = post.fileAbsolutePath.substring(

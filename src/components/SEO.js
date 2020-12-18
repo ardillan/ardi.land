@@ -7,7 +7,6 @@ import metaImage from "../images/general/meta-image-default.png"
 
 const SEO = (data) => {
   const { postDescription, title } = data
-  console.log(postDescription, title)
   return (
     <StaticQuery
       query={graphql`
