@@ -65,7 +65,10 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Ardillan.com | Proyectos" />
+      <SEO
+        title="Ardillan.com | Proyectos"
+        postDescription="Esta página muestra los proyectos en los que he tenido el placer de trabajar, tanto desarrollo como diseño gráfico. "
+      />
       <SectionTitle>
         <div>
           <h1>Proyectos</h1>

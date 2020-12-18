@@ -14,7 +14,10 @@ import {
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Ardillan.com | Sobre mí" />
+      <SEO
+        title="Ardillan.com | Sobre mí"
+        postDescription="En esta página muestro un poco de mi persona."
+      />
       <SectionTitleWithImage>
         <Img
           fluid={data.fileName.childImageSharp.fluid}

@@ -49,7 +49,7 @@ export default () => {
     <Layout>
       <SEO
         title={`Ardillan.com | Espacios`}
-        postDescription="Mis diferentes espacios de trabajo"
+        postDescription="En esta página muestro los diferentes espacios en los que suelo trabajar con mi portátil. "
       />
       <SectionTitle>
         <div>

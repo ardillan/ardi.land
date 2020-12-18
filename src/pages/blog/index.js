@@ -19,7 +19,10 @@ const BlogPosts = styled.section`
 export default () => {
   return (
     <Layout>
-      <SEO title="Ardillan.com | Blog" />
+      <SEO
+        title="Ardillan.com | Blog"
+        postDescription="Este es mi blog. Aquí escribo sobre todo lo que me apasiona como videojuegos, música, tecnología y reflexiones personales."
+      />
       <SectionTitle>
         <div>
           <h1>Blog</h1>
