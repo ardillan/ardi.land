@@ -62,7 +62,7 @@ export default ({ data }) => {
             <Link to="/proyectos">proyectos</Link> actuales, ver{" "}
             <Link to="/como-trabajo">cómo trabajo</Link>, ver los{" "}
             <Link to="/espacios">diferentes espacios</Link> en los que he tenido
-            el placer de decicar horas en frente de mi pantalla, o bien
+            el placer de dedicar horas en frente de mi pantalla, o bien
             contactar conmigo vía{" "}
             <a href="https://www.github.com/ardillan">Twitter</a>.
           </p>
