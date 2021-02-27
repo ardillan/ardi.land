@@ -202,7 +202,7 @@ const Main = createGlobalStyle`
     /* 💅🏻 Heading sizes */
     h1, h2, h3, h4, h5, h6 {
         color: ${(props) => props.theme.colors.fonts.text};
-        font-family: Inter;
+        font-family: "Source Sans Pro";
         font-weight: 400;
         margin:0;
         padding-top: 15px;
@@ -257,7 +257,7 @@ const Main = createGlobalStyle`
         background: ${(props) => props.theme.colors.fonts.caption};
         padding: 10px 10px;
         font-size: 13px;
-        font-family: "Inter";
+        font-family: "Source Sans Pro";
         font-weight: 400;
         margin: 10px auto;
         border-radius: 5px;

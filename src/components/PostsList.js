@@ -81,7 +81,7 @@ const Post = styled.li`
     line-height: 22px;
   }
   p {
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -127,7 +127,7 @@ const Categories = styled.div`
     padding: 10px 15px;
     border-radius: 50px;
     font-size: 13px;
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     display: flex;
     align-items: center;
   }
@@ -145,7 +145,7 @@ const Category = styled.div`
   display: flex;
   span {
     color: ${(props) => props.theme.colors.fonts.anchor};
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-size: 14px;
     margin-right: 5px;
     margin: 0;

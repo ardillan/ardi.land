@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 
 import { LightTheme } from "./styled/Themes"
@@ -20,17 +20,8 @@ const Container = styled.div`
 `
 
 export default ({ props, children }) => {
-  const currentTheme =
-    typeof window !== "undefined"
-      ? !localStorage.getItem("theme")
-        ? LightTheme
-        : JSON.parse(localStorage.getItem("theme"))
-      : LightTheme
-
-  const [theme, setTheme] = useState(currentTheme)
-
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={LightTheme}>
       <Normalize />
       <Fonts />
       <Prism />
@@ -40,7 +31,7 @@ export default ({ props, children }) => {
         <Container>{children}</Container>
       </main>
       <Container>
-        <Footer setTheme={setTheme} theme={theme} />
+        <Footer />
       </Container>
     </ThemeProvider>
   )

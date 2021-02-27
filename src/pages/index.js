@@ -43,7 +43,7 @@ const Articles = styled.section`
 
         h3 {
           grid-area: title;
-          font-family: "Inter";
+          font-family: "Source Sans Pro";
           font-size: 19px;
           font-weight: 400;
           margin: 0;
@@ -57,7 +57,7 @@ const Articles = styled.section`
           line-height: 20px;
           padding-bottom: 15px;
           margin-top: 5px;
-          font-family: "Inter";
+          font-family: "Source Sans Pro";
           font-weight: 200;
         }
       }

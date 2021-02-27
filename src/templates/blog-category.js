@@ -33,7 +33,7 @@ const Post = styled.li`
     line-height: 22px;
   }
   p {
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     margin: 0;
     padding: 0;
     font-size: 14px;

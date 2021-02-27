@@ -145,7 +145,7 @@ const FeaturedImage = styled.div`
 `
 const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   display: flex;
   line-height: 19px;
   font-size: 15px;
@@ -160,7 +160,7 @@ const Description = styled.div`
 `
 const Subtitle = styled.div`
   h2 {
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     font-weight: 200;
     opacity: 0.7;

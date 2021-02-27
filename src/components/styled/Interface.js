@@ -1,5 +1,10 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+  width: 900px;
+  margin: auto;
+`
+
 export const SectionTitle = styled.section`
   display: grid;
   grid-template-columns: 1fr;
@@ -24,7 +29,7 @@ export const SectionTitle = styled.section`
     }
 
     h2 {
-      font-family: "Inter";
+      font-family: "Source Sans Pro";
       font-size: 18px;
       margin-top: 10px;
       padding: 0;
@@ -89,7 +94,7 @@ export const SectionTitleWithImage = styled.section`
 
   h2 {
     grid-area: subtitle;
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     font-weight: 200;
     line-height: 25px;

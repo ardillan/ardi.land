@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { LightTheme, DarkTheme, GameBoyTheme } from "./styled/Themes"
 import { formatDateTime } from "../utils/helpers"
 
 const Footer = styled.footer`
@@ -16,7 +15,7 @@ const Footer = styled.footer`
   small,
   button,
   p {
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     padding: 0;
     margin: 0;
     line-height: 25px;
@@ -75,7 +74,6 @@ const ThemeAndLinks = styled.div`
   a {
     text-transform: uppercase;
     font-size: 12px;
-    font-family: Inter;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -132,22 +130,7 @@ const ThemeSelector = styled.div`
   }
 `
 
-export default (props) => {
-  const setLightTheme = () => {
-    localStorage.setItem("theme", JSON.stringify(LightTheme))
-    props.setTheme(LightTheme)
-  }
-
-  const setDarkTheme = () => {
-    localStorage.setItem("theme", JSON.stringify(DarkTheme))
-    props.setTheme(DarkTheme)
-  }
-
-  const setGameBoyTheme = () => {
-    localStorage.setItem("theme", JSON.stringify(GameBoyTheme))
-    props.setTheme(GameBoyTheme)
-  }
-
+export default () => {
   const [latestCommit, setLatestCommit] = useState(null)
   useEffect(() => {
     fetch("https://api.github.com/repos/ardillan/ardillan.com")
@@ -197,9 +180,8 @@ export default (props) => {
       <ThemeAndLinks>
         <ThemeSelector>
           <p>Tema de color</p>
-          <button onClick={() => setLightTheme()}>Claro</button>
-          <button onClick={() => setDarkTheme()}>Oscuro</button>
-          <button onClick={() => setGameBoyTheme()}>Game Boy</button>
+          <button>Claro</button>
+          <button>Game Boy</button>
         </ThemeSelector>
         <Link to={`/mapa-del-sitio`}>Mapa del sitio</Link>
       </ThemeAndLinks>

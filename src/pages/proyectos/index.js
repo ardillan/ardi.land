@@ -33,7 +33,7 @@ const Projects = styled.div`
   }
 
   p {
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-weight: 200;
     font-size: 15px;
     line-height: 22px;

@@ -6,7 +6,7 @@ import styled from "styled-components"
 import portrait from "../images/general/portrait.png"
 
 const RandomText = styled.div`
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +75,7 @@ const MobileNavigation = styled.div`
   }
   button {
     text-transform: uppercase;
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-weight: 600;
     padding: 5px 10px;
     border: 2px solid ${(props) => props.theme.colors.table.border};
@@ -152,7 +152,7 @@ const MenuListItems = styled.div`
     padding: 0;
     margin: 0;
     align-items: center;
-    font-family: "Inter";
+    font-family: "Source Sans Pro";
     font-size: 16px;
     height: 100%;
     li {
@@ -189,6 +189,15 @@ const MenuListItems = styled.div`
       }
     }
   }
+`
+const TopBar = styled.div`
+  height: 10px;
+  background: ${(props) => props.theme.colors.background.header};
+`
+const TopBarInfo = styled.div`
+  min-height: 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `
 
 const MenuList = () => (
@@ -294,7 +303,7 @@ const randomText = [
   },
 ]
 
-const Header = (props) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const [randomNumber, setRandomNumber] = useState()
@@ -311,6 +320,15 @@ const Header = (props) => {
 
   return (
     <HeaderContainer>
+      <TopBar />
+      <TopBarInfo>
+        <p>I’m just a boy standing in front of a computer</p>
+        <div>
+          <a href="">Mi Twitter</a>
+          <span>~</span>
+          <a href="">Mi Github</a>
+        </div>
+      </TopBarInfo>
       <BannerContainer>
         <Location>
           {({ location }) => {
