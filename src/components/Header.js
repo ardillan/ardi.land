@@ -3,29 +3,74 @@ import { Location } from "@reach/router"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import portrait from "../images/general/portrait.png"
+import { Container } from "../components/styled/Interface"
+
+const TopBar = styled.div`
+  height: 10px;
+  background: ${(props) => props.theme.colors.background.header};
+`
+const TopBarInfo = styled.div`
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70px;
+  p {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+  }
+
+  div {
+    text-align: right;
+    span {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+      font-weight: 800;
+      margin: 0 0.5rem;
+    }
+
+    a {
+      color: ${(props) => props.theme.colors.fonts.anchor};
+      color: initial;
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+`
 
 const RandomText = styled.div`
-  font-family: "Source Sans Pro";
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: ${(props) => props.theme.colors.secondaryColorLight};
+  border-left: 10px solid ${(props) => props.theme.colors.secondaryColor};
+  padding: 1rem 2rem;
+  margin: 0;
 
   h1 {
     font-weight: 800;
     font-size: 40px;
     line-height: 45px;
-    a {
-      text-decoration: none;
-      span {
-        color: ${(props) => props.theme.colors.fonts.anchor};
-      }
+  }
+
+  p {
+    font-weight: 200;
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    span {
+      color: ${(props) => props.theme.colors.fonts.text};
     }
   }
-  small {
-    font-weight: 200;
-    font-size: 20px;
-    padding-top: 10px;
+
+  span {
+    color: ${(props) => props.theme.colors.primaryColor};
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -36,20 +81,17 @@ const RandomText = styled.div`
     }
   }
 `
-const BannerContainer = styled.header`
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
-`
-const HomeBanner = styled.div`
-  grid-column-gap: 20px;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  margin: auto;
-  width: 900px;
 
+const HomeBanner = styled.div`
+  min-height: 445px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: 50px;
+    font-weight: 800;
+  }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     grid-column-gap: 20px;
     display: grid;
@@ -75,7 +117,6 @@ const MobileNavigation = styled.div`
   }
   button {
     text-transform: uppercase;
-    font-family: "Source Sans Pro";
     font-weight: 600;
     padding: 5px 10px;
     border: 2px solid ${(props) => props.theme.colors.table.border};
@@ -96,7 +137,6 @@ const MenuNavigation = styled.div`
 `
 const Navigation = styled.nav`
   margin: auto;
-  width: 900px;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     ul {
@@ -136,28 +176,21 @@ const HeaderContainer = styled.header`
     }
   }
 `
-const PortraitContainer = styled.div`
-  height: 250px;
-  width: 200px;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: none;
-  }
-`
 const MenuListItems = styled.div`
   height: 50px;
   ul {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    align-items: center;
-    font-family: "Source Sans Pro";
-    font-size: 16px;
+    font-size: 20px;
     height: 100%;
+    margin: 0;
+    justify-content: space-between;
     li {
-      margin-right: 35px;
       a {
+        font-family: "Literata";
+        font-weight: 400;
         text-decoration: none;
         color: ${(props) => props.theme.colors.fonts.text};
         &:hover {
@@ -166,9 +199,10 @@ const MenuListItems = styled.div`
       }
       &:hover {
         span:not([role="img"]) {
-          text-decoration: underline;
+          text-decoration: none;
           cursor: pointer;
-          text-decoration-thickness: 1px;
+          text-decoration-thickness: 2px;
+          color: ${(props) => props.theme.colors.fonts.anchor};
         }
       }
     }
@@ -190,88 +224,37 @@ const MenuListItems = styled.div`
     }
   }
 `
-const TopBar = styled.div`
-  height: 10px;
-  background: ${(props) => props.theme.colors.background.header};
-`
-const TopBarInfo = styled.div`
-  min-height: 75px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-`
 
 const MenuList = () => (
   <MenuListItems>
     <ul>
       <li>
         <Link to={`/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            🦕
-          </span>
           <span>Inicio</span>
         </Link>
       </li>
       <li>
         <Link to={`/sobre-mi/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            🚲
-          </span>
           <span>Sobre mí</span>
         </Link>
       </li>
       <li>
         <Link to={`/como-trabajo/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            👨‍💻
-          </span>
           <span>Cómo trabajo</span>
         </Link>
       </li>
       <li>
         <Link to={`/proyectos/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            ⚡
-          </span>
           <span>Mis proyectos</span>
         </Link>
       </li>
       <li>
         <Link to={`/espacios/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            🌵
-          </span>
           <span>Mis espacios</span>
         </Link>
       </li>
       <li>
         <Link to={`/blog/`}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 20, margin: "0 15px 0 0" }}
-          >
-            ✏️
-          </span>
           <span>Blog</span>
         </Link>
       </li>
@@ -321,41 +304,37 @@ const Header = () => {
   return (
     <HeaderContainer>
       <TopBar />
-      <TopBarInfo>
-        <p>I’m just a boy standing in front of a computer</p>
-        <div>
-          <a href="">Mi Twitter</a>
-          <span>~</span>
-          <a href="">Mi Github</a>
-        </div>
-      </TopBarInfo>
-      <BannerContainer>
+      <Container>
+        <TopBarInfo>
+          <p>I’m just a boy standing in front of a computer</p>
+          <div>
+            <a href="">Mi Twitter</a>
+            <span>~</span>
+            <a href="">Mi Github</a>
+          </div>
+        </TopBarInfo>
+        <Navigation>
+          <MenuList />
+        </Navigation>
         <Location>
           {({ location }) => {
             return location.pathname === "/" ? (
               <HomeBanner>
-                <PortraitContainer>
-                  <Link to={`/`}>
-                    <img
-                      src={portrait}
-                      width="200"
-                      alt="Autoretrato de caricatura"
-                    />
-                  </Link>
-                </PortraitContainer>
+                <h1>
+                  ¡Hola! soy Adrián, un diseñador gráfico reconvertido a{` `}
+                  <span>desarrollador web</span>
+                </h1>
                 <RandomText>
-                  <h1>
-                    Bienvenido a mi web,
-                    <br />
-                    siéntate y{`{`}
+                  <p>
+                    Bienvenido a mi web, siéntate y{` `}
+                    <span>{` { `}</span>
                     {typeof randomNumber === "number" && (
                       <a href={randomText[randomNumber].link}>
                         <span>{`${randomText[randomNumber].text}`}</span>
                       </a>
                     )}
-                    {`}`}
-                  </h1>
-                  <small>Soy Adrián, desarrollador web</small>
+                    <span>{` } `}</span>
+                  </p>
                 </RandomText>
               </HomeBanner>
             ) : (
@@ -363,7 +342,7 @@ const Header = () => {
             )
           }}
         </Location>
-      </BannerContainer>
+      </Container>
       <MobileNavigation>
         <Link to={`/`}>Inicio</Link>
         <button onClick={(e) => handleMenu(e)}>
@@ -384,9 +363,6 @@ const Header = () => {
       ) : (
         ""
       )}
-      <Navigation>
-        <MenuList />
-      </Navigation>
     </HeaderContainer>
   )
 }

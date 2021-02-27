@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  width: 900px;
+  width: ${(props) => props.theme.width.main};
   margin: auto;
 `
 
@@ -20,7 +20,6 @@ export const SectionTitle = styled.section`
     margin: auto;
     padding: 30px 0;
     h1 {
-      font-family: "Noto Serif";
       font-size: 45px;
       font-weight: 800;
       margin: 0;
@@ -29,7 +28,6 @@ export const SectionTitle = styled.section`
     }
 
     h2 {
-      font-family: "Source Sans Pro";
       font-size: 18px;
       margin-top: 10px;
       padding: 0;
@@ -82,7 +80,6 @@ export const SectionTitleWithImage = styled.section`
     height: 500px;
   }
   h1 {
-    font-family: "Noto serif";
     font-size: 50px;
     font-weight: 800;
     margin: 0;
@@ -94,7 +91,6 @@ export const SectionTitleWithImage = styled.section`
 
   h2 {
     grid-area: subtitle;
-    font-family: "Source Sans Pro";
     font-size: 18px;
     font-weight: 200;
     line-height: 25px;

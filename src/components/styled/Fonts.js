@@ -38,14 +38,14 @@ const Fonts = createGlobalStyle`
     }
 
     @font-face {
-        font-family: 'Noto Serif';
+        font-family: 'Literata';
         font-style: regular;
         font-weight: 400;
         src: url(${LiterataRegular})
     }
 
     @font-face {
-        font-family: 'Noto Serif';
+        font-family: 'Literata';
         font-style: bold;
         font-weight: 600;
         src: url(${LiterataBold})

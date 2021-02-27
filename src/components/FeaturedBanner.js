@@ -57,14 +57,12 @@ const BannerInfo = styled.div`
   max-width: 400px;
 
   small {
-    font-family: "Source Sans Pro";
     font-size: 15px;
     font-weight: 200;
     margin-bottom: 15px;
     color: ${(props) => props.theme.colors.fonts.text}69;
   }
   h1 {
-    font-family: "Source Sans Pro";
     color: ${(props) => props.theme.colors.fonts.text};
     font-size: 25px;
     font-weight: 400;
@@ -75,7 +73,6 @@ const BannerInfo = styled.div`
 
   h2 {
     color: ${(props) => props.theme.colors.fonts.text};
-    font-family: "Source Sans Pro";
     font-size: 17px;
     font-weight: 200;
   }

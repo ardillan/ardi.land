@@ -15,7 +15,6 @@ const Footer = styled.footer`
   small,
   button,
   p {
-    font-family: "Source Sans Pro";
     padding: 0;
     margin: 0;
     line-height: 25px;

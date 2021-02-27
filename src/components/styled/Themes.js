@@ -3,8 +3,15 @@ const breakPoints = {
   desktop: "980px",
 }
 
+const width = {
+  main: "700px",
+  full: "100vw",
+}
+
 const primaryColor = "#FC4A80"
-const textColor = "#022C3F"
+const secondaryColor = "#FEEB84"
+const secondaryColorLight = "#FFFADE"
+const textColor = "#0a3a50"
 
 export const LightTheme = {
   colors: {
@@ -34,6 +41,9 @@ export const LightTheme = {
     images: {
       blendMode: "none",
     },
+    primaryColor,
+    secondaryColor,
+    secondaryColorLight,
     rainBow: {
       0: "#2abd7d",
       1: "#FF9C43",
@@ -43,6 +53,7 @@ export const LightTheme = {
     },
   },
   breakPoints: breakPoints,
+  width: width,
 }
 
 export const GameBoyTheme = {

@@ -97,7 +97,6 @@ const PostHeader = styled.header`
     "image title"
     "description description";
   h1 {
-    font-family: "Noto serif";
     font-size: 40px;
     font-weight: 400;
     margin: 0;
@@ -158,7 +157,6 @@ const FeaturedImage = styled.div`
 const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
   grid-area: description;
-  font-family: "Source Sans Pro";
   display: flex;
   line-height: 19px;
   font-size: 15px;
@@ -174,7 +172,6 @@ const Description = styled.div`
 const Subtitle = styled.div`
   grid-area: subtitle;
   h2 {
-    font-family: "Source Sans Pro";
     font-size: 18px;
     font-weight: 200;
     opacity: 0.7;
@@ -246,7 +243,6 @@ const Categories = styled.div`
 `
 const Meta = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
-  font-family: "Source Sans Pro";
   font-size: 14px;
   font-weight: 400;
   width: fit-content;
@@ -264,7 +260,6 @@ const Category = styled.span`
     color: initial;
     border-radius: 40px;
     color: white;
-    font-family: "Source Sans Pro";
     font-size: 13px;
     margin-right: 5px;
     padding: 5px 15px;
