@@ -10,28 +10,28 @@ import LiterataBold from "../../fonts/literata/Literata-Bold.ttf"
 
 const Fonts = createGlobalStyle`
     @font-face {
-        font-family: 'Source Sans';
+        font-family: 'Source Sans Pro';
         font-style: normal;
         font-weight: 200;
         src: url(${SourceSansRegular})
     }
 
     @font-face {
-        font-family: 'Source Sans';
+        font-family: 'Source Sans Pro';
         font-style: normal;
         font-weight: 400;
         src: url(${SourceSansSemiBold})
     }
 
     @font-face {
-        font-family: 'Source Sans';
+        font-family: 'Source Sans Pro';
         font-style: bold;
         font-weight: 600;
         src: url(${SourceSansBold})
     }
 
     @font-face {
-        font-family: 'Source Sans';
+        font-family: 'Source Sans Pro';
         font-style: bolder;
         font-weight: 800;
         src: url(${SourceSansBlack})

@@ -3,6 +3,10 @@ import styled from "styled-components"
 export const Container = styled.div`
   width: ${(props) => props.theme.width.main};
   margin: auto;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: auto;
+  }
 `
 
 export const SectionTitle = styled.section`

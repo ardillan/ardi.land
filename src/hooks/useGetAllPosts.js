@@ -21,7 +21,7 @@ export const useGetAllPosts = () => {
                 author
                 featuredImage {
                   childImageSharp {
-                    fixed(width: 150, height: 150, cropFocus: CENTER) {
+                    fixed(width: 100, height: 100, cropFocus: CENTER) {
                       ...GatsbyImageSharpFixed
                     }
                   }

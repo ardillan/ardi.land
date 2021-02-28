@@ -18,6 +18,7 @@ const TopBarInfo = styled.div`
     margin: 0;
     padding: 0;
     font-style: italic;
+    font-weight: 200;
   }
 
   div {
@@ -29,10 +30,9 @@ const TopBarInfo = styled.div`
     }
 
     a {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-      color: initial;
+      color: ${(props) => props.theme.colors.fonts.text};
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 200;
       text-decoration: none;
 
       &:hover {
@@ -48,12 +48,6 @@ const RandomText = styled.div`
   border-left: 10px solid ${(props) => props.theme.colors.secondaryColor};
   padding: 1rem 2rem;
   margin: 0;
-
-  h1 {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 45px;
-  }
 
   p {
     font-weight: 200;
@@ -72,14 +66,6 @@ const RandomText = styled.div`
   span {
     color: ${(props) => props.theme.colors.primaryColor};
   }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    h1 {
-      font-weight: 800;
-      font-size: 25px;
-      line-height: 30px;
-    }
-  }
 `
 
 const HomeBanner = styled.div`
@@ -90,7 +76,11 @@ const HomeBanner = styled.div`
   justify-content: center;
   h1 {
     font-size: 50px;
-    font-weight: 800;
+    font-weight: 600;
+
+    span {
+      color: ${(props) => props.theme.colors.primaryColor};
+    }
   }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     grid-column-gap: 20px;
@@ -264,25 +254,29 @@ const MenuList = () => (
 
 const randomText = [
   {
-    text: "hazte un TachoCao®",
+    text: "el TachoCao",
     link: "http://www.hornosanjose.com/producto/tachocao/tachocao-700gr",
   },
-  { text: "come Nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
+  { text: "los nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
   {
-    text: "escucha post-rock",
+    text: "la música post-rock",
     link: "https://es.wikipedia.org/wiki/Post-rock",
   },
   {
-    text: "sé Manny Calavera",
+    text: "Manny Calavera",
     link: "https://es.wikipedia.org/wiki/Grim_Fandango",
   },
   {
-    text: "treguna mekoides trecorum satis dee",
+    text: "bedknobs and broomsticks",
     link: "https://es.wikipedia.org/wiki/Bedknobs_and_Broomsticks",
   },
   {
-    text: "deja algo de tu felicidad",
-    link: "https://es.wikipedia.org/wiki/Dr%C3%A1cula",
+    text: "Otl Aicher",
+    link: "https://en.wikipedia.org/wiki/Otl_Aicher",
+  },
+  {
+    text: "el JAMStack",
+    link: "https://jamstack.org/what-is-jamstack/",
   },
 ]
 
@@ -326,14 +320,26 @@ const Header = () => {
                 </h1>
                 <RandomText>
                   <p>
-                    Bienvenido a mi web, siéntate y{` `}
+                    Me gustan cosas como {` `}
                     <span>{` { `}</span>
                     {typeof randomNumber === "number" && (
-                      <a href={randomText[randomNumber].link}>
-                        <span>{`${randomText[randomNumber].text}`}</span>
-                      </a>
+                      <>
+                        {randomText
+                          .sort(function (a, b) {
+                            return 0.5 - Math.random()
+                          })
+                          .slice(0, 4)
+                          .map((text, index) => (
+                            <a href={text.link} key={index}>
+                              <span>
+                                {`${text.text}`}
+                                {index + 1 === 4 ? "" : ", "}
+                              </span>
+                            </a>
+                          ))}
+                      </>
                     )}
-                    <span>{` } `}</span>
+                    <span>{` } `}</span> y generar textos aleatorios.
                   </p>
                 </RandomText>
               </HomeBanner>

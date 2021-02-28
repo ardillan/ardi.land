@@ -5,6 +5,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
+import { Container } from "../components/styled/Interface"
+import Arrow from "../images/general/arrow.png"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -12,13 +14,27 @@ import FeaturedBanner from "../components/FeaturedBanner"
 
 const Articles = styled.section`
   h2 {
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 35px;
+    font-weight: 400;
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      background-image: url(${Arrow});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px 22px;
+      content: "";
+      height: 40px;
+      left: -50px;
+      position: absolute;
+      width: 25px;
+    }
   }
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 1fr;
     list-style-type: none;
     padding: 0;
 
@@ -26,36 +42,19 @@ const Articles = styled.section`
       margin: 0;
       padding: 0;
       a {
-        display: grid;
-        padding-right: 30px;
         text-decoration: none;
-        grid-template-areas:
-          "image title"
-          "image description";
-        grid-column-gap: 25px;
-
-        div {
-          grid-area: image;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
 
         h3 {
-          grid-area: title;
-          font-size: 19px;
-          font-weight: 400;
+          font-size: 25px;
+          font-weight: 200;
           margin: 0;
-          padding: 20px 0 0 0;
-          line-height: 20px;
+          padding: 0;
+          color: ${(props) => props.theme.colors.primary};
         }
 
         p {
           grid-area: description;
-          font-size: 14px;
-          line-height: 20px;
-          padding-bottom: 15px;
-          margin-top: 5px;
+          font-size: 18px;
           font-weight: 200;
         }
       }
@@ -70,26 +69,7 @@ const Articles = styled.section`
       grid-template-columns: 1fr;
       li {
         a {
-          display: grid;
-          text-decoration: none;
-          grid-template-areas:
-            "image title"
-            "description description";
-          grid-row-gap: 0;
-          margin-bottom: 20px;
           border: 1px dashed ${(props) => props.theme.colors.table.border};
-          padding: 20px 30px;
-          grid-template-columns: 40px 1fr;
-          grid-column-gap: 15px;
-          align-items: center;
-
-          .gatsby-image-wrapper,
-          picture,
-          img {
-            width: 40px !important;
-            height: 40px !important;
-            border-radius: 50%;
-          }
 
           h3 {
             padding: 0;
@@ -102,14 +82,6 @@ const Articles = styled.section`
         }
       }
     }
-  }
-`
-
-const Container = styled.div`
-  width: 900px;
-  margin: auto;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
   }
 `
 
@@ -129,21 +101,13 @@ const Home = ({ data }) => {
           <FeaturedBanner />
         </section>
         <Articles>
-          <h2>Últimas entradas escritas</h2>
+          <h2>Suelo escribir de todo un poco</h2>
+
           <ul>
             {posts.slice(0, 4).map((post) => {
               return (
                 <li key={post.node.frontmatter.title}>
                   <Link to={post.node.fields.slug}>
-                    <Img
-                      fixed={
-                        post.node.frontmatter.featuredImage.childImageSharp
-                          .fixed
-                      }
-                      fadeIn={true}
-                      alt={post.node.frontmatter.title}
-                      title={post.node.frontmatter.title}
-                    />
                     <h3>{post.node.frontmatter.title}</h3>
                     <p>{post.node.frontmatter.description}</p>
                   </Link>
