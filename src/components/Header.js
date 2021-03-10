@@ -19,6 +19,7 @@ const TopBarInfo = styled.div`
     padding: 0;
     font-style: italic;
     font-weight: 200;
+    font-size: 18px;
   }
 
   div {
@@ -50,6 +51,7 @@ const RandomText = styled.div`
   margin: 0;
 
   p {
+    line-height: 23px;
     font-weight: 200;
     font-size: 21px;
     padding: 0;

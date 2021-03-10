@@ -56,6 +56,7 @@ const Articles = styled.section`
           grid-area: description;
           font-size: 18px;
           font-weight: 200;
+          line-height: 29px;
         }
       }
     }

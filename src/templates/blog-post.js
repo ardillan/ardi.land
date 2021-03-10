@@ -7,30 +7,12 @@ import Helmet from "react-helmet"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
+import { Container } from "../components/styled/Interface"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 import { BackArrow } from "../images/general/icons"
 
 import { formatDate, slugify } from "../utils/helpers"
 
-const PostContainer = styled.div`
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
-  margin-bottom: 40px;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: 600px;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-`
 const PostContent = styled.div`
   width: 900px;
   margin: auto;
@@ -44,6 +26,7 @@ const PostContent = styled.div`
   h5,
   h6 {
     width: 600px;
+    font-family: "Literata";
   }
 
   img {
@@ -80,14 +63,7 @@ const PostContent = styled.div`
     }
   }
 `
-const PostHeaderContainer = styled.div`
-  width: 900px;
-  margin: auto;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-  }
-`
 const PostHeader = styled.header`
   display: grid;
   grid-column-gap: 35px;
@@ -202,39 +178,7 @@ const EditPost = styled.a`
     margin: 0;
   }
 `
-const BackArrowContainer = styled.div`
-  position: absolute;
-  padding: 17px;
-  top: 170px;
-  margin-left: -85px;
-  border-radius: 50%;
-  transform: rotateY(180deg);
-  fill: ${(props) => props.theme.colors.fonts.text};
-  display: flex;
-  &:hover {
-    background: ${(props) => props.theme.colors.fonts.anchorBackground};
-    animation: moveBackArrow 0.5s infinite;
-  }
-  img {
-    width: 25px;
-    position: absolute;
-    left: 17px;
-    top: 20px;
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    display: none;
-  }
 
-  @keyframes moveBackArrow {
-    0% {
-      transform: rotateY(180deg) scale(1.1);
-      filter: saturation(0.2);
-    }
-    100% {
-      transform: rotateY(180deg) scale(1);
-    }
-  }
-`
 const Categories = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     margin: 0 auto;
@@ -334,58 +278,46 @@ export default ({ data }) => {
       </Helmet>
       <section>
         <article>
-          <PostContainer>
-            <Link to={`../`}>
-              <BackArrowContainer>
-                <BackArrow />
-              </BackArrowContainer>
-            </Link>
-
-            <PostHeaderContainer>
-              <PostHeader>
-                <FeaturedImage>
-                  <Img fluid={featuredImage} />
-                </FeaturedImage>
-                <PostHeaderTitle>
-                  <h1>{post.frontmatter.title}</h1>
-                  <Subtitle>
-                    <h2>{post.frontmatter.subtitle}</h2>
-                  </Subtitle>
-                  <Description>{post.frontmatter.description}</Description>
-                  <PostInfo>
-                    <Meta>
-                      <time>
-                        Escrito el {formatDate(post.frontmatter.date)}
-                      </time>{" "}
-                      •{" "}
-                      <EditPost
-                        target="_blank"
-                        rel="noopener nofollow"
-                        href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
-                      >
-                        Editar entrada
-                      </EditPost>
-                    </Meta>
-                    <Categories>
-                      {post.frontmatter.category ? (
-                        post.frontmatter.category.map((cat) => (
-                          <Category key={cat}>
-                            <Link
-                              to={`/categoria/${slugify(cat).toLowerCase()}`}
-                            >
-                              {cat}
-                            </Link>
-                          </Category>
-                        ))
-                      ) : (
-                        <span>Sin categoría</span>
-                      )}
-                    </Categories>
-                  </PostInfo>
-                </PostHeaderTitle>
-              </PostHeader>
-            </PostHeaderContainer>
-          </PostContainer>
+          <Container>
+            <PostHeader>
+              <FeaturedImage>
+                <Img fluid={featuredImage} />
+              </FeaturedImage>
+              <PostHeaderTitle>
+                <h1>{post.frontmatter.title}</h1>
+                <Subtitle>
+                  <h2>{post.frontmatter.subtitle}</h2>
+                </Subtitle>
+                <Description>{post.frontmatter.description}</Description>
+                <PostInfo>
+                  <Meta>
+                    <time>Escrito el {formatDate(post.frontmatter.date)}</time>{" "}
+                    •{" "}
+                    <EditPost
+                      target="_blank"
+                      rel="noopener nofollow"
+                      href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
+                    >
+                      Editar entrada
+                    </EditPost>
+                  </Meta>
+                  <Categories>
+                    {post.frontmatter.category ? (
+                      post.frontmatter.category.map((cat) => (
+                        <Category key={cat}>
+                          <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
+                            {cat}
+                          </Link>
+                        </Category>
+                      ))
+                    ) : (
+                      <span>Sin categoría</span>
+                    )}
+                  </Categories>
+                </PostInfo>
+              </PostHeaderTitle>
+            </PostHeader>
+          </Container>
 
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
