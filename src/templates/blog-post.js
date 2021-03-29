@@ -16,7 +16,6 @@ import { formatDate, slugify } from "../utils/helpers"
 const PostContent = styled.div`
   width: 900px;
   margin: auto;
-  p,
   ol,
   ul,
   h1,
@@ -25,8 +24,19 @@ const PostContent = styled.div`
   h4,
   h5,
   h6 {
-    width: 600px;
+    width: ${(props) => props.theme.width.main};
     font-family: "Literata";
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    width: ${(props) => props.theme.width.main};
+    margin: auto;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 36px;
   }
 
   img {
@@ -67,10 +77,10 @@ const PostContent = styled.div`
 const PostHeader = styled.header`
   display: grid;
   grid-column-gap: 35px;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 1fr 150px;
   padding: 30px 0;
   grid-template-areas:
-    "image title"
+    "title image"
     "description description";
   h1 {
     font-size: 40px;
@@ -107,8 +117,14 @@ const PostHeaderTitle = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 30px;
+
     h1 {
       font-size: 30px;
     }
@@ -117,7 +133,7 @@ const PostHeaderTitle = styled.div`
 const FeaturedImage = styled.div`
   grid-area: image;
   img {
-    border-radius: 50%;
+    border-radius: 5px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -134,9 +150,9 @@ const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
   grid-area: description;
   display: flex;
-  line-height: 19px;
-  font-size: 15px;
-  margin: 10px 0 20px 0;
+  line-height: 30px;
+  font-size: 25px;
+  margin-bottom: 20px;
   font-weight: 200;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -148,10 +164,11 @@ const Description = styled.div`
 const Subtitle = styled.div`
   grid-area: subtitle;
   h2 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 200;
     opacity: 0.7;
     padding: 10px 0;
+    margin-bottom: 10px;
     width: fit-content;
   }
 
@@ -187,9 +204,9 @@ const Categories = styled.div`
 `
 const Meta = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
-  font-size: 14px;
-  font-weight: 400;
   width: fit-content;
+  font-size: 16px;
+  font-weight: 200;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     width: auto;
@@ -198,20 +215,22 @@ const Meta = styled.div`
   }
 `
 const Category = styled.span`
+  background: ${(props) => props.theme.colors.secondaryColorLight};
+  border-radius: 40px;
+  color: ${(props) => props.theme.colors.textColor};
+  font-size: 18px;
+  font-weight: 200;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  display: block;
+
   a {
-    background: ${(props) => props.theme.colors.fonts.anchor};
-    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
-    color: initial;
-    border-radius: 40px;
-    color: white;
-    font-size: 13px;
-    margin-right: 5px;
-    padding: 5px 15px;
     text-decoration: none;
-    &:hover {
-      background: initial;
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
+  }
+
+  &:hover {
+    background: ${(props) => props.theme.colors.secondaryColor};
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -280,15 +299,27 @@ export default ({ data }) => {
         <article>
           <Container>
             <PostHeader>
-              <FeaturedImage>
-                <Img fluid={featuredImage} />
-              </FeaturedImage>
               <PostHeaderTitle>
                 <h1>{post.frontmatter.title}</h1>
-                <Subtitle>
+                {/* <Subtitle>
                   <h2>{post.frontmatter.subtitle}</h2>
-                </Subtitle>
+                </Subtitle> */}
+
                 <Description>{post.frontmatter.description}</Description>
+
+                <Categories>
+                  {post.frontmatter.category ? (
+                    post.frontmatter.category.map((cat) => (
+                      <Category key={cat}>
+                        <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
+                          {cat}
+                        </Link>
+                      </Category>
+                    ))
+                  ) : (
+                    <span>Sin categoría</span>
+                  )}
+                </Categories>
                 <PostInfo>
                   <Meta>
                     <time>Escrito el {formatDate(post.frontmatter.date)}</time>{" "}
@@ -301,21 +332,11 @@ export default ({ data }) => {
                       Editar entrada
                     </EditPost>
                   </Meta>
-                  <Categories>
-                    {post.frontmatter.category ? (
-                      post.frontmatter.category.map((cat) => (
-                        <Category key={cat}>
-                          <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
-                            {cat}
-                          </Link>
-                        </Category>
-                      ))
-                    ) : (
-                      <span>Sin categoría</span>
-                    )}
-                  </Categories>
                 </PostInfo>
               </PostHeaderTitle>
+              <FeaturedImage>
+                <Img fluid={featuredImage} />
+              </FeaturedImage>
             </PostHeader>
           </Container>
 

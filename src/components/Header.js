@@ -51,11 +51,11 @@ const RandomText = styled.div`
   margin: 0;
 
   p {
-    line-height: 23px;
-    font-weight: 200;
     font-size: 21px;
-    padding: 0;
+    font-weight: 200;
+    line-height: 30px;
     margin: 0;
+    padding: 0;
   }
 
   a {
