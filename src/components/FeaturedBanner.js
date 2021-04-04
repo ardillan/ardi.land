@@ -13,6 +13,7 @@ const FeaturedBannerContainer = styled.div`
     margin-top: 45px;
     margin-bottom: 45px;
     text-decoration: none;
+    background: ${(props) => props.theme.colors.secondaryColorLight};
     .gatsby-image-wrapper,
     img,
     figure,
@@ -22,8 +23,7 @@ const FeaturedBannerContainer = styled.div`
     }
 
     &:hover {
-      background: transparent;
-      opacity: 0.8;
+      background: ${(props) => props.theme.colors.secondaryColor};
     }
   }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -31,7 +31,7 @@ const FeaturedBannerContainer = styled.div`
       margin: 0 30px;
       background-size: cover;
       grid-template-columns: 1fr;
-      border: 2px solid black;
+      border: 2px solid ${(props) => props.theme.colors.secondaryColor};
       padding: 0;
 
       .gatsby-image-wrapper,

@@ -41,6 +41,10 @@ const TopBarInfo = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    display: none;
+  }
 `
 
 const RandomText = styled.div`
@@ -68,6 +72,10 @@ const RandomText = styled.div`
   span {
     color: ${(props) => props.theme.colors.primaryColor};
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: auto;
+  }
 `
 
 const HomeBanner = styled.div`
@@ -85,6 +93,9 @@ const HomeBanner = styled.div`
     }
   }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    h1 {
+      font-size: 30px;
+    }
     grid-column-gap: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -111,7 +122,7 @@ const MobileNavigation = styled.div`
     text-transform: uppercase;
     font-weight: 600;
     padding: 5px 10px;
-    border: 2px solid ${(props) => props.theme.colors.table.border};
+    border: 1px solid ${(props) => props.theme.colors.textColor};
     color: ${(props) => props.theme.colors.fonts.text};
     background: transparent;
   }
@@ -207,7 +218,9 @@ const MenuListItems = styled.div`
       align-items: flex-start;
       li {
         a {
-          font-size: 13px;
+          font-family: "Source Sans Pro";
+          font-size: 18px;
+          font-weight: 300;
           margin: 0;
           padding: 5px 0px;
           text-transform: uppercase;
@@ -304,14 +317,32 @@ const Header = () => {
         <TopBarInfo>
           <p>I’m just a boy standing in front of a computer</p>
           <div>
-            <a href="">Mi Twitter</a>
+            <a href="https://twitter.com/ardillan_">Mi Twitter</a>
             <span>~</span>
-            <a href="">Mi Github</a>
+            <a href="https://github.com/ardillan">Mi Github</a>
           </div>
         </TopBarInfo>
         <Navigation>
           <MenuList />
         </Navigation>
+        <MobileNavigation>
+          <Link to={`/`}>Inicio</Link>
+          <button onClick={(e) => handleMenu(e)}>
+            <span
+              role="img"
+              aria-label="Icono de un dinosaurio"
+              style={{ fontSize: 18, marginRight: "10px" }}
+            >
+              🍔
+            </span>
+            <span>Menú</span>
+          </button>
+        </MobileNavigation>
+        {isMenuOpen === true && (
+          <MenuNavigation>
+            <MenuList />
+          </MenuNavigation>
+        )}
         <Location>
           {({ location }) => {
             return location.pathname === "/" ? (
@@ -351,26 +382,6 @@ const Header = () => {
           }}
         </Location>
       </Container>
-      <MobileNavigation>
-        <Link to={`/`}>Inicio</Link>
-        <button onClick={(e) => handleMenu(e)}>
-          <span
-            role="img"
-            aria-label="Icono de un dinosaurio"
-            style={{ fontSize: 18, marginRight: "10px" }}
-          >
-            🍔
-          </span>
-          <span>Menú</span>
-        </button>
-      </MobileNavigation>
-      {isMenuOpen ? (
-        <MenuNavigation>
-          <MenuList />
-        </MenuNavigation>
-      ) : (
-        ""
-      )}
     </HeaderContainer>
   )
 }

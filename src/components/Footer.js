@@ -8,31 +8,31 @@ const Footer = styled.footer`
   display: grid;
   grid-template-columns: 70% 1fr;
   padding: 30px;
-  border: 1px solid ${(props) => props.theme.colors.table.border};
+  background: ${(props) => props.theme.colors.primaryColor};
   margin: 120px auto;
   width: 900px;
 
   small,
   button,
   p {
+    color: white;
     padding: 0;
     margin: 0;
     line-height: 25px;
     padding-bottom: 15px;
   }
   a {
-    color: ${(props) => props.theme.colors.fonts.text};
+    color: white;
     text-decoration: underline;
     background: none;
-
     &:hover {
-      color: ${(props) => props.theme.colors.fonts.anchor};
+      color: ${(props) => props.theme.colors.secondaryColor};
     }
   }
 
   small {
-    color: ${(props) => props.theme.colors.fonts.text};
-    opacity: 0.7;
+    font-size: 13px;
+    font-weight: 300;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -49,7 +49,6 @@ const Footer = styled.footer`
     width: auto;
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    background: ${(props) => props.theme.colors.fonts.text}08;
     padding: 20px;
     margin: 30px;
   }
@@ -63,7 +62,8 @@ const ThemeAndLinks = styled.div`
 
   button {
     &:hover {
-      color: ${(props) => props.theme.colors.fonts.anchor};
+      color: white;
+      text-decoration: underline;
     }
     &:focus {
       outline: none;
@@ -86,8 +86,11 @@ const Social = styled.p`
   font-size: 16px;
 
   a:nth-child(1) {
-    color: #1da1f2;
+    background: #1da1f2;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
 
     &:hover {
       text-decoration: underline;
@@ -95,8 +98,12 @@ const Social = styled.p`
   }
 
   a:nth-child(2) {
-    color: #ff0068;
+    background: #25292d;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+
     &:hover {
       text-decoration: underline;
     }
@@ -107,12 +114,13 @@ const ThemeSelector = styled.div`
   p {
     margin: 0;
     padding: 0;
+    color: white;
   }
   button {
     border: none;
     cursor: pointer;
     font-size: 14px;
-    color: ${(props) => props.theme.colors.fonts.text};
+    color: white;
     background: none;
     margin: 0;
     padding: 0;

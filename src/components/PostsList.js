@@ -76,8 +76,6 @@ const Post = styled.li`
   h2  {
     padding: 0;
     margin: 0;
-    font-size: 23px;
-    line-height: 22px;
   }
   p {
     margin: 0;
@@ -91,7 +89,6 @@ const Post = styled.li`
       background: ${(props) => props.theme.colors.fonts.anchorBackground};
       padding: 20px;
       margin: -20px;
-      border-radius: 10px;
     }
 
     h2,
@@ -183,6 +180,7 @@ export default (props) => {
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
     )
+
     setSearchResults(results)
   }, [searchTerm])
 
@@ -198,7 +196,7 @@ export default (props) => {
       </SearchContainer>
       <Categories>
         {categories.map((cat) => (
-          <Link ket={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
+          <Link key={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
             {cat}
           </Link>
         ))}

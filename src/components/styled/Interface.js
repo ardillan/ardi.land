@@ -40,6 +40,7 @@ export const SectionTitle = styled.section`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     margin: 0;
+    width: auto;
     div {
       width: auto;
       padding: 30px;
@@ -115,12 +116,6 @@ export const PageContainer = styled.div`
   margin: auto;
   font-family: "Literata";
   width: ${(props) => props.theme.width.main};
-
-  p {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 38px;
-  }
 
   div {
     max-width: ${(props) => props.theme.width.main};

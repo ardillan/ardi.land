@@ -9,7 +9,6 @@ import SEO from "../components/SEO"
 
 import { Container } from "../components/styled/Interface"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
-import { BackArrow } from "../images/general/icons"
 
 import { formatDate, slugify } from "../utils/helpers"
 
@@ -33,10 +32,6 @@ const PostContent = styled.div`
   p {
     width: ${(props) => props.theme.width.main};
     margin: auto;
-    font-family: "Source Sans Pro";
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 36px;
   }
 
   img {
@@ -76,8 +71,7 @@ const PostContent = styled.div`
 
 const PostHeader = styled.header`
   display: grid;
-  grid-column-gap: 35px;
-  grid-template-columns: 1fr 150px;
+  grid-template-columns: 1fr;
   padding: 30px 0;
   grid-template-areas:
     "title image"
@@ -132,18 +126,11 @@ const PostHeaderTitle = styled.div`
 `
 const FeaturedImage = styled.div`
   grid-area: image;
-  img {
-    border-radius: 5px;
-  }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     height: auto;
     object-fit: cover;
-    width: 100px;
     padding: 0 30px;
-    img {
-      border-radius: 50%;
-    }
   }
 `
 const Description = styled.div`
@@ -197,6 +184,7 @@ const EditPost = styled.a`
 `
 
 const Categories = styled.div`
+  display: flex;
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     margin: 0 auto;
     width: 100%;
@@ -298,15 +286,16 @@ export default ({ data }) => {
       <section>
         <article>
           <Container>
+            <FeaturedImage>
+              <Img fluid={featuredImage} />
+            </FeaturedImage>
             <PostHeader>
               <PostHeaderTitle>
                 <h1>{post.frontmatter.title}</h1>
-                {/* <Subtitle>
+                <Subtitle>
                   <h2>{post.frontmatter.subtitle}</h2>
-                </Subtitle> */}
-
+                </Subtitle>
                 <Description>{post.frontmatter.description}</Description>
-
                 <Categories>
                   {post.frontmatter.category ? (
                     post.frontmatter.category.map((cat) => (
@@ -334,9 +323,6 @@ export default ({ data }) => {
                   </Meta>
                 </PostInfo>
               </PostHeaderTitle>
-              <FeaturedImage>
-                <Img fluid={featuredImage} />
-              </FeaturedImage>
             </PostHeader>
           </Container>
 
@@ -366,7 +352,7 @@ export const query = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+            fluid(maxWidth: 600, maxHeight: 300, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

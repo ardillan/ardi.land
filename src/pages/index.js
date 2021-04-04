@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
@@ -27,7 +26,7 @@ const Articles = styled.section`
       background-size: 25px 22px;
       content: "";
       height: 40px;
-      left: -50px;
+      left: -30px;
       position: absolute;
       width: 25px;
     }
@@ -70,8 +69,6 @@ const Articles = styled.section`
       grid-template-columns: 1fr;
       li {
         a {
-          border: 1px dashed ${(props) => props.theme.colors.table.border};
-
           h3 {
             padding: 0;
           }

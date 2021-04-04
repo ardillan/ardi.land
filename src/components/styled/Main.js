@@ -14,12 +14,13 @@ const Main = createGlobalStyle`
 
     /*  💅🏻 Paragraphs */
     p {
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 38px;
         color: ${(props) => props.theme.colors.fonts.text};
         margin-top: 5px;
         padding-bottom: 15px;
+        font-weight: 300;
+        font-family: "Source Sans Pro";
+        font-size: 1.2rem;
+        line-height: 28px;
     }
 
     .gallery-post__1-columns {

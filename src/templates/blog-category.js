@@ -113,7 +113,7 @@ export default ({ pageContext, data }) => {
 
             return (
               <Post key={post.node.id}>
-                <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
+                <Link to={`/${post.node.fields.slug}`}>
                   <article>
                     <header>
                       <Img

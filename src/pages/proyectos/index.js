@@ -19,7 +19,6 @@ const Projects = styled.div`
     text-decoration: none;
 
     .gatsby-image-wrapper {
-      border-radius: 10px;
       transition: all 0.3s ease;
     }
 
