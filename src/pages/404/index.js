@@ -11,10 +11,13 @@ const Glitch = styled.div`
   margin: auto;
   text-align: center;
   h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    line-height: 30px;
+    font-family: "Source Sans Pro";
+    font-weight: 200;
   }
 `
 
@@ -27,12 +30,6 @@ export default ({ data }) => {
       />
       <PageContainer>
         <Glitch>
-          <Img
-            fluid={data.fileName.childImageSharp.fluid}
-            fadeIn={true}
-            alt="Captura del vídeo R.U.R, donde aparecen unos robots maltratando a un humano"
-            title="Captura de R.U.R"
-          />
           <h1>
             <span style={{ textTransform: "italic" }}>¡Qué horrible</span>{" "}
             <span style={{ fontWeight: 800 }}>pesadilla</span>!<br />¡
