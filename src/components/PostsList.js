@@ -74,14 +74,10 @@ const Post = styled.li`
     }
   }
   h2  {
-    font-family: "Noto serif";
     padding: 0;
     margin: 0;
-    font-size: 23px;
-    line-height: 22px;
   }
   p {
-    font-family: "Inter";
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -93,7 +89,6 @@ const Post = styled.li`
       background: ${(props) => props.theme.colors.fonts.anchorBackground};
       padding: 20px;
       margin: -20px;
-      border-radius: 10px;
     }
 
     h2,
@@ -127,7 +122,6 @@ const Categories = styled.div`
     padding: 10px 15px;
     border-radius: 50px;
     font-size: 13px;
-    font-family: "Inter";
     display: flex;
     align-items: center;
   }
@@ -145,7 +139,6 @@ const Category = styled.div`
   display: flex;
   span {
     color: ${(props) => props.theme.colors.fonts.anchor};
-    font-family: "Inter";
     font-size: 14px;
     margin-right: 5px;
     margin: 0;
@@ -187,6 +180,7 @@ export default (props) => {
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
     )
+
     setSearchResults(results)
   }, [searchTerm])
 
@@ -202,7 +196,7 @@ export default (props) => {
       </SearchContainer>
       <Categories>
         {categories.map((cat) => (
-          <Link ket={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
+          <Link key={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
             {cat}
           </Link>
         ))}

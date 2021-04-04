@@ -12,7 +12,6 @@ const ContentContainer = styled.div`
     list-style-type: decimal;
     li {
       a {
-        font-family: "Inter";
         font-size: 17px;
         text-transform: capitalize;
       }

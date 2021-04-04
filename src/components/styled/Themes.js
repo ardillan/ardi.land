@@ -3,16 +3,26 @@ const breakPoints = {
   desktop: "980px",
 }
 
+const width = {
+  main: "700px",
+  full: "100vw",
+}
+
+const primaryColor = "#FC4A80"
+const secondaryColor = "#FEEB84"
+const secondaryColorLight = "#FFFADE"
+const textColor = "#0a3a50"
+
 export const LightTheme = {
   colors: {
     background: {
       main: "#FFFFFF",
-      header: "#755cfd",
+      header: primaryColor,
       line: "#ffe600",
     },
     fonts: {
-      text: "#241a58",
-      anchor: "#8a75f5",
+      text: textColor,
+      anchor: primaryColor,
       header: "white",
       anchorBackground: "#f3f1ff",
       caption: "#f5f5fb",
@@ -31,6 +41,9 @@ export const LightTheme = {
     images: {
       blendMode: "none",
     },
+    primaryColor,
+    secondaryColor,
+    secondaryColorLight,
     rainBow: {
       0: "#2abd7d",
       1: "#FF9C43",
@@ -40,45 +53,7 @@ export const LightTheme = {
     },
   },
   breakPoints: breakPoints,
-}
-
-export const DarkTheme = {
-  colors: {
-    background: {
-      main: "#0c0f1d",
-      header: "#141a33",
-      line: "#4597ff",
-    },
-    fonts: {
-      text: "#ffffff",
-      anchor: "#3dd1ff",
-      header: "white",
-      anchorBackground: "#191e2f",
-      caption: "#1a203c",
-    },
-    table: {
-      border: "#2b3471",
-    },
-    gradients: {
-      top: "#0d0f1e",
-      bottom: "#1b1e33",
-    },
-    cursor: {
-      selection: "#0d0f1e",
-      color: "#5c6392",
-    },
-    images: {
-      blendMode: "none",
-    },
-    rainBow: {
-      0: "#3eace6",
-      1: "#17ed86",
-      2: "#2dcac6",
-      3: "#ff6ea2",
-      4: "#ffde32",
-    },
-  },
-  breakPoints: breakPoints,
+  width: width,
 }
 
 export const GameBoyTheme = {

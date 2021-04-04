@@ -90,7 +90,6 @@ const PostHeader = styled.header`
   padding: 30px 0;
 
   h1 {
-    font-family: "Noto serif";
     font-size: 40px;
     font-weight: 400;
     margin: 0;
@@ -145,7 +144,6 @@ const FeaturedImage = styled.div`
 `
 const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
-  font-family: "Inter";
   display: flex;
   line-height: 19px;
   font-size: 15px;
@@ -160,7 +158,6 @@ const Description = styled.div`
 `
 const Subtitle = styled.div`
   h2 {
-    font-family: "Inter";
     font-size: 18px;
     font-weight: 200;
     opacity: 0.7;

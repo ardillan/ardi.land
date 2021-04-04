@@ -13,6 +13,7 @@ const FeaturedBannerContainer = styled.div`
     margin-top: 45px;
     margin-bottom: 45px;
     text-decoration: none;
+    background: ${(props) => props.theme.colors.secondaryColorLight};
     .gatsby-image-wrapper,
     img,
     figure,
@@ -22,8 +23,7 @@ const FeaturedBannerContainer = styled.div`
     }
 
     &:hover {
-      background: transparent;
-      opacity: 0.8;
+      background: ${(props) => props.theme.colors.secondaryColor};
     }
   }
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -31,7 +31,7 @@ const FeaturedBannerContainer = styled.div`
       margin: 0 30px;
       background-size: cover;
       grid-template-columns: 1fr;
-      border: 2px solid black;
+      border: 2px solid ${(props) => props.theme.colors.secondaryColor};
       padding: 0;
 
       .gatsby-image-wrapper,
@@ -57,14 +57,12 @@ const BannerInfo = styled.div`
   max-width: 400px;
 
   small {
-    font-family: "Inter";
     font-size: 15px;
     font-weight: 200;
     margin-bottom: 15px;
     color: ${(props) => props.theme.colors.fonts.text}69;
   }
   h1 {
-    font-family: "Inter";
     color: ${(props) => props.theme.colors.fonts.text};
     font-size: 25px;
     font-weight: 400;
@@ -75,7 +73,6 @@ const BannerInfo = styled.div`
 
   h2 {
     color: ${(props) => props.theme.colors.fonts.text};
-    font-family: "Inter";
     font-size: 17px;
     font-weight: 200;
   }
@@ -103,8 +100,6 @@ const BannerInfo = styled.div`
 
 const TellMeMoreButton = styled.div`
   margin-top: 30px;
-
-  font-family: Inter;
   font-size: 15px;
   color: ${(props) => props.theme.colors.fonts.anchor};
   font-weight: 400;
@@ -119,7 +114,6 @@ const TellMeMoreButton = styled.div`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     a {
       padding: 0;
-      font-family: Inter;
       text-transform: uppercase;
       font-size: 12px;
       color: ${(props) => props.theme.colors.fonts.anchor};

@@ -2,61 +2,26 @@ import { createGlobalStyle } from "styled-components"
 
 const Main = createGlobalStyle`
     /* 💅🏻 Root */
-    body {
-        font-family: "Noto Serif";
-        background-color: ${(props) => props.theme.colors.background.main};
+    :root {
+      font-family: "Source Sans Pro";
+      background-color: ${(props) => props.theme.colors.background.main};
     }
 
     ::selection {
-        background: ${(props) => props.theme.colors.cursor.selection};
-        color: ${(props) => props.theme.colors.cursor.color};
+      background: ${(props) => props.theme.colors.secondaryColorLight};
+      color: ${(props) => props.theme.colors.cursor.secondaryColor};
     } 
 
     /*  💅🏻 Paragraphs */
     p {
         color: ${(props) => props.theme.colors.fonts.text};
-        font-size: 18px;
-        line-height: 30px;
-        padding-bottom: 15px;
         margin-top: 5px;
+        padding-bottom: 15px;
+        font-weight: 300;
+        font-family: "Source Sans Pro";
+        font-size: 1.2rem;
+        line-height: 28px;
     }
-
-    blockquote {
-        border-left: 5px solid ${(props) =>
-          props.theme.colors.cursor.selection};
-        padding: 20px 30px;
-        margin: 0;
-        background: #8080800f;
-        max-width: 600px;
-        p {
-            font-size: 15px;
-            line-height: 25px;
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-    }
-
-    /*  💅🏻 Code */
-    pre {
-        margin: 30px auto;
-    }
-
-    small {
-        color: ${(props) => props.theme.colors.fonts.text};
-    }
-
-    table > a {
-        color: ${(props) => props.theme.colors.fonts.text};
-    }
-
-
-    /*  💅🏻 Images */
-    img, .gatsby-image-wrapper, picture, figure {
-
-        mix-blend-mode: ${(props) => props.theme.colors.images.blendMode};;
-    }
-
 
     .gallery-post__1-columns {
       display: grid;
@@ -202,7 +167,6 @@ const Main = createGlobalStyle`
     /* 💅🏻 Heading sizes */
     h1, h2, h3, h4, h5, h6 {
         color: ${(props) => props.theme.colors.fonts.text};
-        font-family: Inter;
         font-weight: 400;
         margin:0;
         padding-top: 15px;
@@ -238,10 +202,9 @@ const Main = createGlobalStyle`
         color: ${(props) => props.theme.colors.fonts.text};
         text-decoration: underline;
         transition: all 0.3s;
-        text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};;
+        text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};
         &:hover{
-            text-decoration-color: ${(props) => props.theme.colors.fonts.text};
-            background: ${(props) => props.theme.colors.fonts.anchorBackground};
+          text-decoration-color: ${(props) => props.theme.colors.fonts.text};
         }
     }
 
@@ -257,7 +220,6 @@ const Main = createGlobalStyle`
         background: ${(props) => props.theme.colors.fonts.caption};
         padding: 10px 10px;
         font-size: 13px;
-        font-family: "Inter";
         font-weight: 400;
         margin: 10px auto;
         border-radius: 5px;

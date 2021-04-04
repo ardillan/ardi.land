@@ -7,34 +7,14 @@ import Helmet from "react-helmet"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
+import { Container } from "../components/styled/Interface"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
-import { BackArrow } from "../images/general/icons"
 
 import { formatDate, slugify } from "../utils/helpers"
 
-const PostContainer = styled.div`
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
-  margin-bottom: 40px;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: 600px;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-`
 const PostContent = styled.div`
   width: 900px;
   margin: auto;
-  p,
   ol,
   ul,
   h1,
@@ -43,7 +23,15 @@ const PostContent = styled.div`
   h4,
   h5,
   h6 {
-    width: 600px;
+    width: ${(props) => props.theme.width.main};
+    font-family: "Literata";
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    width: ${(props) => props.theme.width.main};
+    margin: auto;
   }
 
   img {
@@ -80,24 +68,15 @@ const PostContent = styled.div`
     }
   }
 `
-const PostHeaderContainer = styled.div`
-  width: 900px;
-  margin: auto;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-  }
-`
 const PostHeader = styled.header`
   display: grid;
-  grid-column-gap: 35px;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 1fr;
   padding: 30px 0;
   grid-template-areas:
-    "image title"
+    "title image"
     "description description";
   h1 {
-    font-family: "Noto serif";
     font-size: 40px;
     font-weight: 400;
     margin: 0;
@@ -132,8 +111,14 @@ const PostHeaderTitle = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     padding: 30px;
+
     h1 {
       font-size: 30px;
     }
@@ -141,28 +126,20 @@ const PostHeaderTitle = styled.div`
 `
 const FeaturedImage = styled.div`
   grid-area: image;
-  img {
-    border-radius: 50%;
-  }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     height: auto;
     object-fit: cover;
-    width: 100px;
     padding: 0 30px;
-    img {
-      border-radius: 50%;
-    }
   }
 `
 const Description = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
   grid-area: description;
-  font-family: "Inter";
   display: flex;
-  line-height: 19px;
-  font-size: 15px;
-  margin: 10px 0 20px 0;
+  line-height: 30px;
+  font-size: 25px;
+  margin-bottom: 20px;
   font-weight: 200;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -174,11 +151,11 @@ const Description = styled.div`
 const Subtitle = styled.div`
   grid-area: subtitle;
   h2 {
-    font-family: "Inter";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 200;
     opacity: 0.7;
     padding: 10px 0;
+    margin-bottom: 10px;
     width: fit-content;
   }
 
@@ -205,40 +182,9 @@ const EditPost = styled.a`
     margin: 0;
   }
 `
-const BackArrowContainer = styled.div`
-  position: absolute;
-  padding: 17px;
-  top: 170px;
-  margin-left: -85px;
-  border-radius: 50%;
-  transform: rotateY(180deg);
-  fill: ${(props) => props.theme.colors.fonts.text};
-  display: flex;
-  &:hover {
-    background: ${(props) => props.theme.colors.fonts.anchorBackground};
-    animation: moveBackArrow 0.5s infinite;
-  }
-  img {
-    width: 25px;
-    position: absolute;
-    left: 17px;
-    top: 20px;
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    display: none;
-  }
 
-  @keyframes moveBackArrow {
-    0% {
-      transform: rotateY(180deg) scale(1.1);
-      filter: saturation(0.2);
-    }
-    100% {
-      transform: rotateY(180deg) scale(1);
-    }
-  }
-`
 const Categories = styled.div`
+  display: flex;
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     margin: 0 auto;
     width: 100%;
@@ -246,10 +192,9 @@ const Categories = styled.div`
 `
 const Meta = styled.div`
   color: ${(props) => props.theme.colors.fonts.text};
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
   width: fit-content;
+  font-size: 16px;
+  font-weight: 200;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
     width: auto;
@@ -258,21 +203,22 @@ const Meta = styled.div`
   }
 `
 const Category = styled.span`
+  background: ${(props) => props.theme.colors.secondaryColorLight};
+  border-radius: 40px;
+  color: ${(props) => props.theme.colors.textColor};
+  font-size: 18px;
+  font-weight: 200;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  display: block;
+
   a {
-    background: ${(props) => props.theme.colors.fonts.anchor};
-    border: 2px solid ${(props) => props.theme.colors.fonts.anchor};
-    color: initial;
-    border-radius: 40px;
-    color: white;
-    font-family: "Inter";
-    font-size: 13px;
-    margin-right: 5px;
-    padding: 5px 15px;
     text-decoration: none;
-    &:hover {
-      background: initial;
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
+  }
+
+  &:hover {
+    background: ${(props) => props.theme.colors.secondaryColor};
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
@@ -339,58 +285,46 @@ export default ({ data }) => {
       </Helmet>
       <section>
         <article>
-          <PostContainer>
-            <Link to={`../`}>
-              <BackArrowContainer>
-                <BackArrow />
-              </BackArrowContainer>
-            </Link>
-
-            <PostHeaderContainer>
-              <PostHeader>
-                <FeaturedImage>
-                  <Img fluid={featuredImage} />
-                </FeaturedImage>
-                <PostHeaderTitle>
-                  <h1>{post.frontmatter.title}</h1>
-                  <Subtitle>
-                    <h2>{post.frontmatter.subtitle}</h2>
-                  </Subtitle>
-                  <Description>{post.frontmatter.description}</Description>
-                  <PostInfo>
-                    <Meta>
-                      <time>
-                        Escrito el {formatDate(post.frontmatter.date)}
-                      </time>{" "}
-                      •{" "}
-                      <EditPost
-                        target="_blank"
-                        rel="noopener nofollow"
-                        href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
-                      >
-                        Editar entrada
-                      </EditPost>
-                    </Meta>
-                    <Categories>
-                      {post.frontmatter.category ? (
-                        post.frontmatter.category.map((cat) => (
-                          <Category key={cat}>
-                            <Link
-                              to={`/categoria/${slugify(cat).toLowerCase()}`}
-                            >
-                              {cat}
-                            </Link>
-                          </Category>
-                        ))
-                      ) : (
-                        <span>Sin categoría</span>
-                      )}
-                    </Categories>
-                  </PostInfo>
-                </PostHeaderTitle>
-              </PostHeader>
-            </PostHeaderContainer>
-          </PostContainer>
+          <Container>
+            <FeaturedImage>
+              <Img fluid={featuredImage} />
+            </FeaturedImage>
+            <PostHeader>
+              <PostHeaderTitle>
+                <h1>{post.frontmatter.title}</h1>
+                <Subtitle>
+                  <h2>{post.frontmatter.subtitle}</h2>
+                </Subtitle>
+                <Description>{post.frontmatter.description}</Description>
+                <Categories>
+                  {post.frontmatter.category ? (
+                    post.frontmatter.category.map((cat) => (
+                      <Category key={cat}>
+                        <Link to={`/categoria/${slugify(cat).toLowerCase()}`}>
+                          {cat}
+                        </Link>
+                      </Category>
+                    ))
+                  ) : (
+                    <span>Sin categoría</span>
+                  )}
+                </Categories>
+                <PostInfo>
+                  <Meta>
+                    <time>Escrito el {formatDate(post.frontmatter.date)}</time>{" "}
+                    •{" "}
+                    <EditPost
+                      target="_blank"
+                      rel="noopener nofollow"
+                      href={`https://github.com/ardillan/ardillan.com/edit/master/src/content/posts/${gitHubFile}`}
+                    >
+                      Editar entrada
+                    </EditPost>
+                  </Meta>
+                </PostInfo>
+              </PostHeaderTitle>
+            </PostHeader>
+          </Container>
 
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
@@ -418,7 +352,7 @@ export const query = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+            fluid(maxWidth: 600, maxHeight: 300, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

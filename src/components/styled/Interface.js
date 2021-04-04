@@ -1,40 +1,46 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+  width: ${(props) => props.theme.width.main};
+  margin: auto;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
+    width: auto;
+  }
+`
+
 export const SectionTitle = styled.section`
   display: grid;
+  width: ${(props) => props.theme.width.main};
+  margin: auto;
   grid-template-columns: 1fr;
   justify-content: center;
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
   padding: 35px 0;
   div {
-    width: 900px;
     margin: auto;
     padding: 30px 0;
     h1 {
-      font-family: "Noto Serif";
       font-size: 45px;
-      font-weight: 800;
+      font-weight: 600;
       margin: 0;
       padding: 0;
       width: auto;
     }
 
     h2 {
-      font-family: "Inter";
-      font-size: 18px;
-      margin-top: 10px;
-      padding: 0;
+      background: ${(props) => props.theme.colors.secondaryColorLight};
+      border-left: 10px solid ${(props) => props.theme.colors.secondaryColor};
+      font-size: 21px;
       font-weight: 200;
-      line-height: 25px;
+      line-height: 2rem;
+      margin-top: 10px;
+      padding: 1rem 2rem;
     }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     margin: 0;
+    width: auto;
     div {
       width: auto;
       padding: 30px;
@@ -56,11 +62,7 @@ export const SectionTitle = styled.section`
 `
 
 export const SectionTitleWithImage = styled.section`
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
+  width: ${(props) => props.theme.width.main};
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 1fr;
@@ -77,7 +79,6 @@ export const SectionTitleWithImage = styled.section`
     height: 500px;
   }
   h1 {
-    font-family: "Noto serif";
     font-size: 50px;
     font-weight: 800;
     margin: 0;
@@ -89,7 +90,6 @@ export const SectionTitleWithImage = styled.section`
 
   h2 {
     grid-area: subtitle;
-    font-family: "Inter";
     font-size: 18px;
     font-weight: 200;
     line-height: 25px;
@@ -114,9 +114,11 @@ export const SectionTitleWithImage = styled.section`
 
 export const PageContainer = styled.div`
   margin: auto;
-  width: 900px;
+  font-family: "Literata";
+  width: ${(props) => props.theme.width.main};
+
   div {
-    max-width: 600px;
+    max-width: ${(props) => props.theme.width.main};
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {

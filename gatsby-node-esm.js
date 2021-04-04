@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               category
             }

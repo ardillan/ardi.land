@@ -26,14 +26,12 @@ const Post = styled.li`
     }
   }
   h2  {
-    font-family: "Noto serif";
     padding: 0;
     margin: 0;
     font-size: 23px;
     line-height: 22px;
   }
   p {
-    font-family: "Inter";
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -115,7 +113,7 @@ export default ({ pageContext, data }) => {
 
             return (
               <Post key={post.node.id}>
-                <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
+                <Link to={`/${post.node.fields.slug}`}>
                   <article>
                     <header>
                       <Img

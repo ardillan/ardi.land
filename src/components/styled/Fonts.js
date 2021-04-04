@@ -1,54 +1,54 @@
 import { createGlobalStyle } from "styled-components"
 
-import InterLight from "../../fonts/inter/Inter-Light-BETA.woff"
-import InterMedium from "../../fonts/inter/Inter-Medium.woff"
-import InterBold from "../../fonts/inter/Inter-Bold.woff"
-import InterBlack from "../../fonts/inter/Inter-Black.woff"
+import SourceSansRegular from "../../fonts/source-sans-pro/SourceSansPro-Regular.ttf"
+import SourceSansSemiBold from "../../fonts/source-sans-pro/SourceSansPro-SemiBold.ttf"
+import SourceSansBold from "../../fonts/source-sans-pro/SourceSansPro-Bold.ttf"
+import SourceSansBlack from "../../fonts/source-sans-pro/SourceSansPro-Black.ttf"
 
-import NotoSerifRegular from "../../fonts/notoSerif/NotoSerif-Regular.ttf"
-import NotoSerifBold from "../../fonts/notoSerif/NotoSerif-Bold.ttf"
+import LiterataRegular from "../../fonts/literata/Literata-Regular.ttf"
+import LiterataBold from "../../fonts/literata/Literata-Bold.ttf"
 
 const Fonts = createGlobalStyle`
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Source Sans Pro';
         font-style: normal;
         font-weight: 200;
-        src: url(${InterLight})
+        src: url(${SourceSansRegular})
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Source Sans Pro';
         font-style: normal;
         font-weight: 400;
-        src: url(${InterMedium})
+        src: url(${SourceSansSemiBold})
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Source Sans Pro';
         font-style: bold;
         font-weight: 600;
-        src: url(${InterBold})
+        src: url(${SourceSansBold})
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Source Sans Pro';
         font-style: bolder;
         font-weight: 800;
-        src: url(${InterBlack})
+        src: url(${SourceSansBlack})
     }
 
     @font-face {
-        font-family: 'Noto Serif';
+        font-family: 'Literata';
         font-style: regular;
         font-weight: 400;
-        src: url(${NotoSerifRegular})
+        src: url(${LiterataRegular})
     }
 
     @font-face {
-        font-family: 'Noto Serif';
+        font-family: 'Literata';
         font-style: bold;
         font-weight: 600;
-        src: url(${NotoSerifBold})
+        src: url(${LiterataBold})
     }
 
 

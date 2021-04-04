@@ -19,7 +19,6 @@ const Projects = styled.div`
     text-decoration: none;
 
     .gatsby-image-wrapper {
-      border-radius: 10px;
       transition: all 0.3s ease;
     }
 
@@ -33,7 +32,6 @@ const Projects = styled.div`
   }
 
   p {
-    font-family: "Inter";
     font-weight: 200;
     font-size: 15px;
     line-height: 22px;
