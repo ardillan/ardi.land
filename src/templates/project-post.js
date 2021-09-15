@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
@@ -181,7 +181,7 @@ const ProjectPost = ({ data }) => {
 
   const featuredImage =
     post.frontmatter.featuredImage !== null
-      ? post.frontmatter.featuredImage.childImageSharp.fluid
+      ? post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
       : genericImage
 
   return (
@@ -223,7 +223,7 @@ const ProjectPost = ({ data }) => {
             <ProjectHeaderContainer>
               <PostHeader>
                 <FeaturedImage>
-                  <Img fluid={featuredImage} />
+                  <GatsbyImage image={featuredImage} />
                 </FeaturedImage>
                 <ProjectHeaderTitle>
                   <h1>{post.frontmatter.title}</h1>
@@ -244,7 +244,7 @@ const ProjectPost = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
@@ -262,9 +262,12 @@ export const query = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 900, maxHeight: 500, cropFocus: CENTER) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 900
+              height: 500
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
           }
         }
       }

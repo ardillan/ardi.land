@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 
@@ -99,29 +99,7 @@ const BannerInfo = styled.div`
 `
 
 const TellMeMoreButton = styled.div`
-  margin-top: 30px;
-  font-size: 15px;
-  color: ${(props) => props.theme.colors.fonts.anchor};
-  font-weight: 400;
-  transition: all 0.3s;
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    a {
-      padding: 0;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: ${(props) => props.theme.colors.fonts.anchor};
-      font-weight: 600;
-      transition: all 0.3s;
-      text-decoration: none;
-      border: none;
-    }
+   {
   }
 `
 
@@ -131,12 +109,15 @@ const FeaturedBanner = () => {
   return (
     <FeaturedBannerContainer>
       <Link to={`${featuredPost.node.fields.slug}`}>
-        <Img
-          fluid={
-            featuredPost.node.frontmatter.featuredImage.childImageSharp.fluid
+        <GatsbyImage
+          image={
+            featuredPost.node.frontmatter.featuredImage.childImageSharp
+              .gatsbyImageData
           }
-          fadeIn={true}
+          layout="fixed"
           alt="Imagen destacada"
+          width={200}
+          height={200}
           title="Imagen destacada"
         />
 

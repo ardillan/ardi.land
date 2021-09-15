@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { slugify } from "../utils/helpers"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
@@ -9,33 +9,7 @@ import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
 
-const SearchContainer = styled.div`
-  padding: 20px 0;
-  display: flex;
-  input {
-    background: ${(props) => props.theme.colors.background.main};
-    color: ${(props) => props.theme.colors.fonts.text};
-    border-radius: 50px;
-    border: 2px solid #ea0054;
-    border: 2px solid ${(props) => props.theme.colors.table.border};
-    height: 45px;
-    margin: 40px 0;
-    padding: 0 30px;
-    width: 100%;
-
-    ::placeholder {
-      color: ${(props) => props.theme.colors.fonts.text}54;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    padding: 20px;
-  }
-`
+const SearchContainer = styled.div``
 const PostsListContainer = styled.ul`
   display: grid;
   grid-row-gap: 40px;
@@ -57,102 +31,10 @@ const PostsListContainer = styled.ul`
     margin: auto;
   }
 `
-const Post = styled.li`
-  a {
-    text-decoration: none;
-  }
-  article {
-    display: flex;
-  }
-  header {
-    margin-right: 15px;
-    img {
-      width: 100px;
-      margin-right: 10px;
-      border-radius: 50%;
-    }
-  }
-  h2  {
-    padding: 0;
-    margin: 0;
-  }
-  p {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-  }
-
-  &:hover {
-    article {
-      transition: all 0.2s;
-      background: ${(props) => props.theme.colors.fonts.anchorBackground};
-      padding: 20px;
-      margin: -20px;
-    }
-
-    h2,
-    p {
-      transition: all 0.2s;
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: flex;
-    text-align: center;
-    margin: auto;
-    width: auto;
-    a {
-      background: none;
-      article {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
-`
-const Categories = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 60px;
-  a {
-    border: 1px solid ${(props) => props.theme.colors.table.border};
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    flex-wrap: wrap;
-    padding: 0 30px;
-    justify-content: initial;
-    a {
-      margin: 0 10px 10px 0;
-    }
-  }
-`
-const Category = styled.div`
-  display: flex;
-  span {
-    color: ${(props) => props.theme.colors.fonts.anchor};
-    font-size: 14px;
-    margin-right: 5px;
-    margin: 0;
-    padding: 0;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    justify-content: center;
-  }
-`
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
+const Post = styled.li``
+const Categories = styled.div``
+const Category = styled.div``
+const Content = styled.div``
 
 const PostsList = (props) => {
   const allPosts = useGetAllPosts()
@@ -184,8 +66,6 @@ const PostsList = (props) => {
     setSearchResults(results)
   }, [searchTerm])
 
-  console.log("🥦 searchResults", searchResults)
-
   return (
     <>
       <SearchContainer>
@@ -208,17 +88,19 @@ const PostsList = (props) => {
           {searchResults.slice(0, props.length).map((post) => {
             let featuredImage =
               post.node.frontmatter.featuredImage !== null
-                ? post.node.frontmatter.featuredImage.childImageSharp.fixed
+                ? post.node.frontmatter.featuredImage.childImageSharp
+                    .gatsbyImageData
                 : genericImage
-
             return (
               <Post key={post.node.id}>
                 <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
                   <article>
                     <header>
-                      <Img
-                        fixed={featuredImage}
+                      <GatsbyImage
+                        image={featuredImage}
                         fadeIn={true}
+                        width={200}
+                        height={100}
                         alt={post.node.frontmatter.title}
                         title={post.node.frontmatter.title}
                       />

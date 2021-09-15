@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { SectionTitle } from "../../components/styled/Interface"
 
@@ -35,9 +35,12 @@ const Spaces = () => {
             size
             name
             childImageSharp {
-              fluid(maxWidth: 800, cropFocus: CENTER, quality: 90) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                layout: CONSTRAINED
+                width: 300
+                height: 300
+                placeholder: DOMINANT_COLOR
+              )
             }
           }
         }
@@ -63,15 +66,13 @@ const Spaces = () => {
         </div>
       </SectionTitle>
       <SpacesContainer>
-        {spaces.allFile.edges.map((image) => {
-          return (
-            <Img
-              key={image.node.name}
-              alt="Imagen de un portátil"
-              fluid={image.node.childImageSharp.fluid}
-            />
-          )
-        })}
+        {spaces.allFile.edges.map((image) => (
+          <GatsbyImage
+            image={image.node.childImageSharp.gatsbyImageData}
+            key={image.node.name}
+            alt="Imagen de un portátil"
+          />
+        ))}
       </SpacesContainer>
     </Layout>
   )

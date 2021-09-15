@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { useGetAllProjects } from "../../hooks/useGetAllProjects"
 
@@ -82,10 +82,12 @@ const Projects = () => {
           <Link key={project.node.id} to={`/${project.node.fields.slug}`}>
             <article>
               <header>
-                <Img
-                  fixed={
-                    project.node.frontmatter.featuredImage.childImageSharp.fixed
+                <GatsbyImage
+                  image={
+                    project.node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData
                   }
+                  alt={project.node.frontmatter.title}
                 />
                 <h2>{project.node.frontmatter.title}</h2>
                 <p>{project.node.frontmatter.description}</p>

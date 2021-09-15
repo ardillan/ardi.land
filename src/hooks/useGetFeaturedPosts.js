@@ -33,9 +33,12 @@ export const useGetFeaturedPosts = () => {
                 featuredImage {
                   sourceInstanceName
                   childImageSharp {
-                    fluid(maxWidth: 600, maxHeight: 600, cropFocus: CENTER) {
-                      src
-                    }
+                    gatsbyImageData(
+                      height: 600
+                      width: 600
+                      placeholder: DOMINANT_COLOR
+                      formats: [AUTO, WEBP, AVIF]
+                    )
                   }
                 }
               }

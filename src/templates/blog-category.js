@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 import { formatDate } from "../utils/helpers"
@@ -10,87 +10,14 @@ import { SectionTitle } from "../components/styled/Interface"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 
-const Post = styled.li`
-  a {
-    text-decoration: none;
-  }
-  article {
-    display: flex;
-  }
-  header {
-    margin-right: 15px;
-    img {
-      width: 70px;
-      margin-right: 10px;
-      border-radius: 50%;
-    }
-  }
-  h2  {
-    padding: 0;
-    margin: 0;
-    font-size: 23px;
-    line-height: 22px;
-  }
-  p {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-  }
-
-  &:hover {
-    article {
-      transition: all 0.2s;
-      background: ${(props) => props.theme.colors.fonts.anchorBackground};
-      padding: 20px;
-      margin: -20px;
-      border-radius: 10px;
-    }
-
-    h2,
-    p {
-      transition: all 0.2s;
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: flex;
-    text-align: center;
-    margin: auto;
-    width: auto;
-    a {
-      background: none;
-      article {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
-`
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
-const PostsLists = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
-  list-style-type: none;
-  padding: 0;
-  width: 900px;
-  margin: 40px auto;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    grid-template-columns: 1fr;
-    width: auto;
-  }
-`
+const Post = styled.li``
+const Content = styled.div``
+const PostsLists = styled.ul``
 const BlogCategory = ({ pageContext, data }) => {
   const category = pageContext.category
   const posts = data.allMarkdownRemark.edges
-  const genericFeaturedImage = useGetGenericFeaturedImage().childImageSharp
-    .fixed
+  const genericFeaturedImage =
+    useGetGenericFeaturedImage().childImageSharp.fixed
 
   return (
     <Layout>
@@ -110,7 +37,8 @@ const BlogCategory = ({ pageContext, data }) => {
           {posts.map((post) => {
             let featuredImage =
               post.node.frontmatter.featuredImage !== null
-                ? post.node.frontmatter.featuredImage.childImageSharp.fixed
+                ? post.node.frontmatter.featuredImage.childImageSharp
+                    .gatsbyImageData
                 : genericFeaturedImage
 
             return (
@@ -118,11 +46,9 @@ const BlogCategory = ({ pageContext, data }) => {
                 <Link to={`/${post.node.fields.slug}`}>
                   <article>
                     <header>
-                      <Img
-                        fixed={featuredImage}
-                        fadeIn={true}
+                      <GatsbyImage
+                        image={featuredImage}
                         alt={post.node.frontmatter.title}
-                        title={post.node.frontmatter.title}
                       />
                     </header>
                     <Content>
@@ -146,7 +72,7 @@ const BlogCategory = ({ pageContext, data }) => {
 }
 
 export const query = graphql`
-  query($category: String!) {
+  query ($category: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
@@ -163,9 +89,7 @@ export const query = graphql`
             category
             featuredImage {
               childImageSharp {
-                fixed(width: 70, height: 70, cropFocus: CENTER) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 300, height: 300, layout: CONSTRAINED)
               }
             }
           }

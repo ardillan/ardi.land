@@ -21,11 +21,15 @@ export const useGetAllProjects = () => {
                 author
                 featuredImage {
                   childImageSharp {
-                    fixed(width: 300, height: 150, cropFocus: CENTER) {
-                      ...GatsbyImageSharpFixed
-                    }
+                    gatsbyImageData(
+                      layout: FIXED
+                      width: 300
+                      height: 300
+                      placeholder: TRACED_SVG
+                    )
                   }
                 }
+
                 type
                 description
                 category

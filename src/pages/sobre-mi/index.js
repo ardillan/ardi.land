@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { getAge } from "../../utils/helpers"
 import Layout from "../../components/Layout"
@@ -18,12 +18,9 @@ const About = ({ data }) => {
         postDescription="En esta página muestro un poco de mi persona."
       />
       <SectionTitleWithImage>
-        <Img
-          fluid={data.fileName.childImageSharp.fluid}
-          fadeIn={true}
-          alt="Autoretrato hecho a modo ilustración"
-          title="Autoretrato"
-          style={{ height: 600 }}
+        <GatsbyImage
+          image={data.fileName.childImageSharp.gatsbyImageData}
+          alt={"Autoretrato"}
         />
         <div>
           <h1>¡Hola!</h1>
@@ -84,9 +81,7 @@ export const query = graphql`
     }
     fileName: file(relativePath: { eq: "portrait-mountains.jpeg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 900, height: 400, layout: FULL_WIDTH)
       }
     }
   }

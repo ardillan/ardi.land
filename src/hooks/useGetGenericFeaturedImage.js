@@ -6,9 +6,7 @@ export const useGetGenericFeaturedImage = () => {
       {
         file(name: { eq: "genericFeaturedImage" }) {
           childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(width: 200, height: 200)
           }
         }
       }

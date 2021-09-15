@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Helmet from "react-helmet"
 
 import Layout from "../components/Layout"
@@ -12,235 +12,23 @@ import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate, slugify } from "../utils/helpers"
 
-const PostContent = styled.div`
-  width: 900px;
-  margin: auto;
-  ol,
-  ul,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    width: ${(props) => props.theme.width.main};
-    font-family: "Literata";
-    margin: auto;
-    padding-bottom: 1rem;
-  }
+const PostContent = styled.div``
 
-  p {
-    width: ${(props) => props.theme.width.main};
-    margin: auto;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  figure {
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};
-    text-decoration-thickness: 2px;
-    &:hover  {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 30px;
-    width: auto;
-    p,
-    ol,
-    ul,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      width: auto;
-    }
-  }
-`
-
-const PostHeader = styled.header`
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 30px 0;
-  grid-template-areas:
-    "title image"
-    "description description";
-  h1 {
-    font-size: 40px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    width: auto;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: 100%;
-    padding: 0;
-    margin: 50px auto 0;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 0px;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-
-    h1 {
-      font-size: 25px;
-    }
-  }
-`
-const PostHeaderTitle = styled.div`
-  grid-area: title;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-
-  h1 {
-    font-size: 60px;
-    font-weight: 600;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 30px;
-
-    h1 {
-      font-size: 30px;
-    }
-  }
-`
-const FeaturedImage = styled.div`
-  grid-area: image;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    height: auto;
-    object-fit: cover;
-    padding: 0 30px;
-  }
-`
-const Description = styled.div`
-  color: ${(props) => props.theme.colors.fonts.text};
-  grid-area: description;
-  display: flex;
-  line-height: 30px;
-  font-size: 25px;
-  margin-bottom: 20px;
-  font-weight: 200;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0;
-  }
-`
-const Subtitle = styled.div`
-  grid-area: subtitle;
-  h2 {
-    font-size: 22px;
-    font-weight: 200;
-    opacity: 0.7;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    width: fit-content;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0;
-    h2 {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-      background: initial;
-      font-weight: 200;
-    }
-  }
-`
-const EditPost = styled.a`
-  color: ${(props) => props.theme.colors.fonts.text};
-  background: initial;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-    color: ${(props) => props.theme.colors.fonts.anchor};
-    background: initial;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    margin: 0;
-  }
-`
-
-const Categories = styled.div`
-  display: flex;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    margin: 0 auto;
-    width: 100%;
-  }
-`
-const Meta = styled.div`
-  color: ${(props) => props.theme.colors.fonts.text};
-  width: fit-content;
-  font-size: 16px;
-  font-weight: 200;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-    margin: 10px 0;
-    line-height: 20px;
-  }
-`
-const Category = styled.span`
-  background: ${(props) => props.theme.colors.secondaryColorLight};
-  border-radius: 40px;
-  color: ${(props) => props.theme.colors.textColor};
-  font-size: 18px;
-  font-weight: 200;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  padding: 10px 20px;
-  display: block;
-
-  a {
-    text-decoration: none;
-  }
-
-  &:hover {
-    background: ${(props) => props.theme.colors.secondaryColor};
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0;
-  }
-`
-const PostInfo = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 70% 1fr;
-  grid-gap: 10px;
-  align-items: center;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    grid-template-columns: 1fr;
-  }
-`
+const PostHeader = styled.header``
+const PostHeaderTitle = styled.div``
+const FeaturedImage = styled.div``
+const Description = styled.div``
+const Subtitle = styled.div``
+const EditPost = styled.a``
+const Categories = styled.div``
+const Meta = styled.div``
+const Category = styled.span``
+const PostInfo = styled.div``
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
-  const genericFeaturedImage = useGetGenericFeaturedImage().childImageSharp
-    .fluid
+  const genericFeaturedImage =
+    useGetGenericFeaturedImage().childImageSharp.gatsbyImageData
 
   const gitHubFile = post.fileAbsolutePath.substring(
     post.fileAbsolutePath.lastIndexOf("posts/") + 6,
@@ -249,7 +37,7 @@ const BlogPost = ({ data }) => {
 
   const featuredImage =
     post.frontmatter.featuredImage !== null
-      ? post.frontmatter.featuredImage.childImageSharp.fluid
+      ? post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
       : genericFeaturedImage
 
   return (
@@ -289,7 +77,10 @@ const BlogPost = ({ data }) => {
         <article>
           <Container>
             <FeaturedImage>
-              <Img fluid={featuredImage} />
+              <GatsbyImage
+                image={featuredImage}
+                alt={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
+              />
             </FeaturedImage>
             <PostHeader>
               <PostHeaderTitle>
@@ -336,7 +127,7 @@ const BlogPost = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
@@ -354,6 +145,12 @@ export const query = graphql`
         featuredImage {
           publicURL
           childImageSharp {
+            gatsbyImageData(
+              width: 600
+              height: 300
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
             fluid(maxWidth: 600, maxHeight: 300, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
