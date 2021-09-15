@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
 import { slugify } from "../utils/helpers"
-import { useGetFeaturedPosts } from "../hooks/useGetFeaturedPosts"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
@@ -155,34 +154,37 @@ const Content = styled.div`
   justify-content: center;
 `
 
-export default (props) => {
-  let posts = props.featured ? useGetFeaturedPosts() : useGetAllPosts()
+const PostsList = (props) => {
+  const allPosts = useGetAllPosts()
+  const genericImage = useGetGenericFeaturedImage().childImageSharp.fluid
+  let posts = useRef(allPosts)
 
   const categories = []
 
   // Create categories pages
-  posts.map(({ node }) => {
+  posts.current.map(({ node }) => {
     return node.frontmatter.category.map((cat) =>
       categories.includes(cat) ? "" : categories.push(cat)
     )
   })
 
   const [searchTerm, setSearchTerm] = useState("")
-  const [searchResults, setSearchResults] = useState(posts)
+  const [searchResults, setSearchResults] = useState(null)
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value)
   }
 
   useEffect(() => {
-    const results = posts.filter((post) =>
+    const results = posts.current.filter((post) =>
       post.node.frontmatter.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
     )
-
     setSearchResults(results)
   }, [searchTerm])
+
+  console.log("🥦 searchResults", searchResults)
 
   return (
     <>
@@ -201,49 +203,55 @@ export default (props) => {
           </Link>
         ))}
       </Categories>
-      <PostsListContainer>
-        {searchResults.slice(0, props.length).map((post) => {
-          let featuredImage =
-            post.node.frontmatter.featuredImage !== null
-              ? post.node.frontmatter.featuredImage.childImageSharp.fixed
-              : useGetGenericFeaturedImage().childImageSharp.fluid
+      {searchResults !== null && (
+        <PostsListContainer>
+          {searchResults.slice(0, props.length).map((post) => {
+            let featuredImage =
+              post.node.frontmatter.featuredImage !== null
+                ? post.node.frontmatter.featuredImage.childImageSharp.fixed
+                : genericImage
 
-          return (
-            <Post key={post.node.id}>
-              <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
-                <article>
-                  <header>
-                    <Img
-                      fixed={featuredImage}
-                      fadeIn={true}
-                      alt={post.node.frontmatter.title}
-                      title={post.node.frontmatter.title}
-                    />
-                  </header>
-                  <Content>
-                    <h2>{post.node.frontmatter.title}</h2>
-                    {props.showPostDate ? (
-                      <p>
-                        Escrito el{" "}
-                        <time dateTime={post.node.frontmatter.date}>
-                          {formatDate(post.node.frontmatter.date)}
-                        </time>
-                      </p>
-                    ) : (
-                      ""
-                    )}
-                    <Category>
-                      {post.node.frontmatter.category.map((category, index) => (
-                        <span key={index}>{category}</span>
-                      ))}
-                    </Category>
-                  </Content>
-                </article>
-              </Link>
-            </Post>
-          )
-        })}
-      </PostsListContainer>
+            return (
+              <Post key={post.node.id}>
+                <Link to={`/${post.node.fields.slug}`} key={post.node.id}>
+                  <article>
+                    <header>
+                      <Img
+                        fixed={featuredImage}
+                        fadeIn={true}
+                        alt={post.node.frontmatter.title}
+                        title={post.node.frontmatter.title}
+                      />
+                    </header>
+                    <Content>
+                      <h2>{post.node.frontmatter.title}</h2>
+                      {props.showPostDate ? (
+                        <p>
+                          Escrito el{" "}
+                          <time dateTime={post.node.frontmatter.date}>
+                            {formatDate(post.node.frontmatter.date)}
+                          </time>
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                      <Category>
+                        {post.node.frontmatter.category.map(
+                          (category, index) => (
+                            <span key={index}>{category}</span>
+                          )
+                        )}
+                      </Category>
+                    </Content>
+                  </article>
+                </Link>
+              </Post>
+            )
+          })}
+        </PostsListContainer>
+      )}
     </>
   )
 }
+
+export default PostsList
