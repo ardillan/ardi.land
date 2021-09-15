@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { formatDateTime } from "../utils/helpers"
 
-const Footer = styled.footer`
+const FooterContainer = styled.footer`
   padding-top: 50px;
   display: grid;
   grid-template-columns: 70% 1fr;
@@ -137,7 +137,7 @@ const ThemeSelector = styled.div`
   }
 `
 
-export default () => {
+const Footer = () => {
   const [latestCommit, setLatestCommit] = useState(null)
   useEffect(() => {
     fetch("https://api.github.com/repos/ardillan/ardillan.com")
@@ -148,7 +148,7 @@ export default () => {
   }, [])
 
   return (
-    <Footer>
+    <FooterContainer>
       <Info>
         <p>
           {" "}
@@ -192,6 +192,8 @@ export default () => {
         </ThemeSelector>
         <Link to={`/mapa-del-sitio`}>Mapa del sitio</Link>
       </ThemeAndLinks>
-    </Footer>
+    </FooterContainer>
   )
 }
+
+export default Footer

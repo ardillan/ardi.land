@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 import { PageContainer } from "../../components/styled/Interface"
 
 const Glitch = styled.div`
@@ -20,10 +20,10 @@ const Glitch = styled.div`
   }
 `
 
-export default ({ data }) => {
+const Error = ({ data }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Ardillan.com | Matar humanos"
         postDescription="Evita el alzamiento de las máquinas introduciendo una URL correcta."
       />
@@ -60,3 +60,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Error

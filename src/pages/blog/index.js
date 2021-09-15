@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Layout from "../../components/Layout"
 import PostsList from "../../components/PostsList"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 
 import { SectionTitle } from "../../components/styled/Interface"
 
@@ -16,10 +16,10 @@ const BlogPosts = styled.section`
   }
 `
 
-export default () => {
+const Blog = () => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Ardillan.com | Blog"
         postDescription="Este es mi blog. Aquí escribo sobre todo lo que me apasiona como videojuegos, música, tecnología y reflexiones personales."
       />
@@ -36,3 +36,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Blog

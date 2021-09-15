@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Helmet from "react-helmet"
 
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 import { Container } from "../components/styled/Interface"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
@@ -237,8 +237,10 @@ const PostInfo = styled.div`
   }
 `
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
   const post = data.markdownRemark
+  const genericFeaturedImage = useGetGenericFeaturedImage().childImageSharp
+    .fluid
 
   const gitHubFile = post.fileAbsolutePath.substring(
     post.fileAbsolutePath.lastIndexOf("posts/") + 6,
@@ -248,11 +250,11 @@ export default ({ data }) => {
   const featuredImage =
     post.frontmatter.featuredImage !== null
       ? post.frontmatter.featuredImage.childImageSharp.fluid
-      : useGetGenericFeaturedImage().childImageSharp.fluid
+      : genericFeaturedImage
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
@@ -361,3 +363,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPost

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 import styled from "styled-components"
 import { SectionTitle, PageContainer } from "../../components/styled/Interface"
 
@@ -18,11 +18,11 @@ const ContentContainer = styled.div`
     }
   }
 `
-export default ({ data }) => {
+const SiteMap = ({ data }) => {
   const { blogPosts, pages } = data
   return (
     <Layout>
-      <SEO title="Ardillan.com | Sobre mí" />
+      <Seo title="Ardillan.com | Sobre mí" />
       <SectionTitle>
         <div>
           <h1>Mapa del sitio</h1>
@@ -109,3 +109,5 @@ export const query = graphql`
     }
   }
 `
+
+export default SiteMap

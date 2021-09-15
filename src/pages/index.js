@@ -8,7 +8,7 @@ import { Container } from "../components/styled/Interface"
 import Arrow from "../images/general/arrow.png"
 
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 import FeaturedBanner from "../components/FeaturedBanner"
 
 const Articles = styled.section`
@@ -90,7 +90,7 @@ const Home = ({ data }) => {
   // const videogame = useGetLastVideogame()
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Ardillan.com | Inicio"
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />

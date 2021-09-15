@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `
 
-export default ({ props, children }) => {
+const Layout = ({ props, children }) => {
   return (
     <ThemeProvider theme={LightTheme}>
       <Normalize />
@@ -36,3 +36,5 @@ export default ({ props, children }) => {
     </ThemeProvider>
   )
 }
+
+export default Layout

@@ -8,7 +8,7 @@ import { formatDate } from "../utils/helpers"
 import { SectionTitle } from "../components/styled/Interface"
 
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const Post = styled.li`
   a {
@@ -86,13 +86,15 @@ const PostsLists = styled.ul`
     width: auto;
   }
 `
-export default ({ pageContext, data }) => {
+const BlogCategory = ({ pageContext, data }) => {
   const category = pageContext.category
   const posts = data.allMarkdownRemark.edges
+  const genericFeaturedImage = useGetGenericFeaturedImage().childImageSharp
+    .fixed
 
   return (
     <Layout>
-      <SEO title={`Ardillan.com`} />
+      <Seo title={`Ardillan.com`} />
       <section>
         <SectionTitle>
           <div>
@@ -109,7 +111,7 @@ export default ({ pageContext, data }) => {
             let featuredImage =
               post.node.frontmatter.featuredImage !== null
                 ? post.node.frontmatter.featuredImage.childImageSharp.fixed
-                : useGetGenericFeaturedImage().childImageSharp.fixed
+                : genericFeaturedImage
 
             return (
               <Post key={post.node.id}>
@@ -172,3 +174,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogCategory

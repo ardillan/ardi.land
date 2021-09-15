@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
@@ -175,17 +175,18 @@ const Subtitle = styled.div`
   }
 `
 
-export default ({ data }) => {
+const ProjectPost = ({ data }) => {
   const post = data.markdownRemark
+  const genericImage = useGetGenericFeaturedImage().childImageSharp.fluid
 
   const featuredImage =
     post.frontmatter.featuredImage !== null
       ? post.frontmatter.featuredImage.childImageSharp.fluid
-      : useGetGenericFeaturedImage().childImageSharp.fluid
+      : genericImage
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`Ardillan.com | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
@@ -270,3 +271,5 @@ export const query = graphql`
     }
   }
 `
+
+export default ProjectPost

@@ -6,10 +6,10 @@ import Img from "gatsby-image"
 import { useGetAllProjects } from "../../hooks/useGetAllProjects"
 
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 import { SectionTitle } from "../../components/styled/Interface"
 
-const Projects = styled.div`
+const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 300px);
   margin: 40px 30px;
@@ -58,12 +58,12 @@ const Projects = styled.div`
   }
 `
 
-export default () => {
+const Projects = () => {
   const projects = useGetAllProjects()
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Ardillan.com | Proyectos"
         postDescription="Esta página muestra los proyectos en los que he tenido el placer de trabajar, tanto desarrollo como diseño gráfico. "
       />
@@ -77,7 +77,7 @@ export default () => {
         </div>
       </SectionTitle>
 
-      <Projects>
+      <ProjectsContainer>
         {projects.map((project) => (
           <Link key={project.node.id} to={`/${project.node.fields.slug}`}>
             <article>
@@ -93,7 +93,9 @@ export default () => {
             </article>
           </Link>
         ))}
-      </Projects>
+      </ProjectsContainer>
     </Layout>
   )
 }
+
+export default Projects

@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { SectionTitle } from "../../components/styled/Interface"
 
-const Spaces = styled.section`
+const SpacesContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2px;
@@ -18,7 +18,7 @@ const Spaces = styled.section`
   }
 `
 
-export default () => {
+const Spaces = () => {
   const spaces = useStaticQuery(graphql`
     {
       allFile(
@@ -47,7 +47,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`Ardillan.com | Espacios`}
         postDescription="En esta página muestro los diferentes espacios en los que suelo trabajar con mi portátil. "
       />
@@ -62,7 +62,7 @@ export default () => {
           </h2>
         </div>
       </SectionTitle>
-      <Spaces>
+      <SpacesContainer>
         {spaces.allFile.edges.map((image) => {
           return (
             <Img
@@ -72,7 +72,9 @@ export default () => {
             />
           )
         })}
-      </Spaces>
+      </SpacesContainer>
     </Layout>
   )
 }
+
+export default Spaces

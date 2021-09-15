@@ -4,17 +4,16 @@ import Img from "gatsby-image"
 
 import { getAge } from "../../utils/helpers"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
-// import styled from "styled-components"
+import Seo from "../../components/SEO"
 import {
   SectionTitleWithImage,
   PageContainer,
 } from "../../components/styled/Interface"
 
-export default ({ data }) => {
+const About = ({ data }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Ardillan.com | Sobre mí"
         postDescription="En esta página muestro un poco de mi persona."
       />
@@ -92,3 +91,5 @@ export const query = graphql`
     }
   }
 `
+
+export default About

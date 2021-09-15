@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 
 import { SectionTitle, PageContainer } from "../../components/styled/Interface"
 
-export default ({ data }) => {
+const HowDoIWork = ({ data }) => {
   return (
     <Layout>
-      <SEO
-        title="Ardillan.com | Cómo trabajo"
+      <Seo
         postDescription="Aquí muestro las aplicaciones que utilizo para desarrollar y diseñar, la música que escucho o qué utilidades uso para notas"
+        title="Ardillan.com | Cómo trabajo"
       />
       <SectionTitle>
         <div>
@@ -47,3 +47,5 @@ export const query = graphql`
     }
   }
 `
+
+export default HowDoIWork
