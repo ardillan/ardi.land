@@ -10,18 +10,14 @@ const MobileNavigation = styled.div`
     display: flex;
     justify-content: space-between;
     width: 90vw;
+    min-height: 60px;
   }
 `
 const MenuNavigation = styled.div``
 
-const MenuButton = styled.button`
+const MenuButton = styled.div`
   align-items: center;
-  background: transparent;
-  border: none;
-  display: flex;
-  height: 35px;
   justify-content: center;
-  width: 35px;
 `
 
 const Navigation = styled.nav`
@@ -87,9 +83,7 @@ const MenuListItems = styled.div`
         margin: 0;
         text-align: center;
         padding: 15px 0;
-        &:first-child {
-          display: none;
-        }
+
         &:after {
           content: "";
         }
@@ -101,17 +95,6 @@ const MenuListItems = styled.div`
 const MenuList = () => (
   <MenuListItems>
     <ul>
-      <li>
-        <Link to={`/`}>
-          <StaticImage
-            src={"../images/general/logo.svg"}
-            alt="Logotipo"
-            title="Logotipo"
-            width={45}
-            height={45}
-          />
-        </Link>
-      </li>
       <li>
         <Link to={`/sobre-mi/`}>
           <span>Sobre mí</span>
@@ -160,13 +143,25 @@ const Header = () => {
           />
         </Link>
         <MenuButton onClick={(e) => handleMenu(e)}>
-          <StaticImage
-            src={"../images/general/menu-icon.svg"}
-            alt="Logotipo"
-            title="Logotipo"
-            width={45}
-            height={45}
-          />
+          {isMenuOpen ? (
+            <StaticImage
+              src={"../images/general/close-icon.svg"}
+              alt="Logotipo"
+              title="Logotipo"
+              width={25}
+              height={25}
+              placeholder="TRACED_SVG"
+            />
+          ) : (
+            <StaticImage
+              src={"../images/general/menu-icon.svg"}
+              alt="Logotipo"
+              title="Logotipo"
+              width={25}
+              height={25}
+              placeholder="TRACED_SVG"
+            />
+          )}
         </MenuButton>
       </MobileNavigation>
       {isMenuOpen === true && (
