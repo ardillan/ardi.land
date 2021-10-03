@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { getAge } from "../../utils/helpers"
 import Layout from "../../components/Layout"
 import { PageContainer, SectionTitle } from "../../components/styled/Interface"
 
