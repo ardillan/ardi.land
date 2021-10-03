@@ -40,6 +40,13 @@ export const SectionTitle = styled.div`
     margin: 50px auto 0;
     padding: 0;
 
+    @media screen and (max-width: ${(props) =>
+        props.theme.breakPoints.desktop}) {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
     h2 {
       font-size: 20px;
     }
