@@ -8,7 +8,7 @@ const RandomTextContainer = styled.div`
   text-align: center;
   a {
     text-decoration: none;
-    color: initial;
+    color: ${(props) => props.theme.textColor};
     &:hover {
       text-decoration: underline;
       text-decoration-color: ${(props) => props.theme.primaryColor};
