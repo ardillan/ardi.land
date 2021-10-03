@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
+
+import guybrush from "../images/general/guybrush.gif"
 
 const SearchContainer = styled.div`
   input {
@@ -39,6 +41,23 @@ const SearchContainer = styled.div`
       min-width: initial;
       width: 100%;
     }
+  }
+`
+
+const EmptyState = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: grey;
+
+  img {
+    width: 150px;
+    margin-top: 40px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
   }
 `
 
@@ -103,7 +122,7 @@ const PostsList = (props) => {
   })
 
   const [searchTerm, setSearchTerm] = useState("")
-  const [searchResults, setSearchResults] = useState(null)
+  const [searchResults, setSearchResults] = useState([])
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value)
@@ -128,6 +147,14 @@ const PostsList = (props) => {
           onChange={handleChange}
         />
       </SearchContainer>
+
+      {Object.keys(searchResults).length === 0 && (
+        <EmptyState>
+          <img src={guybrush} alt="Guybrush bailando" />
+          <p>Parece que no hay resultados</p>
+          <small>Pero al menos puedes ver a Guybrush bailando</small>
+        </EmptyState>
+      )}
 
       {searchResults !== null && (
         <PostsListContainer>
