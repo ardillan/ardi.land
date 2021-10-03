@@ -3,38 +3,90 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { slugify } from "../utils/helpers"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
 import { formatDate } from "../utils/helpers"
 
-const SearchContainer = styled.div``
-const PostsListContainer = styled.ul`
-  display: grid;
-  grid-row-gap: 40px;
-  grid-column-gap: 40px;
-  grid-template-columns: 1fr 1fr;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+const SearchContainer = styled.div`
+  input {
+    background: #f5f5f5;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 200;
+    min-height: 40px;
+    min-width: 400px;
+    padding-left: 20px;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    grid-template-columns: 1fr;
-    width: 600px;
-    margin: auto;
+    &::placeholder {
+      color: #b8b8b8;
+    }
+
+    &::focus,
+    &::active,
+    &::focus-visible {
+      box-shadow: 0px;
+      border: none;
+      outline: 4px dashed darkorange;
+    }
   }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    grid-template-columns: 1fr;
-    width: auto;
-    margin: auto;
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    input {
+      min-width: initial;
+      width: 100%;
+    }
   }
 `
-const Post = styled.li``
-const Categories = styled.div``
-const Category = styled.div``
-const Content = styled.div``
+
+const PostsListContainer = styled.ul`
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 50px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    grid-gap: 30px;
+    li {
+      border-bottom: 1px solid #f3f3f3;
+    }
+  }
+`
+
+const Post = styled.li`
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`
+
+const Content = styled.div`
+  h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  time {
+    font-size: 15px;
+    opacity: 0.8;
+    padding: 20px 0;
+    display: block;
+  }
+
+  p {
+    font-size: 18px;
+  }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    time {
+      padding: 5px 0;
+    }
+  }
+`
 
 const PostsList = (props) => {
   const allPosts = useGetAllPosts()
@@ -76,13 +128,7 @@ const PostsList = (props) => {
           onChange={handleChange}
         />
       </SearchContainer>
-      <Categories>
-        {categories.map((cat) => (
-          <Link key={cat} to={`/categoria/${slugify(cat.toLowerCase())}`}>
-            {cat}
-          </Link>
-        ))}
-      </Categories>
+
       {searchResults !== null && (
         <PostsListContainer>
           {searchResults.slice(0, props.length).map((post) => {
@@ -98,7 +144,6 @@ const PostsList = (props) => {
                     <header>
                       <GatsbyImage
                         image={featuredImage}
-                        fadeIn={true}
                         width={200}
                         height={100}
                         alt={post.node.frontmatter.title}
@@ -107,23 +152,10 @@ const PostsList = (props) => {
                     </header>
                     <Content>
                       <h2>{post.node.frontmatter.title}</h2>
-                      {props.showPostDate ? (
-                        <p>
-                          Escrito el{" "}
-                          <time dateTime={post.node.frontmatter.date}>
-                            {formatDate(post.node.frontmatter.date)}
-                          </time>
-                        </p>
-                      ) : (
-                        ""
-                      )}
-                      <Category>
-                        {post.node.frontmatter.category.map(
-                          (category, index) => (
-                            <span key={index}>{category}</span>
-                          )
-                        )}
-                      </Category>
+                      <time dateTime={post.node.frontmatter.date}>
+                        {formatDate(post.node.frontmatter.date)}
+                      </time>
+                      <p>{post.node.frontmatter.description}</p>
                     </Content>
                   </article>
                 </Link>

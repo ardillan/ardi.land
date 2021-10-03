@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
 
-import { SectionTitle, PageContainer } from "../../components/styled/Interface"
+import { PageContainer, SectionTitle } from "../../components/styled/Interface"
 
 const HowDoIWork = ({ data }) => {
   return (
@@ -13,23 +13,19 @@ const HowDoIWork = ({ data }) => {
         title="Ardillan.com | Cómo trabajo"
       />
       <SectionTitle>
-        <div>
-          <h1>¿Cómo trabajo?</h1>
-          <h2>
-            Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o
-            pequeños scripts facilitan el trabajo de la gente. A continuación
-            indico qué aplicaciones utilizo en mi día a día, qué música escucho
-            o qué utilizo para editar gráficos y construir interfaces.
-          </h2>
-        </div>
+        <h1>¿Cómo trabajo?</h1>
+        <h2>
+          Me gusta mucho conocer dinámicas nuevas y ver cómo aplicaciones o
+          pequeños scripts facilitan el trabajo de la gente. A continuación
+          indico qué aplicaciones utilizo en mi día a día, qué música escucho o
+          qué utilizo para editar gráficos y construir interfaces.
+        </h2>
       </SectionTitle>
-      <PageContainer>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html,
-          }}
-        ></div>
-      </PageContainer>
+      <PageContainer
+        dangerouslySetInnerHTML={{
+          __html: data.markdownRemark.html,
+        }}
+      ></PageContainer>
     </Layout>
   )
 }

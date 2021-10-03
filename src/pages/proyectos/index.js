@@ -7,54 +7,23 @@ import { useGetAllProjects } from "../../hooks/useGetAllProjects"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
-import { SectionTitle } from "../../components/styled/Interface"
+import { SectionTitle, Container } from "../../components/styled/Interface"
 
 const ProjectsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  margin: 40px 30px;
-  grid-gap: 20px;
-  justify-content: center;
+  grid-column-gap: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  grid-row-gap: 100px;
+  text-align: center;
+
   a {
+    color: inherit;
     text-decoration: none;
-
-    .gatsby-image-wrapper {
-      transition: all 0.3s ease;
-    }
-
-    &:hover {
-      background: initial;
-
-      .gatsby-image-wrapper {
-        transform: translateY(-10px);
-      }
-    }
-  }
-
-  p {
-    font-weight: 200;
-    font-size: 15px;
-    line-height: 22px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    grid-template-columns: 1fr 1fr;
-    a {
-      align-items: center;
-      text-align: center;
-      width: min-content;
-      margin: auto;
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    grid-template-columns: 1fr;
-    a {
-      align-items: center;
-      text-align: center;
-      width: min-content;
-      margin: auto;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 `
 
@@ -67,35 +36,37 @@ const Projects = () => {
         title="Ardillan.com | Proyectos"
         postDescription="Esta página muestra los proyectos en los que he tenido el placer de trabajar, tanto desarrollo como diseño gráfico. "
       />
-      <SectionTitle>
-        <div>
-          <h1>Proyectos</h1>
-          <h2>
-            Esta página muestra los proyectos en los que estoy trabajando
-            actualmente.
-          </h2>
-        </div>
-      </SectionTitle>
+      <Container>
+        <SectionTitle>
+          <div>
+            <h1>Proyectos</h1>
+            <h2>
+              Esta página muestra proyectos en los que he podido trabajar. Desde
+              diseño gráfico hasta desarrollo web.
+            </h2>
+          </div>
+        </SectionTitle>
 
-      <ProjectsContainer>
-        {projects.map((project) => (
-          <Link key={project.node.id} to={`/${project.node.fields.slug}`}>
-            <article>
-              <header>
-                <GatsbyImage
-                  image={
-                    project.node.frontmatter.featuredImage.childImageSharp
-                      .gatsbyImageData
-                  }
-                  alt={project.node.frontmatter.title}
-                />
-                <h2>{project.node.frontmatter.title}</h2>
-                <p>{project.node.frontmatter.description}</p>
-              </header>
-            </article>
-          </Link>
-        ))}
-      </ProjectsContainer>
+        <ProjectsContainer>
+          {projects.map((project) => (
+            <Link key={project.node.id} to={`/${project.node.fields.slug}`}>
+              <article>
+                <header>
+                  <GatsbyImage
+                    image={
+                      project.node.frontmatter.featuredImage.childImageSharp
+                        .gatsbyImageData
+                    }
+                    alt={project.node.frontmatter.title}
+                  />
+                  <h2>{project.node.frontmatter.title}</h2>
+                  <p>{project.node.frontmatter.description}</p>
+                </header>
+              </article>
+            </Link>
+          ))}
+        </ProjectsContainer>
+      </Container>
     </Layout>
   )
 }

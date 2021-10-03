@@ -1,20 +1,10 @@
 import React from "react"
-import styled from "styled-components"
 
 import Layout from "../../components/Layout"
 import PostsList from "../../components/PostsList"
 import Seo from "../../components/SEO"
 
-import { SectionTitle } from "../../components/styled/Interface"
-
-const BlogPosts = styled.section`
-  width: 900px;
-  margin: auto;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-  }
-`
+import { SectionTitle, Container } from "../../components/styled/Interface"
 
 const Blog = () => {
   return (
@@ -26,13 +16,17 @@ const Blog = () => {
       <SectionTitle>
         <div>
           <h1>Blog</h1>
-          <h2>En esta página se muestran todas las entradas del blog.</h2>
+          <h2>
+            En esta página se encuentran todas las entradas del blog. Me gusta
+            escribir de todo un poco, así que siéntete libre de leer lo que
+            quieras o incluso de proponer una edición
+          </h2>
         </div>
       </SectionTitle>
 
-      <BlogPosts>
+      <Container>
         <PostsList length="55" type="blog" showPostDate />
-      </BlogPosts>
+      </Container>
     </Layout>
   )
 }

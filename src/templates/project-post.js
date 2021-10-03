@@ -2,187 +2,48 @@ import React from "react"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
+import { Container, PageContainer } from "../components/styled/Interface"
 
-import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
-
-const ProjectsContainer = styled.div`
-  background: linear-gradient(
-    -180deg,
-    ${(props) => props.theme.colors.gradients.top},
-    ${(props) => props.theme.colors.gradients.bottom}
-  );
-  margin-bottom: 40px;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: 600px;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-`
 const ProjectContent = styled.div`
-  width: 900px;
-  margin: auto;
-  p,
-  ol,
-  ul,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    width: 600px;
-    margin: auto;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  figure {
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-color: ${(props) => props.theme.colors.fonts.anchor};
-    text-decoration-thickness: 2px;
-    &:hover  {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0 30px;
-    width: auto;
-    p,
-    ol,
-    ul,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      width: auto;
-    }
-  }
-`
-const ProjectHeaderContainer = styled.div`
-  width: 900px;
-  margin: auto;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-  }
+  margin-top: 50px;
 `
 const PostHeader = styled.header`
-  padding: 30px 0;
-
+  border-bottom: 1px solid ${(props) => props.theme.secondaryColor}2e;
+  border-top: 1px solid ${(props) => props.theme.secondaryColor}2e;
+  margin-top: 100px;
+  text-align: center;
   h1 {
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 3rem;
     margin: 0;
-    padding: 0;
-    width: auto;
+    margin-top: 25px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  p {
+    margin: 10px auto 25px;
+    max-width: 600px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: 100%;
-    padding: 0;
-    margin: 50px auto 0;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-
     h1 {
-      font-size: 25px;
+      font-size: 2rem;
     }
-  }
-`
-const ProjectHeaderTitle = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 25px;
-  margin: auto;
-  text-align: center;
-  width: 70%;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 30px;
-    h1 {
-      font-size: 30px;
-    }
-  }
-`
-const FeaturedImage = styled.div`
-  .gatsby-image-wrapper {
-    border-radius: 5px;
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    .gatsby-image-wrapper {
-      border-radius: 0px;
-    }
-  }
-`
-const Description = styled.div`
-  color: ${(props) => props.theme.colors.fonts.text};
-  display: flex;
-  line-height: 19px;
-  font-size: 15px;
-  margin: 10px 0 20px 0;
-  font-weight: 200;
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0;
-  }
-`
-const Subtitle = styled.div`
-  h2 {
-    font-size: 18px;
-    font-weight: 200;
-    opacity: 0.7;
-    padding: 10px 0;
-    width: fit-content;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 0;
     h2 {
-      color: ${(props) => props.theme.colors.fonts.anchor};
-      background: initial;
-      font-weight: 200;
+      font-size: 18px;
     }
   }
 `
 
 const ProjectPost = ({ data }) => {
   const post = data.markdownRemark
-  const genericImage = useGetGenericFeaturedImage().childImageSharp.fluid
-
-  const featuredImage =
-    post.frontmatter.featuredImage !== null
-      ? post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
-      : genericImage
 
   return (
     <Layout>
@@ -219,24 +80,16 @@ const ProjectPost = ({ data }) => {
       </Helmet>
       <section>
         <article>
-          <ProjectsContainer>
-            <ProjectHeaderContainer>
-              <PostHeader>
-                <FeaturedImage>
-                  <GatsbyImage image={featuredImage} />
-                </FeaturedImage>
-                <ProjectHeaderTitle>
-                  <h1>{post.frontmatter.title}</h1>
-                  <Subtitle>
-                    <h2>{post.frontmatter.subtitle}</h2>
-                  </Subtitle>
-                  <Description>{post.frontmatter.description}</Description>
-                </ProjectHeaderTitle>
-              </PostHeader>
-            </ProjectHeaderContainer>
-          </ProjectsContainer>
-
-          <ProjectContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Container>
+            <PostHeader>
+              <h1>{post.frontmatter.title}</h1>
+              <h2>{post.frontmatter.subtitle}</h2>
+              <p>{post.frontmatter.description}</p>
+            </PostHeader>
+          </Container>
+          <PageContainer>
+            <ProjectContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          </PageContainer>
         </article>
       </section>
     </Layout>
@@ -264,7 +117,7 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 900
-              height: 500
+              height: 600
               layout: CONSTRAINED
               placeholder: TRACED_SVG
             )

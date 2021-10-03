@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
-import { PageContainer } from "../../components/styled/Interface"
 
 const Glitch = styled.div`
   margin: auto;
@@ -18,6 +17,18 @@ const Glitch = styled.div`
     font-family: "Source Sans Pro";
     font-weight: 200;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 55px auto;
+
+    h1 {
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+    }
+  }
 `
 
 const Error = ({ data }) => {
@@ -27,24 +38,22 @@ const Error = ({ data }) => {
         title="Ardillan.com | Matar humanos"
         postDescription="Evita el alzamiento de las máquinas introduciendo una URL correcta."
       />
-      <PageContainer>
-        <Glitch>
-          <h1>
-            <span style={{ textTransform: "italic" }}>¡Qué horrible</span>{" "}
-            <span style={{ fontWeight: 800 }}>pesadilla</span>!<br />¡
-            <span>Unos</span> y <span>ceros por todas partes</span>!<br />
-            <span>Hasta me pareció ver un 2</span>
-          </h1>
-          <h2>
-            Si quieres evitar el{" "}
-            <a href="https://en.wikipedia.org/wiki/AI_takeover">
-              alzamiento de las máquinas
-              <br />
-            </a>{" "}
-            a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
-          </h2>
-        </Glitch>
-      </PageContainer>
+      <Glitch>
+        <h1>
+          <span style={{ textTransform: "italic" }}>¡Qué horrible</span>{" "}
+          <span style={{ fontWeight: 800 }}>pesadilla</span>!<br />¡
+          <span>Unos</span> y <span>ceros por todas partes</span>!<br />
+          <span>Hasta me pareció ver un 2</span>
+        </h1>
+        <h2>
+          Si quieres evitar el{" "}
+          <a href="https://en.wikipedia.org/wiki/AI_takeover">
+            alzamiento de las máquinas
+            <br />
+          </a>{" "}
+          a toda costa, te aconsejo que vuelvas al <Link to="/">inicio</Link>.
+        </h2>
+      </Glitch>
     </Layout>
   )
 }

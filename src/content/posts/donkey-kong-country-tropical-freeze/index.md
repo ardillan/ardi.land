@@ -9,8 +9,6 @@ category:
   - Videojuegos
 ---
 
-![Inicio del juego](./donkey-kong-country-tropical-freeze.jpg)
-
 A pesar de que tenía bastantes ganas de echarle el guante, no puedo decir que me haya gustado el último plataformas de Donkey Kong. Desde su control hasta hasta la jugabilidad, las espectativas que tenía no han cumplido para nada mi pronóstico.
 
 #### Espectativas vs. Realidad
@@ -22,3 +20,5 @@ Obviamente, no digo que sea un mal título, pero el manejo de los personajes me 
 De la misma manera, su banda sonora no ha dejado huella en mí (cuando normalmente siempre suelen hacerlo). Ni siquiera el apartado gráfico me ha supuesto un deleite visual.
 
 Me apena decirlo, pero no es juego que podría recomendar a nadie.
+
+![Inicio del juego](./donkey-kong-country-tropical-freeze.jpg)

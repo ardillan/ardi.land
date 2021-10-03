@@ -22,9 +22,9 @@ export const useGetAllProjects = () => {
                 featuredImage {
                   childImageSharp {
                     gatsbyImageData(
-                      layout: FIXED
-                      width: 300
-                      height: 300
+                      layout: CONSTRAINED
+                      width: 400
+                      height: 200
                       placeholder: TRACED_SVG
                     )
                   }

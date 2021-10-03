@@ -11,17 +11,13 @@ category:
   - Videojuegos
 ---
 
-<div class="gallery-post__3-columns-masonry">
-  <img src="./florence-01.jpg" alt="Captura del juego" />
-  <img src="./florence-02.jpg" alt="Captura del juego" />
-  <img src="./florence-03.jpg" alt="Captura del juego" />
-</div>
-
 Florence es un videojuego que me atrapó, como muchas otras veces, por su estética. Sabía perfectamente que su duración no iba a ser demasiado larga y que su banda sonora no me iba a defraudar. Por eso no dudé en comprarlo.
 
 ### La cotidiana vida de Florence Yeoh
 
 Florence es una historia interactiva, lo que quiere decir que **no sigue el patrón** clásico al que estamos acostumbrados en otros videojuegos. Al comenzar, se nos presenta a **Florence Yeoh**, una joven que se encuentra atascada en la cotidianidad de su vida y de la cual no logra escapar.
+
+![Introducción del capítulo 4, titulado: 'Choque'](./florence-01.jpg)
 
 A medida que avanza la historia (a través de capítulos), veremos cómo logra superar diferentes obstaculos que se le plantean. La **dificultad** de este tipo de juegos suele ser más bien **baja**; no puede haber fricción para que podamos disfrutar de la historia y los gráficos cómodamente.
 

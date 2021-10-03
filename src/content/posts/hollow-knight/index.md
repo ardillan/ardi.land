@@ -9,8 +9,6 @@ category:
   - Videojuegos
 ---
 
-![Enemigos de Hollow Knight](./hollow-knight-3.jpg)
-
 Hace tiempo que me apetecía jugar a algo del estilo [_metroidvania_](https://es.wikipedia.org/wiki/Metroidvania). Son un tipo de **videojuegos con los que disfruto bastante**; consiguen engancharme y rara vez me defraudan.
 
 ### La decandencia de Hallownest
@@ -19,8 +17,10 @@ Desde el diseño del personaje hasta la ambientación, pasando por su **[increib
 
 Nuestro pequeño héroe deberá adentrarse hasta lo más profundo de este nido repleto de enemigos de toda clase: mantis, abejas, [bichos bola](https://es.wikipedia.org/wiki/Oniscidea), escarabajos... todo ello a la par que descubrimos el por qué de la decadencia de Hallownest e incluso de nuestra propia existencia.
 
-![Enemigos de Hollow Knight](./hollow-knight-4.gif)
+![Enemigos de Hollow Knight](./hollow-knight-3.jpg)
 
 El estilo de juego, como ya he mencionado, trata con unas **mecánicas clásicas**. Visitaremos los mismos lugares **una y otra vez**, podremos aumentar las destrezas de nuestro personaje a medida que avance la historia. Conseguiremos habilidades que nos permitirán **descubrir nuevas zonas del mapa** y enemigos a los que derrotar.
 
 Para todas las personas que quieran disfrutar una aventura dentro del genéro _metroidvania_, esta es sin lugar a dudas un referente.
+
+![Enemigos de Hollow Knight](./hollow-knight-4.gif)

@@ -45,7 +45,7 @@ Esta es mi configuración para VS Code:
 
 ##### Gráficos
 
-Para montar un **flujo de pantallas** y diseñar interfaces utilizo ~~Photoshop~~, ~~Affinity Designer~~, ~~[Sketch App](https://www.sketch.com/)~~, [Figma](https://www.figma.com/).
+Para montar un **flujo de pantallas** y diseñar interfaces utilizo ~~Photoshop~~, ~~Affinity Designer~~, ~~Sketch App~~, [Figma](https://www.figma.com/).
 
 Si necesito **editar vectores** utilizo [Affinity Designer](https://affinity.serif.com/es/designer/), en cambio para **fotografías** utilizo [Affinity Photo](https://affinity.serif.com/es/photo/). Ambas aplicaciones están desarrolladas por Serif, por lo que la integración entre ellas es total.
 

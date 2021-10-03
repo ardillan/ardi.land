@@ -84,12 +84,10 @@ Para no explayarme, el listado de juegos ha sido:
 - Florence
 - Shovel Knight: King of cards
 
-<div class="gallery-post__2-columns">
-  <img src="./a-link-to-the-past-2020-videojuegos-01.jpg" alt="Portada del videojuego Florence" title="Florence"/>
-  <img src="./a-link-to-the-past-2020-videojuegos-02.jpg" alt="Portada del videojuego Ori and the blind forest" title="Ori and the blind forest"/>
-  <img src="./a-link-to-the-past-2020-videojuegos-03.jpg" alt="Portada del videojuego Ni no kuni" title="Ni no kuni"/>
-  <img src="./a-link-to-the-past-2020-videojuegos-04.jpg" alt="Portada del videojuego Blasphemous" title="Blasphemous"/>
-</div>
+![Portada del videojuego Florence](./a-link-to-the-past-2020-videojuegos-01.jpg)
+![Portada del videojuego Ori and the blind forest](./a-link-to-the-past-2020-videojuegos-02.jpg)
+![Portada del videojuego Ni no kuni](./a-link-to-the-past-2020-videojuegos-03.jpg)
+![Portada del videojuego Blasphemous](./a-link-to-the-past-2020-videojuegos-04.jpg)
 
 ## 🌵 Lo demás
 

@@ -1,137 +1,118 @@
 import styled from "styled-components"
+import Bolt from "../../images/general/bolt.svg"
 
 export const Container = styled.div`
-  width: ${(props) => props.theme.width.main};
+  width: ${(props) => (props.fullWidth ? "100%" : "900px")};
   margin: auto;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    width: 85vw;
   }
 `
 
-export const SectionTitle = styled.section`
-  display: grid;
-  width: ${(props) => props.theme.width.main};
-  margin: auto;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  padding: 35px 0;
-  div {
-    margin: auto;
-    padding: 30px 0;
-    h1 {
-      font-size: 45px;
-      font-weight: 600;
-      margin: 0;
-      padding: 0;
-      width: auto;
-    }
+export const SectionTitle = styled.div`
+  width: 640px;
+  margin: 80px auto 40px;
+  text-align: center;
+  h1 {
+    font-size: 55px;
+    font-weight: 600;
+    margin: 0;
+  }
+  h2 {
+    font-size: 25px;
+    font-weight: 200;
+  }
 
-    h2 {
-      background: ${(props) => props.theme.colors.secondaryColorLight};
-      border-left: 10px solid ${(props) => props.theme.colors.secondaryColor};
-      font-size: 21px;
-      font-weight: 200;
-      line-height: 2rem;
-      margin-top: 10px;
-      padding: 1rem 2rem;
-    }
+  &:after {
+    background-image: url(${Bolt});
+    background-position: center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 30px;
+    width: 20px;
+    margin: 50px auto 75px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    margin: 0;
-    width: auto;
-    div {
-      width: auto;
-      padding: 30px;
-      margin: 0;
+    width: 85vw;
+    margin: 50px auto 0;
+    padding: 0;
 
-      h1 {
-        font-size: 30px;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    h1 {
-      font-size: 30px;
-      margin: 0;
+    h2 {
+      font-size: 20px;
     }
   }
 `
-
-export const SectionTitleWithImage = styled.section`
-  width: ${(props) => props.theme.width.main};
-  display: grid;
+export const PageContainer = styled.section`
+  width: 900px;
+  max-width: 640px;
   margin: auto;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  grid-gap: 20px;
-  align-items: center;
-  margin-bottom: 40px;
 
-  img,
-  picture,
-  .gatsby-image-wrapper {
-    border-radius: 3px;
-    width: auto;
-    height: 500px;
+  .gatsby-image-wrapper,
+  .gatsby-resp-image-figure,
+  .gatsby-highlight {
+    width: 900px;
+    margin: 50px 0 30px -130px;
   }
-  h1 {
-    font-size: 50px;
-    font-weight: 800;
-    margin: 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 50px 0 10px 0;
     padding: 0;
-    width: auto;
-    display: flex;
-    align-items: center;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 1.6em;
   }
 
   h2 {
-    grid-area: subtitle;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 25px;
+    font-size: 1.5em;
   }
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    padding: 30px;
-    width: auto;
-    margin: 0;
-    grid-template-columns: 1fr;
-
-    h1  {
-      text-align: center;
-      font-size: 25px;
-    }
-
-    h2 {
-      margin: 0;
-    }
+  h3 {
+    font-size: 1.4em;
   }
-`
 
-export const PageContainer = styled.div`
-  margin: auto;
-  font-family: "Literata";
-  width: ${(props) => props.theme.width.main};
+  h4 {
+    font-size: 1.3em;
+  }
 
-  div {
-    max-width: ${(props) => props.theme.width.main};
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: #5b40f9;
+    color: initial;
+  }
+
+  ul,
+  ol {
+    line-height: 35px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: auto;
-    div {
-      padding: 30px;
-    }
-  }
+    padding: 0;
+    width: 85vw;
+    margin: auto;
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-    div {
-      padding: 30px;
+    .gatsby-image-wrapper,
+    .gatsby-resp-image-figure,
+    .gatsby-highlight {
+      width: 85vw;
+      margin: auto;
     }
   }
 `

@@ -34,8 +34,8 @@ export const useGetFeaturedPosts = () => {
                   sourceInstanceName
                   childImageSharp {
                     gatsbyImageData(
-                      height: 600
-                      width: 600
+                      height: 400
+                      width: 900
                       placeholder: DOMINANT_COLOR
                       formats: [AUTO, WEBP, AVIF]
                     )

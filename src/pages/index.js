@@ -1,93 +1,124 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { Container } from "../components/styled/Interface"
-import Arrow from "../images/general/arrow.png"
 
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
+import RandomText from "../components/RandomText"
 import FeaturedBanner from "../components/FeaturedBanner"
 
-const Articles = styled.section`
-  h2 {
-    font-size: 35px;
-    font-weight: 400;
-    position: relative;
-    padding: 0;
+const Introduction = styled.section`
+  margin: 150px 0 0;
+  text-align: center;
+  h1 {
+    font-size: 55px;
+    font-weight: 600;
     margin: 0;
+  }
 
-    &:before {
-      background-image: url(${Arrow});
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 25px 22px;
-      content: "";
-      height: 40px;
-      left: -30px;
-      position: absolute;
-      width: 25px;
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 25px 0;
+
+    h1 {
+      font-size: 1.6rem;
     }
   }
+`
+
+const Articles = styled.section`
+  margin: 150px 0;
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 200;
+  }
+
+  h2 span {
+    background: #fff;
+    padding: 0 30px;
+  }
+
   ul {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     list-style-type: none;
     padding: 0;
+    margin: 70px 0;
+  }
 
-    li {
-      margin: 0;
+  a {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-column-gap: 20px;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    img {
+      border-radius: ${(props) => props.theme.borderRadius};
+    }
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
       padding: 0;
-      a {
-        text-decoration: none;
-
-        h3 {
-          font-size: 25px;
-          font-weight: 200;
-          margin: 0;
-          padding: 0;
-          color: ${(props) => props.theme.colors.primary};
-        }
-
-        p {
-          grid-area: description;
-          font-size: 18px;
-          font-weight: 200;
-          line-height: 29px;
-        }
-      }
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      height: 50px;
+      line-height: 23px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      text-overflow: ellipsis;
     }
   }
 
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.mobile}) {
-    width: auto;
-    padding: 0 30px;
-    margin-top: 40px;
-    ul {
-      grid-template-columns: 1fr;
-      li {
-        a {
-          h3 {
-            padding: 0;
-          }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin: 75px 0;
 
-          p {
-            padding: 0;
-            margin-top: 20px;
-          }
-        }
+    a {
+      grid-row-gap: 25px;
+      grid-template-columns: 1fr;
+      text-align: center;
+      img {
+        border-radius: 0;
+      }
+      h3 {
+        margin-bottom: 15px;
       }
     }
   }
 `
 
+const ViewAllButton = styled.div`
+  width: 200px;
+  margin: auto;
+  a {
+    background: ${(props) => props.theme.primaryColor};
+    border-radius: 50px;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    padding: 10px 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+`
+
 const Home = ({ data }) => {
   const posts = useGetAllPosts()
-  // const bestiary = useGetAllBestiaryPosts()
-  // const music = useGetLastAlbum()
-  // const videogame = useGetLastVideogame()
   return (
     <Layout>
       <Seo
@@ -95,25 +126,46 @@ const Home = ({ data }) => {
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />
       <Container>
-        <section>
-          <FeaturedBanner />
-        </section>
+        <Introduction>
+          <h1>
+            ¡Hola!{" "}
+            <span role="img" aria-label="Icono de un una mano saludando">
+              👋
+            </span>
+            <br /> soy Adrián, un diseñador gráfico reconvertido a{` `}
+            <span style={{ color: `#FF8A00` }}>desarrollador web</span>
+          </h1>
+        </Introduction>
+        <RandomText />
         <Articles>
-          <h2>Suelo escribir de todo un poco</h2>
-
+          <h2>
+            <span>Mis últimas publicaciones</span>
+          </h2>
           <ul>
             {posts.slice(0, 4).map((post) => {
               return (
                 <li key={post.node.frontmatter.title}>
                   <Link to={post.node.fields.slug}>
-                    <h3>{post.node.frontmatter.title}</h3>
-                    <p>{post.node.frontmatter.description}</p>
+                    <GatsbyImage
+                      image={getImage(post.node.frontmatter.featuredImage)}
+                      alt={`Imagen destacada de la entrada: ${post.node.title}`}
+                      title={`Imagen destacada de la entrada: ${post.node.title}`}
+                      objectFit="contain"
+                    />
+                    <div>
+                      <h3>{post.node.frontmatter.title}</h3>
+                      <p>{post.node.frontmatter.description}</p>
+                    </div>
                   </Link>
                 </li>
               )
             })}
           </ul>
+          <ViewAllButton>
+            <Link to={`/blog`}>Ver todas</Link>
+          </ViewAllButton>
         </Articles>
+        <FeaturedBanner />
       </Container>
     </Layout>
   )
