@@ -84,6 +84,11 @@ const MenuListItems = styled.div`
         text-align: center;
         padding: 15px 0;
 
+        &:first-child {
+          display: none;
+          &: after;
+        }
+
         &:after {
           content: "";
         }
@@ -96,10 +101,22 @@ const MenuList = () => (
   <MenuListItems>
     <ul>
       <li>
+        <Link to={`/`}>
+          <StaticImage
+            src={"../images/general/logo.svg"}
+            alt="Logotipo"
+            title="Logotipo"
+            width={45}
+            height={45}
+          />
+        </Link>
+      </li>
+      <li>
         <Link to={`/sobre-mi/`}>
           <span>Sobre mí</span>
         </Link>
       </li>
+
       <li>
         <Link to={`/blog/`}>
           <span>Blog</span>
