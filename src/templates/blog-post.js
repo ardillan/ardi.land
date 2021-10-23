@@ -140,7 +140,7 @@ const BlogPost = ({ data }) => {
         />
         <meta
           property="og:image"
-          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+          content={`https://www.ardillan.com${featuredImage}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -155,7 +155,7 @@ const BlogPost = ({ data }) => {
         />
         <meta
           property="twitter:image"
-          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+          content={`https://www.ardillan.com${featuredImage}`}
         />
       </Helmet>
       <PageContainer>
