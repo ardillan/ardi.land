@@ -53,7 +53,7 @@ export const query = graphql`
       }
       html
     }
-    fileName: file(relativePath: { eq: "portrait-mountains.jpeg" }) {
+    fileName: file(relativePath: { eq: "portrait-house.jpeg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 900
@@ -61,6 +61,7 @@ export const query = graphql`
           layout: CONSTRAINED
           placeholder: DOMINANT_COLOR
           formats: [AUTO, WEBP, AVIF]
+          quality: 100
         )
       }
     }
