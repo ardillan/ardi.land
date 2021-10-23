@@ -44,7 +44,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
-        exclude: [`/categoria/*`, `/404/`, `/404.html/`],
+        excludes: [`/categoria/*`, `/404/`, `/404.html/`],
       },
     },
     {
