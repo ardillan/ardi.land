@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
