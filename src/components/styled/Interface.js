@@ -13,7 +13,6 @@ export const Container = styled.div`
 export const SectionTitle = styled.div`
   width: 640px;
   margin: 80px auto 40px;
-  text-align: center;
   h1 {
     font-size: 55px;
     font-weight: 600;
@@ -101,13 +100,23 @@ export const PageContainer = styled.section`
 
   a {
     text-decoration: underline;
-    text-decoration-color: #5b40f9;
+    text-decoration-color: ${(props) => props.theme.primaryColor}60;
+    text-decoration-thickness: 3px;
     color: initial;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-decoration-color: ${(props) => props.theme.primaryColor};
+      background: ${(props) => props.theme.primaryColor}10;
+    }
   }
 
   ul,
   ol {
     line-height: 35px;
+    li {
+      font-size: ${(props) => props.theme.mainFontSize};
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {

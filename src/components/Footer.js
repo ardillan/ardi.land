@@ -6,7 +6,7 @@ import { Container } from "../components/styled/Interface"
 
 const Info = styled.div`
   margin-top: 150px;
-  font-size: 16px;
+  font-size: ${(props) => props.theme.mainFontSize};
   text-align: center;
   a {
     color: inherit;
@@ -23,7 +23,7 @@ const BottomBar = styled.div`
   text-align: center;
   a {
     color: white;
-    font-size: 15px;
+    font-size: ${(props) => props.theme.mainFontSize};
     margin-right: 10px;
   }
 `

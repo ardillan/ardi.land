@@ -19,6 +19,7 @@ const Main = createGlobalStyle`
     p {
         line-height: 150%;
         margin-top: 0;
+        font-size: 0.9em;
     }
 
 

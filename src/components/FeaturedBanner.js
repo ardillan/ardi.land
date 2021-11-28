@@ -10,7 +10,7 @@ const FeaturedBannerContainer = styled.div`
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #e7e7e7;
-    line-height: 0.1em;
+    line-height: 0.1em
     margin: 10px 0 20px;
     text-align: center;
     font-size: 21px;
