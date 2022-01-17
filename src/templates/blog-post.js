@@ -106,7 +106,7 @@ const EditGithub = styled.a`
 
   &:hover {
     background: ${(props) => props.theme.secondaryColor};
-    color: white;
+    color: #CACACA;
   }
 `
 
