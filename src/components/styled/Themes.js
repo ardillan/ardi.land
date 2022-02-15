@@ -2,8 +2,8 @@ const breakPoints = {
   desktop: "980px",
 }
 
-const primaryColor = "#ffdc21"
-const secondaryColor = "#24292f"
+const primaryColor = "#FDE3BA"
+const secondaryColor = "#1E314D"
 
 const textColor = secondaryColor
 const borderRadius = "10px"

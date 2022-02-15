@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Bolt from "../../images/general/bolt.svg"
 
 export const Container = styled.div`
-  width: ${(props) => (props.fullWidth ? "100%" : "900px")};
+  width: ${(props) => (props.fullWidth ? "100vw" : "900px")};
   margin: auto;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {

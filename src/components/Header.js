@@ -17,19 +17,6 @@ const MobileNavigation = styled.div`
     min-height: 60px;
   }
 `
-const TopBar = styled.div`
-  width: 100%;
-  a {
-    color: ${(props) => props.theme.secondaryColor};
-    &:hover {
-      text-decoration-thickness: 3px;
-      text-decoration-color: ${(props) => props.theme.primaryColor};
-    }
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    display: none;
-  }
-`
 
 const MenuButton = styled.div`
   align-items: center;
@@ -45,22 +32,13 @@ const Navigation = styled.nav`
     display: none;
   }
 `
-const HeaderContainer = styled.header`
-  display: grid;
-  min-height: 100px;
-  padding: 0 30px;
-  align-items: center;
-  align-content: center;
-  grid-gap: 10px;
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    grid-template-columns: 1fr;
-    padding: 0;
-    min-height: 0;
-  }
-`
+
 const MenuListItems = styled.div`
+  align-items: center;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  min-height: 120px;
+  padding: 0 5rem;
   ul {
     align-items: center;
     display: flex;
@@ -77,12 +55,6 @@ const MenuListItems = styled.div`
         font-size: ${(props) => props.theme.mainFontSize};
         font-weight: 200;
         text-decoration: none;
-        &:hover {
-          background: ${(props) => props.theme.primaryColor}10;
-          text-decoration: underline;
-          text-decoration-color: ${(props) => props.theme.primaryColor}60;
-          text-decoration-thickness: 3px;
-        }
       }
 
       &:first-child {
@@ -120,29 +92,45 @@ const MenuListItems = styled.div`
   }
 `
 
+const TwitterButton = styled.a`
+  background: #00acee14;
+  border: 1px solid #00acee;
+  padding: 10px 35px;
+  border-radius: 40px;
+
+  &:hover {
+    background: #00acee38;
+  }
+`
+
 const MenuList = () => (
   <MenuListItems>
+    <Link to={`/`}>
+      <StaticImage
+        src={"../images/general/ardi-logo.svg"}
+        alt="Logotipo"
+        title="Logotipo"
+        width={67}
+        height={29}
+        placeholder="TRACED_SVG"
+      />
+    </Link>
     <ul>
       <li>
-        <Link to={`/sobre-mi/`}>
-          <span>Sobre mí</span>
+        <Link to={`/acerca/`}>
+          <span>Acerca</span>
         </Link>
       </li>
 
       <li>
         <Link to={`/blog/`}>
-          <span>Blog</span>
+          <span>Artículos</span>
         </Link>
       </li>
       <li>
-        <Link to={`/como-trabajo/`}>
-          <span>Cómo trabajo</span>
-        </Link>
-      </li>
-      <li>
-        <Link to={`/espacios/`}>
-          <span>Mis espacios</span>
-        </Link>
+        <TwitterButton target="_blank" href="https://twitter.com/ardillan_">
+          Twitter
+        </TwitterButton>
       </li>
     </ul>
   </MenuListItems>
@@ -157,40 +145,35 @@ const Header = () => {
   }
 
   return (
-    <Container>
-      <HeaderContainer>
-        <TopBar>
-          <Link to={`/`}>Ardi</Link>
-        </TopBar>
-        <Navigation>
-          <MenuList />
-        </Navigation>
-        <MobileNavigation>
-          <Link to={`/`}>Ardi</Link>
-          <MenuButton onClick={(e) => handleMenu(e)}>
-            {isMenuOpen ? (
-              <StaticImage
-                src={"../images/general/close-icon.svg"}
-                alt="Logotipo"
-                title="Logotipo"
-                width={25}
-                height={25}
-                placeholder="TRACED_SVG"
-              />
-            ) : (
-              <StaticImage
-                src={"../images/general/menu-icon.svg"}
-                alt="Logotipo"
-                title="Logotipo"
-                width={25}
-                height={25}
-                placeholder="TRACED_SVG"
-              />
-            )}
-          </MenuButton>
-        </MobileNavigation>
-        {isMenuOpen === true && <MenuList />}
-      </HeaderContainer>
+    <Container fullWidth>
+      <Navigation>
+        <MenuList />
+      </Navigation>
+      <MobileNavigation>
+        <Link to={`/`}>Ardi</Link>
+        <MenuButton onClick={(e) => handleMenu(e)}>
+          {isMenuOpen ? (
+            <StaticImage
+              src={"../images/general/close-icon.svg"}
+              alt="Logotipo"
+              title="Logotipo"
+              width={25}
+              height={25}
+              placeholder="TRACED_SVG"
+            />
+          ) : (
+            <StaticImage
+              src={"../images/general/menu-icon.svg"}
+              alt="Logotipo"
+              title="Logotipo"
+              width={25}
+              height={25}
+              placeholder="TRACED_SVG"
+            />
+          )}
+        </MenuButton>
+      </MobileNavigation>
+      {isMenuOpen === true && <MenuList />}
     </Container>
   )
 }
