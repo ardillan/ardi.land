@@ -6,10 +6,11 @@ import Layout from "../../components/Layout"
 import { PageContainer, SectionTitle } from "../../components/styled/Interface"
 
 const About = ({ data }) => {
+  console.log("data", data)
   return (
     <Layout>
       <SectionTitle>
-        <h1>Sobre mí</h1>
+        <h1>Acerca de mí...</h1>
         <h2>
           Aquí podrás descubrir un poco más acerca de mi persona, he dejado
           varios enlaces a través del texto para que puedas ver mis diferentes
@@ -44,7 +45,7 @@ export const query = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "Sobre mí" } }) {
+    markdownRemark(frontmatter: { title: { eq: "Acerca" } }) {
       fileAbsolutePath
       id
       frontmatter {

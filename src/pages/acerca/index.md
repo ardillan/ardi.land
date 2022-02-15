@@ -1,5 +1,5 @@
 ---
-title: "Sobre mí"
+title: "Acerca"
 date: "2021-10-03T21:00:00.0100"
 author: Ardillán
 type: "page"
