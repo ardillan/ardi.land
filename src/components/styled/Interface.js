@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Bolt from "../../images/general/bolt.svg"
 
 export const Container = styled.div`
   width: ${(props) => (props.fullWidth ? "100vw" : "900px")};
@@ -11,9 +10,11 @@ export const Container = styled.div`
 `
 
 export const SectionTitle = styled.div`
-  width: 640px;
+  width: 900px;
   margin: 80px auto 40px;
   h1 {
+    font-family: "Viga";
+
     font-size: 55px;
     font-weight: 600;
     margin: 0;
@@ -21,17 +22,6 @@ export const SectionTitle = styled.div`
   h2 {
     font-size: 25px;
     font-weight: 200;
-  }
-
-  &:after {
-    background-image: url(${Bolt});
-    background-position: center;
-    background-size: cover;
-    content: "";
-    display: block;
-    height: 30px;
-    width: 20px;
-    margin: 50px auto 75px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -53,14 +43,18 @@ export const SectionTitle = styled.div`
 `
 export const PageContainer = styled.section`
   width: 900px;
-  max-width: 640px;
+  max-width: 900px;
   margin: auto;
 
   .gatsby-image-wrapper,
-  .gatsby-resp-image-figure,
+  .gatsby-resp-image-figure {
+    width: 900px;
+    margin: 50px auto 50px auto;
+  }
+
   .gatsby-highlight {
     width: 900px;
-    margin: 50px 0 30px -130px;
+    margin: 50px 0 50px -130px;
   }
 
   h1,
@@ -69,6 +63,7 @@ export const PageContainer = styled.section`
   h4,
   h5,
   h6 {
+    font-family: "Viga";
     margin: 50px 0 10px 0;
     padding: 0;
     font-weight: 400;

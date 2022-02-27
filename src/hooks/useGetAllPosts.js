@@ -21,11 +21,7 @@ export const useGetAllPosts = () => {
                 author
                 featuredImage {
                   childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED
-                      width: 250
-                      height: 250
-                    )
+                    gatsbyImageData(layout: FULL_WIDTH, width: 400, height: 300)
                   }
                 }
                 type

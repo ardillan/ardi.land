@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 const Main = createGlobalStyle`
     :root {
         color: ${(props) => props.theme.textColor};
-        font-family: Source Sans Pro;
+        font-family: Inter;
         font-weight: 200;
         font-size: 21px;
         text-rendering: geometricPrecision;
@@ -17,9 +17,9 @@ const Main = createGlobalStyle`
     }
     
     p {
-        line-height: 150%;
+        line-height: 180%;
         margin-top: 0;
-        font-size: 0.9em;
+        font-size: .8em;
     }
 
 

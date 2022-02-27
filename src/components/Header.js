@@ -21,7 +21,6 @@ const MobileNavigation = styled.div`
 const MenuButton = styled.div`
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.theme.secondaryColor};
   padding: 10px;
   border-radius: 50%;
 `
@@ -37,8 +36,8 @@ const MenuListItems = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  min-height: 120px;
-  padding: 0 5rem;
+  min-height: 140px;
+  padding: 0 2rem;
   ul {
     align-items: center;
     display: flex;
@@ -103,25 +102,25 @@ const TwitterButton = styled.a`
   }
 `
 
-const MenuList = () => (
+const MenuList = (props) => (
   <MenuListItems>
-    <Link to={`/`}>
-      <StaticImage
-        src={"../images/general/ardi-logo.svg"}
-        alt="Logotipo"
-        title="Logotipo"
-        width={67}
-        height={29}
-        placeholder="TRACED_SVG"
-      />
-    </Link>
+    {props.showLogo && (
+      <Link to={`/`}>
+        <StaticImage
+          src={"../images/general/logo.png"}
+          alt="Logotipo"
+          title="Logotipo"
+          width={100}
+          placeholder="TRACED_SVG"
+        />
+      </Link>
+    )}
     <ul>
       <li>
         <Link to={`/acerca/`}>
           <span>Acerca</span>
         </Link>
       </li>
-
       <li>
         <Link to={`/blog/`}>
           <span>Artículos</span>
@@ -147,10 +146,18 @@ const Header = () => {
   return (
     <Container fullWidth>
       <Navigation>
-        <MenuList />
+        <MenuList showLogo />
       </Navigation>
       <MobileNavigation>
-        <Link to={`/`}>Ardi</Link>
+        <Link to={`/`}>
+          <StaticImage
+            src={"../images/general/logo.png"}
+            alt="Logotipo"
+            title="Logotipo"
+            height={30}
+            placeholder="TRACED_SVG"
+          />
+        </Link>
         <MenuButton onClick={(e) => handleMenu(e)}>
           {isMenuOpen ? (
             <StaticImage
@@ -173,7 +180,7 @@ const Header = () => {
           )}
         </MenuButton>
       </MobileNavigation>
-      {isMenuOpen === true && <MenuList />}
+      {isMenuOpen === true && <MenuList showLogo={false} />}
     </Container>
   )
 }

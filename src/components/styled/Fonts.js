@@ -1,37 +1,30 @@
 import { createGlobalStyle } from "styled-components"
 
-import SourceSansRegular from "../../fonts/source-sans-pro/SourceSansPro-Regular.ttf"
-import SourceSansSemiBold from "../../fonts/source-sans-pro/SourceSansPro-SemiBold.ttf"
-import SourceSansBold from "../../fonts/source-sans-pro/SourceSansPro-Bold.ttf"
-import SourceSansBlack from "../../fonts/source-sans-pro/SourceSansPro-Black.ttf"
+import VigaRegular from "../../fonts/Viga/Viga-Regular.ttf"
+
+import InterRegular from "../../fonts/Inter/Inter-Regular.ttf"
+import InterBold from "../../fonts/Inter/Inter-Bold.ttf"
 
 const Fonts = createGlobalStyle`
     @font-face {
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 200;
-        src: url(${SourceSansRegular})
-    }
-
-    @font-face {
-        font-family: 'Source Sans Pro';
+        font-family: 'Viga';
         font-style: normal;
         font-weight: 400;
-        src: url(${SourceSansSemiBold})
+        src: url(${VigaRegular})
     }
 
     @font-face {
-        font-family: 'Source Sans Pro';
-        font-style: bold;
-        font-weight: 600;
-        src: url(${SourceSansBold})
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: url(${InterRegular})
     }
 
     @font-face {
-        font-family: 'Source Sans Pro';
+        font-family: 'Inter';
         font-style: bolder;
-        font-weight: 800;
-        src: url(${SourceSansBlack})
+        font-weight: 600;
+        src: url(${InterBold})
     }
 `
 

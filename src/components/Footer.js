@@ -23,8 +23,9 @@ const BottomBar = styled.div`
   text-align: center;
   a {
     color: white;
-    font-size: ${(props) => props.theme.mainFontSize};
+    font-size: 12px;
     margin-right: 10px;
+    text-decoration: auto;
   }
 `
 

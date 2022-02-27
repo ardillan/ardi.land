@@ -14,26 +14,42 @@ import { formatDate, slugify } from "../utils/helpers"
 
 import githubIcon from "../images/general/github-icon.svg"
 
-const PostContent = styled.div``
+const PostContent = styled.div`
+  max-width: 600px;
+  margin: auto;
+
+  p {
+    line-height: 170%;
+    margin-top: 0;
+    font-size: 17px;
+  }
+
+  .gatsby-image-wrapper,
+  .gatsby-resp-image-figure {
+    width: 900px;
+    margin: 50px auto 50px -150px;
+  }
+`
 
 const PostHeader = styled.header`
-  margin-top: 80px;
+  margin-top: 40px;
+
   h1 {
-    font-size: 65px;
-    font-weight: 600;
+    font-size: 50px;
+    font-family: "Viga";
+    font-weight: 400;
     line-height: 60px;
     margin: 0;
   }
   h2 {
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    opacity: 0.5;
-    margin: 20px 0 10px;
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 0;
   }
 
   .gatsby-image-wrapper {
-    width: 640px;
+    width: 900px;
     margin: auto;
     margin-bottom: 40px;
   }
@@ -48,18 +64,52 @@ const PostHeader = styled.header`
     }
   }
 `
-const Meta = styled.div`
-  display: flex;
-  margin: auto;
-  width: 640px;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  font-size: 18px;
 
+const Categories = styled.div`
+  display: flex;
+  margin-bottom: 20px;
   a {
-    color: ${(props) => props.theme.primaryColor};
-    text-transform: uppercase;
+    background: #72769421;
+    border-radius: 5px;
+    color: #45546a;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 20px;
+    padding: 10px;
     text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #727694;
+      color: white;
+      text-decoration: none;
+    }
+  }
+`
+
+const Meta = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+  font-size: 15px;
+  align-items: center;
+
+  .gatsby-image-wrapper {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 0;
+  }
+  a {
+    text-decoration: underline;
+  }
+
+  time {
+    text-align: right;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -69,6 +119,17 @@ const Meta = styled.div`
     flex-direction: column;
     gap: 10px;
     margin-bottom: 10px;
+  }
+`
+
+const Author = styled.div`
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 15px;
+  }
+  .gastby-image-wrapper {
+    margin: 0;
   }
 `
 
@@ -106,11 +167,12 @@ const EditGithub = styled.a`
 
   &:hover {
     background: ${(props) => props.theme.secondaryColor};
-    color: #CACACA;
+    color: #cacaca;
   }
 `
 
 const BlogPost = ({ data }) => {
+  console.log("BlogPost", data)
   const post = data.markdownRemark
 
   const genericFeaturedImage = getImage(useGetGenericFeaturedImage())
@@ -162,7 +224,7 @@ const BlogPost = ({ data }) => {
         <section>
           <Article>
             <PostHeader>
-              <Meta>
+              <Categories>
                 {post.frontmatter.category && (
                   <>
                     {post.frontmatter.category.map((cat) => (
@@ -175,11 +237,23 @@ const BlogPost = ({ data }) => {
                     ))}
                   </>
                 )}
-                <time>Escrito el {formatDate(post.frontmatter.date)}</time>
-              </Meta>
+              </Categories>
               <h1>{post.frontmatter.title}</h1>
               <h2>{post.frontmatter.subtitle}</h2>
-              <p>{post.frontmatter.description}</p>
+              <Meta>
+                <Author>
+                  <GatsbyImage
+                    image={getImage(data.fileName)}
+                    alt={"Autoretrato"}
+                    objectFit="contain"
+                  />
+                  <p>
+                    Escrito por <Link to="/acerca">Ardi</Link>
+                  </p>
+                </Author>
+                <time>{formatDate(post.frontmatter.date)}</time>
+              </Meta>
+
               <GatsbyImage
                 image={featuredImage}
                 alt={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
@@ -223,14 +297,25 @@ export const query = graphql`
           publicURL
           childImageSharp {
             gatsbyImageData(
-              width: 640
-              height: 640
+              width: 900
               layout: CONSTRAINED
               placeholder: TRACED_SVG
               quality: 100
             )
           }
         }
+      }
+    }
+    fileName: file(relativePath: { eq: "portrait-house.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 35
+          height: 35
+          layout: CONSTRAINED
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP, AVIF]
+          quality: 100
+        )
       }
     }
   }

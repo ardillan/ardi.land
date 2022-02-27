@@ -6,7 +6,6 @@ import Layout from "../../components/Layout"
 import { PageContainer, SectionTitle } from "../../components/styled/Interface"
 
 const About = ({ data }) => {
-  console.log("data", data)
   return (
     <Layout>
       <SectionTitle>

@@ -14,7 +14,7 @@ const Glitch = styled.div`
   h2 {
     font-size: 1.3rem;
     line-height: 30px;
-    font-family: "Source Sans Pro";
+    font-family: "Inter";
     font-weight: 200;
   }
 

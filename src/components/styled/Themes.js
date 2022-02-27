@@ -3,11 +3,11 @@ const breakPoints = {
 }
 
 const primaryColor = "#FDE3BA"
-const secondaryColor = "#1E314D"
+const secondaryColor = "#0F1723"
 
 const textColor = secondaryColor
 const borderRadius = "10px"
-const mainFontSize = ".9em"
+const mainFontSize = ".8em"
 
 export const MainTheme = {
   borderRadius,

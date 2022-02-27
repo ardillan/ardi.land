@@ -65,7 +65,7 @@ const PostsListContainer = styled.ul`
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 50px;
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
@@ -85,25 +85,13 @@ const Post = styled.li`
 
 const Content = styled.div`
   h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
-    margin-bottom: 0;
-  }
-
-  time {
-    font-size: 15px;
-    opacity: 0.8;
-    padding: 20px 0;
-    display: block;
+    margin-bottom: 10px;
   }
 
   p {
-    font-size: 18px;
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    time {
-      padding: 5px 0;
-    }
+    font-size: 15px;
   }
 `
 
@@ -179,9 +167,7 @@ const PostsList = (props) => {
                     </header>
                     <Content>
                       <h2>{post.node.frontmatter.title}</h2>
-                      <time dateTime={post.node.frontmatter.date}>
-                        {formatDate(post.node.frontmatter.date)}
-                      </time>
+
                       <p>{post.node.frontmatter.description}</p>
                     </Content>
                   </article>

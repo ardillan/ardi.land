@@ -50,7 +50,7 @@ const Articles = styled.section`
   ul {
     display: grid;
     grid-gap: 50px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     list-style-type: none;
     padding: 0;
     margin: 70px 0;
@@ -58,22 +58,20 @@ const Articles = styled.section`
 
   a {
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 20px;
     align-items: center;
     color: inherit;
     text-decoration: none;
-    img {
-      border-radius: ${(props) => props.theme.borderRadius};
-    }
+
     h3 {
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 600;
       padding: 0;
-      margin: 0;
+      margin: 10px 0;
     }
     p {
-      font-size: 18px;
+      font-size: 15px 0 5px 0;
       height: 50px;
       line-height: 23px;
       margin: 0;
@@ -104,16 +102,19 @@ const ViewAllButton = styled.div`
   width: 200px;
   margin: auto;
   a {
-    background: ${(props) => props.theme.primaryColor};
-    border-radius: 50px;
-    border: none;
-    color: white;
+    background: ${(props) => props.theme.primaryColor}1f;
+    border-radius: 5px;
+    color: #3d362b;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     margin: auto;
-    padding: 10px 50px;
+    padding: 15px 0px;
     text-align: center;
-    text-transform: uppercase;
+    border: 1px solid ${(props) => props.theme.primaryColor};
+
+    &:hover {
+      background: ${(props) => props.theme.primaryColor};
+    }
   }
 `
 
@@ -126,6 +127,8 @@ const Home = ({ data }) => {
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />
       <Container>
+        <FeaturedBanner />
+
         <Introduction>
           <h1>
             ¡Hola!{" "}
@@ -142,7 +145,7 @@ const Home = ({ data }) => {
             <span>Mis últimas publicaciones</span>
           </h2>
           <ul>
-            {posts.slice(0, 4).map((post) => {
+            {posts.slice(0, 6).map((post) => {
               return (
                 <li key={post.node.frontmatter.title}>
                   <Link to={post.node.fields.slug}>
@@ -165,7 +168,6 @@ const Home = ({ data }) => {
             <Link to={`/blog`}>Ver todas</Link>
           </ViewAllButton>
         </Articles>
-        <FeaturedBanner />
       </Container>
     </Layout>
   )

@@ -13,7 +13,7 @@ const FeaturedBannerContainer = styled.div`
     line-height: 0.1em
     margin: 10px 0 20px;
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 200;
   }
 
@@ -33,10 +33,7 @@ const BannerInfo = styled.div`
       font-size: 23px;
       font-weight: 200;
       margin: auto;
-      max-width: 640px;
-    }
-    img {
-      border-radius: ${(props) => props.theme.borderRadius};
+      max-width: 900px;
     }
   }
 `
@@ -46,9 +43,6 @@ const FeaturedBanner = () => {
 
   return (
     <FeaturedBannerContainer>
-      <h2>
-        <span>Publicación destacada</span>
-      </h2>
       <BannerInfo>
         <Link to={`${featuredPost.node.fields.slug}`}>
           <GatsbyImage
