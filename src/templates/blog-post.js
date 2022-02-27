@@ -24,6 +24,14 @@ const PostContent = styled.div`
     font-size: 17px;
   }
 
+  a {
+    background: ${(props) => props.theme.primaryColor}44;
+    &:hover {
+      background: ${(props) => props.theme.primaryColor};
+      text-decoration-color: ${(props) => props.theme.secondaryColor}21;
+    }
+  }
+
   .gatsby-image-wrapper,
   .gatsby-resp-image-figure {
     width: 900px;
