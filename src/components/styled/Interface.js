@@ -96,11 +96,11 @@ export const PageContainer = styled.section`
   a {
     text-decoration: underline;
     text-decoration-color: ${(props) => props.theme.primaryColor};
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     color: initial;
     &:hover {
       text-decoration: underline;
-      text-decoration-thickness: 3px;
+      text-decoration-thickness: 2px;
       text-decoration-color: ${(props) => props.theme.primaryColor};
       background: ${(props) => props.theme.primaryColor}10;
     }
