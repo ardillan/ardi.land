@@ -18,6 +18,13 @@ const PostContent = styled.div`
   max-width: 600px;
   margin: auto;
 
+  strong {
+    background: ${(props) => props.theme.primaryColor}1f;
+    color: ${(props) => props.theme.primaryColor};
+    padding: 5px;
+    border-radius: 7px;
+  }
+
   p {
     line-height: 170%;
     margin-top: 0;
@@ -25,7 +32,6 @@ const PostContent = styled.div`
   }
 
   a {
-    background: ${(props) => props.theme.primaryColor}44;
     &:hover {
       background: ${(props) => props.theme.primaryColor};
       text-decoration-color: ${(props) => props.theme.secondaryColor}21;
@@ -75,9 +81,9 @@ const Categories = styled.div`
   display: flex;
   margin-bottom: 20px;
   a {
-    background: #72769421;
+    background: ${(props) => props.theme.primaryColor}21;
     border-radius: 5px;
-    color: #45546a;
+    color: ${(props) => props.theme.primaryColor};
     font-size: 11px;
     font-weight: 600;
     margin-right: 20px;
@@ -86,7 +92,7 @@ const Categories = styled.div`
     text-transform: uppercase;
 
     &:hover {
-      background: #727694;
+      background: ${(props) => props.theme.primaryColor};
       color: white;
       text-decoration: none;
     }
@@ -154,6 +160,8 @@ const AuthorInfo = styled.div`
   }
   time {
     color: grey;
+    font-size: 12px;
+    text-align: left;
   }
 `
 
@@ -278,7 +286,10 @@ const BlogPost = ({ data }) => {
                     <time>{formatDate(post.frontmatter.date)}</time>
                   </AuthorInfo>
                 </Author>
-                <p>Tardas unos {post.timeToRead} minutos en leerlo </p>
+                <p>
+                  Tardas unos <strong>{post.timeToRead} minutos</strong> en
+                  leerlo{" "}
+                </p>
               </Meta>
 
               <GatsbyImage
