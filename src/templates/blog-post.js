@@ -40,8 +40,6 @@ const PostContent = styled.div`
 `
 
 const PostHeader = styled.header`
-  margin-top: 40px;
-
   h1 {
     font-size: 50px;
     font-family: "Viga";
@@ -53,7 +51,7 @@ const PostHeader = styled.header`
     font-family: "Inter";
     font-size: 20px;
     line-height: 35px;
-    margin-top: 0;
+    margin-top: 15px;
   }
 
   .gatsby-image-wrapper {
@@ -99,18 +97,19 @@ const Meta = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
+  margin-top: 25px;
   font-size: 15px;
-  align-items: center;
+  align-items: baseline;
 
   .gatsby-image-wrapper {
     width: 50px;
     height: 50px;
     margin: 0 10px 0 0;
-    border-radius: 50%;
   }
 
   p {
     margin: 0;
+    text-align: right;
   }
   a {
     text-decoration: underline;
@@ -134,10 +133,27 @@ const Author = styled.div`
   display: flex;
   align-items: center;
   p {
+    text-align: left;
     font-size: 15px;
   }
-  .gastby-image-wrapper {
-    margin: 0;
+
+  figure,
+  source,
+  picture,
+  div,
+  img {
+    border-radius: 50%;
+  }
+`
+
+const AuthorInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+  }
+  time {
+    color: grey;
   }
 `
 
@@ -253,13 +269,16 @@ const BlogPost = ({ data }) => {
                   <GatsbyImage
                     image={getImage(data.fileName)}
                     alt={"Autoretrato"}
-                    objectFit="contain"
+                    objectFit="cover"
                   />
-                  <p>
-                    Escrito por <Link to="/acerca">Ardi</Link>
-                  </p>
+                  <AuthorInfo>
+                    <p>
+                      Escrito por <Link to="/acerca">Ardi</Link>
+                    </p>
+                    <time>{formatDate(post.frontmatter.date)}</time>
+                  </AuthorInfo>
                 </Author>
-                <time>{formatDate(post.frontmatter.date)}</time>
+                <p>Tardas unos {post.timeToRead} minutos en leerlo </p>
               </Meta>
 
               <GatsbyImage
