@@ -14,7 +14,7 @@ const Glitch = styled.div`
   h2 {
     font-size: 1.3rem;
     line-height: 30px;
-    font-family: "Inter";
+    font-family: "${(props) => props.theme.secondaryFont}";
     font-weight: 200;
   }
 

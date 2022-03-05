@@ -13,8 +13,7 @@ export const SectionTitle = styled.div`
   width: 900px;
   margin: 80px auto 40px;
   h1 {
-    font-family: "Viga";
-
+    font-family: "${(props) => props.theme.primaryFont}";
     font-size: 55px;
     font-weight: 600;
     margin: 0;
@@ -63,7 +62,7 @@ export const PageContainer = styled.section`
   h4,
   h5,
   h6 {
-    font-family: "Viga";
+    font-family: "${(props) => props.theme.primaryFont}";
     margin: 50px 0 10px 0;
     padding: 0;
     font-weight: 400;

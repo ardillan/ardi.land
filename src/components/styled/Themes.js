@@ -9,6 +9,9 @@ const textColor = secondaryColor
 const borderRadius = "10px"
 const mainFontSize = ".8em"
 
+const primaryFont = "Inter"
+const secondaryFont = "Work Sans"
+
 export const MainTheme = {
   borderRadius,
   breakPoints: breakPoints,
@@ -16,4 +19,6 @@ export const MainTheme = {
   secondaryColor,
   textColor,
   mainFontSize,
+  primaryFont,
+  secondaryFont,
 }

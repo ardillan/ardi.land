@@ -48,13 +48,13 @@ const PostContent = styled.div`
 const PostHeader = styled.header`
   h1 {
     font-size: 50px;
-    font-family: "Viga";
-    font-weight: 400;
+    font-family: "${(props) => props.theme.secondaryFont}";
+    font-weight: 600;
     line-height: 60px;
     margin: 0;
   }
   h2 {
-    font-family: "Inter";
+    font-family: "${(props) => props.theme.primaryFont}";
     font-size: 20px;
     line-height: 35px;
     margin-top: 15px;

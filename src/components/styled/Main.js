@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 const Main = createGlobalStyle`
         :root {
             color: ${(props) => props.theme.textColor};
-            font-family: Inter;
+            font-family: ${(props) => props.theme.primaryFont};;
             font-weight: 200;
             font-size: 21px;
             text-rendering: geometricPrecision;
