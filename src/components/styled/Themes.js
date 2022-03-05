@@ -3,7 +3,7 @@ const breakPoints = {
 }
 
 const primaryColor = "#9172f0"
-const secondaryColor = "#0F1723"
+const secondaryColor = "#161933"
 
 const textColor = secondaryColor
 const borderRadius = "10px"

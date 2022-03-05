@@ -67,6 +67,9 @@ const PostHeader = styled.header`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    margin-top: 10px;
+    border-top: 1px solid ${(props) => props.theme.secondaryColor}24;
+    padding-top: 20px;
     h1 {
       font-size: 35px;
       line-height: 40px;
@@ -97,6 +100,9 @@ const Categories = styled.div`
       text-decoration: none;
     }
   }
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    display: none;
+  }
 `
 
 const Meta = styled.div`
@@ -126,12 +132,7 @@ const Meta = styled.div`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
+    display: none;
   }
 `
 

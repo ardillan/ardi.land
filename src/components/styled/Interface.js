@@ -62,7 +62,7 @@ export const PageContainer = styled.section`
   h4,
   h5,
   h6 {
-    font-family: "${(props) => props.theme.primaryFont}";
+    font-family: "${(props) => props.theme.secondaryFont}";
     margin: 50px 0 10px 0;
     padding: 0;
     font-weight: 400;
