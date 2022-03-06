@@ -35,7 +35,7 @@ const Error = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Ardillan.com | Matar humanos"
+        title="Ardi | Matar humanos"
         postDescription="Evita el alzamiento de las máquinas introduciendo una URL correcta."
       />
       <Glitch>

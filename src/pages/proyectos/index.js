@@ -33,7 +33,7 @@ const Projects = () => {
   return (
     <Layout>
       <Seo
-        title="Ardillan.com | Proyectos"
+        title="Ardi | Proyectos"
         postDescription="Esta página muestra los proyectos en los que he tenido el placer de trabajar, tanto desarrollo como diseño gráfico. "
       />
       <Container>

@@ -123,7 +123,7 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Ardillan.com | Inicio"
+        title="Ardi | Inicio"
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />
       <Container>

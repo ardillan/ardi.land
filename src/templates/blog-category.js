@@ -50,7 +50,7 @@ const BlogCategory = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Seo title={`Ardillan.com`} />
+      <Seo title={`Ardi`} />
       <section>
         <SectionTitle>
           <div>

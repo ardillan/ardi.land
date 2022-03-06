@@ -10,7 +10,7 @@ const HowDoIWork = ({ data }) => {
     <Layout>
       <Seo
         postDescription="Aquí muestro las aplicaciones que utilizo para desarrollar y diseñar, la música que escucho o qué utilidades uso para notas"
-        title="Ardillan.com | Cómo trabajo"
+        title="Ardi | Cómo trabajo"
       />
       <SectionTitle>
         <h1>¿Cómo trabajo?</h1>

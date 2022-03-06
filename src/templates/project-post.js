@@ -48,7 +48,7 @@ const ProjectPost = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={`Ardillan.com | ${post.frontmatter.title}`}
+        title={`Ardi | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
       <Helmet>
@@ -56,17 +56,17 @@ const ProjectPost = ({ data }) => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta
           property="og:url"
-          content={`https://www.ardillan.com/${post.fields.slug}`}
+          content={`https://www.ardi.land/${post.fields.slug}`}
         />
         <meta
           property="og:image"
-          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+          content={`https://www.ardi.land${post.frontmatter.featuredImage.publicURL}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://www.ardillan.com/${post.fields.slug}`}
+          content={`https://www.ardi.land/${post.fields.slug}`}
         />
         <meta property="twitter:title" content={post.frontmatter.title} />
         <meta
@@ -75,7 +75,7 @@ const ProjectPost = ({ data }) => {
         />
         <meta
           property="twitter:image"
-          content={`https://www.ardillan.com${post.frontmatter.featuredImage.publicURL}`}
+          content={`https://www.ardi.land${post.frontmatter.featuredImage.publicURL}`}
         />
       </Helmet>
       <section>

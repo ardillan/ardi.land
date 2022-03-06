@@ -3,4 +3,4 @@ Disallow: /categoria/
 Disallow: /404/
 Disallow: 404.html
 
-Sitemap: http://www.ardillan.com/sitemap.xml
+Sitemap: http://www.ardi.land/sitemap.xml

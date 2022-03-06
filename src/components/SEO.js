@@ -65,7 +65,7 @@ const SEO = (data) => {
             />
             <meta
               property="og:image"
-              content={`https://www.ardillan.com${metaImage}`}
+              content={`https://www.ardi.land${metaImage}`}
             />
 
             {/* {Twitter} */}
@@ -84,7 +84,7 @@ const SEO = (data) => {
             />
             <meta
               property="twitter:image"
-              content={`https://www.ardillan.com${metaImage}`}
+              content={`https://www.ardi.land${metaImage}`}
             />
           </Helmet>
         )

@@ -22,7 +22,7 @@ const SiteMap = ({ data }) => {
   const { blogPosts, pages } = data
   return (
     <Layout>
-      <Seo title="Ardillan.com | Mapa del sitio" />
+      <Seo title="Ardi | Mapa del sitio" />
       <SectionTitle>
         <div>
           <h1>Mapa del sitio</h1>

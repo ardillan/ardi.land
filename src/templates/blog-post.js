@@ -223,7 +223,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={`Ardillan.com | ${post.frontmatter.title}`}
+        title={`Ardi | ${post.frontmatter.title}`}
         postDescription={post.frontmatter.description}
       />
       <Helmet>
@@ -231,17 +231,17 @@ const BlogPost = ({ data }) => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta
           property="og:url"
-          content={`https://www.ardillan.com/${post.fields.slug}`}
+          content={`https://www.Ardi.land/${post.fields.slug}`}
         />
         <meta
           property="og:image"
-          content={`https://www.ardillan.com${featuredImage}`}
+          content={`https://www.Ardi.land${featuredImage}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://www.ardillan.com/${post.fields.slug}`}
+          content={`https://www.Ardi.land/${post.fields.slug}`}
         />
         <meta property="twitter:title" content={post.frontmatter.title} />
         <meta
@@ -250,7 +250,7 @@ const BlogPost = ({ data }) => {
         />
         <meta
           property="twitter:image"
-          content={`https://www.ardillan.com${featuredImage}`}
+          content={`https://www.Ardi.land${featuredImage}`}
         />
       </Helmet>
       <PageContainer>
@@ -305,7 +305,7 @@ const BlogPost = ({ data }) => {
             <EditGithub
               target="_blank"
               rel="noopener nofollow"
-              href={`https://github.com/ardillan/ardillan.com/blob/master/src/content/posts/${gitHubFile}`}
+              href={`https://github.com/ardillan/Ardi.land/blob/master/src/content/posts/${gitHubFile}`}
             >
               Editar entrada en Github
             </EditGithub>

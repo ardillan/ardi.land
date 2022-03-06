@@ -57,7 +57,7 @@ const Spaces = () => {
   return (
     <Layout>
       <Seo
-        title={`Ardillan.com | Espacios`}
+        title={`Ardi | Espacios`}
         postDescription="En esta página muestro los diferentes espacios en los que suelo trabajar con mi portátil. "
       />
       <SectionTitle>

@@ -10,7 +10,7 @@ const Blog = () => {
   return (
     <Layout>
       <Seo
-        title="Ardillan.com | Blog"
+        title="Ardi | Blog"
         postDescription="Este es mi blog. Aquí escribo sobre todo lo que me apasiona como videojuegos, música, tecnología y reflexiones personales."
       />
       <SectionTitle>
