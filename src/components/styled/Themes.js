@@ -11,6 +11,7 @@ const mainFontSize = ".8em"
 
 const primaryFont = "Inter"
 const secondaryFont = "Work Sans"
+const ternaryFont = "Merriweather"
 
 export const MainTheme = {
   borderRadius,
@@ -21,4 +22,5 @@ export const MainTheme = {
   mainFontSize,
   primaryFont,
   secondaryFont,
+  ternaryFont,
 }

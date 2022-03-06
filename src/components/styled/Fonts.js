@@ -6,6 +6,9 @@ import WorkSansBold from "../../fonts/WorkSans/WorkSans-Bold.ttf"
 import InterRegular from "../../fonts/Inter/Inter-Regular.ttf"
 import InterBold from "../../fonts/Inter/Inter-Bold.ttf"
 
+import MerriWeatherRegular from "../../fonts/Merriweather/Merriweather-Regular.ttf"
+import MerriWeatherBold from "../../fonts/Merriweather/Merriweather-Bold.ttf"
+
 const Fonts = createGlobalStyle`
     @font-face {
         font-family: 'Work Sans';
@@ -35,6 +38,22 @@ const Fonts = createGlobalStyle`
         font-weight: 600;
         src: url(${InterBold})
     }
+
+    @font-face {
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        src: url(${MerriWeatherRegular})
+    }
+
+    @font-face {
+        font-family: 'Merriweather';
+        font-style: bolder;
+        font-weight: 600;
+        src: url(${MerriWeatherBold})
+    }
+
+    
 `
 
 export default Fonts

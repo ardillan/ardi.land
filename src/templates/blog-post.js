@@ -17,7 +17,7 @@ import githubIcon from "../images/general/github-icon.svg"
 const PostContent = styled.div`
   max-width: 600px;
   margin: auto;
-
+  font-family: "${(props) => props.theme.ternaryFont}";
   strong {
     background: ${(props) => props.theme.primaryColor}1f;
     color: ${(props) => props.theme.primaryColor};
@@ -25,10 +25,12 @@ const PostContent = styled.div`
     border-radius: 7px;
   }
 
-  p {
+  p,
+  ul,
+  li {
     line-height: 170%;
     margin-top: 0;
-    font-size: 17px;
+    font-size: 19px;
   }
 
   a {
