@@ -45,6 +45,14 @@ const PostContent = styled.div`
     width: 900px;
     margin: 50px auto 50px -150px;
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
+    .gatsby-image-wrapper,
+    .gatsby-resp-image-figure {
+      width: auto;
+      margin: initial;
+    }
+  }
 `
 
 const PostHeader = styled.header`
@@ -339,8 +347,8 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 900
-              layout: CONSTRAINED
-              placeholder: TRACED_SVG
+              layout: FULL_WIDTH
+              placeholder: BLURRED
               quality: 100
             )
           }
@@ -352,7 +360,7 @@ export const query = graphql`
         gatsbyImageData(
           width: 35
           height: 35
-          layout: CONSTRAINED
+          layout: FIXED
           placeholder: DOMINANT_COLOR
           formats: [AUTO, WEBP, AVIF]
           quality: 100

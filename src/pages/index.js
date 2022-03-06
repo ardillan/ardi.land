@@ -84,6 +84,10 @@ const Articles = styled.section`
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     margin: 75px 0;
 
+    ul {
+      grid-template-columns: 1fr;
+    }
+
     a {
       grid-row-gap: 25px;
       grid-template-columns: 1fr;
