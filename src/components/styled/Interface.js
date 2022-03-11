@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 85vw;
+    border-bottom: 1px solid ${(props) => props.theme.secondaryColor}24;
   }
 `
 

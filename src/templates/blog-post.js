@@ -22,20 +22,20 @@ const PostContent = styled.div`
     background: ${(props) => props.theme.primaryColor}1f;
     color: ${(props) => props.theme.primaryColor};
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 4px;
   }
 
   p,
   ul,
   li {
-    line-height: 170%;
+    line-height: 180%;
     margin-top: 0;
-    font-size: 19px;
+    font-size: 17px;
   }
 
   a {
     &:hover {
-      background: ${(props) => props.theme.primaryColor};
+      background: ${(props) => props.theme.primaryColor}21;
       text-decoration-color: ${(props) => props.theme.secondaryColor}21;
     }
   }
@@ -56,6 +56,8 @@ const PostContent = styled.div`
 `
 
 const PostHeader = styled.header`
+  max-width: 600px;
+  margin: auto;
   h1 {
     font-size: 50px;
     font-family: "${(props) => props.theme.secondaryFont}";
@@ -65,9 +67,10 @@ const PostHeader = styled.header`
   }
   h2 {
     font-family: "${(props) => props.theme.primaryFont}";
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 35px;
-    margin-top: 15px;
+    margin-top: 0.25em;
+    opacity: 0.5;
   }
 
   .gatsby-image-wrapper {
@@ -78,7 +81,6 @@ const PostHeader = styled.header`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     margin-top: 10px;
-    border-top: 1px solid ${(props) => props.theme.secondaryColor}24;
     padding-top: 20px;
     h1 {
       font-size: 35px;
@@ -118,7 +120,7 @@ const Categories = styled.div`
 const Meta = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   margin-top: 25px;
   font-size: 15px;
   align-items: baseline;
@@ -154,6 +156,9 @@ const Author = styled.div`
     font-size: 15px;
   }
 
+  a {
+    text-decoration: underline !important;
+  }
   figure,
   source,
   picture,
@@ -267,20 +272,6 @@ const BlogPost = ({ data }) => {
         <section>
           <Article>
             <PostHeader>
-              <Categories>
-                {post.frontmatter.category && (
-                  <>
-                    {post.frontmatter.category.map((cat) => (
-                      <Link
-                        key={cat}
-                        to={`/categoria/${slugify(cat).toLowerCase()}`}
-                      >
-                        {cat}
-                      </Link>
-                    ))}
-                  </>
-                )}
-              </Categories>
               <h1>{post.frontmatter.title}</h1>
               <h2>{post.frontmatter.subtitle}</h2>
               <Meta>
@@ -302,13 +293,27 @@ const BlogPost = ({ data }) => {
                   leerlo{" "}
                 </p>
               </Meta>
+              <Categories>
+                {post.frontmatter.category && (
+                  <>
+                    {post.frontmatter.category.map((cat) => (
+                      <Link
+                        key={cat}
+                        to={`/categoria/${slugify(cat).toLowerCase()}`}
+                      >
+                        {cat}
+                      </Link>
+                    ))}
+                  </>
+                )}
+              </Categories>
 
-              <GatsbyImage
+              {/* <GatsbyImage
                 image={featuredImage}
                 alt={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
                 title={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
                 objectFit={"contain"}
-              />
+              /> */}
             </PostHeader>
             <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
@@ -355,11 +360,11 @@ export const query = graphql`
         }
       }
     }
-    fileName: file(relativePath: { eq: "portrait-house.jpeg" }) {
+    fileName: file(relativePath: { eq: "portrait.jpg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 35
-          height: 35
+          width: 55
+          height: 55
           layout: FIXED
           placeholder: DOMINANT_COLOR
           formats: [AUTO, WEBP, AVIF]

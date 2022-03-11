@@ -31,10 +31,14 @@ const Main = createGlobalStyle`
         }
 
         figcaption {
-            text-align: center;
-            font-size: 16px;
-            margin: 30px 0;
             color: ${(props) => props.theme.primaryColor};
+            text-align: center;
+            background: ${(props) => props.theme.primaryColor}14;
+            font-family: 'Inter';
+            font-size: 14px;
+            margin: 20px auto;
+            padding: 10px;
+            width: max-content;
         }
 
         img ~ img {

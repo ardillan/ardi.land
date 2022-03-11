@@ -7,7 +7,7 @@ const secondaryColor = "#161933"
 
 const textColor = secondaryColor
 const borderRadius = "10px"
-const mainFontSize = ".8em"
+const mainFontSize = "17px"
 
 const primaryFont = "Inter"
 const secondaryFont = "Work Sans"
