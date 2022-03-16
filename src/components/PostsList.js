@@ -6,8 +6,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { useGetAllPosts } from "../hooks/useGetAllPosts"
 import { useGetGenericFeaturedImage } from "../hooks/useGetGenericFeaturedImage"
 
-import { formatDate } from "../utils/helpers"
-
 import guybrush from "../images/general/guybrush.gif"
 
 const SearchContainer = styled.div`

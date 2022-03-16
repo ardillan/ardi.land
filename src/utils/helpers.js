@@ -5,12 +5,27 @@ export const getAge = () => {
   return Math.abs(ageDate.getUTCFullYear() - 1970)
 }
 
-export const formatDate = (postDate) => {
-  return new Date(postDate).toLocaleDateString("es-ES", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })
+export const formatDate = (postDate, type = "readable") => {
+  switch (type) {
+    case "readable":
+      return new Date(postDate).toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    case "numeric":
+      return new Date(postDate).toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+      })
+    default:
+      return new Date(postDate).toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+  }
 }
 
 export const formatDateTime = (commitTime) => {

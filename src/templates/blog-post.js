@@ -119,7 +119,7 @@ const Categories = styled.div`
 
 const Meta = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 25px;
   margin-top: 25px;
   font-size: 15px;
@@ -141,10 +141,6 @@ const Meta = styled.div`
 
   time {
     text-align: right;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    display: none;
   }
 `
 
@@ -171,12 +167,19 @@ const Author = styled.div`
 const AuthorInfo = styled.div`
   display: flex;
   flex-direction: column;
+  div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   a {
     text-decoration: none;
   }
+  p,
+  span,
   time {
     color: grey;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
   }
 `
@@ -285,13 +288,20 @@ const BlogPost = ({ data }) => {
                     <p>
                       Escrito por <Link to="/acerca">Ardi</Link>
                     </p>
-                    <time>{formatDate(post.frontmatter.date)}</time>
+                    <div>
+                      <time>
+                        {formatDate(post.frontmatter.date, "numeric")}
+                      </time>
+                      <span> ∙ </span>
+                      <p>
+                        {post.timeToRead} minuto
+                        {post.timeToRead > 1 ? "s " : " "}
+                        en leerlo
+                      </p>
+                    </div>
                   </AuthorInfo>
                 </Author>
-                <p>
-                  Tardas unos <strong>{post.timeToRead} minutos</strong> en
-                  leerlo{" "}
-                </p>
+                <p></p>
               </Meta>
               <Categories>
                 {post.frontmatter.category && (
