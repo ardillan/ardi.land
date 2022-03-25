@@ -131,8 +131,6 @@ const Home = ({ data }) => {
         postDescription="Es un placer verte por mi web, pasa y deja algo de la felicidad que traes."
       />
       <Container>
-        <FeaturedBanner />
-
         <Introduction>
           <h1>
             ¡Hola!{" "}
@@ -140,10 +138,11 @@ const Home = ({ data }) => {
               👋
             </span>
             <br /> soy Adrián, un diseñador gráfico reconvertido a{` `}
-            <span style={{ color: `#FF8A00` }}>desarrollador web</span>
+            <span style={{ color: `#9172f0` }}>desarrollador web</span>
           </h1>
         </Introduction>
         <RandomText />
+        {/* <FeaturedBanner /> */}
         <Articles>
           <h2>
             <span>Mis últimas publicaciones</span>

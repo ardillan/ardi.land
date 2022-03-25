@@ -71,7 +71,7 @@ En esta ocasión controlaremos a Anne, una habitante de "las tierras olvidadas" 
 
 ![Captura del videojuego Forgotton Anne](./a-link-to-the-past-2021-videojuegos-03.jpg)
 
-Otro de los grandes descubrimentos fué el vidoejuego de **Super Epic**, desarrollado por el estudio catalán [Undercoders](https://www.undercoders.com/). Aunque al principio me costó hacerme a él, conseguí completarlo y disfruté mucho de los gráficos. Me gusta ver que este tipo de juegos, del estilo _metroidvania_, se den también en la península.
+Otro de los grandes descubrimentos fué el videojuego de **Super Epic**, desarrollado por el estudio catalán [Undercoders](https://www.undercoders.com/). Aunque al principio me costó hacerme a él, conseguí completarlo y disfruté mucho de los gráficos. Me gusta ver que este tipo de juegos, del estilo _metroidvania_, se den también en la península.
 
 ![Portada del videojuego Super Epic](./a-link-to-the-past-2021-videojuegos-04.jpg)
 

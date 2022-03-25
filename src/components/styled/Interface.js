@@ -6,12 +6,11 @@ export const Container = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
     width: 85vw;
-    border-bottom: 1px solid ${(props) => props.theme.secondaryColor}24;
   }
 `
 
 export const SectionTitle = styled.div`
-  width: 900px;
+  width: 600px;
   margin: 80px auto 40px;
   h1 {
     font-family: "${(props) => props.theme.primaryFont}";
@@ -28,6 +27,7 @@ export const SectionTitle = styled.div`
     width: 85vw;
     margin: 50px auto 0;
     padding: 0;
+    max-width: 600px;
 
     @media screen and (max-width: ${(props) =>
         props.theme.breakPoints.desktop}) {
@@ -43,14 +43,10 @@ export const SectionTitle = styled.div`
 `
 export const PageContainer = styled.section`
   width: 900px;
-  max-width: 900px;
+  padding-top: 50px;
+  max-width: 600px;
   margin: auto;
-
-  .gatsby-image-wrapper,
-  .gatsby-resp-image-figure {
-    width: 900px;
-    margin: 50px auto 50px auto;
-  }
+  font-family: "${(props) => props.theme.ternaryFont}";
 
   .gatsby-highlight {
     width: 900px;
@@ -115,14 +111,11 @@ export const PageContainer = styled.section`
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    padding: 0;
     width: 85vw;
     margin: auto;
 
-    .gatsby-image-wrapper,
-    .gatsby-resp-image-figure,
     .gatsby-highlight {
-      width: 85vw;
+      width: auto;
       margin: auto;
     }
   }

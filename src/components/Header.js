@@ -107,10 +107,10 @@ const MenuList = (props) => (
     {props.showLogo && (
       <Link to={`/`}>
         <StaticImage
-          src={"../images/general/logo.png"}
+          src={"../images/general/logo.svg"}
           alt="Logotipo"
           title="Logotipo"
-          width={100}
+          width={70}
           placeholder="TRACED_SVG"
         />
       </Link>
@@ -151,11 +151,11 @@ const Header = () => {
       <MobileNavigation>
         <Link to={`/`}>
           <StaticImage
-            src={"../images/general/logo.png"}
+            src={"../images/general/logo.svg"}
             alt="Logotipo"
             title="Logotipo"
-            height={30}
-            placeholder="TRACED_SVG"
+            height={50}
+            placeholder="BLURRED"
           />
         </Link>
         <MenuButton onClick={(e) => handleMenu(e)}>

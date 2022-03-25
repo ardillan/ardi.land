@@ -19,8 +19,6 @@ const PostContent = styled.div`
   margin: auto;
   font-family: "${(props) => props.theme.ternaryFont}";
   strong {
-    background: ${(props) => props.theme.primaryColor}1f;
-    color: ${(props) => props.theme.primaryColor};
     padding: 5px;
     border-radius: 4px;
   }
@@ -37,20 +35,6 @@ const PostContent = styled.div`
     &:hover {
       background: ${(props) => props.theme.primaryColor}21;
       text-decoration-color: ${(props) => props.theme.secondaryColor}21;
-    }
-  }
-
-  .gatsby-image-wrapper,
-  .gatsby-resp-image-figure {
-    width: 900px;
-    margin: 50px auto 50px -150px;
-  }
-
-  @media screen and (max-width: ${(props) => props.theme.breakPoints.desktop}) {
-    .gatsby-image-wrapper,
-    .gatsby-resp-image-figure {
-      width: auto;
-      margin: initial;
     }
   }
 `
@@ -74,7 +58,7 @@ const PostHeader = styled.header`
   }
 
   .gatsby-image-wrapper {
-    width: 900px;
+    width: auto;
     margin: auto;
     margin-bottom: 40px;
   }
@@ -95,6 +79,7 @@ const PostHeader = styled.header`
 const Categories = styled.div`
   display: flex;
   margin-bottom: 20px;
+  font-family: "${(props) => props.theme.primaryFont}";
   a {
     background: ${(props) => props.theme.primaryColor}21;
     border-radius: 5px;
@@ -147,6 +132,8 @@ const Meta = styled.div`
 const Author = styled.div`
   display: flex;
   align-items: center;
+  font-family: "${(props) => props.theme.primaryFont}";
+
   p {
     text-align: left;
     font-size: 15px;
@@ -197,10 +184,11 @@ const EditGithub = styled.a`
   border-radius: 50px;
   border: 2px solid #151f2e;
   display: grid;
+  font-family: "${(props) => props.theme.primaryFont}";
   font-size: 18px;
   grid-template-columns: 27px 1fr;
-  max-width: max-content;
   margin: 50px auto;
+  max-width: max-content;
   padding: 5px 15px 4px 20px;
   text-decoration: none !important;
 
@@ -217,8 +205,8 @@ const EditGithub = styled.a`
   }
 
   &:hover {
-    background: ${(props) => props.theme.secondaryColor};
-    color: #cacaca;
+    background: #151f2e !important;
+    color: white;
   }
 `
 
@@ -362,7 +350,7 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 900
-              layout: FULL_WIDTH
+              layout: CONSTRAINED
               placeholder: BLURRED
               quality: 100
             )

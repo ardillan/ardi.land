@@ -63,7 +63,7 @@ const RandomText = () => {
     <RandomTextContainer>
       <p>
         Me gustan cosas como {` `}
-        <span style={{ color: `#FF8A00`, fontWeight: 400 }}>{` { `}</span>
+        <span style={{ color: `#9172f0`, fontWeight: 400 }}>{` { `}</span>
         {typeof randomNumber === "number" && (
           <>
             {randomText
@@ -81,7 +81,7 @@ const RandomText = () => {
               ))}
           </>
         )}
-        <span style={{ color: `#FF8A00`, fontWeight: 400 }}>{` } `}</span> y
+        <span style={{ color: `#9172f0`, fontWeight: 400 }}>{` } `}</span> y
         generar textos aleatorios.
       </p>
     </RandomTextContainer>

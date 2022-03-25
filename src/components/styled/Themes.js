@@ -3,7 +3,8 @@ const breakPoints = {
 }
 
 const primaryColor = "#9172f0"
-const secondaryColor = "#161933"
+const secondaryColor = "#1f1e5d"
+const ternaryColor = "#f7f6f2"
 
 const textColor = secondaryColor
 const borderRadius = "10px"
@@ -18,6 +19,7 @@ export const MainTheme = {
   breakPoints: breakPoints,
   primaryColor,
   secondaryColor,
+  ternaryColor,
   textColor,
   mainFontSize,
   primaryFont,
