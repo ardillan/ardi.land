@@ -2,10 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { PageContainer, SectionTitle } from "../../components/styled/Interface"
+import {
+  PageContainer,
+  SectionTitle,
+  Container,
+} from "../../components/styled/Interface"
 
 const HowDoIWork = ({ data }) => {
+  const CAOC = getImage(data.CAOC)
+
   return (
     <Layout>
       <Seo
@@ -21,6 +28,13 @@ const HowDoIWork = ({ data }) => {
           qué utilizo para editar gráficos y construir interfaces.
         </h2>
       </SectionTitle>
+      <Container>
+        <GatsbyImage
+          image={CAOC}
+          alt="CAOC: Centro Avanzado de Ocio y Computación"
+          title="CAOC: Centro Avanzado de Ocio y Computación"
+        />
+      </Container>
       <PageContainer
         dangerouslySetInnerHTML={{
           __html: data.markdownRemark.html,
@@ -35,11 +49,23 @@ export const query = graphql`
     markdownRemark(frontmatter: { title: { eq: "Cómo trabajo" } }) {
       fileAbsolutePath
       id
+      html
       frontmatter {
         title
         date
       }
-      html
+    }
+    CAOC: file(relativePath: { eq: "space.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 2000
+          height: 600
+          layout: FULL_WIDTH
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP, AVIF]
+          quality: 100
+        )
+      }
     }
   }
 `
