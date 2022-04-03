@@ -7,8 +7,8 @@ module.exports = {
       "Adrián Alcorta",
       "adrián",
       "alcorta",
-      "Ardillán",
-      "ardillan",
+      "Ardi",
+      "ardi",
       "diseño",
       "front-end",
       "frontend",
@@ -23,8 +23,8 @@ module.exports = {
       "cantabria",
     ],
     social: {
-      twitter: "@ardillan_",
-      instagram: "ardillan",
+      twitter: "@ardi__land",
+      instagram: "ardi__land",
     },
   },
   plugins: [

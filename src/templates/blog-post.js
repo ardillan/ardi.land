@@ -318,7 +318,7 @@ const BlogPost = ({ data }) => {
             <EditGithub
               target="_blank"
               rel="noopener nofollow"
-              href={`https://github.com/ardillan/Ardi.land/blob/master/src/content/posts/${gitHubFile}`}
+              href={`https://github.com/ardillan/ardi.land/blob/master/src/content/posts/${gitHubFile}`}
             >
               Editar entrada en Github
             </EditGithub>

@@ -39,7 +39,7 @@ const SiteMap = ({ data }) => {
             </li>
             <li>
               <strong>Entradas</strong> creadas{" "}
-              <a href="https://github.com/ardillan/ardillan.com/blob/e28025375b778238d825dd3ffbf502d1f624c30d/gatsby-node.js#L36">
+              <a href="https://github.com/ardillan/ardi.land/blob/e28025375b778238d825dd3ffbf502d1f624c30d/gatsby-node.js#L36">
                 programáticamente
               </a>{" "}
               mediante una serie de plugins que permiten transformar el

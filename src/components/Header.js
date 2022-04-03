@@ -127,7 +127,7 @@ const MenuList = (props) => (
         </Link>
       </li>
       <li>
-        <TwitterButton target="_blank" href="https://twitter.com/ardillan_">
+        <TwitterButton target="_blank" href="https://twitter.com/ardi__land">
           Twitter
         </TwitterButton>
       </li>

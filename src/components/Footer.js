@@ -32,7 +32,7 @@ const BottomBar = styled.div`
 const Footer = () => {
   const [latestCommit, setLatestCommit] = useState(null)
   useEffect(() => {
-    fetch("https://api.github.com/repos/ardillan/ardillan.com")
+    fetch("https://api.github.com/repos/ardillan/ardi.land")
       .then((res) => res.json())
       .then((commit) => {
         setLatestCommit(commit)
