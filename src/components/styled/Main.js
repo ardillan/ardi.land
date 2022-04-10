@@ -10,8 +10,8 @@ const Main = createGlobalStyle`
   }
 
   ::selection {
-    background: #cceae7;
-    background-color: #cceae7;
+    background: #fffe00;
+    background-color: #fffe00;
     color: #263238;
   }
 
