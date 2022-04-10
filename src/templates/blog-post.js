@@ -32,9 +32,12 @@ const PostContent = styled.div`
   }
 
   a {
+    text-decoration-color: ${props => props.theme.primaryColor}75;
     &:hover {
-      background: ${(props) => props.theme.primaryColor}21;
-      text-decoration-color: ${(props) => props.theme.secondaryColor}21;
+      background: ${props => props.theme.primaryColor}21;
+      text-decoration-color: ${props => props.theme.primaryColor};
+      border-radius: 3px;
+  
     }
   }
 `
