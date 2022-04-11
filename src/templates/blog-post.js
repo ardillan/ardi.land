@@ -32,12 +32,12 @@ const PostContent = styled.div`
   }
 
   a {
-    text-decoration-color: ${props => props.theme.primaryColor}75;
+    text-decoration-color: ${(props) => props.theme.primaryColor}75;
+
     &:hover {
-      background: ${props => props.theme.primaryColor}21;
-      text-decoration-color: ${props => props.theme.primaryColor};
+      background: ${(props) => props.theme.primaryColor}21;
+      text-decoration-color: ${(props) => props.theme.primaryColor};
       border-radius: 3px;
-  
     }
   }
 `
@@ -194,6 +194,7 @@ const EditGithub = styled.a`
   max-width: max-content;
   padding: 5px 15px 4px 20px;
   text-decoration: none !important;
+  transition: ${(props) => props.theme.transition};
 
   &:before {
     content: "";
@@ -214,7 +215,6 @@ const EditGithub = styled.a`
 `
 
 const BlogPost = ({ data }) => {
-  console.log("BlogPost", data)
   const post = data.markdownRemark
 
   const genericFeaturedImage = getImage(useGetGenericFeaturedImage())
@@ -240,17 +240,17 @@ const BlogPost = ({ data }) => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta
           property="og:url"
-          content={`https://www.Ardi.land/${post.fields.slug}`}
+          content={`https://www.ardi.land/${post.fields.slug}`}
         />
         <meta
           property="og:image"
-          content={`https://www.Ardi.land${featuredImage}`}
+          content={`https://www.ardi.land${featuredImage}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://www.Ardi.land/${post.fields.slug}`}
+          content={`https://www.ardi.land/${post.fields.slug}`}
         />
         <meta property="twitter:title" content={post.frontmatter.title} />
         <meta
@@ -259,7 +259,7 @@ const BlogPost = ({ data }) => {
         />
         <meta
           property="twitter:image"
-          content={`https://www.Ardi.land${featuredImage}`}
+          content={`https://www.ardi.land${featuredImage}`}
         />
       </Helmet>
       <PageContainer>

@@ -34,7 +34,7 @@ const Articles = styled.section`
   h2 {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 3px dotted ${(props) => props.theme.color.yellow};
     line-height: 0.1em;
     margin: 10px 0 20px;
     text-align: center;
@@ -105,19 +105,20 @@ const Articles = styled.section`
 const ViewAllButton = styled.div`
   width: 200px;
   margin: auto;
+
   a {
-    background: ${(props) => props.theme.primaryColor}1f;
-    border-radius: 5px;
+    background: ${(props) => props.theme.color.yellow}1f;
+    border-radius: 50px;
     color: #3d362b;
     display: block;
     font-size: 16px;
     margin: auto;
     padding: 15px 0px;
     text-align: center;
-    border: 1px solid ${(props) => props.theme.primaryColor};
-
+    border: 1px solid ${(props) => props.theme.color.yellow};
+    transition: ${(props) => props.theme.transition};
     &:hover {
-      background: ${(props) => props.theme.primaryColor};
+      background: ${(props) => props.theme.color.yellow};
     }
   }
 `

@@ -15,14 +15,13 @@ const Info = styled.div`
 `
 const BottomBar = styled.div`
   align-items: center;
-  background: ${(props) => props.theme.secondaryColor};
+  background: ${(props) => props.theme.color.yellow};
   display: flex;
   font-weight: 400;
   justify-content: center;
   min-height: 45px;
   text-align: center;
   a {
-    color: white;
     font-size: 12px;
     margin-right: 10px;
     text-decoration: auto;

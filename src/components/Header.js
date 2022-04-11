@@ -20,6 +20,7 @@ const MobileNavigation = styled.div`
 
 const MenuButton = styled.div`
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   padding: 10px;
   border-radius: 50%;
@@ -97,23 +98,33 @@ const TwitterButton = styled.a`
   padding: 10px 35px;
   border-radius: 40px;
 
+  transition: ${(props) => props.theme.transition};
   &:hover {
     background: #00acee38;
+  }
+`
+
+const Logo = styled.div`
+  transition: ${(props) => props.theme.transition};
+  &:hover {
+    transform: rotate(-5deg) scale(1.2);
   }
 `
 
 const MenuList = (props) => (
   <MenuListItems>
     {props.showLogo && (
-      <Link to={`/`}>
-        <StaticImage
-          src={"../images/general/logo.svg"}
-          alt="Logotipo"
-          title="Logotipo"
-          width={70}
-          placeholder="TRACED_SVG"
-        />
-      </Link>
+      <Logo>
+        <Link to={`/`}>
+          <StaticImage
+            src={"../images/general/logo.svg"}
+            alt="Logotipo"
+            title="Logotipo"
+            width={70}
+            placeholder="TRACED_SVG"
+          />
+        </Link>
+      </Logo>
     )}
     <ul>
       <li>
@@ -149,15 +160,17 @@ const Header = () => {
         <MenuList showLogo />
       </Navigation>
       <MobileNavigation>
-        <Link to={`/`}>
-          <StaticImage
-            src={"../images/general/logo.svg"}
-            alt="Logotipo"
-            title="Logotipo"
-            height={50}
-            placeholder="BLURRED"
-          />
-        </Link>
+        <Logo>
+          <Link to={`/`}>
+            <StaticImage
+              src={"../images/general/logo.svg"}
+              alt="Logotipo"
+              title="Logotipo"
+              height={50}
+              placeholder="BLURRED"
+            />
+          </Link>
+        </Logo>
         <MenuButton onClick={(e) => handleMenu(e)}>
           {isMenuOpen ? (
             <StaticImage

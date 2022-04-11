@@ -8,6 +8,9 @@ import InterBold from "../../fonts/Inter/Inter-Bold.ttf"
 
 import MerriWeatherRegular from "../../fonts/Merriweather/Merriweather-Regular.ttf"
 import MerriWeatherBold from "../../fonts/Merriweather/Merriweather-Bold.ttf"
+import MerriWeatherRegularItalic from "../../fonts/Merriweather/Merriweather-Italic.ttf"
+import MerriWeatherBoldItalic from "../../fonts/Merriweather/Merriweather-BoldItalic.ttf"
+
 
 const Fonts = createGlobalStyle`
     @font-face {
@@ -51,6 +54,19 @@ const Fonts = createGlobalStyle`
         font-style: bolder;
         font-weight: 600;
         src: url(${MerriWeatherBold})
+    }
+
+    @font-face {
+        font-family: 'Merriweather';
+        font-style: italic;
+        src: url(${MerriWeatherRegularItalic})
+    }
+
+    @font-face {
+        font-family: 'Merriweather';
+        font-style: italic;
+        font-weight: 600;
+        src: url(${MerriWeatherBoldItalic})
     }
 
     
