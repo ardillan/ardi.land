@@ -39,7 +39,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

@@ -1,2 +1,6 @@
-require = require("esm")(module /*, options*/)
-module.exports = require("./gatsby-node-esm.js")
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+const requireEsm = require("esm")(module)
+
+module.exports = {
+  ...requireEsm("./gatsby-node-esm.js"),
+}
