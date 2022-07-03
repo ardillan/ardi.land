@@ -38,6 +38,13 @@ const Main = createGlobalStyle`
     margin: 20px auto;
     padding: 10px;
     width: max-content;
+
+    @media screen and (max-width: ${(props) =>
+      props.theme.breakPoints.desktop}) {
+      width: 100%;
+      padding: initial;
+    }
+
   }
 
   .gallery-post__1-columns {
