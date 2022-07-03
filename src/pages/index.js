@@ -9,7 +9,7 @@ import { Container } from "../components/styled/Interface"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import RandomText from "../components/RandomText"
-import FeaturedBanner from "../components/FeaturedBanner"
+// import FeaturedBanner from "../components/FeaturedBanner"
 
 const Introduction = styled.section`
   margin: 150px 0 0;
