@@ -11,11 +11,11 @@ category:
 
 > ¡Atención! Esta entrada la empecé en enero, pero no me he sentido con ganas de terminarla hasta ahora.
 
-Esta entrada resumen otro año más haciendo donde hago un balance general. En esta ocasión hablaré lo que ha supuesto para mí 2021 y cómo quiero afrontar 2022. Si te fijas en el subtítulo, he decidido resumirlo en tres palabras que podrían explicarse de esta manera:
+Otra entrada mas haciendo balance general de mi año. En esta ocasión hablaré lo que ha supuesto para mí 2021 y cómo quiero afrontar 2022. Si te fijas en el subtítulo, he decidido resumirlo en tres palabras que podrían explicarse de esta manera:
 
-- 🐲 Un dragón: por haberme pasado el Dragon Quest, cosa que me costó más de lo que quisiera.
-- 💻 Un portátil: por haber cambiado de ordenador, algo que no hacía desde hace siete años.
-- 🏠 Una reforma: por la casa que nos hemos comprado y que hemos tenido que tirar de arriba a abajo.
+- Un dragón: por haberme pasado el Dragon Quest, cosa que me costó más de lo que quisiera.
+- Un portátil: por haber cambiado de ordenador, algo que no hacía desde hace siete años.
+- Una reforma: por la casa que nos hemos comprado y que hemos tenido que tirar de arriba a abajo.
 
 Mejor voy por partes.
 
