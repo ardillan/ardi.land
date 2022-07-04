@@ -31,7 +31,7 @@ Una vez instalado, podremos iniciar nuestra sesión mediante el comando
 lpass login ardi@me.com
 ```
 
-Nos pedirá que introduzcamos la contraseña (obviamente). Una vez hayamos iniciado la sesión, seremos capaces de consultar nuestras contraseñas almacenadas de forma segura dentro de LastPass. Si queresmo verlas todas podemos ejecutar el comando `lpass ls` y nos aparecerá un listado de este tipo:
+Nos pedirá que introduzcamos la contraseña (obviamente). Una vez hayamos iniciado la sesión, seremos capaces de consultar nuestras contraseñas almacenadas de forma segura dentro de LastPass. Si queremos verlas todas podemos ejecutar el comando `lpass ls` y nos aparecerá un listado de este tipo:
 
 ```bash
 Nombre del grupo de contraseñas
@@ -46,13 +46,13 @@ Nombre del grupo de contraseñas
 Por último, si lo que queremos es ver la contraseña con toda su información no tendremos más que ejecutar: `lpass show japanesecomposers`.
 
 ```bash
-[Slack]
+[japanesecomposers]
 Username: hirokazu@tanaka.com
 Password: TanakaHip1234
 Website: www.japanesecomposers.chiptune
 ```
 
-Si queremos hacerlo de una manera más elegante, podremos inclusor copiar la contraseña a nuestro portapapeles sin mostrarla en la terminal. Para ello utilizaremos el comando:
+Y si además hacerlo de una manera más segura y elegante, podremos incluso copiar la contraseña a nuestro portapapeles sin mostrarla en la terminal. Para ello utilizaremos el comando:
 
 ```bash
 lpass show -c --password japanesecomposers
@@ -60,4 +60,4 @@ lpass show -c --password japanesecomposers
 
 Con ello podremos copiarla y pegarla en nuestro formularios de manera segura.
 
-Si quieres aprender más sobre esta utilizad, puede echar un vistazo a su manual con todas las _flags_ disponibles y todo su potencial como añadir contraseñas, editarlas y borrarlas.
+Si quieres aprender más sobre esta utilidad, puedes [echar un vistazo a su manual](https://lastpass.github.io/lastpass-cli/lpass.1.html) con todas las _flags_ disponibles así como todo su potencial como añadir contraseñas, editarlas y borrarlas.
