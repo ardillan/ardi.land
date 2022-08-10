@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/SEO"
@@ -31,7 +31,7 @@ const Glitch = styled.div`
   }
 `
 
-const Error = ({ data }) => {
+const Error = () => {
   return (
     <Layout>
       <Seo
@@ -57,17 +57,5 @@ const Error = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    fileName: file(relativePath: { eq: "404.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default Error
