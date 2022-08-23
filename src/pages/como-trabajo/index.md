@@ -95,12 +95,9 @@ Siempre me gusta escuchar programas donde hablan de tecnología o videojuegos. E
 
 - [No me da la vida](https://anchor.fm/no-me-da-la-vida)
 - [Loop Infinito](https://www.applesfera.com/applesfera-podcast/bienvenidos-a-loop-infinito-nuevo-podcast-applesfera)
-- [CODEC](https://podtail.com/en/podcast/codec/)
 - [El Arroyo Dev](https://elarroyo.dev/)
-- [Gadgetocast](https://redllenando.com/gadgetocast/)
 - [Un billete a Chattanooga](https://unbilleteachattanooga.com/)
 - [El Complejo Lambda](https://www.complejolambda.com)
-- [Mundo Babel](https://www.rtve.es/play/audios/mundo-babel/)
 - [Podcast Replay](https://www.podcastreplay.com)
 - [Mixx.io](https://mixx.io/)
 - [Kernel](https://mixx.io/kernel)
