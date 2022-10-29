@@ -33,10 +33,13 @@ const RandomText = () => {
 
   const randomText = [
     {
+      text: "Scatman John",
+      link: "https://es.wikipedia.org/wiki/Scatman_John",
+    },
+    {
       text: "el TachoCao",
       link: "http://www.hornosanjose.com/producto/tachocao/tachocao-700gr",
     },
-    { text: "los nachos", link: "https://es.wikipedia.org/wiki/Nachos" },
     {
       text: "la música post-rock",
       link: "https://es.wikipedia.org/wiki/Post-rock",
