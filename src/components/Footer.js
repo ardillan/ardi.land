@@ -35,7 +35,6 @@ const Footer = () => {
       .then((res) => res.json())
       .then((apiData) => {
         const { pushed_at: lastCommit } = apiData
-        console.log(lastCommit)
         setLatestCommit(lastCommit)
       })
   }, [])
