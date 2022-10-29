@@ -33,8 +33,10 @@ const Footer = () => {
   useEffect(() => {
     fetch("https://api.github.com/repos/ardillan/ardi.land")
       .then((res) => res.json())
-      .then((commit) => {
-        setLatestCommit(commit)
+      .then((apiData) => {
+        const { pushed_at: lastCommit } = apiData
+        console.log(lastCommit)
+        setLatestCommit(lastCommit)
       })
   }, [])
 
@@ -47,12 +49,12 @@ const Footer = () => {
             y algo de café desde la verde y gris{" "}
             <a href="https://es.wikipedia.org/wiki/Torrelavega">Torrelavega</a>
           </p>
-          <p style={{ color: "#C4C4C4" }}>
+          <p>
             Última actualización el{" "}
             {latestCommit === null ? (
               <span>...</span>
             ) : (
-              <span>{formatDateTime(latestCommit.updated_at)}</span>
+              <span>{formatDateTime(latestCommit)}</span>
             )}
           </p>
         </Container>
