@@ -31,6 +31,11 @@ const PostContent = styled.div`
     font-size: 17px;
   }
 
+  figure {
+    padding: 0;
+    margin: 0;
+  }
+
   a {
     text-decoration-color: ${(props) => props.theme.primaryColor}75;
 
