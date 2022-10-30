@@ -58,8 +58,6 @@ export const query = graphql`
     CAOC: file(relativePath: { eq: "space.jpeg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 2000
-          height: 600
           layout: FULL_WIDTH
           placeholder: DOMINANT_COLOR
           formats: [AUTO, WEBP, AVIF]
