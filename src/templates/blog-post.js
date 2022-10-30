@@ -308,13 +308,6 @@ const BlogPost = ({ data }) => {
                   </>
                 )}
               </Categories>
-
-              {/* <GatsbyImage
-                image={featuredImage}
-                alt={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
-                title={`Imagen de cabecera de la entrada: ${post.frontmatter.title}`}
-                objectFit={"contain"}
-              /> */}
             </PostHeader>
             <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
