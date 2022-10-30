@@ -48,6 +48,11 @@ export const PageContainer = styled.section`
   margin: auto;
   font-family: "${(props) => props.theme.ternaryFont}";
 
+  figure {
+    padding: 0;
+    margin: 0;
+  }
+
   .gatsby-highlight {
     width: 900px;
     margin: 50px 0 50px -130px;
