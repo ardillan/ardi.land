@@ -23,7 +23,7 @@ module.exports = {
       "cantabria",
     ],
     social: {
-      twitter: "@ardi__land",
+      twitter: "@ardillan_",
       instagram: "ardi__land",
     },
   },
