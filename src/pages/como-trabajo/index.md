@@ -9,6 +9,12 @@ type: "page"
 
 Utilizo un **Macbook Pro M1** de 2020. Vengo utilizando equipos de Apple desde 2008. Me encuentro muy cómodo trabajando con macOS. Ahora plataformas como Windows y GNU/Linux han mejorado muchísimo, por lo que siempre estoy abierto a probar nuevos sistemas.
 
+##### Teclado
+
+Desde hace tiempo utilizo también un teclado mecánico inhalámbrico de la marca [Nuphy](https://nuphy.com/products/air75). Aunque al principio cuesta un poco adaptarse, sobretodo por el cambio de _layout_, es bastante agradable a la hora de escribir.
+
+![Teclado mecánico Nuphy Air 75](./keyboard.jpeg)
+
 ##### Comunicación
 
 Para **comunicarme** día a día confío en **Telegram** y **Slack**. Ambos me encantan aunque, si tengo que elegir, es Slack donde más cómodo me siento, sobretodo para cuestiones de trabajo.
