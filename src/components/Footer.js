@@ -62,7 +62,7 @@ const Footer = () => {
       <BottomBar>
         <Container>
           <Link to={`/mapa-del-sitio`}>Mapa del sitio</Link>
-          <Link to={`/proyectos`}>Mis proyectos</Link>
+          <Link to={`/espacios`}>Espacios</Link>
         </Container>
       </BottomBar>
     </>

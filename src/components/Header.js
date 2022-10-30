@@ -133,8 +133,18 @@ const MenuList = (props) => (
         </Link>
       </li>
       <li>
+        <Link to={`/como-trabajo/`}>
+          <span>Cómo trabajo</span>
+        </Link>
+      </li>
+      <li>
+        <Link to={`/proyectos/`}>
+          <span>Proyectos</span>
+        </Link>
+      </li>
+      <li>
         <Link to={`/blog/`}>
-          <span>Artículos</span>
+          <span>Blog</span>
         </Link>
       </li>
       <li>
