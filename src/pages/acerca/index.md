@@ -5,7 +5,7 @@ author: Ardillán
 type: "page"
 ---
 
-Me llamo **Adrián**, aunque mucha gente me conoce como Ardillán. Tengo 33 años y, actualmente, estoy inmerso en el mundo del desarrollo web. Me interesa todo aquello que está relacionado con la tecnología, los videojuegos y la música.
+Me llamo **Adrián**, aunque mucha gente me conoce como Ardillán. Tengo 34 años y, actualmente, estoy inmerso en el mundo del desarrollo web. Me interesa todo aquello que está relacionado con la tecnología, los videojuegos y la música.
 
 Mi interés está centrado en aprender todo lo posible sobre tecnologías [frontend](https://es.wikipedia.org/wiki/Front-end_y_back-end), enfocándome sobretodo en utilidades que sirvan para construir interfaces web. Tanto es así, que esta web ha sido desarrollada con [ReactJS](https://reactjs.org).
 
