@@ -1,9 +1,9 @@
 ---
 title: "Nuphy Air 75"
-subtitle: ""
+subtitle: "Un teclado que da mucho la nota"
 date: "2022-11-05T13:30:00.0100"
 type: "blog"
-description: "Munich es una marca de zapatillas conocida a nivel mundial"
+description: "Un teclado mecánico con muy buenas características."
 featuredImage: "./main-image.jpeg"
 category:
   - General
