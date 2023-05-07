@@ -1,7 +1,7 @@
 ---
 title: "A link to the past: 2022"
 subtitle: "Balance de mi año en 2022"
-date: "2023-03-26T21:00:10.0100"
+date: "2023-05-07T23:00:10.0100"
 type: "blog"
 description: "Un resumen de mi año 2022 donde hablo de la música que he escuchado, los videojuegos que he jugado y los lugares que he visitado."
 featuredImage: "./a-link-to-the-past-2022.png"
