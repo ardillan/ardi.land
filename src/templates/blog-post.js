@@ -18,10 +18,6 @@ const PostContent = styled.div`
   max-width: 600px;
   margin: auto;
   font-family: "${(props) => props.theme.ternaryFont}";
-  strong {
-    padding: 5px;
-    border-radius: 4px;
-  }
 
   p,
   ul,
