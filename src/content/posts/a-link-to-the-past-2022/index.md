@@ -15,7 +15,7 @@ Mejor voy por partes:
 
 ## 👨‍💻 Lo del desarrollo
 
-En este 2022 no he avanzado todo lo que sí me hubiese gustado. He andado jugueteando aquí y allá con plataformas como pueden ser **Contentful** o **ContentStack**. He descubierto algún que otro framework CSS como [Charka](https://chakra-ui.com), he cerrado un proyecto que inicié en 2020 (sólamente compré el dominio) al que llamé _setups.tech_, con él pretendía aprender y crear una especie de comunidad en base a escritorios o _set-ups_.
+En este 2022 no he avanzado todo lo que sí me hubiese gustado. He andado jugueteando aquí y allá con plataformas como pueden ser **Contentful** o **ContentStack**. He descubierto algún que otro framework CSS como [Chakra](https://chakra-ui.com), he cerrado un proyecto que inicié en 2020 (sólamente compré el dominio) al que llamé _setups.tech_, con él pretendía aprender y crear una especie de comunidad en base a escritorios o _set-ups_.
 
 Apenas he escrito en mi blog y no he dedicado tiempo a formarme lo suficiente. Muestra de ello es esta entrada, que escribo en ~abril~ mayo, cuando debería haber sido como mucho en enero. En general, creo que podría haberlo hecho bastante mejor.
 
@@ -94,7 +94,7 @@ He pasado por varias etapas con la **bicicleta**, de querer una eléctrica a una
 - En Incentro hemos estrenado oficina. Enorme y muy equipada.
 - El almuerzo holandés está buenísimo.
 - Acabé la Saga de Geratl de Rivia, por fín. Qué buen final.
-- Fué la primera vez que vi cómo subían la malla de Silió.
+- Fué la primera vez que vi cómo pinaban la maya de Silió.
 - He ido a dos exposiciones de [tipografía en Torrelavega](https://www.cantabria.es/cultura/-/asset_publisher/QCCQ2FZxv99q/content/la-casa-de-cultura-de-torrelavega-acoge-la-muestra-de-dise%25C3%25B1o-tipogr%25C3%25A1fico-tdc-68-/2168911). Lo nunca visto.
 - He comprado (y me han regalado) literatura de videojuegos.
 - Hicimos un viaje a Potes y fuí a Picos de Europa de ruta.
@@ -104,7 +104,7 @@ He pasado por varias etapas con la **bicicleta**, de querer una eléctrica a una
 - Cambié de reloj y compré un Apple Watch. Ya tengo la suite completa
 - Vi una exposición de José Ramón Sánchez que me voló la cabeza.
 - Sara colaboró en la creación de un [juego de cartas de La Vijanera](https://www.vijanera.com/2022/juego-la-vijanera/)
-- Fuí a jugar Airsoft. La experiencia más cercana de estar dentro de Half-Life/Counter Strike.
+- Fui a jugar Airsoft. La experiencia más cercana de estar dentro de Half-Life/Counter Strike.
 - Por fin: mascarillas fuera.
 - Fuimos a Tudanca y vimos su casona. Jamás habría dicho que está eso ahí.
 - ¡Me casé!
@@ -138,9 +138,9 @@ He pasado por varias etapas con la **bicicleta**, de querer una eléctrica a una
 ![Diseño del disco de Eretia, en CD](./a-link-to-the-past-2022-fotografia-17.jpg)
 ![Concierto en el Espacio Creativo Illera](./a-link-to-the-past-2022-fotografia-18.jpg)
 ![Fotografía de la exposición de videojuegos organizada por Jorge Oceja](./a-link-to-the-past-2022-fotografia-19.jpg)
-![Centro de adulto CALIGRAMA](./a-link-to-the-past-2022-fotografia-20.jpg)
+![Centro de adultos CALIGRAMA](./a-link-to-the-past-2022-fotografia-20.jpg)
 ![Sara y yo, un día cualquiera](./a-link-to-the-past-2022-fotografia-21.jpg)
-![Autoretrato](./a-link-to-the-past-2022-fotografia-22.jpg)
+![Autorretrato](./a-link-to-the-past-2022-fotografia-22.jpg)
 ![Casa vieja](./a-link-to-the-past-2022-fotografia-23.jpg)
 
 <div class="gallery-post__2-columns">
@@ -148,7 +148,7 @@ He pasado por varias etapas con la **bicicleta**, de querer una eléctrica a una
   <img src="./a-link-to-the-past-2022-fotografia-25.jpg" alt="Vista de Tudanca" title="Vista de Tudanca">
 </div>
 
-![Amanecer cerca de Peñacastillo junto a mi bicicleta](./a-link-to-the-past-2022-fotografia-26.jpg)
+![Amanecer cerca de Peñacastillo, junto a mi bicicleta](./a-link-to-the-past-2022-fotografia-26.jpg)
 ![Fotografía de un cachivache en la Plaza Mayor](./a-link-to-the-past-2022-fotografia-27.jpg)
 ![Mi escritorio](./a-link-to-the-past-2022-fotografia-28.jpg)
 ![Libro de Monkey Island](./a-link-to-the-past-2022-fotografia-29.jpg)
@@ -163,7 +163,7 @@ He pasado por varias etapas con la **bicicleta**, de querer una eléctrica a una
 ![Mi salón](./a-link-to-the-past-2022-fotografia-39.jpg)
 ![Una serie de máscaras de La Vijanera, listas para ser colgadas](./a-link-to-the-past-2022-fotografia-40.jpg)
 ![Mi longboard en Cuchía](./a-link-to-the-past-2022-fotografia-41.jpg)
-![Levantamiento de la Malla de Silió](./a-link-to-the-past-2022-fotografia-42.jpg)
+![Maya de Silió](./a-link-to-the-past-2022-fotografia-42.jpg)
 ![Concierto en el Espacio Creativo Illera](./a-link-to-the-past-2022-fotografia-43.jpg)
 ![Sara, haciendo un puzzle](./a-link-to-the-past-2022-fotografia-44.jpg)
 ![Monkey Island II](./a-link-to-the-past-2022-fotografia-45.jpg)
